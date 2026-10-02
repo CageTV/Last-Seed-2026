@@ -4,3 +4,4 @@ plugin/build/
 *.pdb
 *.zip
 build-log.txt
+imports/lastseed-decompiled/

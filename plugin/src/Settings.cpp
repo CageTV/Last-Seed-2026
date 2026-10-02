@@ -82,6 +82,7 @@ void Settings::Load()
 	}
 
 	GetBool(kv, "bautostart", autoStart);
+	GetBool(kv, "bnativespoilage", nativeSpoilage);
 	GetBool(kv, "bwaitforfrostfall", waitForFrostfall);
 	GetBool(kv, "bhudenabled", hudEnabled);
 	GetInt(kv, "idisplaymode", displayMode);
@@ -128,7 +129,10 @@ void Settings::Save() const
 	}
 	out << "; LastSeed.dll settings. Edit them in game from the SKSE Menu Framework page (Last Seed).\n\n";
 	out << "[General]\n";
-	out << "iVersion=" << kVersion << "\n\n";
+	out << "iVersion=" << kVersion << "\n";
+	out << "bAutoStart=" << (autoStart ? 1 : 0) << "\n";
+	out << "bWaitForFrostfall=" << (waitForFrostfall ? 1 : 0) << "\n";
+	out << "bNativeSpoilage=" << (nativeSpoilage ? 1 : 0) << "\n\n";
 	out << "[HUD]\n";
 	out << "bHudEnabled=" << (hudEnabled ? 1 : 0) << "\n";
 	out << "iDisplayMode=" << displayMode << "\n";

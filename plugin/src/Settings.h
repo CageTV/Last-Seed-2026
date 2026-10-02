@@ -5,6 +5,7 @@ struct Settings
 {
 	// [General]
 	bool  waitForFrostfall = true;   // with Frostfall installed, start Last Seed only after Frostfall has started (like Frostfall's own pattern)
+	bool  nativeSpoilage = true;     // food spoilage runs in LastSeed.dll instead of Last Seed's Papyrus trackers
 	bool  autoStart = true;          // start Last Seed on its own the first time the player is outside and in control
 
 	// [HUD]

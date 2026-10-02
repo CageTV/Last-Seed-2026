@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "Hud.h"
 #include "Settings.h"
+#include "Spoilage.h"
 
 #include "SKSEMenuFramework.h"
 
@@ -143,6 +144,57 @@ namespace Menu
 			}
 		}
 
+		void __stdcall RenderSpoilage()
+		{
+			auto& s = Settings::Get();
+			if (Checkbox("Track food spoilage in LastSeed.dll", &s.nativeSpoilage)) {
+				s.Save();
+			}
+			TextWrapped(
+				"Replaces Last Seed's Papyrus spoilage (an invisible tracker object per food stack, each waking up every game hour) with "
+				"records kept by this plugin. The food categories, rot times and spoiled items are still Last Seed's own, and they are still "
+				"set in its Mod Configuration Menu. Takes effect on the next game start, or when you start a new game.");
+			Spacing();
+			Separator();
+
+			const auto stats = Spoilage::Snapshot(40);
+			if (!Game::IsRunning()) {
+				TextDisabled("Last Seed is not running.");
+				return;
+			}
+			if (!s.nativeSpoilage) {
+				TextDisabled("Native tracking is off: Last Seed's own scripts handle spoilage.");
+				return;
+			}
+			if (!stats.active) {
+				TextDisabled("Spoilage is switched off in Last Seed's settings (Gameplay > Spoilage), so nothing is being tracked.");
+				return;
+			}
+			Text("%d stacks of food, %d items in total. Rot speed now: x%.2f", stats.batches, stats.items, stats.speed);
+			Spacing();
+			if (stats.rows.empty()) {
+				TextDisabled("You are not carrying anything that spoils.");
+				return;
+			}
+			Text("Closest to spoiling first (you, your Provisions container, and your followers):");
+			for (const auto& r : stats.rows) {
+				ImVec4 col(0.65f, 0.9f, 0.5f, 1.0f);  // fresh
+				if (r.rottedFraction >= 0.75f) {
+					col = ImVec4(0.95f, 0.45f, 0.35f, 1.0f);
+				} else if (r.rottedFraction >= 0.4f) {
+					col = ImVec4(0.95f, 0.8f, 0.4f, 1.0f);
+				}
+				TextColored(col, "%s x%d", r.food.c_str(), r.count);
+				SameLine();
+				TextDisabled("(%s)", r.container.c_str());
+				if (r.hoursLeft >= 48.0f) {
+					ProgressBar(r.rottedFraction, ImVec2(-1.0f, 0.0f), std::format("about {:.0f} days left", r.hoursLeft / 24.0f).c_str());
+				} else {
+					ProgressBar(r.rottedFraction, ImVec2(-1.0f, 0.0f), std::format("about {:.0f} hours left", r.hoursLeft).c_str());
+				}
+			}
+		}
+
 		std::atomic<bool> registered{ false };
 	}
 
@@ -157,6 +209,7 @@ namespace Menu
 		SKSEMenuFramework::SetSection("Last Seed");
 		SKSEMenuFramework::AddSectionItem("Overview", RenderOverview);
 		SKSEMenuFramework::AddSectionItem("HUD", RenderHud);
+		SKSEMenuFramework::AddSectionItem("Spoilage", RenderSpoilage);
 		SKSEMenuFramework::AddHudElement(Hud::Render);
 		registered = true;
 		SKSE::log::info("Registered with SKSE Menu Framework {}", SKSEMenuFramework::GetMenuFrameworkVersion());

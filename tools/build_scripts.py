@@ -22,6 +22,7 @@ SRC = os.path.join(HERE, "src", "scripts")
 IMPORTS = [
     SRC,
     os.path.join(HERE, "imports", "stubs"),                                  # compile-only stubs for Last Seed's own types
+    os.path.join(HERE, "imports", "lastseed-decompiled"),                    # Last Seed's other scripts, decompiled locally (not in the repo)
     CAMPFIRE,
     os.path.join(FROSTFALL, "imports", "chesko-shared"),
     os.path.join(FROSTFALL, "imports", "stubs"),                             # compile-only stubs for optional third-party types

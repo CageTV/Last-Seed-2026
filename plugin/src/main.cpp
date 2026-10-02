@@ -4,6 +4,7 @@
 #include "Hud.h"
 #include "Menu.h"
 #include "Settings.h"
+#include "Spoilage.h"
 
 namespace
 {
@@ -33,10 +34,16 @@ namespace
 		return Settings::Get().autoStart;
 	}
 
+	bool NativeSpoilage(RE::StaticFunctionTag*)
+	{
+		return Spoilage::Active();
+	}
+
 	bool RegisterPapyrus(RE::BSScript::IVirtualMachine* a_vm)
 	{
 		a_vm->RegisterFunction("HudBarsActive", "LastSeedNative", HudBarsActive);
 		a_vm->RegisterFunction("AutoStartEnabled", "LastSeedNative", AutoStartEnabled);
+		a_vm->RegisterFunction("NativeSpoilage", "LastSeedNative", NativeSpoilage);
 		return true;
 	}
 
@@ -48,6 +55,8 @@ namespace
 			break;
 		case SKSE::MessagingInterface::kDataLoaded:
 			Game::Init();
+			Spoilage::Init();
+			Spoilage::Begin();
 			AutoStart::Begin();
 			break;
 		default:
@@ -62,6 +71,7 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 	SetupLog();
 	SKSE::log::info("LastSeed.dll 0.2.1, game {}", REL::Module::get().version().string());
 	Settings::Get().Load();
+	Spoilage::Register();
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);
 	SKSE::GetMessagingInterface()->RegisterListener(OnMessage);
 	return true;
