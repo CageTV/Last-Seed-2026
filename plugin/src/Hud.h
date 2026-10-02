@@ -1,0 +1,15 @@
+#pragma once
+
+// Last Seed's HUD, drawn through SKSE Menu Framework's HUD API: four flat vertical bars (hunger, thirst, fatigue,
+// vitality) in the same style as Frostfall's, stacked directly below Frostfall's group when Frostfall.dll's HUD is on.
+namespace Hud
+{
+	void __stdcall Render();
+
+	// The settings page calls this every frame it is visible, so the bars stay drawn (as a live preview) while
+	// SKSE Menu Framework's window is open.
+	void MarkPreviewFrame();
+
+	// Mark settings as changed; they are written to the INI shortly after the last change.
+	void MarkSettingsDirty();
+}

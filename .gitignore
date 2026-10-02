@@ -1,0 +1,6 @@
+build/
+plugin/build/
+*.log
+*.pdb
+*.zip
+build-log.txt
