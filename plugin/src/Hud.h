@@ -6,6 +6,9 @@ namespace Hud
 {
 	void __stdcall Render();
 
+	// Fade the Last Seed logo in and out (when Last Seed finishes starting).
+	void ShowStartupLogo();
+
 	// The settings page calls this every frame it is visible, so the bars stay drawn (as a live preview) while
 	// SKSE Menu Framework's window is open.
 	void MarkPreviewFrame();

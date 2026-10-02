@@ -82,6 +82,7 @@ void Settings::Load()
 	}
 
 	GetBool(kv, "bautostart", autoStart);
+	GetBool(kv, "bwaitforfrostfall", waitForFrostfall);
 	GetBool(kv, "bhudenabled", hudEnabled);
 	GetInt(kv, "idisplaymode", displayMode);
 	GetInt(kv, "ifillmode", fillMode);

@@ -47,6 +47,8 @@ namespace Game
 		g.vitality = Lookup(ids::Seed_AttributeVitality, "_Seed_AttributeVitality");
 		g.vitalityMax = Lookup(ids::Seed_AttributeVitalityMax, "_Seed_AttributeVitalityMax");
 		auto* dh = RE::TESDataHandler::GetSingleton();
+		g.startupFinished = dh ? dh->LookupForm<RE::TESGlobal>(ids::LastSeedStartupFinished, "LastSeed.esp") : nullptr;
+		g.frostfallRunning = dh ? dh->LookupForm<RE::TESGlobal>(ids::FrostfallRunning, "Frostfall.esp") : nullptr;
 		g.kwCheck = dh ? dh->LookupForm<RE::TESGlobal>(ids::LastSeedRunningKWCheck, "Update.esm") : nullptr;
 		g.mainQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::MainQuest, "LastSeed.esp") : nullptr;
 		g.trackingQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::TrackingQuest, "LastSeed.esp") : nullptr;
@@ -67,6 +69,18 @@ namespace Game
 	bool IsRunning()
 	{
 		return ready && static_cast<int>(Value(g.running)) == 2;
+	}
+
+	bool StartupFinished()
+	{
+		return ready && static_cast<int>(Value(g.startupFinished)) == 2;
+	}
+
+	bool FrostfallInstalled() { return g.frostfallRunning != nullptr; }
+
+	bool FrostfallRunning()
+	{
+		return g.frostfallRunning && static_cast<int>(Value(g.frostfallRunning)) == 2;
 	}
 
 	void StartLastSeed()

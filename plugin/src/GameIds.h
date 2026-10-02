@@ -3,6 +3,7 @@
 
 namespace ids
 {
+	inline constexpr unsigned int FrostfallRunning = 0x06DCFB;          // in Frostfall.esp (2 = running)
 	inline constexpr unsigned int MainQuest = 0x000D72;                // _Seed_MainQuest, carries the _Seed_Main script
 	inline constexpr unsigned int TrackingQuest = 0x00A69D;            // _Seed_TrackingQuest (stage 20 = has been started)
 	inline constexpr unsigned int LastSeedStartupFinished = 0x5525A8;

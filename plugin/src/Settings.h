@@ -4,6 +4,7 @@
 struct Settings
 {
 	// [General]
+	bool  waitForFrostfall = true;   // with Frostfall installed, start Last Seed only after Frostfall has started (like Frostfall's own pattern)
 	bool  autoStart = true;          // start Last Seed on its own the first time the player is outside and in control
 
 	// [HUD]

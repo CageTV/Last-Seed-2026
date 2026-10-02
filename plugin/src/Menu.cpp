@@ -20,8 +20,24 @@ namespace Menu
 			return a_changed;
 		}
 
+		constexpr const char* kLogoPath = "Data\\Interface\\lastseed\\lastseed_logo.png";
+
+		void Logo()
+		{
+			static ImTextureID tex = SKSEMenuFramework::LoadTexture(kLogoPath);
+			if (!tex) {
+				return;
+			}
+			const float avail = GetContentRegionAvail().x;
+			const float w = std::min(avail, 460.0f);
+			SetCursorPosX(GetCursorPosX() + (avail - w) * 0.5f);
+			Image(tex, ImVec2(w, w * 150.0f / 760.0f));
+			Spacing();
+		}
+
 		void __stdcall RenderOverview()
 		{
+			Logo();
 			if (!Game::Ready()) {
 				TextColored(ImVec4(1.0f, 0.45f, 0.4f, 1.0f), "LastSeed.esp is not loaded.");
 				return;
@@ -45,7 +61,12 @@ namespace Menu
 			if (Checkbox("Start Last Seed automatically on a new game", &settings.autoStart)) {
 				settings.Save();
 			}
-			TextWrapped("Auto-start waits until you are outside, in control and out of any menu or fight, so it never interrupts the opening.");
+			if (Game::FrostfallInstalled()) {
+				if (Checkbox("Wait for Frostfall to start first", &settings.waitForFrostfall)) {
+					settings.Save();
+				}
+			}
+			TextWrapped("Auto-start waits for Frostfall to start (when it is installed), otherwise until you are outside, in control and out of any menu or fight.");
 
 			Spacing();
 			Separator();

@@ -16,6 +16,8 @@ namespace Game
 		RE::TESGlobal* fatigueMax = nullptr;    // _Seed_AttributeFatigueMax
 		RE::TESGlobal* vitality = nullptr;      // _Seed_AttributeVitality
 		RE::TESGlobal* vitalityMax = nullptr;   // _Seed_AttributeVitalityMax
+		RE::TESGlobal* startupFinished = nullptr;  // LastSeedStartupFinished (2 = start-up complete)
+		RE::TESGlobal* frostfallRunning = nullptr; // Frostfall.esp FrostfallRunning, null when Frostfall is not installed
 		RE::TESGlobal* kwCheck = nullptr;       // LastSeedRunning_KWCheck
 		RE::TESQuest*  mainQuest = nullptr;      // _Seed_MainQuest (script _Seed_Main)
 		RE::TESQuest*  trackingQuest = nullptr;  // _Seed_TrackingQuest
@@ -25,6 +27,9 @@ namespace Game
 	const Globals& G();
 	bool           Ready();
 	bool           IsRunning();
+	bool           StartupFinished();
+	bool           FrostfallRunning();  // false when Frostfall is not installed
+	bool           FrostfallInstalled();
 	// Same steps as the MCM's start / stop option: set the running globals, then call _Seed_Main.StartLastSeed / StopLastSeed.
 	void           StartLastSeed();
 	void           StopLastSeed();

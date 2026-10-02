@@ -16,7 +16,15 @@ namespace Hud
 		float groupAlpha = 1.0f;
 
 		FrostfallLayout frostfall;
-		float           frostfallTimer = 1e6f;  // seconds since Frostfall's INI was last read
+		constexpr const char* kLogoPath = "Data\\Interface\\lastseed\\lastseed_logo.png";
+		constexpr float       kLogoAspect = 150.0f / 760.0f;
+		constexpr float       kLogoFadeIn = 0.8f;
+		constexpr float       kLogoHold = 2.6f;
+		constexpr float       kLogoFadeOut = 1.2f;
+		std::atomic<bool>     logoRequested{ false };
+		float                 logoTime = -1.0f;  // seconds since the logo started, -1 = not showing
+		int                   lastStartupFinished = -1;  // -1 = not seen yet (a save that is already running shows no logo)
+		float                 frostfallTimer = 1e6f;  // seconds since Frostfall's INI was last read
 
 		struct Tracked
 		{
@@ -243,6 +251,50 @@ namespace Hud
 				iconAt(3, kVitality);
 			}
 		}
+
+		void DrawLogo(ImDrawList* a_dl, float a_dt)
+		{
+			if (logoRequested.exchange(false)) {
+				logoTime = 0.0f;
+			}
+			if (logoTime < 0.0f) {
+				return;
+			}
+			logoTime += a_dt;
+			const float total = kLogoFadeIn + kLogoHold + kLogoFadeOut;
+			if (logoTime >= total) {
+				logoTime = -1.0f;
+				return;
+			}
+			float a = 1.0f;
+			if (logoTime < kLogoFadeIn) {
+				a = logoTime / kLogoFadeIn;
+			} else if (logoTime > kLogoFadeIn + kLogoHold) {
+				a = 1.0f - (logoTime - kLogoFadeIn - kLogoHold) / kLogoFadeOut;
+			}
+			a = a * a * (3.0f - 2.0f * a);  // smoothstep
+
+			static ImTextureID tex = SKSEMenuFramework::LoadTexture(kLogoPath);
+			if (!tex) {
+				return;
+			}
+			const auto* io = GetIO();
+			const float w = std::min(io->DisplaySize.x * 0.34f, 900.0f);
+			const float h = w * kLogoAspect;
+			const float x = (io->DisplaySize.x - w) * 0.5f;
+			const float y = io->DisplaySize.y * 0.24f;
+			const float drift = (1.0f - a) * 6.0f;  // settles upward slightly as it fades in
+			const ImU32 shadow = IM_COL32(0, 0, 0, static_cast<int>(165 * a));
+			const ImU32 white = IM_COL32(255, 255, 255, static_cast<int>(255 * a));
+			ImDrawListManager::AddImage(a_dl, tex, ImVec2(x + 2, y + 3 + drift), ImVec2(x + w + 2, y + h + 3 + drift), ImVec2(0, 0), ImVec2(1, 1), shadow);
+			ImDrawListManager::AddImage(a_dl, tex, ImVec2(x, y + drift), ImVec2(x + w, y + h + drift), ImVec2(0, 0), ImVec2(1, 1), white);
+		}
+	}
+
+	void ShowStartupLogo()
+	{
+		logoRequested = true;
+		SKSE::log::info("Start-up logo requested");
 	}
 
 	void MarkPreviewFrame() { previewFrames = 2; }
@@ -276,6 +328,18 @@ namespace Hud
 		if (!preview && (SKSEMenuFramework::IsAnyBlockingWindowOpened() || HudHiddenByGame())) {
 			return;
 		}
+
+		// The logo plays when Last Seed's start-up finishes, however it was started (auto-start, MCM, menu button).
+		const int finished = Game::StartupFinished() ? 2 : 1;
+		if (lastStartupFinished == -1) {
+			lastStartupFinished = finished;
+		} else if (finished != lastStartupFinished) {
+			lastStartupFinished = finished;
+			if (finished == 2) {
+				ShowStartupLogo();
+			}
+		}
+		DrawLogo(dl, dt);
 
 		if (!Game::IsRunning()) {
 			return;
