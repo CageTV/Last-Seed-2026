@@ -3,6 +3,10 @@
 
 namespace ids
 {
+	inline constexpr unsigned int MainQuest = 0x000D72;                // _Seed_MainQuest, carries the _Seed_Main script
+	inline constexpr unsigned int TrackingQuest = 0x00A69D;            // _Seed_TrackingQuest (stage 20 = has been started)
+	inline constexpr unsigned int LastSeedStartupFinished = 0x5525A8;
+	inline constexpr unsigned int LastSeedRunningKWCheck = 0xD9FF01;    // declared in Update.esm, overridden by LastSeed.esp
 	inline constexpr unsigned int LastSeedRunning = 0x00B162;
 	inline constexpr unsigned int Seed_AttributeHunger = 0x0029CD;
 	inline constexpr unsigned int Seed_AttributeThirst = 0x0029CE;

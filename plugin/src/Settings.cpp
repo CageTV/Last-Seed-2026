@@ -81,6 +81,7 @@ void Settings::Load()
 		return;
 	}
 
+	GetBool(kv, "bautostart", autoStart);
 	GetBool(kv, "bhudenabled", hudEnabled);
 	GetInt(kv, "idisplaymode", displayMode);
 	GetInt(kv, "ifillmode", fillMode);

@@ -16,11 +16,19 @@ namespace Game
 		RE::TESGlobal* fatigueMax = nullptr;    // _Seed_AttributeFatigueMax
 		RE::TESGlobal* vitality = nullptr;      // _Seed_AttributeVitality
 		RE::TESGlobal* vitalityMax = nullptr;   // _Seed_AttributeVitalityMax
+		RE::TESGlobal* kwCheck = nullptr;       // LastSeedRunning_KWCheck
+		RE::TESQuest*  mainQuest = nullptr;      // _Seed_MainQuest (script _Seed_Main)
+		RE::TESQuest*  trackingQuest = nullptr;  // _Seed_TrackingQuest
 	};
 
 	bool           Init();  // after data is loaded
 	const Globals& G();
 	bool           Ready();
 	bool           IsRunning();
+	// Same steps as the MCM's start / stop option: set the running globals, then call _Seed_Main.StartLastSeed / StopLastSeed.
+	void           StartLastSeed();
+	void           StopLastSeed();
+	// True once Last Seed has been started at least once in this save (its tracking quest reached stage 20).
+	bool           EverStarted();
 	float          Value(const RE::TESGlobal* a_global, float a_fallback = 0.0f);
 }

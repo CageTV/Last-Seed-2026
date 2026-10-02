@@ -30,8 +30,22 @@ namespace Menu
 			if (Game::IsRunning()) {
 				TextColored(ImVec4(0.65f, 0.9f, 0.5f, 1.0f), "Last Seed is running.");
 			} else {
-				TextColored(ImVec4(0.75f, 0.75f, 0.75f, 1.0f), "Last Seed is not running. Start it from its Mod Configuration Menu page.");
+				TextColored(ImVec4(0.75f, 0.75f, 0.75f, 1.0f), "Last Seed is not running.");
 			}
+
+			Spacing();
+			if (Game::IsRunning()) {
+				if (Button("Stop Last Seed")) {
+					Game::StopLastSeed();
+				}
+			} else if (Button("Start Last Seed")) {
+				Game::StartLastSeed();
+			}
+			auto& settings = Settings::Get();
+			if (Checkbox("Start Last Seed automatically on a new game", &settings.autoStart)) {
+				settings.Save();
+			}
+			TextWrapped("Auto-start waits until you are outside, in control and out of any menu or fight, so it never interrupts the opening.");
 
 			Spacing();
 			Separator();

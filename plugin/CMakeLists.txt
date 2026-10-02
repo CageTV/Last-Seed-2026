@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 # LastSeed.dll - the SKSE plugin behind Last Seed 2026's HUD bars and SKSE Menu Framework page.
-project(LastSeed VERSION 0.1.0 LANGUAGES CXX)
+project(LastSeed VERSION 0.2.0 LANGUAGES CXX)
 
 find_package(CommonLibSSE CONFIG REQUIRED)
 
@@ -11,6 +11,7 @@ add_commonlibsse_plugin(${PROJECT_NAME} NAME "LastSeed" AUTHOR "CageTV" SOURCES
     src/Game.cpp
     src/Hud.cpp
     src/Menu.cpp
+    src/AutoStart.cpp
 )
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)

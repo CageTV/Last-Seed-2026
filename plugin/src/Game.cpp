@@ -18,6 +18,21 @@ namespace Game
 			}
 			return form;
 		}
+
+		void DispatchMain(const char* a_function, bool a_withBypassArg)
+		{
+			SKSE::GetTaskInterface()->AddTask([a_function, a_withBypassArg]() {
+				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+				if (!vm || !g.mainQuest) {
+					return;
+				}
+				const auto handle = vm->GetObjectHandlePolicy()->GetHandleForObject(RE::TESQuest::FORMTYPE, g.mainQuest);
+				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
+				auto* args = a_withBypassArg ? RE::MakeFunctionArguments(true) : RE::MakeFunctionArguments();
+				const bool ok = vm->DispatchMethodCall2(handle, "_Seed_Main", a_function, args, callback);
+				SKSE::log::info("Called _Seed_Main.{}() -> {}", a_function, ok ? "dispatched" : "FAILED (is the _Seed_Main script attached?)");
+			});
+		}
 	}
 
 	bool Init()
@@ -31,6 +46,11 @@ namespace Game
 		g.fatigueMax = Lookup(ids::Seed_AttributeFatigueMax, "_Seed_AttributeFatigueMax");
 		g.vitality = Lookup(ids::Seed_AttributeVitality, "_Seed_AttributeVitality");
 		g.vitalityMax = Lookup(ids::Seed_AttributeVitalityMax, "_Seed_AttributeVitalityMax");
+		auto* dh = RE::TESDataHandler::GetSingleton();
+		g.kwCheck = dh ? dh->LookupForm<RE::TESGlobal>(ids::LastSeedRunningKWCheck, "Update.esm") : nullptr;
+		g.mainQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::MainQuest, "LastSeed.esp") : nullptr;
+		g.trackingQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::TrackingQuest, "LastSeed.esp") : nullptr;
+		SKSE::log::info("KWCheck global {}, main quest {}, tracking quest {}", g.kwCheck ? "found" : "MISSING", g.mainQuest ? "found" : "MISSING", g.trackingQuest ? "found" : "MISSING");
 		ready = g.running && g.hunger && g.thirst && g.fatigue && g.vitality;
 		SKSE::log::info("Last Seed globals {}", ready ? "found" : "MISSING - is LastSeed.esp enabled?");
 		return ready;
@@ -47,5 +67,34 @@ namespace Game
 	bool IsRunning()
 	{
 		return ready && static_cast<int>(Value(g.running)) == 2;
+	}
+
+	void StartLastSeed()
+	{
+		if (!ready || !g.mainQuest) {
+			return;
+		}
+		g.running->value = 2.0f;
+		if (g.kwCheck) {
+			g.kwCheck->value = 2.0f;
+		}
+		// true = bypass the "first start-up" message box; the rest of the start-up runs exactly as from the MCM
+		DispatchMain("StartLastSeed", true);
+	}
+
+	void StopLastSeed()
+	{
+		if (!ready || !g.mainQuest) {
+			return;
+		}
+		if (g.kwCheck) {
+			g.kwCheck->value = 1.0f;
+		}
+		DispatchMain("StopLastSeed", false);
+	}
+
+	bool EverStarted()
+	{
+		return g.trackingQuest && g.trackingQuest->GetCurrentStageID() >= 20;
 	}
 }

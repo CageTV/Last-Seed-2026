@@ -3,6 +3,9 @@
 // LastSeed.dll settings, stored in Data/SKSE/Plugins/LastSeed.ini (edited from the SKSE Menu Framework page).
 struct Settings
 {
+	// [General]
+	bool  autoStart = true;          // start Last Seed on its own the first time the player is outside and in control
+
 	// [HUD]
 	bool  hudEnabled = true;
 	int   displayMode = 1;           // 0 = always, 1 = contextual (fade out while comfortable and unchanged)
