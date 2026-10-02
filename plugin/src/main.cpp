@@ -28,9 +28,15 @@ namespace
 		return Menu::Registered() && Settings::Get().hudEnabled;
 	}
 
+	bool AutoStartEnabled(RE::StaticFunctionTag*)
+	{
+		return Settings::Get().autoStart;
+	}
+
 	bool RegisterPapyrus(RE::BSScript::IVirtualMachine* a_vm)
 	{
 		a_vm->RegisterFunction("HudBarsActive", "LastSeedNative", HudBarsActive);
+		a_vm->RegisterFunction("AutoStartEnabled", "LastSeedNative", AutoStartEnabled);
 		return true;
 	}
 

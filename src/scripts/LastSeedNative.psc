@@ -8,6 +8,12 @@ endFunction
 
 ; Implemented by LastSeed.dll
 bool function HudBarsActive() global native
+bool function AutoStartEnabled() global native
+
+; True when LastSeed.dll starts Last Seed on its own: the start-up objective (journal prompt) and its "COMPLETED" banner are skipped.
+bool function QuietStart() global
+	return IsInstalled() && AutoStartEnabled()
+endFunction
 
 ; True while LastSeed.dll's HUD bars replace Last Seed's SkyUI meters (the meters then stay hidden).
 bool function OldMetersHidden() global
