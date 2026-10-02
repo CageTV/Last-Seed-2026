@@ -76,6 +76,18 @@ namespace Spoilage
 			return dh ? dh->LookupForm<T>(a_id, "LastSeed.esp") : nullptr;
 		}
 
+		// TESBoundObject has no form type of its own, so LookupForm<TESBoundObject> always fails; cast by hand.
+		RE::TESBoundObject* ById(RE::FormID a_id)
+		{
+			return skyrim_cast<RE::TESBoundObject*>(RE::TESForm::LookupByID(a_id));
+		}
+
+		RE::TESBoundObject* LookBound(RE::FormID a_id)
+		{
+			auto* dh = RE::TESDataHandler::GetSingleton();
+			return dh ? skyrim_cast<RE::TESBoundObject*>(dh->LookupForm(a_id, "LastSeed.esp")) : nullptr;
+		}
+
 		double NowHours()
 		{
 			auto* cal = RE::Calendar::GetSingleton();
@@ -339,7 +351,7 @@ namespace Spoilage
 			const int removeMode = d.remove ? static_cast<int>(d.remove->value) : 1;
 			for (const auto& item : due) {
 				auto* container = RE::TESForm::LookupByID<RE::TESObjectREFR>(item.container);
-				auto* food = RE::TESForm::LookupByID<RE::TESBoundObject>(item.food);
+				auto* food = ById(item.food);
 				int   n = 0;
 				if (container && food) {
 					const auto counts = container->GetInventoryCounts([food](RE::TESBoundObject& o) { return &o == food; });
@@ -470,7 +482,7 @@ namespace Spoilage
 		for (std::size_t i = 0; i < std::size(ids::FoodCategories); ++i) {
 			const auto& c = ids::FoodCategories[i];
 			d.cats[i].list = Look<RE::BGSListForm>(c.list);
-			d.cats[i].spoiled = Look<RE::TESBoundObject>(c.spoiled);
+			d.cats[i].spoiled = LookBound(c.spoiled);
 			d.cats[i].rate = Look<RE::TESGlobal>(c.rate);
 			if (!d.cats[i].list || !d.cats[i].spoiled || !d.cats[i].rate) {
 				SKSE::log::error("Spoilage: category '{}' is missing a form (list {}, spoiled {}, rate {})", c.name, !!d.cats[i].list, !!d.cats[i].spoiled, !!d.cats[i].rate);
@@ -478,9 +490,9 @@ namespace Spoilage
 		}
 		d.preserved = Look<RE::BGSListForm>(ids::PreservedList);
 		d.spoiledFoods = Look<RE::BGSListForm>(ids::SpoiledFoodsList);
-		d.perishedFood = Look<RE::TESBoundObject>(ids::PerishedFood);
-		d.iceTeeth = Look<RE::TESBoundObject>(ids::IceWraithTeeth);
-		d.iceTeethOld = Look<RE::TESBoundObject>(ids::IceWraithTeethOld);
+		d.perishedFood = LookBound(ids::PerishedFood);
+		d.iceTeeth = LookBound(ids::IceWraithTeeth);
+		d.iceTeethOld = LookBound(ids::IceWraithTeethOld);
 		d.iceRate = Look<RE::TESGlobal>(ids::IceWraithTeethRate);
 		d.enable = Look<RE::TESGlobal>(ids::SpoilageEnable);
 		d.remove = Look<RE::TESGlobal>(ids::SpoilageRemove);
