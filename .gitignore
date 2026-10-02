@@ -5,3 +5,6 @@ plugin/build/
 *.zip
 build-log.txt
 imports/lastseed-decompiled/
+src/scripts/_Seed_AliasFoodMonitor.psc
+release-contents/Scripts/Source/_Seed_AliasFoodMonitor.psc
+release-contents/Scripts/_Seed_AliasFoodMonitor.pex

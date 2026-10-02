@@ -22,3 +22,12 @@ Put the outputs in the folder layout of `release-contents/`: `SKSE/Plugins/LastS
 
 `plugin/src/GameIds.h` lists the local FormIDs, in `LastSeed.esp`, of the globals it reads. They were read from Last Seed 5.3's
 plugin; if a later Last Seed release renumbers them, that is the one file to update.
+
+## Papyrus scripts (`src/scripts` -> `Scripts/*.pex`)
+
+`python tools/build_scripts.py` compiles them with the official Papyrus compiler (edit the paths at its top). It needs Last Seed's
+other scripts as compile-time imports: decompile them once into `imports/lastseed-decompiled/` with Champollion (that folder is
+git-ignored; Last Seed ships no source and its license is unknown, so none of its code is kept in this repository).
+`_Seed_AliasFoodMonitor.psc` is a patched copy of a Last Seed script, so it is not in the repository either: run
+`python tools/make_alias_food_monitor.py` to generate it from your own Last Seed install before building.
+
