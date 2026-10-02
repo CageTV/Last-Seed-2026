@@ -35,6 +35,20 @@ namespace Game
 		}
 	}
 
+	void RefreshOldMeters()
+	{
+		SKSE::GetTaskInterface()->AddTask([]() {
+			auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+			if (!vm) {
+				return;
+			}
+			RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
+			auto* args = RE::MakeFunctionArguments();
+			vm->DispatchStaticCall("LastSeedNative", "RefreshOldMeters", args, callback);
+			SKSE::log::info("Called LastSeedNative.RefreshOldMeters()");
+		});
+	}
+
 	bool Init()
 	{
 		g.running = Lookup(ids::LastSeedRunning, "LastSeedRunning");

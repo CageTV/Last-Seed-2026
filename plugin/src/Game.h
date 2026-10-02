@@ -35,5 +35,7 @@ namespace Game
 	void           StopLastSeed();
 	// True once Last Seed has been started at least once in this save (its tracking quest reached stage 20).
 	bool           EverStarted();
-	float          Value(const RE::TESGlobal* a_global, float a_fallback = 0.0f);
+	// Tells LastSeedNative (Papyrus) to hide or bring back Last Seed's own SkyUI meters, depending on whether the HUD bars are on.
+	void           RefreshOldMeters();
+	float         Value(const RE::TESGlobal* a_global, float a_fallback = 0.0f);
 }

@@ -333,12 +333,23 @@ namespace Hud
 		const int finished = Game::StartupFinished() ? 2 : 1;
 		if (lastStartupFinished == -1) {
 			lastStartupFinished = finished;
+			if (finished == 2) {
+				Game::RefreshOldMeters();  // a save that is already running: hide the old SkyUI meters
+			}
 		} else if (finished != lastStartupFinished) {
 			lastStartupFinished = finished;
 			if (finished == 2) {
 				ShowStartupLogo();
+				Game::RefreshOldMeters();
 			}
 		}
+		// Switching the bars on or off in the settings page: hide or bring back the old meters right away.
+		static int lastHudEnabled = -1;
+		const int hudEnabled = Settings::Get().hudEnabled ? 1 : 0;
+		if (lastHudEnabled != -1 && hudEnabled != lastHudEnabled && finished == 2) {
+			Game::RefreshOldMeters();
+		}
+		lastHudEnabled = hudEnabled;
 		DrawLogo(dl, dt);
 
 		// Bars appear with the logo, once Last Seed's start-up has finished (not while it is still checking mods).
