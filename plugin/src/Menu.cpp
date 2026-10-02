@@ -31,7 +31,7 @@ namespace Menu
 			const float avail = GetContentRegionAvail().x;
 			const float w = std::min(avail, 460.0f);
 			SetCursorPosX(GetCursorPosX() + (avail - w) * 0.5f);
-			Image(tex, ImVec2(w, w * 150.0f / 760.0f));
+			Image(tex, ImVec2(w, w * 417.0f / 1499.0f));
 			Spacing();
 		}
 

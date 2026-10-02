@@ -17,7 +17,7 @@ namespace Hud
 
 		FrostfallLayout frostfall;
 		constexpr const char* kLogoPath = "Data\\Interface\\lastseed\\lastseed_logo.png";
-		constexpr float       kLogoAspect = 150.0f / 760.0f;
+		constexpr float       kLogoAspect = 417.0f / 1499.0f;
 		constexpr float       kLogoFadeIn = 0.8f;
 		constexpr float       kLogoHold = 2.6f;
 		constexpr float       kLogoFadeOut = 1.2f;
@@ -341,7 +341,8 @@ namespace Hud
 		}
 		DrawLogo(dl, dt);
 
-		if (!Game::IsRunning()) {
+		// Bars appear with the logo, once Last Seed's start-up has finished (not while it is still checking mods).
+		if (!Game::IsRunning() || !Game::StartupFinished()) {
 			return;
 		}
 		if (Settings::Get().hudEnabled) {
