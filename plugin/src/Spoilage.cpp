@@ -1,5 +1,6 @@
 #include "PCH.h"
 #include <unordered_set>
+#include <random>
 #include "Spoilage.h"
 #include "Game.h"
 #include "GameIds.h"
@@ -12,6 +13,8 @@ namespace Spoilage
 		constexpr std::uint32_t kUniqueId = 'LSTD';
 		constexpr std::uint32_t kRecordBatches = 'LSPB';
 		constexpr std::uint32_t kRecordTime = 'LSPT';
+		constexpr std::uint32_t kRecordWorld = 'LSWC';
+		constexpr std::uint32_t kRecordStash = 'LSWS';
 		constexpr std::uint32_t kVersion = 1;
 
 		constexpr int    kPollSeconds = 3;        // real seconds between checks
@@ -19,6 +22,10 @@ namespace Spoilage
 		constexpr double kReconcileHours = 1.0;   // game hours between inventory re-checks
 		constexpr float  kMergeTolerance = 0.05f; // batches of the same food this close in age are merged
 		constexpr double kInvalidTime = -1.0;
+		constexpr int    kWorldScanTicks = 4;     // polls between looks at the containers around the player
+		constexpr float  kWorldScanRadius = 4096.0f;
+		constexpr int    kWorldBudget = 24;       // containers handled per look
+		constexpr float  kPerishedShare = 25.0f;  // % of the food that spoils which has gone all the way to "perished" (Last Seed's own value)
 
 		// A stack of one food in one container, all aged the same.
 		struct Batch
@@ -54,6 +61,8 @@ namespace Spoilage
 			RE::TESGlobal*      enable = nullptr;
 			RE::TESGlobal*      remove = nullptr;
 			RE::TESGlobal*      speed = nullptr;
+		RE::TESGlobal*      worldEnable = nullptr;
+		RE::TESGlobal*      worldRate = nullptr;
 			RE::FormID          provisions = 0;
 			bool                ready = false;
 		} d;
@@ -68,6 +77,25 @@ namespace Spoilage
 		bool                                        active = false;
 		bool                                        swapping = false;  // game thread only: our own item swaps must not be tracked
 		std::atomic<bool>                           needReconcile{ true };
+
+		// Food in containers out in the world (barrels, chests, sacks). When one is first seen, each food in it has a chance to have
+		// spoiled; the swaps are remembered so that after the reset period the spoiled food can be made fresh again and re-rolled.
+		struct Swap
+		{
+			RE::FormID fresh = 0;
+			RE::FormID spoiled = 0;
+			int        count = 0;
+		};
+		struct World
+		{
+			RE::FormID        container = 0;
+			double            rolledAt = 0.0;  // game hours
+			std::vector<Swap> swaps;
+		};
+		std::vector<World>             worlds;
+		std::unordered_set<RE::FormID> stash;  // containers the player has put food into: never touched
+		int                            worldTicks = 0;
+		bool                           worldActive = false;
 
 		template <class T>
 		T* Look(RE::FormID a_id)
@@ -229,6 +257,11 @@ namespace Spoilage
 				const bool from = a_event->oldContainer && IsTracked(a_event->oldContainer);
 				const bool to = a_event->newContainer && IsTracked(a_event->newContainer);
 				if (!from && !to) {
+					if (a_event->oldContainer == 0x14 && a_event->newContainer && !RE::TESForm::LookupByID<RE::Actor>(a_event->newContainer)) {
+						std::scoped_lock l(lock);  // the player is storing food somewhere: it is theirs, not loot
+						stash.insert(a_event->newContainer);
+						std::erase_if(worlds, [&](const World& w) { return w.container == a_event->newContainer; });
+					}
 					return RE::BSEventNotifyControl::kContinue;
 				}
 
@@ -311,7 +344,143 @@ namespace Spoilage
 			}
 		}
 
-		bool Blocked()
+			// ---- world containers ----
+
+		std::mt19937& Rng()
+		{
+			static std::mt19937 rng{ std::random_device{}() };
+			return rng;
+		}
+
+		bool Chance(float a_percent)
+		{
+			return std::uniform_real_distribution<float>(0.0f, 100.0f)(Rng()) <= a_percent;
+		}
+
+		bool IsWorldContainer(RE::TESObjectREFR* a_ref)
+		{
+			if (!a_ref || a_ref->IsDeleted() || a_ref->IsDisabled() || !a_ref->Is3DLoaded() || a_ref->GetFormID() == d.provisions) {
+				return false;
+			}
+			auto* base = a_ref->GetBaseObject();
+			if (!base || !base->Is(RE::FormType::Container)) {
+				return false;
+			}
+			auto* player = RE::PlayerCharacter::GetSingleton();
+			return !(player && a_ref->GetOwner() == player->GetActorBase());  // the player's own chests are theirs
+		}
+
+		int CountOf(RE::TESObjectREFR* a_container, RE::TESBoundObject* a_obj)
+		{
+			const auto counts = a_container->GetInventoryCounts([a_obj](RE::TESBoundObject& o) { return &o == a_obj; });
+			const auto it = counts.find(a_obj);
+			return it != counts.end() ? it->second : 0;
+		}
+
+		void SwapItems(RE::TESObjectREFR* a_container, RE::TESBoundObject* a_from, RE::TESBoundObject* a_to, int a_count)
+		{
+			swapping = true;
+			a_container->RemoveItem(a_from, a_count, RE::ITEM_REMOVE_REASON::kRemove, nullptr, nullptr);
+			a_container->AddObjectToContainer(a_to, nullptr, a_count, nullptr);
+			swapping = false;
+		}
+
+		// Brings a container up to date: spoiled food we made earlier (and the player left) becomes fresh again, then each food
+		// is rolled afresh.
+		void RollContainer(RE::TESObjectREFR* a_ref, double a_now, float a_chance)
+		{
+			const auto        id = a_ref->GetFormID();
+			std::vector<Swap> old;
+			{
+				std::scoped_lock l(lock);
+				if (auto it = std::ranges::find(worlds, id, &World::container); it != worlds.end()) {
+					old = it->swaps;
+				}
+			}
+			for (const auto& sw : old) {
+				auto* fresh = ById(sw.fresh);
+				auto* spoiled = ById(sw.spoiled);
+				if (fresh && spoiled) {
+					if (const int n = std::min(sw.count, CountOf(a_ref, spoiled)); n > 0) {
+						SwapItems(a_ref, spoiled, fresh, n);
+					}
+				}
+			}
+
+			std::vector<Swap> rolled;
+			const auto        inventory = a_ref->GetInventoryCounts([](RE::TESBoundObject& o) { return o.Is(RE::FormType::AlchemyItem); });
+			for (const auto& [obj, count] : inventory) {
+				Info info;
+				if (count <= 0 || !Classify(obj, info) || (d.spoiledFoods && d.spoiledFoods->HasForm(obj))) {
+					continue;  // not a food that spoils, or already spoiled
+				}
+				int spoiledN = 0, perishedN = 0;
+				for (int i = 0; i < count; ++i) {
+					if (Chance(a_chance)) {
+						(Chance(kPerishedShare) ? perishedN : spoiledN) += 1;
+					}
+				}
+				if (spoiledN > 0) {
+					SwapItems(a_ref, obj, info.spoiled, spoiledN);
+					rolled.push_back({ obj->GetFormID(), info.spoiled->GetFormID(), spoiledN });
+				}
+				if (perishedN > 0) {
+					SwapItems(a_ref, obj, d.perishedFood, perishedN);
+					rolled.push_back({ obj->GetFormID(), d.perishedFood->GetFormID(), perishedN });
+				}
+			}
+
+			std::scoped_lock l(lock);
+			auto             it = std::ranges::find(worlds, id, &World::container);
+			if (it == worlds.end()) {
+				worlds.push_back({ id, a_now, {} });
+				it = worlds.end() - 1;
+			}
+			it->rolledAt = a_now;
+			it->swaps = std::move(rolled);
+			if (!it->swaps.empty()) {
+				SKSE::log::info("Spoilage: world container {} rolled, {} kinds of food spoiled", a_ref->GetDisplayFullName(), it->swaps.size());
+			}
+		}
+
+		void ScanWorld(double a_now)
+		{
+			auto*       player = RE::PlayerCharacter::GetSingleton();
+			auto*       tes = RE::TES::GetSingleton();
+			const auto  period = static_cast<double>(Settings::Get().containerResetDays) * 24.0;
+			const float chance = d.worldRate ? std::clamp(d.worldRate->value, 0.0f, 100.0f) : 0.0f;
+			if (!player || !tes) {
+				return;
+			}
+			std::vector<RE::ObjectRefHandle> found;
+			tes->ForEachReferenceInRange(player, kWorldScanRadius, [&](RE::TESObjectREFR& a_ref) {
+				if (IsWorldContainer(&a_ref)) {
+					found.push_back(a_ref.GetHandle());
+				}
+				return RE::BSContainer::ForEachResult::kContinue;
+			});
+			int budget = kWorldBudget;
+			for (auto& handle : found) {
+				auto ref = handle.get();
+				if (!ref || budget <= 0) {
+					continue;
+				}
+				{
+					std::scoped_lock l(lock);
+					if (stash.contains(ref->GetFormID())) {
+						continue;
+					}
+					const auto it = std::ranges::find(worlds, ref->GetFormID(), &World::container);
+					if (it != worlds.end() && a_now >= it->rolledAt && a_now - it->rolledAt < period) {
+						continue;  // rolled recently: leave it alone
+					}
+				}
+				--budget;
+				RollContainer(ref.get(), a_now, chance);
+			}
+		}
+
+	bool Blocked()
 		{
 			auto* ui = RE::UI::GetSingleton();
 			auto* player = RE::PlayerCharacter::GetSingleton();
@@ -405,6 +574,11 @@ namespace Spoilage
 			}
 			if (!Blocked()) {
 				SpoilDue();
+				worldActive = Settings::Get().worldSpoilage && d.worldEnable && d.worldRate && static_cast<int>(d.worldEnable->value) == 2;
+				if (worldActive && ++worldTicks >= kWorldScanTicks) {
+					worldTicks = 0;
+					ScanWorld(now);
+				}
 			}
 		}
 
@@ -415,6 +589,35 @@ namespace Spoilage
 			std::scoped_lock l(lock);
 			if (a_intfc->OpenRecord(kRecordTime, kVersion)) {
 				a_intfc->WriteRecordData(lastAdvance);
+			}
+			if (a_intfc->OpenRecord(kRecordWorld, kVersion)) {
+				const double horizon = NowHours() - 2.0 * Settings::Get().containerResetDays * 24.0;
+				std::uint32_t n = 0;
+				for (const auto& w : worlds) {
+					n += (!w.swaps.empty() || w.rolledAt >= horizon) ? 1 : 0;  // forget old containers that had nothing spoiled
+				}
+				a_intfc->WriteRecordData(n);
+				for (const auto& w : worlds) {
+					if (w.swaps.empty() && w.rolledAt < horizon) {
+						continue;
+					}
+					a_intfc->WriteRecordData(w.container);
+					a_intfc->WriteRecordData(w.rolledAt);
+					const std::uint32_t m = static_cast<std::uint32_t>(w.swaps.size());
+					a_intfc->WriteRecordData(m);
+					for (const auto& sw : w.swaps) {
+						a_intfc->WriteRecordData(sw.fresh);
+						a_intfc->WriteRecordData(sw.spoiled);
+						a_intfc->WriteRecordData(sw.count);
+					}
+				}
+			}
+			if (a_intfc->OpenRecord(kRecordStash, kVersion)) {
+				const std::uint32_t n = static_cast<std::uint32_t>(stash.size());
+				a_intfc->WriteRecordData(n);
+				for (const auto id : stash) {
+					a_intfc->WriteRecordData(id);
+				}
 			}
 			if (a_intfc->OpenRecord(kRecordBatches, kVersion)) {
 				const std::uint32_t n = static_cast<std::uint32_t>(batches.size());
@@ -432,6 +635,8 @@ namespace Spoilage
 		{
 			std::scoped_lock l(lock);
 			batches.clear();
+			worlds.clear();
+			stash.clear();
 			lastAdvance = kInvalidTime;
 			lastReconcile = kInvalidTime;
 			std::uint32_t type, version, length;
@@ -441,6 +646,40 @@ namespace Spoilage
 				}
 				if (type == kRecordTime) {
 					a_intfc->ReadRecordData(lastAdvance);
+				} else if (type == kRecordWorld) {
+					std::uint32_t n = 0;
+					a_intfc->ReadRecordData(n);
+					for (std::uint32_t i = 0; i < n; ++i) {
+						RE::FormID    oldId = 0;
+						World         w;
+						std::uint32_t m = 0;
+						a_intfc->ReadRecordData(oldId);
+						a_intfc->ReadRecordData(w.rolledAt);
+						a_intfc->ReadRecordData(m);
+						for (std::uint32_t k = 0; k < m; ++k) {
+							Swap       sw;
+							RE::FormID oldFresh = 0, oldSpoiled = 0;
+							a_intfc->ReadRecordData(oldFresh);
+							a_intfc->ReadRecordData(oldSpoiled);
+							a_intfc->ReadRecordData(sw.count);
+							if (a_intfc->ResolveFormID(oldFresh, sw.fresh) && a_intfc->ResolveFormID(oldSpoiled, sw.spoiled) && sw.count > 0) {
+								w.swaps.push_back(sw);
+							}
+						}
+						if (a_intfc->ResolveFormID(oldId, w.container)) {
+							worlds.push_back(std::move(w));
+						}
+					}
+				} else if (type == kRecordStash) {
+					std::uint32_t n = 0;
+					a_intfc->ReadRecordData(n);
+					for (std::uint32_t i = 0; i < n; ++i) {
+						RE::FormID oldId = 0, id = 0;
+						a_intfc->ReadRecordData(oldId);
+						if (a_intfc->ResolveFormID(oldId, id)) {
+							stash.insert(id);
+						}
+					}
 				} else if (type == kRecordBatches) {
 					std::uint32_t n = 0;
 					a_intfc->ReadRecordData(n);
@@ -459,13 +698,15 @@ namespace Spoilage
 			}
 			names.clear();
 			needReconcile = true;
-			SKSE::log::info("Spoilage: loaded {} batches from the save", batches.size());
+			SKSE::log::info("Spoilage: loaded {} batches, {} world containers, {} stash containers from the save", batches.size(), worlds.size(), stash.size());
 		}
 
 		void OnRevert(SKSE::SerializationInterface*)
 		{
 			std::scoped_lock l(lock);
 			batches.clear();
+			worlds.clear();
+			stash.clear();
 			names.clear();
 			lastAdvance = kInvalidTime;
 			lastReconcile = kInvalidTime;
@@ -497,6 +738,8 @@ namespace Spoilage
 		d.enable = Look<RE::TESGlobal>(ids::SpoilageEnable);
 		d.remove = Look<RE::TESGlobal>(ids::SpoilageRemove);
 		d.speed = Look<RE::TESGlobal>(ids::SpoilTemperatureMulti);
+		d.worldEnable = Look<RE::TESGlobal>(ids::ContainerSpoilageEnable);
+		d.worldRate = Look<RE::TESGlobal>(ids::ContainerSpoilageRate);
 		if (auto* prov = Look<RE::TESObjectREFR>(ids::ProvisionsContainer)) {
 			d.provisions = prov->GetFormID();
 		}
@@ -533,6 +776,8 @@ namespace Spoilage
 
 	bool Active() { return Settings::Get().nativeSpoilage; }
 
+bool WorldActive() { return Settings::Get().nativeSpoilage && Settings::Get().worldSpoilage; }
+
 	Stats Snapshot(std::size_t a_maxRows)
 	{
 		Stats s;
@@ -540,6 +785,9 @@ namespace Spoilage
 		s.active = active;
 		s.speed = speed;
 		s.batches = static_cast<int>(batches.size());
+		for (const auto& w : worlds) {
+			s.worldContainers += w.swaps.empty() ? 0 : 1;
+		}
 		struct Entry
 		{
 			const Batch* b;

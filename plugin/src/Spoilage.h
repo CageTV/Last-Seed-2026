@@ -22,6 +22,7 @@ namespace Spoilage
 		bool             active = false;   // native tracking is on and Last Seed is running
 		int              batches = 0;
 		int              items = 0;
+		int              worldContainers = 0;  // world containers whose food has been rolled and is waiting for its reset
 		float            speed = 1.0f;     // rot speed multiplier right now (Last Seed's _Seed_SpoilTemperatureMulti)
 		std::vector<Row> rows;             // freshest-to-oldest sorted by how close they are to spoiling, capped
 	};
@@ -30,5 +31,6 @@ namespace Spoilage
 	void  Begin();        // starts the update thread
 	void  Register();     // save-game (SKSE co-save) callbacks, call from plugin load
 	bool  Active();       // native spoilage is switched on
+	bool  WorldActive();  // world-container spoilage is on too (Last Seed's own one-shot container script steps aside)
 	Stats Snapshot(std::size_t a_maxRows);
 }

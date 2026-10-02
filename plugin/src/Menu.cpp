@@ -155,6 +155,21 @@ namespace Menu
 				"records kept by this plugin. The food categories, rot times and spoiled items are still Last Seed's own, and they are still "
 				"set in its Mod Configuration Menu. Takes effect on the next game start, or when you start a new game.");
 			Spacing();
+			BeginDisabled(!s.nativeSpoilage);
+			if (Checkbox("Food in world containers spoils (barrels, chests, sacks)", &s.worldSpoilage)) {
+				s.Save();
+			}
+			TextWrapped(
+				"When you come near a container for the first time, each food in it may have spoiled, using Last Seed's Container Spoilage "
+				"chance. After the reset period below, spoiled food you left in it turns fresh again and is rolled again, so containers do "
+				"not stay rotten forever. Chests you have put food into, and containers you own, are never touched.");
+			BeginDisabled(!s.worldSpoilage);
+			if (SliderFloat("Reset period (game days)", &s.containerResetDays, 1.0f, 120.0f, "%.0f")) {
+				s.Save();
+			}
+			EndDisabled();
+			EndDisabled();
+			Spacing();
 			Separator();
 
 			const auto stats = Spoilage::Snapshot(40);
@@ -171,6 +186,9 @@ namespace Menu
 				return;
 			}
 			Text("%d stacks of food, %d items in total. Rot speed now: x%.2f", stats.batches, stats.items, stats.speed);
+				if (s.worldSpoilage) {
+					Text("%d world containers currently hold food that spoiled before you got to them.", stats.worldContainers);
+				}
 			Spacing();
 			if (stats.rows.empty()) {
 				TextDisabled("You are not carrying anything that spoils.");

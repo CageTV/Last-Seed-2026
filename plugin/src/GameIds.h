@@ -25,6 +25,8 @@ namespace ids
 	inline constexpr unsigned int ProvisionsContainer = 0x074B07;      // _Seed_ProvisionsContainerRef
 	inline constexpr unsigned int PreservedList = 0x00C71C;            // _Seed_Preserved: never spoils
 	inline constexpr unsigned int SpoiledFoodsList = 0x009BD3;         // _Seed_SpoiledFoods: already-spoiled foods, which later become _Seed_PerishedFood
+	inline constexpr unsigned int ContainerSpoilageEnable = 0x19A5E6;  // _Seed_Setting_ContainerSpoilageEnable (2 = on)
+	inline constexpr unsigned int ContainerSpoilageRate = 0x19A5E7;    // _Seed_Setting_ContainerSpoilageRate: % chance each item has spoiled
 	inline constexpr unsigned int PerishedFood = 0x007B4B;             // _Seed_PerishedFood (MISC)
 	inline constexpr unsigned int IceWraithTeeth = 0x44B08B;           // _Seed_IceWraithTeeth (ALCH) -> _Seed_IceWraithTeethOld
 	inline constexpr unsigned int IceWraithTeethOld = 0x44B08E;

@@ -10,6 +10,7 @@ endFunction
 bool function HudBarsActive() global native
 bool function AutoStartEnabled() global native
 bool function NativeSpoilage() global native
+bool function NativeWorldSpoilage() global native
 
 ; True when LastSeed.dll starts Last Seed on its own: the start-up objective (journal prompt) and its "COMPLETED" banner are skipped.
 bool function QuietStart() global

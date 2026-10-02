@@ -8,3 +8,6 @@ imports/lastseed-decompiled/
 src/scripts/_Seed_AliasFoodMonitor.psc
 release-contents/Scripts/Source/_Seed_AliasFoodMonitor.psc
 release-contents/Scripts/_Seed_AliasFoodMonitor.pex
+src/scripts/_Seed_ContainerSpoilScript.psc
+release-contents/Scripts/Source/_Seed_ContainerSpoilScript.psc
+release-contents/Scripts/_Seed_ContainerSpoilScript.pex
