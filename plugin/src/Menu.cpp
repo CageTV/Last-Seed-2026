@@ -157,6 +157,25 @@ namespace Menu
 			if (Checkbox("Freshness bar over the item card when hovering food", &s.freshnessBar)) {
 				s.Save();
 			}
+			BeginDisabled(!s.freshnessBar);
+			TextWrapped("The defaults fit the vanilla / SkyUI inventory. Other inventory skins put the item card elsewhere: open the inventory, hover a food, and use these to place the bar.");
+			if (SliderFloat("Bar left edge", &s.freshLeft, 0.0f, 1.0f, "%.3f")) {
+				s.Save();
+			}
+			if (SliderFloat("Bar width", &s.freshWidth, 0.02f, 1.0f, "%.3f")) {
+				s.Save();
+			}
+			if (SliderFloat("Bar height offset", &s.freshOffsetY, -200.0f, 200.0f, "%.0f")) {
+				s.Save();
+			}
+			if (Button("Reset bar position")) {
+				const Settings d;
+				s.freshLeft = d.freshLeft;
+				s.freshWidth = d.freshWidth;
+				s.freshOffsetY = d.freshOffsetY;
+				s.Save();
+			}
+			EndDisabled();
 			Spacing();
 			BeginDisabled(!s.nativeSpoilage);
 			if (Checkbox("Food in world containers spoils (barrels, chests, sacks)", &s.worldSpoilage)) {

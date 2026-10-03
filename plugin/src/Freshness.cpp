@@ -17,8 +17,6 @@ namespace Freshness
 		constexpr const char* kCardClip = "_root.Menu_mc.itemCardFadeHolder";
 		constexpr float       kDividerBelowTop = 51.0f;  // stage units (the stage is 720 high) from the clip's _y to the divider
 		constexpr float       kGapBelowDivider = 2.5f;   // stage units
-		constexpr float       kLeft = 0.532f;
-		constexpr float       kRight = 0.922f;
 		constexpr float       kFallbackTop = 0.6775f;    // when the card clip can't be read
 		constexpr float       kThickness = 4.0f;         // pixels at 1080p
 
@@ -126,9 +124,10 @@ namespace Freshness
 			return;
 		}
 
-		const float x0 = a_displayW * kLeft;
-		const float x1 = a_displayW * kRight;
-		const float y = a_displayH * (h.haveCard ? h.clipTop + (kDividerBelowTop + kGapBelowDivider) / 720.0f : kFallbackTop);
+		const auto& s = Settings::Get();
+		const float x0 = a_displayW * s.freshLeft;
+		const float x1 = a_displayW * std::min(1.0f, s.freshLeft + s.freshWidth);
+		const float y = a_displayH * ((h.haveCard ? h.clipTop + (kDividerBelowTop + kGapBelowDivider) / 720.0f : kFallbackTop) + s.freshOffsetY / 720.0f);
 		const float t = std::max(2.0f, kThickness * a_displayH / 1080.0f);
 		const float fresh = std::clamp(1.0f - h.rotted, 0.0f, 1.0f);
 
