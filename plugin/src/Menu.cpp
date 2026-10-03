@@ -178,6 +178,21 @@ namespace Menu
 			EndDisabled();
 			Spacing();
 			BeginDisabled(!s.nativeSpoilage);
+			if (Checkbox("Foods Last Seed does not list spoil too (by Vendor Item Food keywords)", &s.keywordFoods)) {
+				s.Save();
+			}
+			TextWrapped(
+				"Food added by other mods that Last Seed knows nothing about: anything eaten (not drunk) that carries Skyrim's VendorItemFood "
+				"or VendorItemFoodRaw keyword rots into Perished Food after the hours below. No patches needed for new foods.");
+			BeginDisabled(!s.keywordFoods);
+			if (SliderFloat("Raw food rots after (game hours)", &s.rawFoodHours, 1.0f, 500.0f, "%.0f")) {
+				s.Save();
+			}
+			if (SliderFloat("Other food rots after (game hours)", &s.otherFoodHours, 1.0f, 500.0f, "%.0f")) {
+				s.Save();
+			}
+			EndDisabled();
+			Spacing();
 			if (Checkbox("Food in world containers spoils (barrels, chests, sacks)", &s.worldSpoilage)) {
 				s.Save();
 			}

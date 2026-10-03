@@ -22,6 +22,9 @@ namespace Spoilage
 		constexpr double kReconcileHours = 1.0;   // game hours between inventory re-checks
 		constexpr float  kMergeTolerance = 0.05f; // batches of the same food this close in age are merged
 		constexpr double kInvalidTime = -1.0;
+		constexpr RE::FormID kKeywordFood = 0x0008CDEA;     // VendorItemFood (Skyrim.esm)
+		constexpr RE::FormID kKeywordFoodRaw = 0x000A0E56;  // VendorItemFoodRaw (Skyrim.esm)
+		constexpr RE::FormID kEatSound = 0x000CAF94;        // ITMFoodEat (Skyrim.esm)
 		constexpr int    kWorldScanTicks = 4;     // polls between looks at the containers around the player
 		constexpr float  kWorldScanRadius = 4096.0f;
 		constexpr int    kWorldBudget = 24;       // containers handled per look
@@ -93,7 +96,8 @@ namespace Spoilage
 			std::vector<Swap> swaps;
 		};
 		std::vector<World>             worlds;
-		std::unordered_set<RE::FormID> stash;  // containers the player has put food into: never touched
+		std::unordered_set<RE::FormID> stash;  // containers the player has put food into: never rolled, but their food ages while away
+		std::unordered_set<RE::FormID> vendorChests;  // merchants' stock chests: not loot, never touched
 		int                            worldTicks = 0;
 		bool                           worldActive = false;
 
@@ -143,12 +147,32 @@ namespace Spoilage
 					return a_out.spoiled && a_out.maxHours > 0.0f;
 				}
 			}
+			// Food Last Seed does not list (added by other mods): anything that is eaten (food flag, the eating sound -- drinks use the
+			// potion sound) and carries Skyrim's own VendorItemFood / VendorItemFoodRaw keyword. It rots into "perished" food.
+			if (const auto& s = Settings::Get(); s.keywordFoods) {
+				const auto* alch = a_form->As<RE::AlchemyItem>();
+				if (alch && alch->IsFood() && alch->data.consumptionSound && alch->data.consumptionSound->GetFormID() == kEatSound &&
+					(!d.spoiledFoods || !d.spoiledFoods->HasForm(a_form))) {
+					const bool raw = alch->HasKeywordID(kKeywordFoodRaw);
+					if (raw || alch->HasKeywordID(kKeywordFood)) {
+						a_out.spoiled = d.perishedFood;
+						a_out.maxHours = raw ? s.rawFoodHours : s.otherFoodHours;
+						return a_out.spoiled && a_out.maxHours > 0.0f;
+					}
+				}
+			}
 			return false;
+		}
+
+		bool IsStash(RE::FormID a_id)
+		{
+			std::scoped_lock l(lock);
+			return stash.contains(a_id);
 		}
 
 		bool IsTracked(RE::FormID a_id)
 		{
-			if (a_id == 0x14 || a_id == d.provisions) {
+			if (a_id == 0x14 || a_id == d.provisions || IsStash(a_id)) {
 				return true;
 			}
 			auto* actor = RE::TESForm::LookupByID<RE::Actor>(a_id);
@@ -163,6 +187,16 @@ namespace Spoilage
 			}
 			if (auto* prov = RE::TESForm::LookupByID<RE::TESObjectREFR>(d.provisions)) {
 				out.push_back(prov);
+			}
+			std::vector<RE::FormID> stashed;
+			{
+				std::scoped_lock l(lock);
+				stashed.assign(stash.begin(), stash.end());
+			}
+			for (const auto id : stashed) {  // only while the container is really there: an unloaded one keeps its records and keeps ageing
+				if (auto* ref = RE::TESForm::LookupByID<RE::TESObjectREFR>(id); ref && !ref->IsDeleted() && ref->Is3DLoaded()) {
+					out.push_back(ref);
+				}
 			}
 			if (auto* lists = RE::ProcessLists::GetSingleton()) {
 				for (auto& handle : lists->highActorHandles) {
@@ -254,14 +288,17 @@ namespace Spoilage
 				if (!Classify(form, info)) {
 					return RE::BSEventNotifyControl::kContinue;
 				}
+				if (a_event->oldContainer == 0x14 && a_event->newContainer && a_event->newContainer != d.provisions &&
+					!RE::TESForm::LookupByID<RE::Actor>(a_event->newContainer) && RE::TESForm::LookupByID<RE::TESObjectREFR>(a_event->newContainer)) {
+					std::scoped_lock l(lock);  // the player is storing food somewhere: it is theirs, not loot, and it keeps ageing there
+					if (stash.insert(a_event->newContainer).second) {
+						std::erase_if(worlds, [&](const World& w) { return w.container == a_event->newContainer; });
+						needReconcile = true;
+					}
+				}
 				const bool from = a_event->oldContainer && IsTracked(a_event->oldContainer);
 				const bool to = a_event->newContainer && IsTracked(a_event->newContainer);
 				if (!from && !to) {
-					if (a_event->oldContainer == 0x14 && a_event->newContainer && !RE::TESForm::LookupByID<RE::Actor>(a_event->newContainer)) {
-						std::scoped_lock l(lock);  // the player is storing food somewhere: it is theirs, not loot
-						stash.insert(a_event->newContainer);
-						std::erase_if(worlds, [&](const World& w) { return w.container == a_event->newContainer; });
-					}
 					return RE::BSEventNotifyControl::kContinue;
 				}
 
@@ -298,6 +335,7 @@ namespace Spoilage
 			for (auto* c : containers) {
 				tracked.insert(c->GetFormID());
 			}
+			tracked.insert(stash.begin(), stash.end());  // unloaded stash containers stay on the books
 			std::erase_if(batches, [&](const Batch& b) { return !tracked.contains(b.container); });
 
 			for (auto* c : containers) {
@@ -361,6 +399,12 @@ namespace Spoilage
 		{
 			if (!a_ref || a_ref->IsDeleted() || a_ref->IsDisabled() || !a_ref->Is3DLoaded() || a_ref->GetFormID() == d.provisions) {
 				return false;
+			}
+			{
+				std::scoped_lock l(lock);
+				if (vendorChests.contains(a_ref->GetFormID())) {
+					return false;
+				}
 			}
 			auto* base = a_ref->GetBaseObject();
 			if (!base || !base->Is(RE::FormType::Container)) {
@@ -580,6 +624,9 @@ namespace Spoilage
 			for (const auto& item : due) {
 				auto* container = RE::TESForm::LookupByID<RE::TESObjectREFR>(item.container);
 				auto* food = ById(item.food);
+				if (IsStash(item.container) && (!container || !container->Is3DLoaded())) {
+					continue;  // not here right now: it spoils when the player comes back to it
+				}
 				int   n = 0;
 				if (container && food) {
 					const auto counts = container->GetInventoryCounts([food](RE::TESBoundObject& o) { return &o == food; });
@@ -802,6 +849,16 @@ namespace Spoilage
 		d.worldRate = Look<RE::TESGlobal>(ids::ContainerSpoilageRate);
 		if (auto* prov = Look<RE::TESObjectREFR>(ids::ProvisionsContainer)) {
 			d.provisions = prov->GetFormID();
+		}
+		{
+			std::scoped_lock l(lock);
+			vendorChests.clear();
+			for (auto* faction : dh->GetFormArray<RE::TESFaction>()) {
+				if (faction && faction->vendorData.merchantContainer) {
+					vendorChests.insert(faction->vendorData.merchantContainer->GetFormID());
+				}
+			}
+			SKSE::log::info("Spoilage: {} merchant chests are left alone", vendorChests.size());
 		}
 		d.ready = d.preserved && d.spoiledFoods && d.perishedFood && d.enable && d.remove && d.speed && d.provisions;
 		SKSE::log::info("Spoilage: Last Seed's food data {}", d.ready ? "found" : "INCOMPLETE - native spoilage is off");

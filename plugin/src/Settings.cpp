@@ -85,6 +85,9 @@ void Settings::Load()
 	GetBool(kv, "bnativespoilage", nativeSpoilage);
 	GetBool(kv, "bworldspoilage", worldSpoilage);
 	GetBool(kv, "bfreshnessbar", freshnessBar);
+	GetBool(kv, "bkeywordfoods", keywordFoods);
+	GetFloat(kv, "frawfoodhours", rawFoodHours);
+	GetFloat(kv, "fotherfoodhours", otherFoodHours);
 	GetFloat(kv, "ffreshleft", freshLeft);
 	GetFloat(kv, "ffreshwidth", freshWidth);
 	GetFloat(kv, "ffreshoffsety", freshOffsetY);
@@ -114,6 +117,8 @@ void Settings::Load()
 	GetBool(kv, "bshowicons", showIcons);
 
 	containerResetDays = std::clamp(containerResetDays, 1.0f, 365.0f);
+	rawFoodHours = std::clamp(rawFoodHours, 1.0f, 2000.0f);
+	otherFoodHours = std::clamp(otherFoodHours, 1.0f, 2000.0f);
 	freshLeft = std::clamp(freshLeft, 0.0f, 1.0f);
 	freshWidth = std::clamp(freshWidth, 0.02f, 1.0f);
 	freshOffsetY = std::clamp(freshOffsetY, -200.0f, 200.0f);
@@ -149,6 +154,8 @@ void Settings::Save() const
 	out << "bNativeSpoilage=" << (nativeSpoilage ? 1 : 0) << "\n";
 	out << "bWorldSpoilage=" << (worldSpoilage ? 1 : 0) << "\n";
 	out << "bFreshnessBar=" << (freshnessBar ? 1 : 0) << "\n";
+	out << "bKeywordFoods=" << (keywordFoods ? 1 : 0) << "\n";
+	out << std::format("fRawFoodHours={:.1f}\nfOtherFoodHours={:.1f}\n", rawFoodHours, otherFoodHours);
 	out << std::format("fFreshLeft={:.4f}\nfFreshWidth={:.4f}\nfFreshOffsetY={:.1f}\n", freshLeft, freshWidth, freshOffsetY);
 	out << std::format("fContainerResetDays={:.1f}\n", containerResetDays);
 	out << std::format("fWorldSpoilChance={:.1f}\nfWorldFreshShare={:.1f}\n\n", worldSpoilChance, worldFreshShare);

@@ -8,6 +8,9 @@ struct Settings
 	float freshLeft = 0.532f;         // freshness bar: left edge, fraction of the screen width
 	float freshWidth = 0.390f;        // freshness bar: width, fraction of the screen width
 	float freshOffsetY = 0.0f;        // freshness bar: moves it down (+) or up (-), in 720p stage units
+	bool  keywordFoods = true;        // foods Last Seed does not list spoil too, found by Skyrim's Vendor Item Food keywords
+	float rawFoodHours = 48.0f;       // ... raw ones (VendorItemFoodRaw)
+	float otherFoodHours = 120.0f;    // ... everything else (VendorItemFood)
 	bool  freshnessBar = true;        // thin freshness bar over the item card while hovering a food that spoils
 	bool  worldSpoilage = true;       // food in world containers spoils (LastSeed.dll), and is restocked fresh after the reset period
 	float worldSpoilChance = 40.0f;   // % chance each food in a world container has spoiled when first seen (replaces Last Seed's Container Spoilage Rate)
