@@ -1,0 +1,34 @@
+FormKey: 2F874D:Complete Alchemy & Cooking Overhaul.esp
+EditorID: CACO_FoodPortionEffect_Brandy08
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CACO_FoodPortionScript
+    Properties:
+    - MutagenObjectType: ScriptIntProperty
+      Name: amount
+      Data: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ReturnItem
+      Object: 2F8761:Complete Alchemy & Cooking Overhaul.esp
+Name:
+  TargetLanguage: English
+  Value: Consume Food Portion
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Partial Bottle (8/16 Servings).
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1

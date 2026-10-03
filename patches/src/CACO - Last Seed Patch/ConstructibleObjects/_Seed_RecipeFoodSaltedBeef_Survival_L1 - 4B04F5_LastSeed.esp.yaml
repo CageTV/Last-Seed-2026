@@ -1,0 +1,22 @@
+FormKey: 4B04F5:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedBeef_Survival_L1
+Items:
+- Item:
+    Item: 065C99:Skyrim.esm
+    Count: 1
+- Item:
+    Item: CCA101:Update.esm
+    Count: 6
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 18B2B4:LastSeed.esp
+WorkbenchKeyword: CCA002:Update.esm
+CreatedObjectCount: 1

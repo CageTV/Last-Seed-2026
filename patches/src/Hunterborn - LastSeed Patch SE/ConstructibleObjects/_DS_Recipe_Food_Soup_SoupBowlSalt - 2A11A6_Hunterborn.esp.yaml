@@ -1,0 +1,22 @@
+FormKey: 2A11A6:Hunterborn.esp
+EditorID: _DS_Recipe_Food_Soup_SoupBowlSalt
+Items:
+- Item:
+    Item: 03199A:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 034CDF:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 28CD3A:Hunterborn.esp
+WorkbenchKeyword: 28CD37:Hunterborn.esp
+CreatedObjectCount: 1

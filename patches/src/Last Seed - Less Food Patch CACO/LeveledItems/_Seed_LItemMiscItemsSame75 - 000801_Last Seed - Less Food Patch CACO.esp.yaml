@@ -1,0 +1,271 @@
+FormKey: 000801:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItemMiscItemsSame75
+ChanceNone: 0.25
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+- CalculateForEachItemInCount
+Entries:
+- Data:
+    Level: 1
+    Reference: 013104:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 013105:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 013106:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 017696:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0209A5:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0261BD:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0261C1:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 02E4E2:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0318EC:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0318FA:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0318FB:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 031941:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 03199A:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0319E3:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0319E5:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 033760:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 033761:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 034CDF:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 034CDF:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 03AD70:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 03AD70:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 03C9FE:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 03CA00:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 04223B:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 044E70:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0467C0:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 04C3C6:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 05ACE4:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 05B6A0:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 05B6A1:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 067180:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 067181:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 067182:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 067183:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 067184:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 067185:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 06F993:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 071CF3:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0800E4:Skyrim.esm
+    Count: 2
+- Data:
+    Level: 1
+    Reference: 080697:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 080699:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 08F19A:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 09AF17:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0A199B:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0A9191:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0A9191:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0B9BDC:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0CE70B:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0CF89E:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0E2617:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0E2618:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0E3CB7:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0E4897:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 0F5D0A:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 104B3F:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 104B40:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 106661:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00300F:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00300F:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 003011:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 003012:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 003035:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 005A68:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 005A68:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 005A69:HearthFires.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00C1DE:HearthFires.esm
+    Count: 1

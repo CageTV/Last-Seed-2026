@@ -1,0 +1,73 @@
+FormKey: 0F431A:Skyrim.esm
+EditorID: RecipeFood2SoupCabbagePotato
+Items:
+- Item:
+    Item: 034D22:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B3F:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B41:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 0669A5:Skyrim.esm
+    Count: 1
+- Item:
+    Item: CCA101:Update.esm
+    Count: 2
+- Item:
+    Item: CCA126:Update.esm
+    Count: 4
+- Item:
+    Item: CCA129:Update.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA031:Update.esm
+- MutagenObjectType: ConditionGlobal
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA030:Update.esm
+  ComparisonValue: CCA032:Update.esm
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0297:Update.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: CCA126:Update.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 064B41:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 064B3F:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 0F431B:Skyrim.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 4

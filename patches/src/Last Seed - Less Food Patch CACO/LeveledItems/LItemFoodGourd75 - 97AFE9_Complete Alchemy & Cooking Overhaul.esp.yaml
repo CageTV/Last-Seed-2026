@@ -1,0 +1,16 @@
+FormKey: 97AFE9:Complete Alchemy & Cooking Overhaul.esp
+EditorID: LItemFoodGourd75
+ChanceNone: 0.25
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+- CalculateForEachItemInCount
+Global: 9B7CEB:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 10D666:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964D:LastSeed.esp
+    Count: 1

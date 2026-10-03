@@ -1,0 +1,29 @@
+FormKey: 1B8C0F:LastSeed.esp
+EditorID: _Seed_WaterToken02
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_MultiCraftingScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CreatedObject1
+      Object: CCA100:Update.esm
+    - MutagenObjectType: ScriptIntProperty
+      Name: CreatedObject1Count
+      Data: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CreatedObject2
+      Object: 01088F:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: CreatedObject2Count
+      Data: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: token
+      Object: 1B8C0F:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Boiled Water
+Model:
+  File: Clutter\Common\Flagon01.nif
+  Data: 0x020000000000000000000000
+Value: 1
+Weight: 1

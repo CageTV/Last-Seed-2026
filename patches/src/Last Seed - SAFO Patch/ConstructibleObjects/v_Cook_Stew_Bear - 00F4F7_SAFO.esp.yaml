@@ -1,0 +1,31 @@
+FormKey: 00F4F7:SAFO.esp
+EditorID: v_Cook_Stew_Bear
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B41:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B42:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 000806:SAFO.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 100665350
+  ComparisonValue: 1
+CreatedObject: 00F4F3:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

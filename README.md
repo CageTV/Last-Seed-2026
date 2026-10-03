@@ -58,6 +58,11 @@ Use one, never both. The same `LastSeed.dll` is in each; it detects which plugin
 Install the original Last Seed, then this over it, and let this one overwrite. Disable the patch plugins listed above. If you use the
 **Drunk or drugged animations OAR** mod with the ESL build, see the notes in the ESL zip's readme (its config names two Last Seed effects by id).
 
+## Patches
+
+Last Seed's compatibility patches that are still needed are in a separate FOMOD, **Last Seed 2026 - Patches**, with a regular and an ESL
+version of each (the installer asks which build you use and only lets you tick patches for mods you have).
+
 ## Building
 
 See [BUILDING.md](BUILDING.md).

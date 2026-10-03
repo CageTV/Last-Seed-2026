@@ -1,0 +1,46 @@
+FormKey: 000A11:HearthFires.esm
+EditorID: BYOHRecipeFoodBraidedBread
+Items:
+- Item:
+    Item: 023D77:Skyrim.esm
+    Count: 2
+- Item:
+    Item: CCA101:Update.esm
+    Count: 1
+- Item:
+    Item: CCA102:Update.esm
+    Count: 4
+- Item:
+    Item: CCA120:Update.esm
+    Count: 1
+- Item:
+    Item: 9E0584:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA031:Update.esm
+- MutagenObjectType: ConditionGlobal
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA030:Update.esm
+  ComparisonValue: CCA033:Update.esm
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: CCA102:Update.esm
+  ComparisonValue: 1
+CreatedObject: 0009DB:HearthFires.esm
+WorkbenchKeyword: 0117F7:HearthFires.esm
+CreatedObjectCount: 1

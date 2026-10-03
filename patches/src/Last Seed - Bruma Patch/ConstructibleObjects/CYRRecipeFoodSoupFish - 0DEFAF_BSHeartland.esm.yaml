@@ -1,0 +1,15 @@
+FormKey: 0DEFAF:BSHeartland.esm
+EditorID: CYRRecipeFoodSoupFish
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 05EF55:BSHeartland.esm
+    Count: 2
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 0DEFA6:BSHeartland.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

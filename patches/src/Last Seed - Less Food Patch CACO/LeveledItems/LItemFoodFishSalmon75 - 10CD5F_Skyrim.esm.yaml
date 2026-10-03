@@ -1,0 +1,15 @@
+FormKey: 10CD5F:Skyrim.esm
+EditorID: LItemFoodFishSalmon75
+ChanceNone: 0.25
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Global: 9B7CEB:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 065C9F:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009645:LastSeed.esp
+    Count: 1

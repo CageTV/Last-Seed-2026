@@ -1,0 +1,22 @@
+FormKey: 0053B9:NordicCooking.esp
+EditorID: simpleModsCoffee
+Name:
+  TargetLanguage: English
+  Value: Nordic Coffee
+Keywords:
+- 001DBF:NordicCooking.esp
+Model:
+  File: Clutter\Dining Set\BasicTankard01.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.1
+Value: 10
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 2468C8:LastSeed.esp
+  Data:
+    Duration: 540

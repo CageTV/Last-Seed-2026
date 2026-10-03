@@ -1,0 +1,18 @@
+FormKey: 00471A:Ana_Skyrim Food Expanded - EN.esp
+EditorID: DLC2RecipeFoodTramaSoup
+Items:
+- Item:
+    Item: 065C98:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 003534:HearthFires.esm
+    Count: 1
+- Item:
+    Item: 017008:Dragonborn.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 004714:Ana_Skyrim Food Expanded - EN.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

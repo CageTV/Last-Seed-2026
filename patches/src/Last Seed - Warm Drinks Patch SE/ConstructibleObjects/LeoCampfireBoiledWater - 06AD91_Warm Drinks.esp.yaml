@@ -1,0 +1,10 @@
+FormKey: 06AD91:Warm Drinks.esp
+EditorID: LeoCampfireBoiledWater
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 06AD90:Warm Drinks.esp
+WorkbenchKeyword: 00AA06:Warm Drinks.esp
+CreatedObjectCount: 1

@@ -1,0 +1,74 @@
+FormKey: 000800:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItemBarrelFoodStale50
+ChanceNone: 0.5
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Entries:
+- Data:
+    Level: 1
+    Reference: 009639:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00963B:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00963D:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00963F:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009641:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009643:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009645:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009647:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009649:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964B:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964D:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964F:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009651:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009653:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009655:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009661:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009BD1:LastSeed.esp
+    Count: 1

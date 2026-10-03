@@ -1,0 +1,22 @@
+FormKey: 0BBF50:mealtimeyum.esp
+EditorID: AAlchubeyum
+Name:
+  TargetLanguage: English
+  Value: Alchube
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoMagnitude
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 0.1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

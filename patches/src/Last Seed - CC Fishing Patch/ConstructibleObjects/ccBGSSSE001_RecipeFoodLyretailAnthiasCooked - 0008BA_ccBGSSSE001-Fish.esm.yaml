@@ -1,0 +1,9 @@
+FormKey: 0008BA:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodLyretailAnthiasCooked
+Items:
+- Item:
+    Item: 0008F1:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 000884:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

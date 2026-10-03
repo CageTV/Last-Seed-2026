@@ -1,0 +1,59 @@
+FormKey: 011800:HearthFires.esm
+EditorID: BYOHRecipeFoodChickenDumplings
+Items:
+- Item:
+    Item: 034D22:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0669A5:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 0F2011:Skyrim.esm
+    Count: 2
+- Item:
+    Item: CCA101:Update.esm
+    Count: 2
+- Item:
+    Item: CCA123:Update.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA031:Update.esm
+- MutagenObjectType: ConditionGlobal
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA030:Update.esm
+  ComparisonValue: CCA034:Update.esm
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0297:Update.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: CCA123:Update.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 0F2011:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 0117FF:HearthFires.esm
+WorkbenchKeyword: 0117F7:HearthFires.esm
+CreatedObjectCount: 2

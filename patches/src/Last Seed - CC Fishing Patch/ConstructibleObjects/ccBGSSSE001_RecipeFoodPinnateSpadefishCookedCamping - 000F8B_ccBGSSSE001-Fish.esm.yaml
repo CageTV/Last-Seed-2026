@@ -1,0 +1,9 @@
+FormKey: 000F8B:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodPinnateSpadefishCookedCamping
+Items:
+- Item:
+    Item: 0008F3:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 000886:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

@@ -1,0 +1,46 @@
+FormKey: 5D61E9:LastSeed.esp
+EditorID: _Seed_Activators
+VirtualMachineAdapter:
+  Scripts:
+  - Name: PRKF__Seed_Activators_065D61E9
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CarridgeRode
+      Object: 5DB2EB:LastSeed.esp
+  ScriptFragments:
+    FileName: PRKF__Seed_Activators_065D61E9
+    Fragments:
+    - Unknown2: 1
+      ScriptName: PRKF__Seed_Activators_065D61E9
+      FragmentName: Fragment_0
+Name:
+  TargetLanguage: English
+  Value: Misc Activations
+Description:
+  TargetLanguage: English
+  Value: ''
+NumRanks: 1
+Playable: True
+Hidden: True
+Effects:
+- MutagenObjectType: PerkEntryPointAddActivateChoice
+  Conditions:
+  - RunOnTabIndex: 1
+    Conditions:
+    - MutagenObjectType: ConditionFloat
+      Flags:
+      - OR
+      Data:
+        MutagenObjectType: GetIsIDConditionData
+        Object: 0A7B37:CFTO.esp
+      ComparisonValue: 1
+    - MutagenObjectType: ConditionFloat
+      Data:
+        MutagenObjectType: GetIsIDConditionData
+        Object: 103445:Skyrim.esm
+      ComparisonValue: 1
+  Flags:
+    Flags:
+    - RunImmediately
+  EntryPoint: Activate
+  PerkConditionTabCount: 2

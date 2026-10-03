@@ -1,0 +1,9 @@
+FormKey: 000F8E:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodJuvenileMudcrabCookedCamping
+Items:
+- Item:
+    Item: 0008F2:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 00089A:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

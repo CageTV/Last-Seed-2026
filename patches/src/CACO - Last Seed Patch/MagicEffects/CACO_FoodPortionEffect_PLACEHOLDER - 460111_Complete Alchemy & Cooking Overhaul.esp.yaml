@@ -1,0 +1,25 @@
+FormKey: 460111:Complete Alchemy & Cooking Overhaul.esp
+EditorID: CACO_FoodPortionEffect_PLACEHOLDER
+Name:
+  TargetLanguage: English
+  Value: Consume Food Portion
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1

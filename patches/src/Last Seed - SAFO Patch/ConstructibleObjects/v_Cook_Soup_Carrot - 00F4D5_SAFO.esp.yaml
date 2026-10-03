@@ -1,0 +1,25 @@
+FormKey: 00F4D5:SAFO.esp
+EditorID: v_Cook_Soup_Carrot
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B40:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 412480
+  ComparisonValue: 1
+CreatedObject: 00F4C0:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

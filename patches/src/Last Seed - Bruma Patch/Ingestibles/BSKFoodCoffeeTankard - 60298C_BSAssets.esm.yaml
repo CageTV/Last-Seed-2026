@@ -1,0 +1,25 @@
+FormKey: 60298C:BSAssets.esm
+EditorID: BSKFoodCoffeeTankard
+ObjectBounds:
+  First: -4, -4, 0
+  Second: 4, 7, 15
+Name:
+  TargetLanguage: English
+  Value: Coffee Tankard
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: bstamriel\clutter\food\CoffeTankard.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 1
+Value: 5
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 2468C8:LastSeed.esp
+  Data:
+    Duration: 540

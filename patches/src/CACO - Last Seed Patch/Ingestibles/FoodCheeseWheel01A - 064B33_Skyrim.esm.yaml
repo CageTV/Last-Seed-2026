@@ -1,0 +1,29 @@
+FormKey: 064B33:Skyrim.esm
+EditorID: FoodCheeseWheel01A
+ObjectBounds:
+  First: -15, -15, 0
+  Second: 15, 15, 15
+Name:
+  TargetLanguage: English
+  Value: Goat Cheese Wheel
+Keywords:
+- 08CDEA:Skyrim.esm
+- AF100A:Update.esm
+- CCA001:Update.esm
+- 980126:Complete Alchemy & Cooking Overhaul.esp
+Model:
+  File: Clutter\Food\CheeseWheel01A.nif
+  Data: 0x0200000002000000000000007EF3D85664647300B9148236C2AC210264647300B9148236
+Weight: 8.4
+Value: 51
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 4B634D:Complete Alchemy & Cooking Overhaul.esp
+  Data: {}
+- BaseEffect: 2A258B:Complete Alchemy & Cooking Overhaul.esp
+  Data:
+    Magnitude: 4
+    Duration: 360

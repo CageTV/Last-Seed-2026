@@ -1,0 +1,20 @@
+FormKey: 0EE5C5:Skyrim.esm
+EditorID: DA11CannibalismAbility
+Name:
+  TargetLanguage: English
+  Value: Namira's Blessing
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: Stamina is increased by <50> points for <5> minutes.
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+CastType: FireAndForget
+Effects:
+- BaseEffect: 10F812:Skyrim.esm
+  Data:
+    Magnitude: 50
+    Duration: 300
+- BaseEffect: 1E1431:LastSeed.esp
+  Data: {}

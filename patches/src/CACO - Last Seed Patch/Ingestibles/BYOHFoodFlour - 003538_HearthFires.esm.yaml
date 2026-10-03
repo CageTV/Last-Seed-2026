@@ -1,0 +1,29 @@
+FormKey: 003538:HearthFires.esm
+EditorID: BYOHFoodFlour
+ObjectBounds:
+  First: -17, -12, 0
+  Second: 16, 12, 9
+Name:
+  TargetLanguage: English
+  Value: Sack of Wheat Flour
+Keywords:
+- 08CDEA:Skyrim.esm
+- AF100E:Update.esm
+- CCA001:Update.esm
+- 980126:Complete Alchemy & Cooking Overhaul.esp
+Model:
+  File: _BYOH\Clutter\Food\FlourSack01.nif
+  Data: 0x020000000000000000000000
+Weight: 5
+Value: 25
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 5023C8:Complete Alchemy & Cooking Overhaul.esp
+  Data: {}
+- BaseEffect: 29D485:Complete Alchemy & Cooking Overhaul.esp
+  Data:
+    Magnitude: 1
+    Duration: 180

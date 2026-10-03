@@ -1,0 +1,34 @@
+FormKey: 534F14:Complete Alchemy & Cooking Overhaul.esp
+EditorID: CACO_FoodPortionEffect_MilkJug
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CACO_FoodPortionScript
+    Properties:
+    - MutagenObjectType: ScriptIntProperty
+      Name: amount
+      Data: 2
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ReturnItem
+      Object: CCA121:Update.esm
+Name:
+  TargetLanguage: English
+  Value: Consume Food Portion
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Full Jug (3/3 Servings).
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1

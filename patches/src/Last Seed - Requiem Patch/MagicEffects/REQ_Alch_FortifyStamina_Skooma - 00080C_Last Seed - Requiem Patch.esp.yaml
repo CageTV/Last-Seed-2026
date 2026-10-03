@@ -1,0 +1,26 @@
+FormKey: 00080C:Last Seed - Requiem Patch.esp
+EditorID: REQ_Alch_FortifyStamina_Skooma
+Name:
+  TargetLanguage: English
+  Value: Fortify Stamina
+MenuDisplayObject: 0435A5:Skyrim.esm
+Keywords:
+- 065A32:Skyrim.esm
+- 0F8A4E:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+BaseCost: 0.15
+HitShader: 0ABF07:Skyrim.esm
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Stamina
+  Association: 065A32:Skyrim.esm
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

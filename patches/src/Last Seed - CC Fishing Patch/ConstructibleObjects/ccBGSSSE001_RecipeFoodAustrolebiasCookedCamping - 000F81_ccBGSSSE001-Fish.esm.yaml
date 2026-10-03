@@ -1,0 +1,9 @@
+FormKey: 000F81:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodAustrolebiasCookedCamping
+Items:
+- Item:
+    Item: 0008EC:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 00087B:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

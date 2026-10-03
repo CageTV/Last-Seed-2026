@@ -1,0 +1,31 @@
+FormKey: 01EEC0:SAFO.esp
+EditorID: v_Cook_Stock_Fish04
+Items:
+- Item:
+    Item: 064B40:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B41:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 106E19:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 009467:SAFO.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 1076761
+  ComparisonValue: 1
+CreatedObject: 01EEA1:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

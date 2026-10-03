@@ -1,0 +1,16 @@
+FormKey: A5F0C1:Complete Alchemy & Cooking Overhaul.esp
+EditorID: LItemFoodTurnip75
+ChanceNone: 0.25
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+- CalculateForEachItemInCount
+Global: 9B7CEB:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: CCA154:Update.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964D:LastSeed.esp
+    Count: 1

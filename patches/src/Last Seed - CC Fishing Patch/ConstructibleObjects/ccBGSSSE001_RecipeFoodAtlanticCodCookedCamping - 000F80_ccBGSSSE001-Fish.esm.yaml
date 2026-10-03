@@ -1,0 +1,9 @@
+FormKey: 000F80:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodAtlanticCodCookedCamping
+Items:
+- Item:
+    Item: 0008A2:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 00087A:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

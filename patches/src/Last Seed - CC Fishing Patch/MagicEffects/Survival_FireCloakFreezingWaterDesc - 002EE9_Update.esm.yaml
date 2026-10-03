@@ -1,0 +1,21 @@
+FormKey: 002EE9:Update.esm
+EditorID: Survival_FireCloakFreezingWaterDesc
+Name:
+  TargetLanguage: English
+  Value: Resist Freezing Water
+Flags:
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsReferenceConditionData
+    Target: 000014:Skyrim.esm
+  ComparisonValue: 1

@@ -1,0 +1,21 @@
+FormKey: 000919:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItem_Seed_PreservedGourd
+Flags:
+- UseAll
+Entries:
+- Data:
+    Level: 1
+    Reference: 1903C5:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00090E:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00090E:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00090E:Last Seed - Less Food Patch CACO.esp
+    Count: 1

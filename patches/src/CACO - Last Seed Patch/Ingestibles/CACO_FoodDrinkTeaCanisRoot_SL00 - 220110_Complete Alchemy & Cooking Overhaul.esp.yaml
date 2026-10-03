@@ -1,0 +1,28 @@
+FormKey: 220110:Complete Alchemy & Cooking Overhaul.esp
+EditorID: CACO_FoodDrinkTeaCanisRoot_SL00
+ObjectBounds:
+  First: -5, -7, 0
+  Second: 5, 6, 21
+Name:
+  TargetLanguage: English
+  Value: Canis Root Tea
+Keywords:
+- 08CDEA:Skyrim.esm
+- AF101B:Update.esm
+- CC0E08:Update.esm
+- 980126:Complete Alchemy & Cooking Overhaul.esp
+Model:
+  File: Clutter\Common\Flagon01.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 78FBC9:Complete Alchemy & Cooking Overhaul.esp
+PutDownSound: 78FBC9:Complete Alchemy & Cooking Overhaul.esp
+Weight: 0.5
+Value: 50
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 2468C8:LastSeed.esp
+  Data:
+    Duration: 540

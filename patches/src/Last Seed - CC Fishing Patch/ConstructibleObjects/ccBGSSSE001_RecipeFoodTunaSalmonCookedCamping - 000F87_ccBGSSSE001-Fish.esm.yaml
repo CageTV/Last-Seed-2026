@@ -1,0 +1,9 @@
+FormKey: 000F87:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodTunaSalmonCookedCamping
+Items:
+- Item:
+    Item: 000891:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 00088A:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

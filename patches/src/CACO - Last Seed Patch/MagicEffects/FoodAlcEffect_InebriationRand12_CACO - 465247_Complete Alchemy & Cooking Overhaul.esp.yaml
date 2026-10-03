@@ -1,0 +1,85 @@
+FormKey: 465247:Complete Alchemy & Cooking Overhaul.esp
+EditorID: FoodAlcEffect_InebriationRand12_CACO
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CACO_FoodEffectInebriation
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AlcoholEffect
+      Object: 2C0BCF:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AlcoholLvl01
+      Object: 2BBABB:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AlcoholLvl02
+      Object: 2BBABD:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AlcoholLvl03
+      Object: 2BBABE:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AlcoholLvl04
+      Object: 2BBABF:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AlcoholLvl05
+      Object: 2BBAC0:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BaseTolerance
+      Object: 2BBAB8:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ChairDrinking
+      Object: 065D07:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DrinkAnimations
+      Object: 2D4FFF:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DrunkFaction
+      Object: 2BBAB6:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: RandomAmt
+      Data: 2
+    - MutagenObjectType: ScriptObjectProperty
+      Name: StandDrinking
+      Object: 0FD68B:Skyrim.esm
+    - MutagenObjectType: ScriptIntProperty
+      Name: StrengthAmt
+      Data: 12
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ToleranceFaction
+      Object: 2BBAB7:Complete Alchemy & Cooking Overhaul.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ToleranceIncreasedFaction
+      Object: 2CFEFD:Complete Alchemy & Cooking Overhaul.esp
+Name:
+  TargetLanguage: English
+  Value: Inebriation
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoArea
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Alcoholic beverage.
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: IsInCombatConditionData
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsIDConditionData
+    Object: 000007:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 01082F:LastSeed.esp
+  ComparisonValue: 1

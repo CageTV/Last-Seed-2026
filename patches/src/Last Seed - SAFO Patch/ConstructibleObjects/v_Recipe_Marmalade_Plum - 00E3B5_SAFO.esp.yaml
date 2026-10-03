@@ -1,0 +1,29 @@
+FormKey: 00E3B5:SAFO.esp
+EditorID: v_Recipe_Marmalade_Plum
+Items:
+- Item:
+    Item: 009489:SAFO.esp
+    Count: 2
+- Item:
+    Item: 00E3AB:SAFO.esp
+    Count: 2
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Unknown2: 84
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 100701321
+  ComparisonValue: 1
+CreatedObject: 00E39C:SAFO.esp
+WorkbenchKeyword: 0033C5:SAFO.esp
+CreatedObjectCount: 1

@@ -1,0 +1,9 @@
+FormKey: 0008B2:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodBucketFishCooked
+Items:
+- Item:
+    Item: 00089C:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 00087C:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

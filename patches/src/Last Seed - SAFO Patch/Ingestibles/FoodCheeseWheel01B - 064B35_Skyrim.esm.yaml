@@ -1,0 +1,28 @@
+FormKey: 064B35:Skyrim.esm
+EditorID: FoodCheeseWheel01B
+ObjectBounds:
+  First: -15, -15, 0
+  Second: 15, 15, 15
+Name:
+  TargetLanguage: English
+  Value: Sliced Goat Cheese
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Food\CheeseWheel01B.nif
+  Data: 0x0200000002000000000000007EF3D85664647300B9148236C2AC210264647300B9148236
+Weight: 1.5
+Value: 20
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 008611:SAFO.esp
+  Data:
+    Magnitude: 25
+    Duration: 300
+- BaseEffect: 69ECE1:SAFO.esp
+  Data:
+    Magnitude: 10
+    Duration: 10

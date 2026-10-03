@@ -1,0 +1,12 @@
+FormKey: 014C0C:Warm Drinks.esp
+EditorID: LeoCampfirePlaceableTeapotRecipeBMFTea
+Items:
+- Item:
+    Item: 077E1C:Skyrim.esm
+    Count: 5
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 00FB0A:Warm Drinks.esp
+WorkbenchKeyword: 00AA06:Warm Drinks.esp
+CreatedObjectCount: 1

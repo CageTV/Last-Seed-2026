@@ -1,0 +1,23 @@
+FormKey: 097F64:Skyrim.esm
+EditorID: MiscSack02Large
+ObjectBounds:
+  First: -8, -15, -26
+  Second: 9, 15, 21
+Name:
+  TargetLanguage: English
+  Value: Sack
+Model:
+  File: Clutter\Containers\MiscSack02Large.nif
+  Data: 0x020000000400000000000000BC64090B64647300B3B824943842869564647300B3B824940635009264647300B3B8249461FCC09764647300B3B82494
+Items:
+- Item:
+    Item: 000802:Last Seed - Less Food Patch.esp
+    Count: 1
+- Item:
+    Item: 000802:Last Seed - Less Food Patch.esp
+    Count: 1
+- Item:
+    Item: 000802:Last Seed - Less Food Patch.esp
+    Count: 1
+OpenSound: 084D0E:Skyrim.esm
+CloseSound: 084D0F:Skyrim.esm

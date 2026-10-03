@@ -1,0 +1,49 @@
+FormKey: 01EEB8:SAFO.esp
+EditorID: v_Cook_Stock_Hunter
+Items:
+- Item:
+    Item: 0669A2:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 10D666:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 00080D:SAFO.esp
+    Count: 1
+- Item:
+    Item: 69ECCF:SAFO.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 107605199
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 420258
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 100665357
+  ComparisonValue: 1
+CreatedObject: 01EEB2:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

@@ -1,0 +1,15 @@
+FormKey: 03324D:Warm Drinks.esp
+EditorID: LeoCampfirePlaceableTeapotCalmingBMFtea
+Items:
+- Item:
+    Item: 045C28:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 077E1C:Skyrim.esm
+    Count: 4
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 02902D:Warm Drinks.esp
+WorkbenchKeyword: 00AA06:Warm Drinks.esp
+CreatedObjectCount: 1

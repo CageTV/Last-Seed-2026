@@ -1,0 +1,18 @@
+FormKey: 00471B:Ana_Skyrim Food Expanded - EN.esp
+EditorID: DLC2RecipeFoodScathecrawSoup
+Items:
+- Item:
+    Item: 064B40:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0669A5:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 017E97:Dragonborn.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 004716:Ana_Skyrim Food Expanded - EN.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

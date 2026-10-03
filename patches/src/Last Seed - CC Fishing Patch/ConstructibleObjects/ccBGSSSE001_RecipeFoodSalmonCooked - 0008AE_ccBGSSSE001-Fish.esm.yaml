@@ -1,0 +1,9 @@
+FormKey: 0008AE:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodSalmonCooked
+Items:
+- Item:
+    Item: 00089B:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 003541:HearthFires.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

@@ -1,0 +1,19 @@
+FormKey: 022B42:SAFO.esp
+EditorID: v_Recipe_FoodSteamAshHopperLeg
+Items:
+- Item:
+    Item: 03D125:Dragonborn.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 03D125:Dragonborn.esm
+  ComparisonValue: 1
+CreatedObject: 022B40:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

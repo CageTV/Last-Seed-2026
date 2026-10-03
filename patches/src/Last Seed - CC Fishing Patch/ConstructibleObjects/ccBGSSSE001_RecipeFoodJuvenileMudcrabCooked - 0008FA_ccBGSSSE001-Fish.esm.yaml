@@ -1,0 +1,9 @@
+FormKey: 0008FA:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodJuvenileMudcrabCooked
+Items:
+- Item:
+    Item: 0008F2:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 00089A:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

@@ -1,0 +1,23 @@
+FormKey: 4B04FD:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedMammoth_Survival_L1
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 6
+- Item:
+    Item: 0669A4:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Unknown2: 84
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 18B2AD:LastSeed.esp
+WorkbenchKeyword: CCA002:Update.esm
+CreatedObjectCount: 1

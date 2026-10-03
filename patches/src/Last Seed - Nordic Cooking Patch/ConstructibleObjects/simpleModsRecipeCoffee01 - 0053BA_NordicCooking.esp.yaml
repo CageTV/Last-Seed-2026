@@ -1,0 +1,28 @@
+FormKey: 0053BA:NordicCooking.esp
+EditorID: simpleModsRecipeCoffee01
+Items:
+- Item:
+    Item: 01B3BD:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 05076E:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 01B3BD:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 05076E:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 0053B9:NordicCooking.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

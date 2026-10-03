@@ -1,0 +1,40 @@
+FormKey: 9EF8A5:Complete Alchemy & Cooking Overhaul.esp
+EditorID: CACO_FoodPortionEffect_MeatSalmon02
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CACO_FoodPortionScript
+    Properties:
+    - MutagenObjectType: ScriptIntProperty
+      Name: amount
+      Data: 1
+    - MutagenObjectType: ScriptIntProperty
+      Name: PercentChance
+      Data: 50
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ReturnItem
+      Object: 065C9F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ReturnItem2Ingr
+      Object: 003545:HearthFires.esm
+Name:
+  TargetLanguage: English
+  Value: Consume Food Portion
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Whole fish (2 Servings).
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1

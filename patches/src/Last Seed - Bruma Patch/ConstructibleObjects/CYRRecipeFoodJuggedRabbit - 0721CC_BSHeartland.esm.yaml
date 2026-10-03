@@ -1,0 +1,18 @@
+FormKey: 0721CC:BSHeartland.esm
+EditorID: CYRRecipeFoodJuggedRabbit
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 05076E:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 065C9E:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 0721CA:BSHeartland.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

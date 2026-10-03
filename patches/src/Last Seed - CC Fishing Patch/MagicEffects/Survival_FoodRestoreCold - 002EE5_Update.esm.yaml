@@ -1,0 +1,22 @@
+FormKey: 002EE5:Update.esm
+EditorID: Survival_FoodRestoreCold
+Name:
+  TargetLanguage: English
+  Value: Restore Cold
+Flags:
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsReferenceConditionData
+    Target: 000014:Skyrim.esm
+  ComparisonValue: 1

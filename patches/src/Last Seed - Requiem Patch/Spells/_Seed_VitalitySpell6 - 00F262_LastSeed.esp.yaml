@@ -1,0 +1,44 @@
+FormKey: 00F262:LastSeed.esp
+EditorID: _Seed_VitalitySpell6
+Name:
+  TargetLanguage: English
+  Value: Very Healthy
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 620
+Type: Ability
+Effects:
+- BaseEffect: 00F253:LastSeed.esp
+  Data: {}
+- BaseEffect: 00ECE3:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00ECE4:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00ECE5:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00ECE6:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00ECEB:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00ECE7:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00ECE8:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00ECE9:LastSeed.esp
+  Data:
+    Magnitude: 1
+- BaseEffect: 00ECEA:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 00F257:LastSeed.esp
+  Data:
+    Magnitude: 10

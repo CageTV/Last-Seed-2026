@@ -1,0 +1,31 @@
+FormKey: 0183D6:Hunterborn.esp
+EditorID: _DS_Recipe_Food_MudcrabChowder
+Items:
+- Item:
+    Item: 064B41:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 014D22:Hunterborn.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 007421:Hunterborn.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 014D22:Hunterborn.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA025:Update.esm
+CreatedObject: 017E13:Hunterborn.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

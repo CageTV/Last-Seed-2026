@@ -1,0 +1,38 @@
+FormKey: 00080B:Last Seed - Requiem Patch.esp
+EditorID: REQ_Alch_DamageMaximumStamina_Skooma
+VirtualMachineAdapter:
+  Scripts:
+  - Name: MagicImodOnPlayerHitScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: OnFinishImodFX
+      Object: 10E3D3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: OnStartImodFX
+      Object: 10E3D2:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Damage Maximum Stamina
+MenuDisplayObject: 0435A5:Skyrim.esm
+Keywords:
+- 042509:Skyrim.esm
+Flags:
+- Hostile
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+BaseCost: 0.8
+ResistValue: PoisonResist
+HitShader: 10CC64:Skyrim.esm
+SpellmakingCastingTime: 0.5
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Stamina
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

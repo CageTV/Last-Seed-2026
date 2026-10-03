@@ -1,0 +1,21 @@
+FormKey: 004705:Ana_Skyrim Food Expanded - EN.esp
+EditorID: RecipeFoodMushroomStew
+Items:
+- Item:
+    Item: 04DA24:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 04DA25:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B41:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0669A5:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 004703:Ana_Skyrim Food Expanded - EN.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

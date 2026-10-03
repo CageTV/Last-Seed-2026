@@ -1,0 +1,24 @@
+FormKey: 033253:Warm Drinks.esp
+EditorID: LeoCampfirePlaceableTeapotEightDivinesBlessingTeaRecipe
+Items:
+- Item:
+    Item: 023D77:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 10394D:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 003534:HearthFires.esm
+    Count: 1
+- Item:
+    Item: 017E97:Dragonborn.esm
+    Count: 1
+- Item:
+    Item: 0207E5:Dragonborn.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 02903D:Warm Drinks.esp
+WorkbenchKeyword: 00AA06:Warm Drinks.esp
+CreatedObjectCount: 1

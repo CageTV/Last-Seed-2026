@@ -1,0 +1,30 @@
+FormKey: 0A29AB:mealtimeyum.esp
+EditorID: yumgum
+Items:
+- Item:
+    Item: 034D22:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 034D31:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 034D32:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B42:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0F2011:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 03BD14:Dragonborn.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 098744:mealtimeyum.esp
+    Count: 1
+CreatedObject: 06FEDD:mealtimeyum.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

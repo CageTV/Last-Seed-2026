@@ -1,0 +1,34 @@
+FormKey: 10CD5E:Skyrim.esm
+EditorID: LItemFoodFishList
+Flags:
+- UseAll
+Global: 9B7CF5:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 10CD5F:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10CD5F:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10CD60:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10CD60:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009645:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 009645:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 5C2E40:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1

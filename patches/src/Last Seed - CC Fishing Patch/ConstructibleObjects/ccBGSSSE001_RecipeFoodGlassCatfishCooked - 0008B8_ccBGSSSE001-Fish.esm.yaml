@@ -1,0 +1,9 @@
+FormKey: 0008B8:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodGlassCatfishCooked
+Items:
+- Item:
+    Item: 0008A0:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 000882:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

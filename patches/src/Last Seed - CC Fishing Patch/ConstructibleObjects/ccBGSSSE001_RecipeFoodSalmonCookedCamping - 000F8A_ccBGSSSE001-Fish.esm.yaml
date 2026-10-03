@@ -1,0 +1,9 @@
+FormKey: 000F8A:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodSalmonCookedCamping
+Items:
+- Item:
+    Item: 00089B:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 003541:HearthFires.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

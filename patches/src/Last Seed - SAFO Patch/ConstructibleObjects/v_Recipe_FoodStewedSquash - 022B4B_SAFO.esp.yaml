@@ -1,0 +1,22 @@
+FormKey: 022B4B:SAFO.esp
+EditorID: v_Recipe_FoodStewedSquash
+Items:
+- Item:
+    Item: 10D666:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 00353C:HearthFires.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 10D666:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 022B4A:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

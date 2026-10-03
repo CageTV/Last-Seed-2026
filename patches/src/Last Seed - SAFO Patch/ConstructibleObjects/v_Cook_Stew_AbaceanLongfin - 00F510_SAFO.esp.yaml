@@ -1,0 +1,28 @@
+FormKey: 00F510:SAFO.esp
+EditorID: v_Cook_Stew_AbaceanLongfin
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 005564:SAFO.esp
+    Count: 1
+- Item:
+    Item: 00D83A:SAFO.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 100685156
+  ComparisonValue: 1
+CreatedObject: 00F4E5:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

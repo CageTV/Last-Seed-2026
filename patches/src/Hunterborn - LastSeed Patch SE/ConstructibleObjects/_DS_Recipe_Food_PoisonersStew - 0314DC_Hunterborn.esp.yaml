@@ -1,0 +1,35 @@
+FormKey: 0314DC:Hunterborn.esp
+EditorID: _DS_Recipe_Food_PoisonersStew
+Items:
+- Item:
+    Item: 02F44C:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 027783:Hunterborn.esp
+    Count: 1
+- Item:
+    Item: 027CE6:Hunterborn.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 007421:Hunterborn.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 024115:Hunterborn.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 027783:Hunterborn.esp
+  ComparisonValue: 1
+CreatedObject: 0314C9:Hunterborn.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

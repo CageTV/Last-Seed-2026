@@ -1,0 +1,27 @@
+FormKey: 01391D:Dawnguard.esm
+EditorID: DLC1FoodDrugRedwaterDenSkooma
+ObjectBounds:
+  First: -2, -2, 0
+  Second: 2, 2, 11
+Name:
+  TargetLanguage: English
+  Value: Redwater Skooma
+Keywords:
+- 08CDEA:Skyrim.esm
+- A08E48:Complete Alchemy & Cooking Overhaul.esp
+Model:
+  File: DLC01\Clutter\Quest\PotionRWSkooma.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 78FBC9:Complete Alchemy & Cooking Overhaul.esp
+PutDownSound: 78FBC9:Complete Alchemy & Cooking Overhaul.esp
+Weight: 0.1
+Value: 55
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 2E388E:LastSeed.esp
+  Data: {}
+- BaseEffect: 01391E:Dawnguard.esm
+  Data: {}

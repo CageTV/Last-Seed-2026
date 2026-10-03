@@ -1,0 +1,48 @@
+FormKey: 0F431F:Skyrim.esm
+EditorID: RecipeFood5SoupElsweyrFondue
+Items:
+- Item:
+    Item: 034C5E:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B32:Skyrim.esm
+    Count: 5
+- Item:
+    Item: 0D8E3F:Skyrim.esm
+    Count: 1
+- Item:
+    Item: CCA117:Update.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA031:Update.esm
+- MutagenObjectType: ConditionGlobal
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA030:Update.esm
+  ComparisonValue: CCA035:Update.esm
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0297:Update.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 0D8E3F:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 0F4320:Skyrim.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 2

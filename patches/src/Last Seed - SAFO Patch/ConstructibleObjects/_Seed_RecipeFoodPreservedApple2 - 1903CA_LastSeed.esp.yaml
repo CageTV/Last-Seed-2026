@@ -1,0 +1,23 @@
+FormKey: 1903CA:LastSeed.esp
+EditorID: _Seed_RecipeFoodPreservedApple2
+Items:
+- Item:
+    Item: 064B2F:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 10394D:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 1903C3:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

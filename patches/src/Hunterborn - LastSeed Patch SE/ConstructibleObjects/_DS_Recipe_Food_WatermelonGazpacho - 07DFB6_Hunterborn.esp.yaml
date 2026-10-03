@@ -1,0 +1,40 @@
+FormKey: 07DFB6:Hunterborn.esp
+EditorID: _DS_Recipe_Food_WatermelonGazpacho
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 034D31:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B31:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B42:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 055772:Hunterborn.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 007421:Hunterborn.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 055772:Hunterborn.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA025:Update.esm
+CreatedObject: 07DFB3:Hunterborn.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 3

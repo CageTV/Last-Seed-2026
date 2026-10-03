@@ -1,0 +1,19 @@
+FormKey: 2A11A9:Hunterborn.esp
+EditorID: _DS_Recipe_Food_Soup_BoiledMushrooms3
+Items:
+- Item:
+    Item: 04DA22:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 04DA22:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 2A1194:Hunterborn.esp
+WorkbenchKeyword: 28CD37:Hunterborn.esp
+CreatedObjectCount: 1

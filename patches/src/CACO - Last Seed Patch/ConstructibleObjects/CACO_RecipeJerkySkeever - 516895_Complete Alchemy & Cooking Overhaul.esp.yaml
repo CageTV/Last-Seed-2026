@@ -1,0 +1,36 @@
+FormKey: 516895:Complete Alchemy & Cooking Overhaul.esp
+EditorID: CACO_RecipeJerkySkeever
+Items:
+- Item:
+    Item: CCA101:Update.esm
+    Count: 1
+- Item:
+    Item: 49CDA3:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0297:Update.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 49CDA3:Complete Alchemy & Cooking Overhaul.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+CreatedObject: 516883:Complete Alchemy & Cooking Overhaul.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

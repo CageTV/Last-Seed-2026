@@ -1,0 +1,15 @@
+FormKey: 00090B:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItemUrnFoodDarkElfSame70
+ChanceNone: 0.3
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Global: 9B7CEE:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 9A89D1:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000800:Last Seed - Less Food Patch CACO.esp
+    Count: 1

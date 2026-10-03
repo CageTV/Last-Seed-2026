@@ -1,0 +1,9 @@
+FormKey: 000F7E:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodArcticGraylingCookedCamping
+Items:
+- Item:
+    Item: 0008A3:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 00088C:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

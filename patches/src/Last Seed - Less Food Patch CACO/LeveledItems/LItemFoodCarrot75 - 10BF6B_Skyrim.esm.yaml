@@ -1,0 +1,16 @@
+FormKey: 10BF6B:Skyrim.esm
+EditorID: LItemFoodCarrot75
+ChanceNone: 0.25
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+- CalculateForEachItemInCount
+Global: 9B7CEB:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 064B40:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964D:LastSeed.esp
+    Count: 1

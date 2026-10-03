@@ -1,0 +1,111 @@
+FormKey: 00F259:LastSeed.esp
+EditorID: _Seed_VitalitySpell2
+Name:
+  TargetLanguage: English
+  Value: Ruined
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 3632
+Type: Ability
+ChargeTime: 0.5
+Effects:
+- BaseEffect: 00F24F:LastSeed.esp
+  Data: {}
+- BaseEffect: 00ECE0:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECDA:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECDD:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECDB:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00F256:LastSeed.esp
+  Data:
+    Magnitude: 25
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECDE:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECDC:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECE1:LastSeed.esp
+  Data:
+    Magnitude: 5
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECDF:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 00ECE2:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 0102BC:LastSeed.esp
+  Data:
+    Magnitude: 20
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 0102BD:LastSeed.esp
+  Data:
+    Magnitude: 0.8
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp

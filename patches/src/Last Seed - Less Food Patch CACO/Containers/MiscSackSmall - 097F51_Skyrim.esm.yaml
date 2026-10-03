@@ -1,0 +1,24 @@
+FormKey: 097F51:Skyrim.esm
+MajorRecordFlagsRaw: 134217728
+EditorID: MiscSackSmall
+SkyrimMajorRecordFlags:
+- 0x8000000
+ObjectBounds:
+  First: -10, -28, -24
+  Second: 10, 26, 39
+Name:
+  TargetLanguage: English
+  Value: Small Sack
+Model:
+  File: Clutter\Containers\MiscSackSmall.nif
+  Data: 0x0200000002000000000000000635009264647300B3B8249461FCC09764647300B3B82494
+Items:
+- Item:
+    Item: 00091D:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+Flags:
+- Respawns
+OpenSound: 084D0E:Skyrim.esm
+CloseSound: 084D0F:Skyrim.esm
+MajorFlags:
+- NavMeshGenerationBoundingBox

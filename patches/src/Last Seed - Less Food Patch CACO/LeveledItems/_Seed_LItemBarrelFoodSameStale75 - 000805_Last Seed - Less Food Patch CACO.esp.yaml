@@ -1,0 +1,14 @@
+FormKey: 000805:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItemBarrelFoodSameStale75
+ChanceNone: 0.25
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Entries:
+- Data:
+    Level: 1
+    Reference: 009641:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964D:LastSeed.esp
+    Count: 1

@@ -1,0 +1,19 @@
+FormKey: 0F430D:Skyrim.esm
+EditorID: RecipeFoodMammothCooked
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0669A4:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 0669A4:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 0722BB:Skyrim.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

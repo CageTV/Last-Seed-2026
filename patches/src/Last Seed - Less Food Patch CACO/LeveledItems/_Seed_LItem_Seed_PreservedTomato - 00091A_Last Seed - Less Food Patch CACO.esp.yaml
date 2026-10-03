@@ -1,0 +1,21 @@
+FormKey: 00091A:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItem_Seed_PreservedTomato
+Flags:
+- UseAll
+Entries:
+- Data:
+    Level: 1
+    Reference: 1903C7:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000910:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000910:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000910:Last Seed - Less Food Patch CACO.esp
+    Count: 1

@@ -1,0 +1,34 @@
+FormKey: 4BB45B:Complete Alchemy & Cooking Overhaul.esp
+EditorID: CACO_FoodPortionEffect_CheeseWheelNew01A
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CACO_FoodPortionScript
+    Properties:
+    - MutagenObjectType: ScriptIntProperty
+      Name: amount
+      Data: 11
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ReturnItem
+      Object: 1FB179:Complete Alchemy & Cooking Overhaul.esp
+Name:
+  TargetLanguage: English
+  Value: Consume Food Portion
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Full wheel (12 Servings).
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1

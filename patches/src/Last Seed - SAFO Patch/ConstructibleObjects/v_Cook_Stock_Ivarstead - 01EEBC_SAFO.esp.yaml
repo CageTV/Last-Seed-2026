@@ -1,0 +1,28 @@
+FormKey: 01EEBC:SAFO.esp
+EditorID: v_Cook_Stock_Ivarstead
+Items:
+- Item:
+    Item: 064B41:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0EC870:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 000806:SAFO.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 100665350
+  ComparisonValue: 1
+CreatedObject: 01EEBA:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

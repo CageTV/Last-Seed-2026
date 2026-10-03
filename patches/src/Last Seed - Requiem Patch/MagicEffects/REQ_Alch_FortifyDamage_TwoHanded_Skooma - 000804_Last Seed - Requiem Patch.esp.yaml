@@ -1,0 +1,26 @@
+FormKey: 000804:Last Seed - Requiem Patch.esp
+EditorID: REQ_Alch_FortifyDamage_TwoHanded_Skooma
+Name:
+  TargetLanguage: English
+  Value: Fortify Two-Handed
+MenuDisplayObject: 0435A5:Skyrim.esm
+Keywords:
+- 065A20:Skyrim.esm
+- 0F8A4E:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+BaseCost: 0.25
+HitShader: 04E220:Skyrim.esm
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: TwoHandedPowerModifier
+  Association: 065A20:Skyrim.esm
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

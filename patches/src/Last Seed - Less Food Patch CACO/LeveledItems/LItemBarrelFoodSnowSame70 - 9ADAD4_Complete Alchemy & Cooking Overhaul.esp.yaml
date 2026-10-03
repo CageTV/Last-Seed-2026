@@ -1,0 +1,55 @@
+FormKey: 9ADAD4:Complete Alchemy & Cooking Overhaul.esp
+EditorID: LItemBarrelFoodSnowSame70
+ChanceNone: 0.3
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Global: 9B7CEE:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 10BF6E:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF72:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10D9CD:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10D9CD:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10F5E7:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: CCA154:Update.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 4D49DA:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 9ADAD3:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 9ADAE2:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 9ADAE3:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000800:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000802:Last Seed - Less Food Patch CACO.esp
+    Count: 1

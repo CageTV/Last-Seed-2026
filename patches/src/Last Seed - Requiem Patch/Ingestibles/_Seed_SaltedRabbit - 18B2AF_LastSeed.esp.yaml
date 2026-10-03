@@ -1,0 +1,27 @@
+FormKey: 18B2AF:LastSeed.esp
+EditorID: _Seed_SaltedRabbit
+ObjectBounds:
+  First: -7, -6, 0
+  Second: 7, 6, 3
+Name:
+  TargetLanguage: English
+  Value: Salted Rabbit Haunch
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\DeadAnimals\RabbitMeatCooked01.nif
+  Data: 0x0200000002000000000000006120048D64647300484A40BF2422398B64647300484A40BF
+Weight: 0.3
+Value: 7
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CC:Skyrim.esm
+  Data:
+    Magnitude: 50
+- BaseEffect: 007B48:LastSeed.esp
+  Data: {}
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

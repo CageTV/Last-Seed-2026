@@ -1,0 +1,55 @@
+FormKey: 000802:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItemBarrelFoodSame25
+ChanceNone: 0.75
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Global: 9B7CEE:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 10BF6E:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF70:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF71:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF72:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF74:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: A5F0C0:Complete Alchemy & Cooking Overhaul.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000912:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000918:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 000919:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00091A:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00091B:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00091C:Last Seed - Less Food Patch CACO.esp
+    Count: 1

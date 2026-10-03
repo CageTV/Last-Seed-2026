@@ -1,0 +1,28 @@
+FormKey: 000801:Last Seed - SAFO Patch.esp
+EditorID: v_Recipe_Marmalade_Apple2_L1
+Items:
+- Item:
+    Item: 064B2F:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 00E3AB:SAFO.esp
+    Count: 4
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Unknown2: 84
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 412463
+  ComparisonValue: 1
+CreatedObject: 00E390:SAFO.esp
+WorkbenchKeyword: 0033C5:SAFO.esp
+CreatedObjectCount: 1

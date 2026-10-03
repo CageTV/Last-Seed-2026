@@ -1,0 +1,25 @@
+FormKey: 15DB81:Falskaar.esm
+EditorID: FSRecipeFoodSpiritStew
+Items:
+- Item:
+    Item: 064B40:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 065C9E:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 077E1C:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetStageConditionData
+    Quest: 15D604:Falskaar.esm
+  ComparisonValue: 10
+CreatedObject: 15DB78:Falskaar.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

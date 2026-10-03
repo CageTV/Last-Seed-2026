@@ -1,0 +1,24 @@
+FormKey: 0F2015:Skyrim.esm
+EditorID: WineBottle02BEmpty
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ConvertWineBottles
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Bottle
+      Object: 0F2015:Skyrim.esm
+ObjectBounds:
+  First: -7, -6, 0
+  Second: 7, 6, 28
+Name:
+  TargetLanguage: English
+  Value: Empty Wine Bottle
+Model:
+  File: Clutter\Wine\WineBottle02BEmpty.nif
+  Data: 0x0200000004000000000000002883CF3C646473002659B6B43B4DC5BE646473002659B6B4164E0459646473002659B6B4B8EC307B64647300262C333B
+PickUpSound: 106E1F:Skyrim.esm
+PutDownSound: 106E20:Skyrim.esm
+Keywords:
+- 0914E9:Skyrim.esm
+Value: 3
+Weight: 0.4

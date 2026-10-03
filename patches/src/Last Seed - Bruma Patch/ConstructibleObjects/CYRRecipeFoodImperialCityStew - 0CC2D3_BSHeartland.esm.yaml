@@ -1,0 +1,21 @@
+FormKey: 0CC2D3:BSHeartland.esm
+EditorID: CYRRecipeFoodImperialCityStew
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 034D22:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 049320:BSHeartland.esm
+    Count: 1
+- Item:
+    Item: 0858EF:BSHeartland.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 0721C6:BSHeartland.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

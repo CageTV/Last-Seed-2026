@@ -1,0 +1,22 @@
+FormKey: 0ACC05:mealtimeyum.esp
+EditorID: AAlchbuttercakeyum
+Name:
+  TargetLanguage: English
+  Value: Alchbuttercake
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoMagnitude
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 0.1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,19 @@
+FormKey: 2B04D3:Hunterborn.esp
+EditorID: _DS_Recipe_Food_Soup_Water_iNeed2
+Items:
+- Item:
+    Item: 010891:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 00000F:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 28CCFA:Hunterborn.esp
+CreatedObjectCount: 1

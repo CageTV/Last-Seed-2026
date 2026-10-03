@@ -1,0 +1,146 @@
+FormKey: 014224:Hunterborn.esp
+EditorID: _DS_MGEF_Forage
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _DS_HB_mgef_Forage
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: dsActions
+      Object: 003367:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: dsAnimals
+      Object: 003367:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: dsGlobals
+      Object: 003367:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: dsPlayer
+      Object: 003367:Hunterborn.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: dsTracksFinder
+      Object: 2B04C8:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: flForageAnything
+      Object: 02C3D9:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: flForageIngredients
+      Object: 038BCF:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: flForageIngredients_Superior
+      Object: 0C4E24:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: flForageLocsHolds
+      Object: 02F45F:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: flScavengeArchetypes
+      Object: 1EFBF3:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: flScavengeMessages
+      Object: 1EFBE8:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: foodSoupWater
+      Object: 1B8C0C:LastSeed.esp
+    - MutagenObjectType: ScriptIntListProperty
+      Name: ForageRollModifiers
+      Data:
+      - 15
+      - 25
+      - -15
+      - 0
+      - -25
+      - 0
+      - 20
+      - 10
+      - -20
+      - 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: kwLocTypeCity
+      Object: 013168:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: liAggregator
+      Object: 0205AD:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: liForageBones
+      Object: 038BD0:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: liForageBones_Superior
+      Object: 0C4E26:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: liForageEdibles
+      Object: 02B384:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: liForageEdibles_Superior
+      Object: 0C4E25:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: liForageFirewood
+      Object: 039133:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: mgefForager
+      Object: 0287F9:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: mgefTracker
+      Object: 2B04CC:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: moHeartwood
+      Object: 12F3E1:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: moSharpRock
+      Object: 01B480:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: moSnow
+      Object: 02B386:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: moTreeBark
+      Object: 1E59D9:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MsgBoxForageChoice
+      Object: 038BCA:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MsgBoxForageLevelUp
+      Object: 02DECB:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MsgErrorCantForageHere
+      Object: 02B382:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MsgErrorCantInCombat
+      Object: 015D8D:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MsgForageFailed
+      Object: 02DECC:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MsgMustBeOutdoors
+      Object: 014794:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MsgNoTreesNearby
+      Object: DECD9E:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RegionCheck_Trees
+      Object: DECD9D:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: spellHircinesVigil
+      Object: 1200CC:Hunterborn.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: spelRegionDetect
+      Object: 02BE6B:Hunterborn.esp
+Name:
+  TargetLanguage: English
+  Value: Forage
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoMagnitude
+- NoArea
+- PowerAffectsMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Search the surrounding area for edible plants and useful materials. Can only be used outdoors.

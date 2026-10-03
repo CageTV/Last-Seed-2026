@@ -1,0 +1,12 @@
+FormKey: 000911:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItem_Seed_PreservedPotato75
+ChanceNone: 0.25
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+- CalculateForEachItemInCount
+Global: 9B7CEB:Complete Alchemy & Cooking Overhaul.esp
+Entries:
+- Data:
+    Level: 1
+    Reference: 1903C6:LastSeed.esp
+    Count: 1

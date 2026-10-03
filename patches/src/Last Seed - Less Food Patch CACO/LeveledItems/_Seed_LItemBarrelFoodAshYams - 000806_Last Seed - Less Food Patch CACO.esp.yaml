@@ -1,0 +1,17 @@
+FormKey: 000806:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItemBarrelFoodAshYams
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Entries:
+- Data:
+    Level: 1
+    Reference: 0206E7:Dragonborn.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964D:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00964D:LastSeed.esp
+    Count: 1

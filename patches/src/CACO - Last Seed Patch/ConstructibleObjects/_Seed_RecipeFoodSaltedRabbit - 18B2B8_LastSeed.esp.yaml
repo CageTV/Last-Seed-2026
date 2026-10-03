@@ -1,0 +1,23 @@
+FormKey: 18B2B8:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedRabbit
+Items:
+- Item:
+    Item: 065C9E:Skyrim.esm
+    Count: 1
+- Item:
+    Item: CCA101:Update.esm
+    Count: 3
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 18B2AF:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

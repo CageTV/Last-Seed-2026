@@ -1,0 +1,80 @@
+FormKey: 01954D:LastSeed.esp
+EditorID: _Seed_DrunkSpell4
+Name:
+  TargetLanguage: English
+  Value: Very Drunk
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 010881:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 019550:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B5D:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B5F:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B5E:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B5C:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B5A:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B60:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 019551:LastSeed.esp
+  Data:
+    Magnitude: 5
+- BaseEffect: 204B5B:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B62:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 4B0505:LastSeed.esp
+  Data:
+    Magnitude: 20
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 47DAA6:LastSeed.esp
+    ComparisonValue: 1
+- BaseEffect: 4B0506:LastSeed.esp
+  Data:
+    Magnitude: 20
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 47DAA6:LastSeed.esp
+    ComparisonValue: 1
+- BaseEffect: 4B0509:LastSeed.esp
+  Data:
+    Magnitude: 25
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 47DAA6:LastSeed.esp
+- BaseEffect: 4B050B:LastSeed.esp
+  Data:
+    Magnitude: 25
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 47DAA6:LastSeed.esp
+    ComparisonValue: 1

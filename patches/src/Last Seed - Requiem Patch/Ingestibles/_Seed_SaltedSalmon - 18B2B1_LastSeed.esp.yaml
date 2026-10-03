@@ -1,0 +1,27 @@
+FormKey: 18B2B1:LastSeed.esp
+EditorID: _Seed_SaltedSalmon
+ObjectBounds:
+  First: -5, -8, 0
+  Second: 8, 9, 2
+Name:
+  TargetLanguage: English
+  Value: Salted Salmon Steak
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Food\CookedSlaughterfishSteak01.nif
+  Data: 0x020000000200000000000000CAF19F3264647300B914823615C2866C64647300B9148236
+Weight: 0.2
+Value: 4
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CC:Skyrim.esm
+  Data:
+    Magnitude: 40
+- BaseEffect: 007B48:LastSeed.esp
+  Data: {}
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

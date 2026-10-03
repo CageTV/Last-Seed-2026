@@ -1,0 +1,22 @@
+FormKey: 00D278:SAFO.esp
+EditorID: v_Cook_Egg_Hardboiled
+Items:
+- Item:
+    Item: 023D77:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 146807
+  ComparisonValue: 1
+CreatedObject: 00D26E:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

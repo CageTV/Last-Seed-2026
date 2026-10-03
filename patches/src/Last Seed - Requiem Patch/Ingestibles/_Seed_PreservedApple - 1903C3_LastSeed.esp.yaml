@@ -1,0 +1,28 @@
+FormKey: 1903C3:LastSeed.esp
+EditorID: _Seed_PreservedApple
+ObjectBounds:
+  First: -10, -10, 0
+  Second: 10, 10, 42
+Name:
+  TargetLanguage: English
+  Value: Apple Preserve
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: _BYOH\Clutter\Food\MilkJug01.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 0FC21F:Skyrim.esm
+Weight: 0.2
+Value: 2
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 20
+- BaseEffect: 007B48:LastSeed.esp
+  Data: {}
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

@@ -1,0 +1,22 @@
+FormKey: 4B0500:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedSalmon_L1
+Items:
+- Item:
+    Item: 065C9F:Skyrim.esm
+    Count: 1
+- Item:
+    Item: CCA101:Update.esm
+    Count: 6
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 18B2B1:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

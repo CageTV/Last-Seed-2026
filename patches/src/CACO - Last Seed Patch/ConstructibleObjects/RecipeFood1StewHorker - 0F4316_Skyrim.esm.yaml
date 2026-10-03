@@ -1,0 +1,40 @@
+FormKey: 0F4316:Skyrim.esm
+EditorID: RecipeFood1StewHorker
+Items:
+- Item:
+    Item: 034D22:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 034D32:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 064B42:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 065C9B:Skyrim.esm
+    Count: 1
+- Item:
+    Item: CCA100:Update.esm
+    Count: 2
+- Item:
+    Item: CCA101:Update.esm
+    Count: 2
+- Item:
+    Item: CCA129:Update.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 065C9B:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 0F4315:Skyrim.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 4

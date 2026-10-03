@@ -1,0 +1,22 @@
+FormKey: 00EF25:SAFO.esp
+EditorID: v_Boil_FalmerEar_1
+Items:
+- Item:
+    Item: 03AD5D:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 240989
+  ComparisonValue: 1
+CreatedObject: 00EF1F:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

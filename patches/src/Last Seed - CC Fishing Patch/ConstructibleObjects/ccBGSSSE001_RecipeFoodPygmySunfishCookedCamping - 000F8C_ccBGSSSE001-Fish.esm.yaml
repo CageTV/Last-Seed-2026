@@ -1,0 +1,9 @@
+FormKey: 000F8C:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodPygmySunfishCookedCamping
+Items:
+- Item:
+    Item: 0008ED:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 000885:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

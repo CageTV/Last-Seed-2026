@@ -1,0 +1,19 @@
+FormKey: 68F9BE:SAFO.esp
+EditorID: v_Recipe_FoodSteamMudcrabMeat
+Items:
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 69ECD2:SAFO.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 69ECD2:SAFO.esp
+  ComparisonValue: 1
+CreatedObject: 000803:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

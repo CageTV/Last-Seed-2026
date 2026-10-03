@@ -1,0 +1,24 @@
+FormKey: 03A609:Dragonborn.esm
+MajorRecordFlagsRaw: 134217728
+EditorID: DLC2DarkElfUrn01Food
+SkyrimMajorRecordFlags:
+- 0x8000000
+ObjectBounds:
+  First: -25, -25, 0
+  Second: 25, 25, 74
+Name:
+  TargetLanguage: English
+  Value: Urn
+Model:
+  File: DLC02\Clutter\DLC2DarkElfUrn01.nif
+  Data: 0x020000000000000000000000
+Items:
+- Item:
+    Item: 00090B:Last Seed - Less Food Patch CACO.esp
+    Count: 3
+Flags:
+- Respawns
+OpenSound: 03CDE0:Skyrim.esm
+CloseSound: 03CD15:Skyrim.esm
+MajorFlags:
+- NavMeshGenerationBoundingBox

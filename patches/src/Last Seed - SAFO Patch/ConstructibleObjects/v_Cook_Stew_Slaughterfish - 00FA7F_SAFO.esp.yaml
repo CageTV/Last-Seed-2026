@@ -1,0 +1,28 @@
+FormKey: 00FA7F:SAFO.esp
+EditorID: v_Cook_Stew_Slaughterfish
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+- Item:
+    Item: 0044CE:SAFO.esp
+    Count: 1
+- Item:
+    Item: 00946B:SAFO.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 100680910
+  ComparisonValue: 1
+CreatedObject: 00FA80:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

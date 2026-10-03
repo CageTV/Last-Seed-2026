@@ -1,0 +1,45 @@
+FormKey: 03CD5D:Dragonborn.esm
+EditorID: DLC2RecipeFood1StewHorkerAshYam
+Items:
+- Item:
+    Item: 034D22:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 065C9B:Skyrim.esm
+    Count: 1
+- Item:
+    Item: CCA100:Update.esm
+    Count: 2
+- Item:
+    Item: CCA101:Update.esm
+    Count: 2
+- Item:
+    Item: CCA122:Update.esm
+    Count: 1
+- Item:
+    Item: 0206E7:Dragonborn.esm
+    Count: 3
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 065C9B:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 0206E7:Dragonborn.esm
+  ComparisonValue: 1
+CreatedObject: 03CD5B:Dragonborn.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 4

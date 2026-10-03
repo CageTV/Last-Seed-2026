@@ -1,0 +1,15 @@
+FormKey: 02E144:Warm Drinks.esp
+EditorID: LeoCampfirePlaceableTeapotAshTea
+Items:
+- Item:
+    Item: 017008:Dragonborn.esm
+    Count: 2
+- Item:
+    Item: 01CD74:Dragonborn.esm
+    Count: 2
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 029031:Warm Drinks.esp
+WorkbenchKeyword: 00AA06:Warm Drinks.esp
+CreatedObjectCount: 1

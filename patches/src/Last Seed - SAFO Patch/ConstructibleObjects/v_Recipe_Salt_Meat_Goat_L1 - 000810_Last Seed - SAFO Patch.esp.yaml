@@ -1,0 +1,28 @@
+FormKey: 000810:Last Seed - SAFO Patch.esp
+EditorID: v_Recipe_Salt_Meat_Goat_L1
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 6
+- Item:
+    Item: 065C9A:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Unknown2: 84
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    ItemOrList: 065C9A:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 00E950:SAFO.esp
+WorkbenchKeyword: 0033C5:SAFO.esp
+CreatedObjectCount: 1

@@ -1,0 +1,33 @@
+FormKey: 029018:Warm Drinks.esp
+EditorID: LeoNordicCoffee
+Name:
+  TargetLanguage: English
+  Value: Nordic Coffee
+Keywords:
+- 08CDEA:Skyrim.esm
+- CC0E08:Update.esm
+Model:
+  File: Clutter\Common\Flagon01.nif
+  Data: 0x020000000000000000000000
+Icons:
+  LargeIconFilename: clutter\common\Flagon01.dds
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.5
+Value: 20
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 1058A3:Skyrim.esm
+  Data:
+    Magnitude: 10
+    Duration: 100
+- BaseEffect: 03EB1D:Skyrim.esm
+  Data:
+    Magnitude: 5
+    Duration: 50
+- BaseEffect: 2468C8:LastSeed.esp
+  Data:
+    Duration: 540

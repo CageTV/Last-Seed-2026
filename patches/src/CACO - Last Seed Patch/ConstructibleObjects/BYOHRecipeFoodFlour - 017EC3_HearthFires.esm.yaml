@@ -1,0 +1,9 @@
+FormKey: 017EC3:HearthFires.esm
+EditorID: BYOHRecipeFoodFlour
+Items:
+- Item:
+    Item: 04B0BA:Skyrim.esm
+    Count: 50
+CreatedObject: 003538:HearthFires.esm
+WorkbenchKeyword: 09C6DE:Skyrim.esm
+CreatedObjectCount: 1

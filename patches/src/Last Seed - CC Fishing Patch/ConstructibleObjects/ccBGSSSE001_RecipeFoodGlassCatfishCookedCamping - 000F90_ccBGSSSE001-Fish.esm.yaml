@@ -1,0 +1,9 @@
+FormKey: 000F90:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodGlassCatfishCookedCamping
+Items:
+- Item:
+    Item: 0008A0:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 000882:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 031DB0:Campfire.esm
+CreatedObjectCount: 1

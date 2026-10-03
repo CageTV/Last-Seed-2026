@@ -1,0 +1,22 @@
+FormKey: 00EF2C:SAFO.esp
+EditorID: v_Boil_SpiderEgg_1
+Items:
+- Item:
+    Item: 09151B:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 595227
+  ComparisonValue: 1
+CreatedObject: 00E9B9:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

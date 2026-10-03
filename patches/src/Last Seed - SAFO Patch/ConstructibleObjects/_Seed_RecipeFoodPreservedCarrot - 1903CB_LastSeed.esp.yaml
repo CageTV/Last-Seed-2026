@@ -1,0 +1,23 @@
+FormKey: 1903CB:LastSeed.esp
+EditorID: _Seed_RecipeFoodPreservedCarrot
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 064B40:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 1903C4:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

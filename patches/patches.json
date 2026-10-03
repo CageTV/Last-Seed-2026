@@ -1,0 +1,142 @@
+[
+  {
+    "file": "CACO - Last Seed Patch.esp",
+    "title": "Complete Alchemy and Cooking Overhaul",
+    "group": "Food and recipe mods",
+    "requires": ["Complete Alchemy & Cooking Overhaul.esp"],
+    "description": "Fixes inconsistencies between Last Seed and CACO's food items and recipes (cooking water, portions, jams, jerky)."
+  },
+  {
+    "file": "Last Seed - Apothecary Food Patch.esp",
+    "title": "Apothecary - Food",
+    "group": "Food and recipe mods",
+    "requires": ["ApothecaryFood.esp"],
+    "description": "Resolves compatibility issues between Last Seed and Apothecary Food's potions and food recipes."
+  },
+  {
+    "file": "Last Seed - Bruma Patch.esp",
+    "title": "Beyond Skyrim - Bruma",
+    "group": "Food and recipe mods",
+    "requires": ["BSAssets.esm", "BSHeartland.esm"],
+    "description": "Combines some recipes that are found in both mods."
+  },
+  {
+    "file": "Last Seed - CC Fishing Patch.esp",
+    "title": "Creation Club - Fishing",
+    "group": "Food and recipe mods",
+    "requires": ["ccBGSSSE001-Fish.esm"],
+    "description": "Adds boiled water as an ingredient for the soup recipes."
+  },
+  {
+    "file": "Last Seed - Falskaar Patch.esp",
+    "title": "Falskaar",
+    "group": "Food and recipe mods",
+    "requires": ["Falskaar.esm"],
+    "description": "Fixes some inconsistencies with food recipes."
+  },
+  {
+    "file": "Hunterborn - LastSeed Patch SE.esp",
+    "title": "Hunterborn",
+    "group": "Food and recipe mods",
+    "requires": ["Hunterborn.esp"],
+    "description": "Adds boiled water as an ingredient for the stew recipes."
+  },
+  {
+    "file": "Last Seed - Mealtime Patch.esp",
+    "title": "Mealtime",
+    "group": "Food and recipe mods",
+    "requires": ["mealtimeyum.esp"],
+    "description": "Disables the food portioning system in Mealtime and integrates the preserved food into the skill tree."
+  },
+  {
+    "file": "Last Seed - Nordic Cooking Patch.esp",
+    "title": "Nordic Cooking",
+    "group": "Food and recipe mods",
+    "requires": ["NordicCooking.esp"],
+    "description": "Fixes some inconsistencies with food recipes."
+  },
+  {
+    "file": "Last Seed - Requiem Patch.esp",
+    "title": "Requiem",
+    "group": "Food and recipe mods",
+    "requires": ["Requiem.esp"],
+    "description": "Resolves a number of compatibility issues between Last Seed and Requiem. Note: it carries Last Seed's original third-person messages, so with it the messages are no longer first person."
+  },
+  {
+    "file": "Last Seed - SAFO Patch.esp",
+    "title": "Skyrim Alchemy and Food Overhaul",
+    "group": "Food and recipe mods",
+    "requires": ["SAFO.esp"],
+    "description": "Resolves compatibility issues with the potions and food recipes between the two mods."
+  },
+  {
+    "file": "Skyrim Food Expanded - Last Seed Patch.esp",
+    "title": "Skyrim Food Expanded",
+    "group": "Food and recipe mods",
+    "requires": ["Ana_Skyrim Food Expanded - EN.esp"],
+    "description": "Fixes some inconsistencies with food recipes."
+  },
+  {
+    "file": "Last Seed - Warm Drinks Patch SE.esp",
+    "title": "Warm Drinks",
+    "group": "Food and recipe mods",
+    "requires": ["Warm Drinks.esp"],
+    "description": "Replaces the Water item from Warm Drinks with the one from Last Seed, and makes coffee restore fatigue."
+  },
+  {
+    "file": "Last Seed - Less Food Patch.esp",
+    "title": "Less Food",
+    "group": "Loot",
+    "requires": [],
+    "description": "Removes food items from containers, replacing them with spoiled food or junk. Skip it if you use a similar mod like Poverty or You Hunger. Place it at the end of your load order, after any Bashed or Smashed Patch."
+  },
+  {
+    "file": "Last Seed - Less Food Patch CACO.esp",
+    "title": "Less Food - for CACO",
+    "group": "Loot",
+    "requires": ["Complete Alchemy & Cooking Overhaul.esp"],
+    "description": "Use this version of Less Food instead of the plain one if you have Complete Alchemy and Cooking Overhaul."
+  },
+  {
+    "file": "Last Seed - Wells Patch.esp",
+    "title": "Well buckets",
+    "group": "Wells and buckets",
+    "requires": [],
+    "description": "Adds buckets to the wells in Skyrim and Solstheim that can be used to collect clean water."
+  },
+  {
+    "file": "Last Seed Wells - CC Farming Patch.esp",
+    "title": "Well buckets - Creation Club Farming",
+    "group": "Wells and buckets",
+    "requires": ["ccvsvsse004-beafarmer.esl"],
+    "description": "Adds a bucket to the well at Goldenhills Plantation."
+  },
+  {
+    "file": "Last Seed Wells - Hearthfire Extended Patch.esp",
+    "title": "Well buckets - Hearthfire Extended",
+    "group": "Wells and buckets",
+    "requires": ["hearthfireextended.esp"],
+    "description": "Adds buckets to the new wells at each Hearthfire home."
+  },
+  {
+    "file": "Last Seed Wells - WellInTowns Patch.esp",
+    "title": "Well buckets - Wells in Towns",
+    "group": "Wells and buckets",
+    "requires": ["WellInTowns.esp"],
+    "description": "Adds buckets to the wells added by Wells in Towns."
+  },
+  {
+    "file": "Last Seed - CFTO Patch.esp",
+    "title": "Carriage and Ferry Travel Overhaul",
+    "group": "Other",
+    "requires": ["CFTO.esp"],
+    "description": "Slower needs reduction when riding carriages and ferries."
+  },
+  {
+    "file": "Last Seed - Reliquary of a Myth Patch.esp",
+    "title": "Reliquary of Myth - Artifact Overhaul",
+    "group": "Other",
+    "requires": ["Reliquary of Myth.esp"],
+    "description": "Fixes the compatibility issues with the Ring of Namira."
+  }
+]

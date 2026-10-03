@@ -1,0 +1,34 @@
+FormKey: 000802:Last Seed - Less Food Patch.esp
+EditorID: _Seed_LItemBarrelFoodSame25
+ChanceNone: 0.75
+Flags:
+- CalculateFromAllLevelsLessThanOrEqualPlayer
+Entries:
+- Data:
+    Level: 1
+    Reference: 10BF6E:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF70:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF71:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF72:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF73:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10BF74:Skyrim.esm
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 10F5E7:Skyrim.esm
+    Count: 1

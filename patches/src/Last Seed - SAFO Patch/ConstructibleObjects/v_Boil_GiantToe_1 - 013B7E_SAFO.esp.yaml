@@ -1,0 +1,22 @@
+FormKey: 013B7E:SAFO.esp
+EditorID: v_Boil_GiantToe_1
+Items:
+- Item:
+    Item: 03AD64:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    UseAliases: True
+    ItemOrList: 240996
+  ComparisonValue: 1
+CreatedObject: 00E9AD:SAFO.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

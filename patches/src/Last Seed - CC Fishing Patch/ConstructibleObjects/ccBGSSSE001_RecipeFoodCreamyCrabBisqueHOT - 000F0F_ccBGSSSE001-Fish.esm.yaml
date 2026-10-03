@@ -1,0 +1,20 @@
+FormKey: 000F0F:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodCreamyCrabBisqueHOT
+Items:
+- Item:
+    Item: 03AD5E:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 003538:HearthFires.esm
+    Count: 1
+- Item:
+    Item: 00353C:HearthFires.esm
+    Count: 1
+- Item:
+    Item: 000EFE:ccBGSSSE001-Fish.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1

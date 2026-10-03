@@ -1,0 +1,30 @@
+FormKey: 0009DC:HearthFires.esm
+EditorID: BYOHFoodBakeBreadGarlic01
+ObjectBounds:
+  First: -4, -7, -1
+  Second: 5, 6, 1
+Name:
+  TargetLanguage: English
+  Value: Garlic Bread
+Keywords:
+- 08CDEA:Skyrim.esm
+- AF100F:Update.esm
+- 980126:Complete Alchemy & Cooking Overhaul.esp
+Model:
+  File: _BYOH\Clutter\Food\GarlicBread01.nif
+  Data: 0x020000000000000000000000
+Weight: 0.1
+Value: 6
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 29D485:Complete Alchemy & Cooking Overhaul.esp
+  Data:
+    Magnitude: 4
+    Duration: 180
+- BaseEffect: 17BF98:LastSeed.esp
+  Data:
+    Magnitude: 25
+    Duration: 28800

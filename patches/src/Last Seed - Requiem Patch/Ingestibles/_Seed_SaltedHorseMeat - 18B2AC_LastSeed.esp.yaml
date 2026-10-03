@@ -1,0 +1,24 @@
+FormKey: 18B2AC:LastSeed.esp
+EditorID: _Seed_SaltedHorseMeat
+Name:
+  TargetLanguage: English
+  Value: Salted Horse Meat
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Ingredients\HorseMeatCooked.nif
+  Data: 0x02000000020000000000000063691A2964647300604DDD5C46C597ED64647300604DDD5C
+Weight: 2
+Value: 4
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 120
+- BaseEffect: 007B48:LastSeed.esp
+  Data: {}
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

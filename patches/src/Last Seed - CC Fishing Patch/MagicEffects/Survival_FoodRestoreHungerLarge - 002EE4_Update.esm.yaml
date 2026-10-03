@@ -1,0 +1,22 @@
+FormKey: 002EE4:Update.esm
+EditorID: Survival_FoodRestoreHungerLarge
+Name:
+  TargetLanguage: English
+  Value: Restore Hunger Large
+Flags:
+- NoDuration
+- NoArea
+- HideInUI
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsReferenceConditionData
+    Target: 000014:Skyrim.esm
+  ComparisonValue: 1

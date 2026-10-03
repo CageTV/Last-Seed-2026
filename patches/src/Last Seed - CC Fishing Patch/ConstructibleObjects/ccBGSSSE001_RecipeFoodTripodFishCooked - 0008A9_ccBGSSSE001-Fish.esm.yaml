@@ -1,0 +1,9 @@
+FormKey: 0008A9:ccBGSSSE001-Fish.esm
+EditorID: ccBGSSSE001_RecipeFoodTripodFishCooked
+Items:
+- Item:
+    Item: 00089E:ccBGSSSE001-Fish.esm
+    Count: 1
+CreatedObject: 000887:ccBGSSSE001-Fish.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

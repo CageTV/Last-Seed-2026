@@ -1,0 +1,16 @@
+FormKey: 000800:Last Seed - Requiem Patch.esp
+EditorID: Seed_RecipeFoodCookingWater_REQ
+Items:
+- Item:
+    Item: 03DFE8:Requiem.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 03DFE8:Requiem.esp
+  ComparisonValue: 1
+CreatedObject: 1B8C0C:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

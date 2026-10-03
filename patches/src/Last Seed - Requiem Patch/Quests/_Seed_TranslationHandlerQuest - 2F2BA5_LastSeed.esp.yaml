@@ -1,0 +1,285 @@
+FormKey: 2F2BA5:LastSeed.esp
+EditorID: _Seed_TranslationHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_TranslationHandler
+    Properties:
+    - MutagenObjectType: ScriptStringProperty
+      Name: AteSome
+      Data: ' ate some '
+    - MutagenObjectType: ScriptStringProperty
+      Name: CurrentSelection
+      Data: 'Current Selection: '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseAddiction
+      Data: Skooma Withdrawal
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseAshchancre
+      Data: Ash-Chancre
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseAshWoeBlight
+      Data: Ash Woe Blight
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseAstralVapors
+      Data: Astral Vapors
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseAtaxia
+      Data: Ataxia
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseBlackHeartBlight
+      Data: Black Heart Blight
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseBloodLung
+      Data: Blood Lung
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseBoneBreakFever
+      Data: Bone Break Fever
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseBrainRot
+      Data: Brain Rot
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseBrownRot
+      Data: Brown Rot
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseChanthraxBlight
+      Data: Chanthrax Blight
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseChills
+      Data: Chills
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseCollywobbles
+      Data: Colliwobbles
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseContracted
+      Data: 'I have contracted '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseCured
+      Data: 'I am no longer suffering from '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseDampworm
+      Data: Dampworm
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseDroops
+      Data: Droops
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseFeebleLimb
+      Data: Feeble Limb
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseGreenspore
+      Data: Greenspore
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseHelljoint
+      Data: Helljoint
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseLevel1
+      Data: 'Mild '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseLevel2
+      Data: 'Moderate '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseLevel3
+      Data: 'Severe '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseLevel4
+      Data: 'Crippling '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseLevel5
+      Data: 'Deadly '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseProgressed
+      Data: 'I have developed '
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseRattles
+      Data: Rattles
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseRedRage
+      Data: Red Rage
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseRockjoint
+      Data: Rockjoint
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseRotbone
+      Data: Rotbone
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseRustChancre
+      Data: Rust Chancre
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseSanguinareVampiris
+      Data: Sanguinare Vampiris
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseScalonSunburn
+      Data: Scalon Sunburn
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseSerpiginousDementia
+      Data: Serpiginous Dementia
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseShakes
+      Data: Shakes
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseStomachRot
+      Data: Stomach Rot
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseSwampFever
+      Data: Swamp Fever
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseTicklebritch
+      Data: Ticklebritch
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseTunnelCough
+      Data: Tunnel Cough
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseWitbane
+      Data: Witbane
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseWither
+      Data: Wither
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseWitlessPox
+      Data: Witless Pox
+    - MutagenObjectType: ScriptStringProperty
+      Name: DiseaseYellowTick
+      Data: Yellow Tick
+    - MutagenObjectType: ScriptStringProperty
+      Name: DrankSome
+      Data: ' drank some '
+    - MutagenObjectType: ScriptStringProperty
+      Name: Drinking
+      Data: ' is looking for something to drink.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: drinkModerate
+      Data: ' (Moderate)'
+    - MutagenObjectType: ScriptStringProperty
+      Name: drinkStrong
+      Data: ' (Strong)'
+    - MutagenObjectType: ScriptStringProperty
+      Name: drinkWeak
+      Data: ' (Weak)'
+    - MutagenObjectType: ScriptStringProperty
+      Name: Eating
+      Data: ' is looking for something to eat.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerFirst
+      Data: My first follower
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerHungerMessage0
+      Data: ' feels full.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerHungerMessage1
+      Data: ' feels content.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerHungerMessage2
+      Data: ' feels hungry.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerHungerMessage3
+      Data: ' feels very hungry.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerHungerMessage4
+      Data: ' feels ravenously hungry.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerHungerMessage5
+      Data: ' is starving!'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerSecond
+      Data: My second follower
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerThird
+      Data: My third follower
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerThirstMessage0
+      Data: ' feels their thirst is quenched.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerThirstMessage1
+      Data: ' feels refreshed.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerThirstMessage2
+      Data: ' feels thirsty.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerThirstMessage3
+      Data: ' feels very thirsty.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerThirstMessage4
+      Data: ' feels parched.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: FollowerThirstMessage5
+      Data: ' feels severely parched!'
+    - MutagenObjectType: ScriptStringProperty
+      Name: foodFilling
+      Data: ' (Filling)'
+    - MutagenObjectType: ScriptStringProperty
+      Name: foodHearty
+      Data: ' (Hearty)'
+    - MutagenObjectType: ScriptStringProperty
+      Name: foodLight
+      Data: ' (Light)'
+    - MutagenObjectType: ScriptStringProperty
+      Name: foodMedium
+      Data: ' (Medium)'
+    - MutagenObjectType: ScriptStringProperty
+      Name: Party
+      Data: My companions
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyDrinking
+      Data: ' are looking for something to drink.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyEating
+      Data: ' are looking for something to eat.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyHungerMessage0
+      Data: ' feel full.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyHungerMessage1
+      Data: ' feel content.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyHungerMessage2
+      Data: ' feels hungry.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyHungerMessage3
+      Data: ' feel very hungry.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyHungerMessage4
+      Data: ' feel ravenously hungry.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyHungerMessage5
+      Data: ' are starving!'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyThirstMessage0
+      Data: ' feel their thirst is quenched.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyThirstMessage1
+      Data: ' feel refreshed.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyThirstMessage2
+      Data: ' feel thirsty.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyThirstMessage3
+      Data: ' feel very thirsty.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyThirstMessage4
+      Data: ' feel parched.'
+    - MutagenObjectType: ScriptStringProperty
+      Name: PartyThirstMessage5
+      Data: ' feel severely parched!'
+    - MutagenObjectType: ScriptStringProperty
+      Name: ProvisionsOverweight
+      Data: 'I cannot carry any more provisions '
+    - MutagenObjectType: ScriptStringProperty
+      Name: ProvisionsWeight
+      Data: 'Provision Weight: '
+    - MutagenObjectType: ScriptStringProperty
+      Name: SomeWater
+      Data: waterskin
+    - MutagenObjectType: ScriptStringProperty
+      Name: UnknownFoodstuff
+      Data: 'New foodstuff discovered: '
+    - MutagenObjectType: ScriptStringProperty
+      Name: You
+      Data: ' I'
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Translation Handler
+QuestFormVersion: 65
+NextAliasID: 0

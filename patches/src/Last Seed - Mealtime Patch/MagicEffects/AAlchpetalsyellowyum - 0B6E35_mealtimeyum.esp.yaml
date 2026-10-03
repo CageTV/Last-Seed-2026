@@ -1,0 +1,22 @@
+FormKey: 0B6E35:mealtimeyum.esp
+EditorID: AAlchpetalsyellowyum
+Name:
+  TargetLanguage: English
+  Value: Alchpetalsyellow
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoMagnitude
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 0.1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

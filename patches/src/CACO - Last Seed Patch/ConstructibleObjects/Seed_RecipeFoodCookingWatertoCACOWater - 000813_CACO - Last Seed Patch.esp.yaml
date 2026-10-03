@@ -1,0 +1,16 @@
+FormKey: 000813:CACO - Last Seed Patch.esp
+EditorID: Seed_RecipeFoodCookingWatertoCACOWater
+Items:
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 1B8C0C:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: CCA100:Update.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

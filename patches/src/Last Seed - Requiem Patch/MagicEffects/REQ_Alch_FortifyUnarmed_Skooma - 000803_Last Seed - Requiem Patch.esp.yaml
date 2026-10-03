@@ -1,0 +1,26 @@
+FormKey: 000803:Last Seed - Requiem Patch.esp
+EditorID: REQ_Alch_FortifyUnarmed_Skooma
+Name:
+  TargetLanguage: English
+  Value: Fortify Unarmed
+MenuDisplayObject: 0435A5:Skyrim.esm
+Keywords:
+- 0F8A4E:Skyrim.esm
+- 66F2D6:Requiem.esp
+Flags:
+- Recover
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+BaseCost: 7.5
+SpellmakingCastingTime: 0.5
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: UnarmedDamage
+  Association: 66F2D6:Requiem.esp
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

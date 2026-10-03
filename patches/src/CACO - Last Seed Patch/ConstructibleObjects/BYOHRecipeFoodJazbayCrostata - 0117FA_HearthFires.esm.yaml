@@ -1,0 +1,51 @@
+FormKey: 0117FA:HearthFires.esm
+EditorID: BYOHRecipeFoodJazbayCrostata
+Items:
+- Item:
+    Item: 06AC4A:Skyrim.esm
+    Count: 15
+- Item:
+    Item: CCA120:Update.esm
+    Count: 2
+- Item:
+    Item: CCA123:Update.esm
+    Count: 1
+- Item:
+    Item: 00353C:HearthFires.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA031:Update.esm
+- MutagenObjectType: ConditionGlobal
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CCA030:Update.esm
+  ComparisonValue: CCA034:Update.esm
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: CC0296:Update.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: CCA123:Update.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 06AC4A:Skyrim.esm
+  ComparisonValue: 1
+CreatedObject: 00353A:HearthFires.esm
+WorkbenchKeyword: 0117F7:HearthFires.esm
+CreatedObjectCount: 1

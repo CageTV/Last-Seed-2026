@@ -1,0 +1,21 @@
+FormKey: 000912:Last Seed - Less Food Patch CACO.esp
+EditorID: _Seed_LItem_Seed_PreservedCabbage
+Flags:
+- UseAll
+Entries:
+- Data:
+    Level: 1
+    Reference: 1903C2:LastSeed.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00090C:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00090C:Last Seed - Less Food Patch CACO.esp
+    Count: 1
+- Data:
+    Level: 1
+    Reference: 00090C:Last Seed - Less Food Patch CACO.esp
+    Count: 1

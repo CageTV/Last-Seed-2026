@@ -1,0 +1,103 @@
+FormKey: 0DC172:Skyrim.esm
+EditorID: TGTQ02BalmoraBlue
+ObjectBounds:
+  First: -2, -2, 0
+  Second: 2, 2, 12
+Name:
+  TargetLanguage: English
+  Value: Balmora Blue
+Keywords:
+- 444D86:Requiem.esp
+Model:
+  File: Clutter\Potions\PotionSkooma.nif
+  Data: 0x02000000050000000000000063DF5C0164647300BFFA25DAB9FB95CF64647300BFFA25DAFAE0BBA4646473007F66A5C0CE353C0964647300262C333BFD5A856264647300BFFA25DA
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.5
+Value: 100
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 000801:Last Seed - Requiem Patch.esp
+  Data:
+    Magnitude: 50
+    Duration: 120
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 000804:Last Seed - Requiem Patch.esp
+  Data:
+    Magnitude: 50
+    Duration: 120
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 000803:Last Seed - Requiem Patch.esp
+  Data:
+    Magnitude: 15
+    Duration: 120
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 00080A:Last Seed - Requiem Patch.esp
+  Data:
+    Magnitude: 10
+    Duration: 500
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 00080B:Last Seed - Requiem Patch.esp
+  Data:
+    Magnitude: 1
+    Duration: 500
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 00080C:Last Seed - Requiem Patch.esp
+  Data:
+    Magnitude: 500
+    Duration: 120
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 000808:Last Seed - Requiem Patch.esp
+  Data:
+    Magnitude: 1000000
+    Duration: 6
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetRandomPercentConditionData
+    ComparisonValue: 1
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 000809:Last Seed - Requiem Patch.esp
+  Data:
+    Duration: 120
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetRandomPercentConditionData
+    ComparisonValue: 2
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetIsIDConditionData
+      Object: 000007:Skyrim.esm
+- BaseEffect: 2E388D:LastSeed.esp
+  Data: {}

@@ -1,0 +1,36 @@
+FormKey: 023F16:Warm Drinks.esp
+EditorID: LeoDarkElvenCoffee
+ObjectBounds:
+  First: -5, -7, 0
+  Second: 5, 6, 21
+Name:
+  TargetLanguage: English
+  Value: Dark Elven Coffee
+Keywords:
+- 08CDEA:Skyrim.esm
+- CC0E08:Update.esm
+Model:
+  File: Clutter\Common\Flagon01.nif
+  Data: 0x020000000000000000000000
+Icons:
+  LargeIconFilename: clutter\common\Flagon01.dds
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.5
+Value: 100
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 1058A3:Skyrim.esm
+  Data:
+    Magnitude: 15
+    Duration: 100
+- BaseEffect: 10C645:Skyrim.esm
+  Data:
+    Magnitude: 30
+    Duration: 100
+- BaseEffect: 2468C8:LastSeed.esp
+  Data:
+    Duration: 540

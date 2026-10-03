@@ -1,0 +1,33 @@
+FormKey: 0FB9C9:Skyrim.esm
+MajorRecordFlagsRaw: 134217728
+EditorID: BarrelFood01_Snow
+SkyrimMajorRecordFlags:
+- 0x8000000
+Name:
+  TargetLanguage: English
+  Value: Barrel
+Model:
+  File: Clutter\Barrel01.NIF
+  Data: 0x0200000002000000000000004EFC5AB964647300BFFA25DA2268D84D64647300BFFA25DA
+Items:
+- Item:
+    Item: 10FCFB:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 000801:Last Seed - Less Food Patch.esp
+    Count: 1
+- Item:
+    Item: 000801:Last Seed - Less Food Patch.esp
+    Count: 1
+- Item:
+    Item: 000801:Last Seed - Less Food Patch.esp
+    Count: 1
+- Item:
+    Item: 000801:Last Seed - Less Food Patch.esp
+    Count: 3
+Flags:
+- Respawns
+OpenSound: 03C86D:Skyrim.esm
+CloseSound: 03C870:Skyrim.esm
+MajorFlags:
+- NavMeshGenerationBoundingBox

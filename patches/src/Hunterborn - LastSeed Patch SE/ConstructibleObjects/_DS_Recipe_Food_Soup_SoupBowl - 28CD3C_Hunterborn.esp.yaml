@@ -1,0 +1,12 @@
+FormKey: 28CD3C:Hunterborn.esp
+EditorID: _DS_Recipe_Food_Soup_SoupBowl
+Items:
+- Item:
+    Item: 03199A:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+CreatedObject: 28CD3A:Hunterborn.esp
+WorkbenchKeyword: 28CD37:Hunterborn.esp
+CreatedObjectCount: 1

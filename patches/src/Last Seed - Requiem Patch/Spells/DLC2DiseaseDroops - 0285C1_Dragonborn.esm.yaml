@@ -1,0 +1,21 @@
+FormKey: 0285C1:Dragonborn.esm
+EditorID: DLC2DiseaseDroops
+Name:
+  TargetLanguage: English
+  Value: Droops
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 0285C0:Dragonborn.esm
+  Data:
+    Magnitude: 15
+- BaseEffect: 010874:LastSeed.esp
+  Data: {}
