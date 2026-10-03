@@ -407,6 +407,14 @@ namespace Spoilage
 				}
 			}
 
+			const auto totalItems = [&]() {
+				int n = 0;
+				for (const auto& [obj, count] : a_ref->GetInventoryCounts([](RE::TESBoundObject&) { return true; })) {
+					n += count;
+				}
+				return n;
+			};
+			const int         before = totalItems();
 			std::vector<Swap> rolled;
 			const auto        inventory = a_ref->GetInventoryCounts([](RE::TESBoundObject& o) { return o.Is(RE::FormType::AlchemyItem); });
 			for (const auto& [obj, count] : inventory) {
@@ -430,6 +438,10 @@ namespace Spoilage
 				}
 			}
 
+			const int after = totalItems();
+			if (before != after) {
+				SKSE::log::warn("Spoilage: world container {:08X} had {} items before its roll and {} after", id, before, after);
+			}
 			std::scoped_lock l(lock);
 			auto             it = std::ranges::find(worlds, id, &World::container);
 			if (it == worlds.end()) {
@@ -438,8 +450,8 @@ namespace Spoilage
 			}
 			it->rolledAt = a_now;
 			it->swaps = std::move(rolled);
-			if (!it->swaps.empty()) {
-				SKSE::log::info("Spoilage: world container {} rolled, {} kinds of food spoiled", a_ref->GetDisplayFullName(), it->swaps.size());
+			if (!it->swaps.empty() || before > 0) {
+				SKSE::log::info("Spoilage: world container {} {:08X} rolled: {} items, {} kinds of food spoiled", a_ref->GetDisplayFullName(), id, before, it->swaps.size());
 			}
 		}
 
