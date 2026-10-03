@@ -1,7 +1,6 @@
 # Last Seed 2026
 
-An update of **Last Seed - Survival Needs and Diseases** (Nexus mod 56393, by Chesko and Aytrus) for Skyrim Special Edition / Anniversary
-Edition 1.6.1170 and up, built the same way as [Frostfall 2026](https://github.com/CageTV/Frostfall-2026): what can leave Papyrus and the
+An update of **Last Seed - Survival Needs and Diseases** (Nexus mod 56393, by Chesko and Aytrus) for Skyrim AE 1.6.1170 and up, built the same way as [Frostfall 2026](https://github.com/CageTV/Frostfall-2026): what can leave Papyrus and the
 old SkyUI widgets now runs in an SKSE plugin, and the settings live in SKSE Menu Framework 3.
 
 Last Seed's scripts and plugin are MIT licensed by their authors, so this release carries a modified `LastSeed.esp` and the scripts that
