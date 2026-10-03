@@ -84,6 +84,7 @@ void Settings::Load()
 	GetBool(kv, "bautostart", autoStart);
 	GetBool(kv, "bnativespoilage", nativeSpoilage);
 	GetBool(kv, "bworldspoilage", worldSpoilage);
+	GetBool(kv, "bfreshnessbar", freshnessBar);
 	GetFloat(kv, "fcontainerresetdays", containerResetDays);
 	GetFloat(kv, "fworldspoilchance", worldSpoilChance);
 	GetFloat(kv, "fworldfreshshare", worldFreshShare);
@@ -141,6 +142,7 @@ void Settings::Save() const
 	out << "bWaitForFrostfall=" << (waitForFrostfall ? 1 : 0) << "\n";
 	out << "bNativeSpoilage=" << (nativeSpoilage ? 1 : 0) << "\n";
 	out << "bWorldSpoilage=" << (worldSpoilage ? 1 : 0) << "\n";
+	out << "bFreshnessBar=" << (freshnessBar ? 1 : 0) << "\n";
 	out << std::format("fContainerResetDays={:.1f}\n", containerResetDays);
 	out << std::format("fWorldSpoilChance={:.1f}\nfWorldFreshShare={:.1f}\n\n", worldSpoilChance, worldFreshShare);
 	out << "[HUD]\n";

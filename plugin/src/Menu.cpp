@@ -154,6 +154,9 @@ namespace Menu
 				"Replaces Last Seed's Papyrus spoilage (an invisible tracker object per food stack, each waking up every game hour) with "
 				"records kept by this plugin. The food categories, rot times and spoiled items are still Last Seed's own, and they are still "
 				"set in its Mod Configuration Menu. Takes effect on the next game start, or when you start a new game.");
+			if (Checkbox("Freshness bar over the item card when hovering food", &s.freshnessBar)) {
+				s.Save();
+			}
 			Spacing();
 			BeginDisabled(!s.nativeSpoilage);
 			if (Checkbox("Food in world containers spoils (barrels, chests, sacks)", &s.worldSpoilage)) {

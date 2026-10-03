@@ -27,6 +27,15 @@ namespace Spoilage
 		std::vector<Row> rows;             // freshest-to-oldest sorted by how close they are to spoiling, capped
 	};
 
+	// How fresh the food of one kind is in one container (count-weighted average over its batches). Any thread.
+	struct Freshness
+	{
+		bool  valid = false;    // tracked food, with a known rot time
+		float rotted = 0.0f;    // 0 = fresh, 1 = about to spoil
+		float hoursLeft = 0.0f; // at the current rot speed
+	};
+	Freshness FreshnessOf(RE::FormID a_container, RE::FormID a_food);
+
 	void  Init();         // after data is loaded
 	void  Begin();        // starts the update thread
 	void  Register();     // save-game (SKSE co-save) callbacks, call from plugin load

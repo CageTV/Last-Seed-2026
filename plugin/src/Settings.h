@@ -5,6 +5,7 @@ struct Settings
 {
 	// [General]
 	bool  waitForFrostfall = true;   // with Frostfall installed, start Last Seed only after Frostfall has started (like Frostfall's own pattern)
+	bool  freshnessBar = true;        // thin freshness bar over the item card while hovering a food that spoils
 	bool  worldSpoilage = true;       // food in world containers spoils (LastSeed.dll), and is restocked fresh after the reset period
 	float worldSpoilChance = 40.0f;   // % chance each food in a world container has spoiled when first seen (replaces Last Seed's Container Spoilage Rate)
 	float worldFreshShare = 25.0f;    // % of the food in each world container that is always left fresh

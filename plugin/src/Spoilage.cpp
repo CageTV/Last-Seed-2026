@@ -836,6 +836,32 @@ namespace Spoilage
 
 	bool Active() { return Settings::Get().nativeSpoilage; }
 
+	Freshness FreshnessOf(RE::FormID a_container, RE::FormID a_food)
+	{
+		Freshness out;
+		std::scoped_lock l(lock);
+		const auto rate = rates.find(a_food);
+		if (!active || rate == rates.end() || rate->second <= 0.0f) {
+			return out;
+		}
+		double sum = 0.0;
+		int    n = 0;
+		for (const auto& b : batches) {
+			if (b.container == a_container && b.food == a_food) {
+				sum += static_cast<double>(b.perished) * b.count;
+				n += b.count;
+			}
+		}
+		if (n <= 0) {
+			return out;
+		}
+		const float avg = static_cast<float>(sum / n);
+		out.valid = true;
+		out.rotted = std::clamp(avg / rate->second, 0.0f, 1.0f);
+		out.hoursLeft = std::max(0.0f, (rate->second - avg) / std::max(speed, 0.01f));
+		return out;
+	}
+
 bool WorldActive() { return Settings::Get().nativeSpoilage && Settings::Get().worldSpoilage; }
 
 	Stats Snapshot(std::size_t a_maxRows)

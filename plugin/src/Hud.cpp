@@ -1,5 +1,6 @@
 #include "PCH.h"
 #include "Hud.h"
+#include "Freshness.h"
 #include "Game.h"
 #include "Settings.h"
 
@@ -325,6 +326,7 @@ namespace Hud
 		}
 
 		auto* dl = GetForegroundDrawList();
+		Freshness::Draw(dl, GetIO()->DisplaySize.x, GetIO()->DisplaySize.y);  // over the inventory item card, whatever the HUD is doing
 		if (!preview && (SKSEMenuFramework::IsAnyBlockingWindowOpened() || HudHiddenByGame())) {
 			return;
 		}

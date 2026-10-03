@@ -13,6 +13,7 @@ add_commonlibsse_plugin(${PROJECT_NAME} NAME "LastSeed" AUTHOR "CageTV" SOURCES
     src/Menu.cpp
     src/AutoStart.cpp
     src/Spoilage.cpp
+    src/Freshness.cpp
 )
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
