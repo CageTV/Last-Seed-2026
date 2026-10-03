@@ -836,6 +836,18 @@ namespace Spoilage
 
 	bool Active() { return Settings::Get().nativeSpoilage; }
 
+	std::string DebugState(RE::FormID a_container, RE::FormID a_food)
+	{
+		std::scoped_lock l(lock);
+		int n = 0;
+		for (const auto& b : batches) {
+			n += (b.container == a_container && b.food == a_food) ? b.count : 0;
+		}
+		const auto rate = rates.find(a_food);
+		return std::format("active {}, nativeSpoilage {}, enableGlobal {}, ready {}, batches {} ({} here), rate {}, items of this food tracked {}", active,
+			Settings::Get().nativeSpoilage, d.enable ? d.enable->value : -1.0f, d.ready, batches.size(), n, rate != rates.end() ? rate->second : -1.0f, n);
+	}
+
 	Freshness FreshnessOf(RE::FormID a_container, RE::FormID a_food)
 	{
 		Freshness out;

@@ -75,6 +75,32 @@ namespace Freshness
 			return true;
 		}
 
+		// Diagnostics: asks the menu movie for the card clip under the usual names and logs what answers, once per menu session.
+		void ProbeCard(RE::GPtr<RE::GFxMovieView> a_view)
+		{
+			static bool probed = false;
+			if (probed || !a_view) {
+				return;
+			}
+			probed = true;
+			const auto frame = a_view->GetVisibleFrameRect();
+			SKSE::log::info("Freshness: stage {:.0f},{:.0f} to {:.0f},{:.0f}", frame.left, frame.top, frame.right, frame.bottom);
+			for (const char* path : { "_root.Menu_mc.ItemCard_mc", "_root.Menu_mc.itemCard", "_root.Menu_mc.ItemCard", "_root.Menu_mc.itemCardFadeHolder",
+					 "_root.Menu_mc.ItemCardFadeHolder_mc", "_root.Menu_mc.ItemCard_mc.ItemCardMovie", "_level0.Menu_mc.ItemCard_mc" }) {
+				RE::GFxValue v;
+				if (!a_view->GetVariable(&v, path) || !v.IsObject()) {
+					SKSE::log::info("Freshness: probe {} -> not found", path);
+					continue;
+				}
+				const auto num = [&](const char* m) {
+					RE::GFxValue n;
+					return (v.GetMember(m, &n) && n.IsNumber()) ? n.GetNumber() : -9999.0;
+				};
+				SKSE::log::info("Freshness: probe {} -> _x {:.0f} _y {:.0f} _width {:.0f} _height {:.0f} _xscale {:.0f} _visible {}", path, num("_x"), num("_y"), num("_width"),
+					num("_height"), num("_xscale"), num("_visible"));
+			}
+		}
+
 		// Game thread: which item is under the cursor, and how fresh is it.
 		void Update()
 		{
@@ -87,11 +113,13 @@ namespace Freshness
 					if (auto menu = ui->GetMenu<RE::InventoryMenu>()) {
 						list = menu->GetRuntimeData().itemList;
 						card = menu->GetRuntimeData().itemCard;
+						ProbeCard(menu->uiMovie);
 					}
 				} else if (ui->IsMenuOpen(RE::ContainerMenu::MENU_NAME)) {
 					if (auto menu = ui->GetMenu<RE::ContainerMenu>()) {
 						list = menu->GetRuntimeData().itemList;
 						card = menu->GetRuntimeData().itemCard;
+						ProbeCard(menu->uiMovie);
 					}
 				}
 				if (auto* item = list ? list->GetSelectedItem() : nullptr; item && item->data.objDesc && item->data.objDesc->object) {
@@ -110,8 +138,8 @@ namespace Freshness
 					next.haveCard = CardRect(card, next, x, y, w, h);
 					if (food != lastLogged) {  // once per item hovered, so the log shows what the bar is working from
 						lastLogged = food;
-						SKSE::log::info("Freshness: hovering {:08X} owner {:08X}: tracked {}, rotted {:.2f}; card clip _x/_y/_w/_h {:.0f}/{:.0f}/{:.0f}/{:.0f} -> screen {:.3f},{:.3f} to {:.3f},{:.3f}",
-							food, owner, f.valid, f.rotted, x, y, w, h, next.cardL, next.cardT, next.cardR, next.cardB);
+						SKSE::log::info("Freshness: hovering {:08X} owner {:08X}: tracked {}, rotted {:.2f} [{}]; card clip _x/_y/_w/_h {:.0f}/{:.0f}/{:.0f}/{:.0f}", food, owner, f.valid, f.rotted,
+							Spoilage::DebugState(owner, food), x, y, w, h);
 					}
 				}
 			}

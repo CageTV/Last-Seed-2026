@@ -35,6 +35,7 @@ namespace Spoilage
 		float hoursLeft = 0.0f; // at the current rot speed
 	};
 	Freshness FreshnessOf(RE::FormID a_container, RE::FormID a_food);
+	std::string DebugState(RE::FormID a_container, RE::FormID a_food);  // why FreshnessOf says what it says, for the log
 
 	void  Init();         // after data is loaded
 	void  Begin();        // starts the update thread
