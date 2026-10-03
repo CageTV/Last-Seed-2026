@@ -17,7 +17,11 @@ PAGES = [
     ("Vitality", "PageReset_Vitality"),
     ("Alcohol, Skooma & Disease", "PageReset_AlcoholDisease"),
     ("Food Spoilage", "PageReset_FoodSpoilage"),
+    ("Other", "PageReset_Help"),
 ]
+
+# Lines of the "Other" page that are not plain settings: handled by hand in NativeMcm.cpp (or only shown while Last Seed is stopped).
+SKIP_OIDS = {"Advanced_ProvisioningSkillRespec_OID", "Advanced_ProvisioningSkillRestore_OID", "Advanced_ProvisioningSkillRestoreSlider_OID", "Advanced_ForceStartMod_OID"}
 
 
 def read(path, enc="utf-8"):
@@ -90,6 +94,18 @@ def globals_from_yaml(folder):
     return out
 
 
+def spells_from_yaml(folder):
+    out = {}
+    sdir = os.path.join(folder, "Spells")
+    for fn in os.listdir(sdir):
+        t = read(os.path.join(sdir, fn))
+        eid = re.search(r"^EditorID:\s*(\S+)", t, re.M)
+        fk = re.search(r"^FormKey:\s*([0-9A-Fa-f]{6}):(\S+)", t, re.M)
+        if eid and fk and fk.group(2).lower() == "lastseed.esp":
+            out[eid.group(1).lower()] = int(fk.group(1), 16)
+    return out
+
+
 def translations(path):
     out = {}
     for l in read(path, "utf-16").splitlines():
@@ -138,6 +154,8 @@ def main():
     mopen = option_blocks(funcs["OnOptionMenuOpen"])
     macc = option_blocks(funcs["OnOptionMenuAccept"])
     odef = option_blocks(funcs["OnOptionDefault"])
+    km = option_blocks(funcs["OnOptionKeyMapChange"])
+    spells = spells_from_yaml(yaml_dir)
 
     def resolve(prop):
         g = gl.get(prop.lower())
@@ -152,8 +170,22 @@ def main():
     used_arrays = {}
     for title, fname in PAGES:
         rows = []
+        seen_oids = set()
         for l in funcs[fname]:
             s = l.strip()
+            if fname == "PageReset_Help" and (s.startswith("If seedutil.") or s in ("Else", "EndIf")):
+                continue
+            m = re.match(r"^(\w+) = Self\.\w+\(", s)
+            if m and (m.group(1) in SKIP_OIDS or m.group(1) in seen_oids):
+                continue
+            if m:
+                seen_oids.add(m.group(1))
+            if s.startswith("Self.AddHeaderOption") and fname == "PageReset_Help" and "HeaderProvisioningSkill" in s:
+                continue  # the provisioning skill options are drawn by hand
+            m = re.match(r'^(\w+) = Self\.AddKeyMapOption\("([^"]+)", (\w+)\.GetValueInt\(\), \d+\)$', s)
+            if m:
+                rows.append(("key", m.group(1), m.group(3), label(m.group(2))))
+                continue
             m = re.match(r'^Self\.AddHeaderOption\("([^"]+)", \d+\)$', s)
             if m:
                 rows.append(("header", label(m.group(1))))
@@ -176,6 +208,7 @@ def main():
                 rows.append(("menu", m.group(1), m.group(4), label(m.group(2)), m.group(3), int(m.group(6) or 0)))
                 continue
             problems.append(f"{title}: unparsed line: {s}")
+        rows = [r for i, r in enumerate(rows) if not (r[0] == "header" and i + 1 < len(rows) and rows[i + 1][0] == "header")]  # a header with nothing under it
         pages_out.append((title, rows))
 
     # ---- emit ----
@@ -189,7 +222,7 @@ def main():
     A("")
     A("namespace mcm")
     A("{")
-    A("	enum class Kind { Header, Column, Toggle, Slider, Menu };")
+    A("	enum class Kind { Header, Column, Toggle, Slider, Menu, Key };")
     A("")
     A("	// One row of a page. formId is the local FormID of the setting's global in LastSeed.esp (0 for headers and column breaks).")
     A("	// Toggles hold 1 (off) or 2 (on). A menu stores its list position plus menuBase. Sliders are saved to the profile as integers.")
@@ -204,6 +237,7 @@ def main():
     A("		const char* const*  options;     // menu entries")
     A("		int                 optionCount;")
     A("		int                 menuBase;    // value stored for the first menu entry")
+    A("		unsigned int        aux;         // Key: local FormID of the spell the hotkey casts")
     A("	};")
     A("")
     # menu arrays first
@@ -294,6 +328,26 @@ def main():
                     problems.append(f"menu {oid} ({lab}): extra effects on accept: {' | '.join(extra)}")
                 n = len(arrays.get(arr) or [])
                 A(f"		{{ Kind::Menu, {cstr(lab)}, 0x{g[0]:06X}, {cstr(key)}, {fl(int(dm.group(1)) if dm else 0)}, 0.0f, 0.0f, 0.0f, \"\", kList_{arr}, {n}, {accept_base} }},")
+            elif r[0] == "key":
+                _, oid, prop, lab = r
+                g = resolve(prop)
+                b = km.get(oid, [])
+                txt = "\n".join(b)
+                m = re.search(r"RemapHotkey\(option, keyCode, conflictControl, conflictName, (\w+), (\w+)\)", txt)
+                spell = None
+                if m:
+                    if m.group(1) != prop:
+                        problems.append(f"key {oid}: remaps {m.group(1)} but is shown with {prop}")
+                    spell = spells.get(m.group(2).lower())
+                    if not spell:
+                        problems.append(f"key {oid}: spell {m.group(2)} not found in the ESP")
+                else:
+                    problems.append(f"key {oid}: no RemapHotkey call")
+                m = re.search(r'SaveSettingToCurrentProfile\("([^"]*)", keyCode\)', txt)
+                key = m.group(1) if m else ""
+                if not m:
+                    problems.append(f"key {oid}: no profile key")
+                A(f"		{{ Kind::Key, {cstr(lab)}, 0x{g[0]:06X}, {cstr(key)}, 0.0f, 0.0f, 0.0f, 0.0f, \"\", nullptr, 0, 0, 0x{(spell or 0):06X} }},")
         A("	};")
         A("")
         page_ids.append((title, f"kPage{pi}"))
@@ -308,9 +362,12 @@ def main():
         A(f"		{{ {cstr(title)}, {ident}, static_cast<int>(std::size({ident})) }},")
     A("	};")
     A("}")
+    for i, ln in enumerate(lines):
+        if ln.startswith("\t\t{ Kind::") and "Kind::Key" not in ln and ln.endswith(" },"):
+            lines[i] = ln[:-3] + ", 0 },"
     with open(out_path, "w", encoding="utf-8", newline="\n") as f:
         f.write("\n".join(lines) + "\n")
-    total = sum(1 for _, rows in pages_out for r in rows if r[0] in ("toggle", "slider", "menu"))
+    total = sum(1 for _, rows in pages_out for r in rows if r[0] in ("toggle", "slider", "menu", "key"))
     print(f"wrote {out_path}: {len(pages_out)} pages, {total} settings")
     for p in problems:
         print("  REVIEW:", p)

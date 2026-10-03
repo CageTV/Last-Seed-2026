@@ -14,6 +14,8 @@ namespace NativeMcm
 		constexpr RE::FormID kConfigHandlerQuest = 0x250AD0;  // _Seed_ConfigurationHandlerQuest, carries _Seed_ConfigurationHandler
 		constexpr RE::FormID kAutoSaveLoad = 0x00E776;        // _Seed_Setting_AutoSaveLoad (2 = changes are written to the current profile)
 		constexpr RE::FormID kCurrentProfile = 0x00E775;      // _Seed_Setting_CurrentProfile
+		constexpr RE::FormID kSkillTreeQuest = 0x4A11E1;      // _Seed_SkillTreeHandlerQuest, carries _Seed_SkillTreeHandler
+		constexpr RE::FormID kPerkPointsTotal = 0x47DAA3;     // ProvisioningPerkPointsTotal
 		constexpr const char* kConfigPath = "../LastSeedData/";  // where the MCM keeps its profiles (JsonUtil path)
 		constexpr float       kSessionGraceSeconds = 0.4f;     // the pages count as closed when not drawn for this long
 		constexpr float       kProfileWriteDelay = 0.6f;       // profile writes wait for the last change, like dragging a slider
@@ -72,6 +74,25 @@ namespace NativeMcm
 			});
 		}
 
+		// Calls a method of a Last Seed quest script on the game thread (arguments are optional ints).
+		template <class... Args>
+		void CallQuest(RE::FormID a_quest, const char* a_script, const char* a_method, Args... a_args)
+		{
+			SKSE::GetTaskInterface()->AddTask([=]() mutable {
+				auto* dh = RE::TESDataHandler::GetSingleton();
+				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(a_quest, "LastSeed.esp") : nullptr;
+				if (!vm || !quest) {
+					SKSE::log::warn("Last Seed settings: cannot call {}.{} (quest or VM missing)", a_script, a_method);
+					return;
+				}
+				const auto handle = vm->GetObjectHandlePolicy()->GetHandleForObject(RE::TESQuest::FORMTYPE, quest);
+				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
+				const bool ok = vm->DispatchMethodCall2(handle, a_script, a_method, RE::MakeFunctionArguments(std::move(a_args)...), callback);
+				SKSE::log::info("Last Seed settings: {}.{}() -> {}", a_script, a_method, ok ? "dispatched" : "FAILED");
+			});
+		}
+
 		void Changed(const mcm::Entry& a_e, RE::TESGlobal* a_g, float a_value, int a_profileValue)
 		{
 			a_g->value = a_value;
@@ -120,6 +141,13 @@ namespace NativeMcm
 					}
 				}
 				break;
+			case mcm::Kind::Key:
+				if (auto* g = Global(a_e.formId)) {
+					Text("%s", a_e.label);
+					SameLine();
+					TextDisabled("(key %d)", static_cast<int>(g->value));
+				}
+				break;
 			case mcm::Kind::Menu:
 				if (auto* g = Global(a_e.formId)) {
 					int index = std::clamp(static_cast<int>(g->value) - a_e.menuBase, 0, std::max(0, a_e.optionCount - 1));
@@ -131,6 +159,56 @@ namespace NativeMcm
 				break;
 			}
 			PopID();
+		}
+	}
+
+	namespace
+	{
+		void DrawProvisioning()
+		{
+			static int   confirm = 0;        // 1 = respec asked, 2 = restore asked
+			static float restore = 0.0f;
+			static float confirmTimer = 0.0f;
+			confirmTimer -= GetIO()->DeltaTime;
+			if (confirmTimer <= 0.0f) {
+				confirm = 0;
+			}
+			Spacing();
+			SeparatorText("Provisioning Skill");
+			if (confirm == 1) {
+				TextWrapped("Are you sure you want to refund all earned Provisioning skill points so you can reallocate them?");
+				if (Button("Yes, respec my perks")) {
+					CallQuest(kSkillTreeQuest, "_Seed_SkillTreeHandler", "RefundSkillPoints");
+					confirm = 0;
+				}
+				SameLine();
+				if (Button("Cancel")) {
+					confirm = 0;
+				}
+			} else if (Button("Respec Perks")) {
+				confirm = 1;
+				confirmTimer = 10.0f;
+			}
+			float total = 0.0f;
+			if (auto* g = Global(kPerkPointsTotal)) {
+				total = g->value;
+			}
+			TextWrapped("Restore Skill Progress: reclaim Provisioning skill progress lost to a clean save or a mod uninstall. This replaces your current progress.");
+			restore = std::clamp(restore, 0.0f, std::max(total, 0.0f));
+			SliderFloat("Skill points to restore", &restore, 0.0f, std::max(total, 1.0f), "%.0f");
+			if (confirm == 2) {
+				if (Button("Yes, restore these skill points")) {
+					CallQuest(kSkillTreeQuest, "_Seed_SkillTreeHandler", "restorePerkPoints", static_cast<std::int32_t>(restore));
+					confirm = 0;
+				}
+				SameLine();
+				if (Button("Cancel##restore")) {
+					confirm = 0;
+				}
+			} else if (Button("Restore skill progress")) {
+				confirm = 2;
+				confirmTimer = 10.0f;
+			}
 		}
 	}
 
@@ -152,6 +230,11 @@ namespace NativeMcm
 		const auto& page = mcm::kPages[a_page];
 		for (int i = 0; i < page.count; ++i) {
 			DrawEntry(page.entries[i], i);
+		}
+		if (std::string_view(page.title) == "Other") {
+			DrawProvisioning();
+			Spacing();
+			TextWrapped("Hotkeys are shown for reference; changing them still happens in Last Seed's SkyUI menu until that menu is retired.");
 		}
 	}
 
