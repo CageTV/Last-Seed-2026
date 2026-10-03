@@ -36,10 +36,12 @@ Attack Speed Fix, Your Own Thoughts and Apothecary patch plugins, and `iWant Las
 
 ## Two builds
 
+Both are in one FOMOD installer, **Last Seed 2026**, which asks Regular or ESL.
+
 | | **Last Seed 2026** | **Last Seed 2026 (ESL)** |
 |---|---|---|
 | `LastSeed.esp` | regular plugin, same FormIDs as Last Seed 5.3 | light plugin (ESL), FormIDs renumbered |
-| Campfire / Frostfall | regular | the ESL pair (CAMPFIRE ESL UPDATED, Frostfall 2026 ESL) |
+| Campfire / Frostfall | regular | the ESL pair (Campfire 2026 ESL, Frostfall 2026 ESL) |
 | Existing saves | works with a save that already runs Last Seed | **new game** |
 
 Use one, never both. The same `LastSeed.dll` is in each; it detects which plugin build is loaded.
@@ -55,14 +57,13 @@ Use one, never both. The same `LastSeed.dll` is in each; it detects which plugin
 
 ## Install
 
-Install the original Last Seed, then this over it, and let this one overwrite. Disable the patch plugins listed above. If you use the
-**Drunk or drugged animations OAR** mod with the ESL build, see the notes in the ESL zip's readme (its config names two Last Seed effects by id).
+Install the original Last Seed, then this over it, and let this one overwrite. Order: Campfire, Campfire 2026, Frostfall 2026, then Last Seed 2026. Disable the patch plugins listed above. If you use the
+**Drunk or drugged animations OAR** mod with the ESL build, see the ESL section of the readme (its config names two Last Seed effects by id).
 
 ## Patches
 
-Last Seed's compatibility patches that are still needed are separate FOMOD downloads, one per build, so you cannot install the wrong one:
-**Last Seed 2026 - Patches** for the regular build and **Last Seed 2026 - Patches (ESL)** for the ESL build (a patch whose mod is not in your load
-order cannot be ticked).
+Last Seed's compatibility patches that are still needed are one FOMOD download, **Last Seed 2026 - Patches**. It first asks which build you use
+(Regular or ESL), so you cannot install the wrong plugins, then lists the patches (a patch whose mod is not in your load order cannot be ticked).
 
 ## Building
 
