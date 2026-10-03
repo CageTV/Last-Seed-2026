@@ -6,6 +6,8 @@ struct Settings
 	// [General]
 	bool  waitForFrostfall = true;   // with Frostfall installed, start Last Seed only after Frostfall has started (like Frostfall's own pattern)
 	bool  worldSpoilage = true;       // food in world containers spoils (LastSeed.dll), and is restocked fresh after the reset period
+	float worldSpoilChance = 40.0f;   // % chance each food in a world container has spoiled when first seen (replaces Last Seed's Container Spoilage Rate)
+	float worldFreshShare = 25.0f;    // % of the food in each world container that is always left fresh
 	float containerResetDays = 30.0f; // game days before a world container's spoiled food is made fresh again and re-rolled
 	bool  nativeSpoilage = true;     // food spoilage runs in LastSeed.dll instead of Last Seed's Papyrus trackers
 	bool  autoStart = true;          // start Last Seed on its own the first time the player is outside and in control

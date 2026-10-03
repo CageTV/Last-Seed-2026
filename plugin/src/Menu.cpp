@@ -160,10 +160,17 @@ namespace Menu
 				s.Save();
 			}
 			TextWrapped(
-				"When you come near a container for the first time, each food in it may have spoiled, using Last Seed's Container Spoilage "
-				"chance. After the reset period below, spoiled food you left in it turns fresh again and is rolled again, so containers do "
-				"not stay rotten forever. Chests you have put food into, and containers you own, are never touched.");
+				"When you come near a container for the first time, each food in it may have spoiled, using the chance below (this replaces "
+				"Last Seed's Container Spoilage Rate), but a share of its food is always left fresh. After the reset period, spoiled food "
+				"you left in it turns fresh again and is rolled again, so containers do not stay rotten forever. Chests you have put food "
+				"into, and containers you own, are never touched.");
 			BeginDisabled(!s.worldSpoilage);
+			if (SliderFloat("Chance each food has spoiled (%)", &s.worldSpoilChance, 0.0f, 100.0f, "%.0f")) {
+				s.Save();
+			}
+			if (SliderFloat("Always left fresh in each container (%)", &s.worldFreshShare, 0.0f, 100.0f, "%.0f")) {
+				s.Save();
+			}
 			if (SliderFloat("Reset period (game days)", &s.containerResetDays, 1.0f, 120.0f, "%.0f")) {
 				s.Save();
 			}

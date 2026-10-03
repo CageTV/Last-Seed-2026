@@ -415,26 +415,56 @@ namespace Spoilage
 				return n;
 			};
 			const int         before = totalItems();
-			std::vector<Swap> rolled;
-			const auto        inventory = a_ref->GetInventoryCounts([](RE::TESBoundObject& o) { return o.Is(RE::FormType::AlchemyItem); });
+			struct Rolled
+			{
+				RE::TESBoundObject* food;
+				RE::TESBoundObject* spoiled;
+				int                 spoiledN = 0;
+				int                 perishedN = 0;
+			};
+			std::vector<Rolled> plan;
+			int                 foodTotal = 0;
+			int                 rotTotal = 0;
+			const auto          inventory = a_ref->GetInventoryCounts([](RE::TESBoundObject& o) { return o.Is(RE::FormType::AlchemyItem); });
 			for (const auto& [obj, count] : inventory) {
 				Info info;
 				if (count <= 0 || !Classify(obj, info) || (d.spoiledFoods && d.spoiledFoods->HasForm(obj))) {
 					continue;  // not a food that spoils, or already spoiled
 				}
-				int spoiledN = 0, perishedN = 0;
+				Rolled r{ obj, info.spoiled };
 				for (int i = 0; i < count; ++i) {
 					if (Chance(a_chance)) {
-						(Chance(kPerishedShare) ? perishedN : spoiledN) += 1;
+						(Chance(kPerishedShare) ? r.perishedN : r.spoiledN) += 1;
 					}
 				}
-				if (spoiledN > 0) {
-					SwapItems(a_ref, obj, info.spoiled, spoiledN);
-					rolled.push_back({ obj->GetFormID(), info.spoiled->GetFormID(), spoiledN });
+				foodTotal += count;
+				rotTotal += r.spoiledN + r.perishedN;
+				plan.push_back(r);
+			}
+			// Always leave a share of the container's food fresh: put random rotten pieces back until it holds.
+			const int keepFresh = static_cast<int>(std::ceil(foodTotal * std::clamp(Settings::Get().worldFreshShare, 0.0f, 100.0f) / 100.0f));
+			for (int excess = rotTotal - (foodTotal - keepFresh); excess > 0; --excess) {
+				std::vector<Rolled*> candidates;
+				for (auto& r : plan) {
+					if (r.spoiledN + r.perishedN > 0) {
+						candidates.push_back(&r);
+					}
 				}
-				if (perishedN > 0) {
-					SwapItems(a_ref, obj, d.perishedFood, perishedN);
-					rolled.push_back({ obj->GetFormID(), d.perishedFood->GetFormID(), perishedN });
+				if (candidates.empty()) {
+					break;
+				}
+				auto& r = *candidates[std::uniform_int_distribution<std::size_t>(0, candidates.size() - 1)(Rng())];
+				(r.spoiledN > 0 ? r.spoiledN : r.perishedN) -= 1;
+			}
+			std::vector<Swap> rolled;
+			for (const auto& r : plan) {
+				if (r.spoiledN > 0) {
+					SwapItems(a_ref, r.food, r.spoiled, r.spoiledN);
+					rolled.push_back({ r.food->GetFormID(), r.spoiled->GetFormID(), r.spoiledN });
+				}
+				if (r.perishedN > 0) {
+					SwapItems(a_ref, r.food, d.perishedFood, r.perishedN);
+					rolled.push_back({ r.food->GetFormID(), d.perishedFood->GetFormID(), r.perishedN });
 				}
 			}
 
@@ -460,7 +490,7 @@ namespace Spoilage
 			auto*       player = RE::PlayerCharacter::GetSingleton();
 			auto*       tes = RE::TES::GetSingleton();
 			const auto  period = static_cast<double>(Settings::Get().containerResetDays) * 24.0;
-			const float chance = d.worldRate ? std::clamp(d.worldRate->value, 0.0f, 100.0f) : 0.0f;
+			const float chance = std::clamp(Settings::Get().worldSpoilChance, 0.0f, 100.0f);
 			auto*       cell = player ? player->GetParentCell() : nullptr;
 			// Not while a save is loading or the world is not fully attached: TES::ForEachReferenceInRange crashes then, so walk
 			// the attached cells ourselves.

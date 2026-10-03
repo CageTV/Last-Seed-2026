@@ -85,6 +85,8 @@ void Settings::Load()
 	GetBool(kv, "bnativespoilage", nativeSpoilage);
 	GetBool(kv, "bworldspoilage", worldSpoilage);
 	GetFloat(kv, "fcontainerresetdays", containerResetDays);
+	GetFloat(kv, "fworldspoilchance", worldSpoilChance);
+	GetFloat(kv, "fworldfreshshare", worldFreshShare);
 	GetBool(kv, "bwaitforfrostfall", waitForFrostfall);
 	GetBool(kv, "bhudenabled", hudEnabled);
 	GetInt(kv, "idisplaymode", displayMode);
@@ -108,6 +110,8 @@ void Settings::Load()
 	GetBool(kv, "bshowicons", showIcons);
 
 	containerResetDays = std::clamp(containerResetDays, 1.0f, 365.0f);
+	worldSpoilChance = std::clamp(worldSpoilChance, 0.0f, 100.0f);
+	worldFreshShare = std::clamp(worldFreshShare, 0.0f, 100.0f);
 	displayMode = std::clamp(displayMode, 0, 1);
 	fillMode = std::clamp(fillMode, 0, 1);
 	layout = std::clamp(layout, 0, 1);
@@ -137,7 +141,8 @@ void Settings::Save() const
 	out << "bWaitForFrostfall=" << (waitForFrostfall ? 1 : 0) << "\n";
 	out << "bNativeSpoilage=" << (nativeSpoilage ? 1 : 0) << "\n";
 	out << "bWorldSpoilage=" << (worldSpoilage ? 1 : 0) << "\n";
-	out << std::format("fContainerResetDays={:.1f}\n\n", containerResetDays);
+	out << std::format("fContainerResetDays={:.1f}\n", containerResetDays);
+	out << std::format("fWorldSpoilChance={:.1f}\nfWorldFreshShare={:.1f}\n\n", worldSpoilChance, worldFreshShare);
 	out << "[HUD]\n";
 	out << "bHudEnabled=" << (hudEnabled ? 1 : 0) << "\n";
 	out << "iDisplayMode=" << displayMode << "\n";
