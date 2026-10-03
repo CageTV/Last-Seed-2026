@@ -1,33 +1,47 @@
 # Building Last Seed 2026
 
+Everything below expects the author's workspace layout and an installed copy of Last Seed 5.3; edit the paths at the top of each tool.
+
 ## SKSE plugin (`plugin/` -> `SKSE/Plugins/LastSeed.dll`)
 
-CommonLibSSE-NG plugin built with CMake + Ninja + MSVC and vcpkg (manifest in `plugin/build-local`, the same baseline and
-registry as Frostfall 2026's DLL). Set `VCPKG_ROOT`, then run `plugin/build.cmd` (edit the Visual Studio and vcpkg paths at its top
-for your install). Output: `plugin/build/release/LastSeed.dll`.
+CommonLibSSE-NG plugin, CMake + Ninja + MSVC + vcpkg. Set `VCPKG_ROOT`, run `plugin/build.cmd` (edit the Visual Studio and vcpkg paths at its
+top). Output: `plugin/build/release/LastSeed.dll`. It needs [SKSE Menu Framework 3](https://www.nexusmods.com/skyrimspecialedition/mods/120352)
+at runtime. One DLL serves both plugin builds: `plugin/src/Ids.cpp` translates FormIDs through `plugin/src/EslMap.h` when `LastSeed.esp`
+is loaded as a light plugin.
 
-Uses [SKSE Menu Framework 3](https://www.nexusmods.com/skyrimspecialedition/mods/120352) at runtime.
+`plugin/src/GameIds.h` and `plugin/src/McmTable.h` hold Last Seed 5.3's local FormIDs. If a later Last Seed renumbers them, regenerate
+`McmTable.h` (below) and update `GameIds.h`.
 
-## Icons (`tools/make_icons.py`)
+## The plugin (`src/esp/LastSeed` -> `LastSeed.esp`)
 
-`python tools/make_icons.py` (needs Pillow) redraws the four HUD icons into `assets/icons/` and copies them to
-`release-contents/Interface/lastseed/icons/`.
+`src/esp/LastSeed` is a [Spriggit](https://github.com/Mutagen-Modding/Spriggit) YAML export of the plugin (Last Seed 5.3 with the General,
+Attack Speed Fix and Your Own Thoughts patches merged and the start-up banner removed). Deserialize it with
+`spriggit deserialize --InputPath src/esp/LastSeed --OutputPath <somewhere>/LastSeed.esp` (the output file must be called `LastSeed.esp`).
+`tools/merge_patches.py` merges patch plugins (serialized the same way) into a copy; it refuses any patch whose masters are not LastSeed.esp's.
+`tools/analyze_patches.py` summarises what a set of patch plugins changes.
 
-## Layout of a release
+## Scripts (`src/scripts` -> `Scripts/*.pex`)
 
-Put the outputs in the folder layout of `release-contents/`: `SKSE/Plugins/LastSeed.dll` and `Interface/lastseed/icons/*.png`
-(more as later phases add scripts and a plugin), and zip it with the files at the zip's root.
+`python tools/build_scripts.py` compiles `src/scripts` with the official Papyrus compiler. Compile-time imports come from Last Seed's other
+scripts, decompiled once with Champollion into `imports/lastseed-decompiled/` (git-ignored). Three scripts are generated from your own Last
+Seed install, then built with the rest (all git-ignored):
 
-## How the DLL finds Last Seed's data
+- `tools/make_alias_food_monitor.py`: the food monitor steps aside when LastSeed.dll tracks spoilage.
+- `tools/make_container_spoil_script.py`: Last Seed's one-shot container spoilage steps aside for the plugin's.
+- `tools/make_mcm_script.py`: the SkyUI menu keeps only the Food & Drink Lists page; the profile, preset and food functions the plugin calls stay.
 
-`plugin/src/GameIds.h` lists the local FormIDs, in `LastSeed.esp`, of the globals it reads. They were read from Last Seed 5.3's
-plugin; if a later Last Seed release renumbers them, that is the one file to update.
+## The settings table (`tools/extract_mcm.py` -> `plugin/src/McmTable.h`)
 
-## Papyrus scripts (`src/scripts` -> `Scripts/*.pex`)
+Reads Last Seed's own menu script, `LastSeed.esp` (Spriggit YAML) and the English strings, and writes every setting of the Gameplay, Needs,
+Vitality, Alcohol & Disease, Food Spoilage and Other pages (global, range, default, profile key), the 33 food lists and the Overview lists.
+It prints anything it could not turn into a table row.
 
-`python tools/build_scripts.py` compiles them with the official Papyrus compiler (edit the paths at its top). It needs Last Seed's
-other scripts as compile-time imports: decompile them once into `imports/lastseed-decompiled/` with Champollion (that folder is
-git-ignored; Last Seed ships no source and its license is unknown, so none of its code is kept in this repository).
-`_Seed_AliasFoodMonitor.psc` is a patched copy of a Last Seed script, so it is not in the repository either: run
-`python tools/make_alias_food_monitor.py` to generate it from your own Last Seed install before building.
+## ESL build
 
+`python tools/esl_build.py` renumbers the plugin's 1927 records into 000800+, points its Campfire references at the ESL Campfire (map from the
+Frostfall 2026 project's `esl` folder), rewrites and recompiles the scripts that hard-code FormIDs, and writes `plugin/src/EslMap.h`. Deserialize
+`esl-work/yaml` with Spriggit to `esl-work/esp/LastSeed.esp`, then `python tools/esl_package.py` lays out the ESL mod folder.
+
+## Release zips
+
+`python tools/make_release.py` builds both zips (regular and ESL) into `release/` from the regular `release-contents/` and the ESL folder.
