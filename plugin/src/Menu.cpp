@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "Hud.h"
 #include "NativeMcm.h"
+#include "Compat.h"
 #include "NativeFoodLists.h"
 #include "Settings.h"
 #include "Spoilage.h"
@@ -88,6 +89,20 @@ namespace Menu
 				}
 			}
 			NativeMcm::DrawOverviewExtras();
+
+			Spacing();
+			Separator();
+			Text("Compatibility (no patch plugins needed)");
+			if (Checkbox("Spoiled food works as fishing bait (any fishing mod)", &settings.baitCompat)) {
+				settings.Save();
+			}
+			TextDisabled("Takes effect the next time the game starts.");
+			for (const auto& e : Compat::Status()) {
+				if (e.present || e.applied) {
+					TextColored(e.applied ? ImVec4(0.65f, 0.9f, 0.5f, 1.0f) : ImVec4(0.95f, 0.8f, 0.4f, 1.0f), "%s: %s%s%s", e.name.c_str(), e.applied ? "applied" : "present, not applied",
+						e.detail.empty() ? "" : " - ", e.detail.c_str());
+				}
+			}
 
 			Spacing();
 			Separator();

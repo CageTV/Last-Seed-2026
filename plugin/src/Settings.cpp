@@ -85,6 +85,7 @@ void Settings::Load()
 	GetBool(kv, "bnativespoilage", nativeSpoilage);
 	GetBool(kv, "bworldspoilage", worldSpoilage);
 	GetBool(kv, "bfreshnessbar", freshnessBar);
+	GetBool(kv, "bbaitcompat", baitCompat);
 	GetBool(kv, "bkeywordfoods", keywordFoods);
 	GetFloat(kv, "frawfoodhours", rawFoodHours);
 	GetFloat(kv, "fotherfoodhours", otherFoodHours);
@@ -154,6 +155,7 @@ void Settings::Save() const
 	out << "bNativeSpoilage=" << (nativeSpoilage ? 1 : 0) << "\n";
 	out << "bWorldSpoilage=" << (worldSpoilage ? 1 : 0) << "\n";
 	out << "bFreshnessBar=" << (freshnessBar ? 1 : 0) << "\n";
+	out << "bBaitCompat=" << (baitCompat ? 1 : 0) << "\n";
 	out << "bKeywordFoods=" << (keywordFoods ? 1 : 0) << "\n";
 	out << std::format("fRawFoodHours={:.1f}\nfOtherFoodHours={:.1f}\n", rawFoodHours, otherFoodHours);
 	out << std::format("fFreshLeft={:.4f}\nfFreshWidth={:.4f}\nfFreshOffsetY={:.1f}\n", freshLeft, freshWidth, freshOffsetY);

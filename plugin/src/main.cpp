@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "GridInv.h"
 #include "Hud.h"
+#include "Compat.h"
 #include "Hotkeys.h"
 #include "Menu.h"
 #include "Settings.h"
@@ -65,6 +66,7 @@ namespace
 			Game::Init();
 			Spoilage::Init();
 			Spoilage::Begin();
+			Compat::Apply();
 			Hotkeys::Init();
 			AutoStart::Begin();
 			break;

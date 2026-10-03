@@ -1,0 +1,20 @@
+#pragma once
+
+// Compatibility that used to need patch plugins, done when the game's data has loaded and only when the other mod is there:
+//   * fishing bait: Perished Food and the spoiled meats and fish go into the bait list of any fishing mod (found by what is on the list)
+//   * Growl - Werebeasts of Skyrim: the werewolf feeding spell gets Growl's effects
+//   * Travellers of Skyrim: the Apothecary's cure disease ability cures with Last Seed's disease cure
+// Nothing here adds a master to LastSeed.esp.
+namespace Compat
+{
+	struct Entry
+	{
+		std::string name;     // what it is
+		bool        present;  // the other mod is in the load order
+		bool        applied;  // and the change was made
+		std::string detail;
+	};
+
+	void Apply();                       // call after data is loaded
+	std::vector<Entry> Status();        // for the settings page
+}
