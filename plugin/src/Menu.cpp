@@ -258,6 +258,10 @@ namespace Menu
 			}
 		}
 
+		void __stdcall RenderGameplaySettings() { NativeMcm::DrawPage(0); }
+		void __stdcall RenderNeedsSettings() { NativeMcm::DrawPage(1); }
+		void __stdcall RenderVitalitySettings() { NativeMcm::DrawPage(2); }
+		void __stdcall RenderAlcoholDiseaseSettings() { NativeMcm::DrawPage(3); }
 		void __stdcall RenderFoodSpoilageSettings() { NativeMcm::DrawPage(4); }
 
 		std::atomic<bool> registered{ false };
@@ -275,6 +279,10 @@ namespace Menu
 		SKSEMenuFramework::AddSectionItem("Overview", RenderOverview);
 		SKSEMenuFramework::AddSectionItem("HUD", RenderHud);
 		SKSEMenuFramework::AddSectionItem("Spoilage", RenderSpoilage);
+		SKSEMenuFramework::AddSectionItem("Gameplay Settings", RenderGameplaySettings);
+		SKSEMenuFramework::AddSectionItem("Primary Needs", RenderNeedsSettings);
+		SKSEMenuFramework::AddSectionItem("Vitality", RenderVitalitySettings);
+		SKSEMenuFramework::AddSectionItem("Alcohol, Skooma & Disease", RenderAlcoholDiseaseSettings);
 		SKSEMenuFramework::AddSectionItem("Food Spoilage Settings", RenderFoodSpoilageSettings);
 		SKSEMenuFramework::AddHudElement(Hud::Render);
 		registered = true;
