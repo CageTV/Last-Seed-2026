@@ -1,6 +1,7 @@
 #include "PCH.h"
 #include "AutoStart.h"
 #include "Game.h"
+#include "GridInv.h"
 #include "Hud.h"
 #include "Menu.h"
 #include "Settings.h"
@@ -80,5 +81,6 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 	Spoilage::Register();
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);
 	SKSE::GetMessagingInterface()->RegisterListener(OnMessage);
+	GridInv::Register();
 	return true;
 }
