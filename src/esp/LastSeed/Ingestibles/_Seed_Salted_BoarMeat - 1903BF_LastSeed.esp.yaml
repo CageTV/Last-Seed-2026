@@ -1,0 +1,21 @@
+FormKey: 1903BF:LastSeed.esp
+EditorID: _Seed_Salted_BoarMeat
+Name:
+  TargetLanguage: English
+  Value: Salted Boar Meat
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: DLC02\Clutter\DLC02BoarMeatCooked.nif
+  Data: 0x020000000000000000000000
+Weight: 1
+Value: 15
+Flags:
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 12
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

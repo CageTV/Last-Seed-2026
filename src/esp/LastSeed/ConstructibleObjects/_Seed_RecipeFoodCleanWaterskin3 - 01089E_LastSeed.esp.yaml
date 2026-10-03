@@ -1,0 +1,9 @@
+FormKey: 01089E:LastSeed.esp
+EditorID: _Seed_RecipeFoodCleanWaterskin3
+Items:
+- Item:
+    Item: 010892:LastSeed.esp
+    Count: 1
+CreatedObject: 010893:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

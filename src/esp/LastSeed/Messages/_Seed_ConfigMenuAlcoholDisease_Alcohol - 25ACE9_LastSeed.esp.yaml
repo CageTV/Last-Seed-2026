@@ -1,0 +1,25 @@
+FormKey: 25ACE9:LastSeed.esp
+EditorID: _Seed_ConfigMenuAlcoholDisease_Alcohol
+Description:
+  TargetLanguage: English
+  Value: >-
+    ENABLE ALCOHOL AND SKOOMA SYSTEM
+
+
+    When enabled, consuming alcohol and Skooma will make you drunk and high respectively.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

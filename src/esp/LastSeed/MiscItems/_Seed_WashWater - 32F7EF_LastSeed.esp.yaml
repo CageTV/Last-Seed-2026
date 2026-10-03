@@ -1,0 +1,9 @@
+FormKey: 32F7EF:LastSeed.esp
+EditorID: _Seed_WashWater
+Name:
+  TargetLanguage: English
+  Value: Bathing Water
+Model:
+  File: Clutter\Common\Flagon01.nif
+  Data: 0x020000000000000000000000
+Weight: 2.5

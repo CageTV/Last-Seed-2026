@@ -1,0 +1,24 @@
+FormKey: 25FDEE:LastSeed.esp
+EditorID: _Seed_ConfigMenuEffects1
+Description:
+  TargetLanguage: English
+  Value: EFFECTS (1/3)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Main Menu
+- Text:
+    TargetLanguage: English
+    Value: Sound Effects
+- Text:
+    TargetLanguage: English
+    Value: Fullscreen Effects
+- Text:
+    TargetLanguage: English
+    Value: Force Feedback
+- Text:
+    TargetLanguage: English
+    Value: More

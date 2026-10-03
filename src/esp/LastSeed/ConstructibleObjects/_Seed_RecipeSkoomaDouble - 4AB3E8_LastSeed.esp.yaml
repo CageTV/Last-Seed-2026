@@ -1,0 +1,19 @@
+FormKey: 4AB3E8:LastSeed.esp
+EditorID: _Seed_RecipeSkoomaDouble
+Items:
+- Item:
+    Item: 02F44C:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0D8E3F:Skyrim.esm
+    Count: 3
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAA8:LastSeed.esp
+  ComparisonValue: 3
+CreatedObject: 03F4BD:Skyrim.esm
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

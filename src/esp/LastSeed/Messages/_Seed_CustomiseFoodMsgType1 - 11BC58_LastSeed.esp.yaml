@@ -1,0 +1,24 @@
+FormKey: 11BC58:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgType1
+Description:
+  TargetLanguage: English
+  Value: What kind of food or drink is this? (1/5)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Bread
+- Text:
+    TargetLanguage: English
+    Value: Raw Large Meat
+- Text:
+    TargetLanguage: English
+    Value: Cooked Large Meat
+- Text:
+    TargetLanguage: English
+    Value: Raw Small Game
+- Text:
+    TargetLanguage: English
+    Value: More

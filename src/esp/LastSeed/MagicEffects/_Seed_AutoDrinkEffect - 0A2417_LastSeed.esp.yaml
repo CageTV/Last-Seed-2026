@@ -1,0 +1,27 @@
+FormKey: 0A2417:LastSeed.esp
+EditorID: _Seed_AutoDrinkEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ConsumeDrink
+Name:
+  TargetLanguage: English
+  Value: Drink From Provisions
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

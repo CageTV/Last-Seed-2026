@@ -1,0 +1,14 @@
+FormKey: 1BDD20:LastSeed.esp
+EditorID: _Seed_FatigueSpell_Rested
+Name:
+  TargetLanguage: English
+  Value: Rested
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 1BDD21:LastSeed.esp
+  Data: {}

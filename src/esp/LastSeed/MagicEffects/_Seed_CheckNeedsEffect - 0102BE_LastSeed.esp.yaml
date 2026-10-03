@@ -1,0 +1,76 @@
+FormKey: 0102BE:LastSeed.esp
+EditorID: _Seed_CheckNeedsEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_CheckNeeds
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Blood1
+      Object: 40425A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Blood2
+      Object: 40425B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Blood3
+      Object: 40425C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Blood4
+      Object: 40425D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Clean
+      Object: 404262:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Dirt1
+      Object: 40425E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Dirt2
+      Object: 40425F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Dirt3
+      Object: 404260:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtAndBlood_Dirt4
+      Object: 404261:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FrozenNorthMsg1
+      Object: 66E032:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FrozenNorthMsg2
+      Object: 66E033:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FrozenNorthMsg3
+      Object: 66E034:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FrozenNorthMsg4
+      Object: 66E035:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FrozenNorthMsg5
+      Object: 66E036:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FrostfallNotifications
+      Object: 3C2537:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Check Needs
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

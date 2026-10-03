@@ -1,0 +1,20 @@
+FormKey: 17BF99:LastSeed.esp
+EditorID: _Seed_BlessedSpell
+Name:
+  TargetLanguage: English
+  Value: Blessed
+MenuDisplayObject: 018F02:Dawnguard.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 1012352
+Flags:
+- IgnoreResistance
+- NoAbsorbOrReflect
+CastType: FireAndForget
+Effects:
+- BaseEffect: 17BF98:LastSeed.esp
+  Data:
+    Magnitude: 100
+    Duration: 4320

@@ -1,0 +1,26 @@
+FormKey: 009641:LastSeed.esp
+EditorID: _Seed_Spoiled_Fruit
+Name:
+  TargetLanguage: English
+  Value: Moldy Fruit
+Keywords:
+- 08CDEA:Skyrim.esm
+- 0A248C:Skyrim.esm
+Model:
+  File: lastseed\spoiled\Apple01.nif
+  Data: 0x020000000000000000000000
+  AlternateTextures:
+  - Name: Apple01:0
+    NewTexture: 0012D5:LastSeed.esp
+Weight: 0.1
+Value: 3
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 2
+- BaseEffect: 007B49:LastSeed.esp
+  Data: {}

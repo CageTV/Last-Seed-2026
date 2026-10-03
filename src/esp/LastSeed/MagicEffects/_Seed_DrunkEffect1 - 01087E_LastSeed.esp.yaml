@@ -1,0 +1,19 @@
+FormKey: 01087E:LastSeed.esp
+EditorID: _Seed_DrunkEffect1
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Relaxed'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: SpeechcraftModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Your are <mag>% more effective with speech.

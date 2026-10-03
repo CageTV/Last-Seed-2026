@@ -1,0 +1,20 @@
+FormKey: 539091:LastSeed.esp
+EditorID: _Seed_WaterBottle1A
+Items:
+- Item:
+    Item: 0F2012:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 0F2012:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: -1
+CreatedObject: 506654:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

@@ -1,0 +1,25 @@
+FormKey: 678240:LastSeed.esp
+MajorRecordFlagsRaw: 512
+EditorID: _Seed_Oven_Indicator
+SkyrimMajorRecordFlags:
+- 0x200
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlacementIndicator
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: indicator_distance
+      Data: 300
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_activator_to_place
+      Object: 67823E:LastSeed.esp
+    - MutagenObjectType: ScriptBoolProperty
+      Name: snap_to_terrain
+      Data: True
+Model:
+  File: _BYOH\Furniture\OvenMarker.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []
+MajorFlags:
+- HiddenFromLocalMap

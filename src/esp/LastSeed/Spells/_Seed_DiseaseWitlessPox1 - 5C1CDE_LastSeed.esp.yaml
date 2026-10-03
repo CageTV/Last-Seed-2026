@@ -1,0 +1,19 @@
+FormKey: 5C1CDE:LastSeed.esp
+EditorID: _Seed_DiseaseWitlessPox1
+Name:
+  TargetLanguage: English
+  Value: Mild Witless Pox
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1CD9:LastSeed.esp
+  Data:
+    Magnitude: 10

@@ -1,0 +1,34 @@
+FormKey: 074B09:LastSeed.esp
+EditorID: _Seed_OpenProvisionsEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ProvisionsOpen
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsContainerRef
+      Object: 074B07:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Open Provisions
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

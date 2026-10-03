@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 47DAAB:LastSeed.esp
+MajorRecordFlagsRaw: 64
+EditorID: Provisioning_PerkRank_PreservationistMax
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 3

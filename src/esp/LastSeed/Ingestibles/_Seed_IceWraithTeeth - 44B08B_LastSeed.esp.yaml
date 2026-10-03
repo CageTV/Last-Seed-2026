@@ -1,0 +1,19 @@
+FormKey: 44B08B:LastSeed.esp
+EditorID: _Seed_IceWraithTeeth
+Name:
+  TargetLanguage: English
+  Value: Ice Wraith Powder
+Model:
+  File: Clutter\Ingredients\FrostSalts.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 0FC21F:Skyrim.esm
+PutDownSound: 0FC21F:Skyrim.esm
+Weight: 0.25
+Value: 30
+Flags:
+- NoAutoCalc
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 44B08C:LastSeed.esp
+  Data:
+    Duration: 12960

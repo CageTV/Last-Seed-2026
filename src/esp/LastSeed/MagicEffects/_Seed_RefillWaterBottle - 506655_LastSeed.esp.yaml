@@ -1,0 +1,48 @@
+FormKey: 506655:LastSeed.esp
+EditorID: _Seed_RefillWaterBottle
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FillWaterskin
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceDirtyWater
+      Object: 209C71:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleClean
+      Object: 506653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleDirty
+      Object: 506652:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleSea
+      Object: 506656:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Refill Empty Bottle
+Flags:
+- NoDuration
+- NoMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Use in water to refill.
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsIDConditionData
+    Object: 000007:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsInDangerousWaterConditionData
+    RunOnType: Target
+  ComparisonValue: 1

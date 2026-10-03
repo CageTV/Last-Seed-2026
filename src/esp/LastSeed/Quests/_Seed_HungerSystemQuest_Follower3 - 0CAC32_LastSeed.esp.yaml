@@ -1,0 +1,134 @@
+FormKey: 0CAC32:LastSeed.esp
+EditorID: _Seed_HungerSystemQuest_Follower3
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_HungerSystem_Follower3
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HungerMeterQuest
+      Object: 003F99:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AutoConsume
+      Object: 0B681C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_HungerMeterDisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsAffectedByRegeneration
+      Object: 36731B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsForceFeedback
+      Object: 003A34:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsMeterDisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsSFX
+      Object: 003A32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsVFX
+      Object: 003A33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications
+      Object: 003A30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications_Followers
+      Object: 213E87:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VampireBehavior
+      Object: 0029D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeEnabled
+      Object: 007073:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeLevelGlobal
+      Object: 0CAC2D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateGlobal
+      Object: 0029CB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateMultiGlobal
+      Object: 0513F8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeValueGlobal
+      Object: 0CAC30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AutoEatenFood
+      Object: 0D9F3B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerISM5
+      Object: 00C70B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerISM6
+      Object: 00C70A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerMessage1
+      Object: 003A2A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerMessage2
+      Object: 003A2B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerMessage3
+      Object: 003A2C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerMessage4
+      Object: 003A2D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerMessage5
+      Object: 003A2E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerMessage6
+      Object: 003A2F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSound3
+      Object: 00BC32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSound4
+      Object: 00C199:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSound5
+      Object: 00C19A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSound6
+      Object: 00C19B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSpell1
+      Object: 0034B0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSpell2
+      Object: 0034B4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSpell3
+      Object: 0034B8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSpell4
+      Object: 0034BC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSpell5
+      Object: 0034C0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerSpell6
+      Object: 0034C4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: recentlyEatenFood
+      Object: 0D9F3B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TimeScale
+      Object: 00003A:Skyrim.esm
+    - MutagenObjectType: ScriptBoolProperty
+      Name: undeadImmunity
+      Data: True
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 007077:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Hunger System - Follower 3
+NextAliasID: 0

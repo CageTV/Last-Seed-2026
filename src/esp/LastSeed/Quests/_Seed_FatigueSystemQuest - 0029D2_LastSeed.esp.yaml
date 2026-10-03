@@ -1,0 +1,231 @@
+FormKey: 0029D2:LastSeed.esp
+EditorID: _Seed_FatigueSystemQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FatigueSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CarriageRode
+      Object: 5DB2EB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseNeedsMulti_BrownRot
+      Object: 59E536:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fatigue_BeastBloodMessage
+      Object: 2EDA99:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fatigue_BYOHAdoptionRestedMessageFemale
+      Object: 2EDA9B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fatigue_BYOHAdoptionRestedMessageMale
+      Object: 2EDA9A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fatigue_MarriageRestedMessage
+      Object: 2EDA98:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fatigue_WellRestedMessage
+      Object: 2EDA97:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatigueMeterQuest
+      Object: 004FC1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatiguePoorSleepHungerMsg
+      Object: 2EDA9D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatiguePoorSleepHungerThirstMsg
+      Object: 2EDA9C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatiguePoorSleepLocationMsg
+      Object: 2EDA9F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatiguePoorSleepThirstMsg
+      Object: 2EDA9E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatigueSpell_AdoptionFemale
+      Object: 1BDD25:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatigueSpell_AdoptionMale
+      Object: 1BDD24:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatigueSpell_Marriage
+      Object: 1BDD23:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatigueSpell_Rested
+      Object: 1BDD20:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatigueSpell_WellRested
+      Object: 1BDD22:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Help_PoorSleep
+      Object: 2D455C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_PoorSleep
+      Object: 2D455B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IsAddicted
+      Object: 2E388C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DisplayTutorials
+      Object: 00C707:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_HungerMeterDisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsAffectedByRegeneration
+      Object: 36731B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsForceFeedback
+      Object: 003A34:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsMeterDisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsSFX
+      Object: 003A32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsVFX
+      Object: 003A33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications
+      Object: 003A30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications_Followers
+      Object: 213E87:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SleepAffectedByLocation
+      Object: 1BDD1F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SleepAffectedByNeeds
+      Object: 1BDD1E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VampireBehavior
+      Object: 0029D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeEnabled
+      Object: 007075:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeLevelGlobal
+      Object: 00F7D8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateGlobal
+      Object: 0029D6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateMultiGlobal
+      Object: 0513F7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeValueGlobal
+      Object: 0029CF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BYOHRelationshipAdoption
+      Object: 0042B4:HearthFires.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CHScript
+      Object: 04B2D9:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CurrentHomeLocation
+      Object: 0042B4:HearthFires.esm
+      Alias: 24
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueISM5
+      Object: 00C70C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueISM6
+      Object: 00C70D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueMessage1
+      Object: 0108C2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueMessage2
+      Object: 0108C0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueMessage3
+      Object: 0108BF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueMessage4
+      Object: 0108BE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueMessage5
+      Object: 0108BD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueMessage6
+      Object: 0108BC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound3_F
+      Object: 218F97:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound3_M
+      Object: 01084A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound4_F
+      Object: 218F98:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound4_M
+      Object: 01084B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound5_F
+      Object: 218F99:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound5_M
+      Object: 01084C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound6_F
+      Object: 218F9A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSound6_M
+      Object: 01084D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSpell1
+      Object: 005A9C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSpell2
+      Object: 005A9E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSpell3
+      Object: 005AA0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSpell4
+      Object: 005AA2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSpell5
+      Object: 005AA4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueSpell6
+      Object: 005AA6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeInn
+      Object: 01CB87:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypePlayerHouse
+      Object: 0FC1A3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LoveInterest
+      Object: 021382:Skyrim.esm
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: pDoomLoverAbility
+      Object: 0E5F5A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_Outdoorsman
+      Object: 47DAAC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RelationshipMarriageFIN
+      Object: 021382:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TimeScale
+      Object: 00003A:Skyrim.esm
+    - MutagenObjectType: ScriptBoolProperty
+      Name: undeadImmunity
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 007079:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Fatigue System
+NextAliasID: 0

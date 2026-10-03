@@ -1,0 +1,18 @@
+FormKey: 59E549:LastSeed.esp
+EditorID: _Seed_DiseaseBrownRot2
+Name:
+  TargetLanguage: English
+  Value: Moderate Brown Rot
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 59E542:LastSeed.esp
+  Data: {}

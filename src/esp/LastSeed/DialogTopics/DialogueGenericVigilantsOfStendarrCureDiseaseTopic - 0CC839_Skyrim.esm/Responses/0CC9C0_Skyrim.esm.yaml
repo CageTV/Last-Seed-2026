@@ -1,0 +1,37 @@
+FormKey: 0CC9C0:Skyrim.esm
+VirtualMachineAdapter:
+  Scripts:
+  - Name: TIF__000CC9C0
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: dunHallOfTheVigilantCureDiseaseSpell
+      Object: 10E948:Skyrim.esm
+  ScriptFragments:
+    MutagenObjectType: ScriptFragments
+    FileName: TIF__000CC9C0
+    OnEnd:
+      ExtraBindDataVersion: 1
+      ScriptName: TIF__000CC9C0
+      FragmentName: Fragment_0
+Flags: {}
+PreviousDialog: Null
+FavorLevel: None
+Responses:
+- Emotion: Happy
+  EmotionValue: 15
+  ResponseNumber: 1
+  Unknown2: 0x000000
+  Flags:
+  - UseEmotionAnimation
+  Unknown3: 0x000000
+  Text:
+    TargetLanguage: English
+    Value: Stendarr's Light purify you of your ills.
+  ScriptNotes: holy warrior
+  Edits: ''
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetDiseaseConditionData
+    RunOnType: Target
+  ComparisonValue: 1

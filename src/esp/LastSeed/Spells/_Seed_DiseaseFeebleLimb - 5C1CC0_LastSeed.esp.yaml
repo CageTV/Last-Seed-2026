@@ -1,0 +1,21 @@
+FormKey: 5C1CC0:LastSeed.esp
+EditorID: _Seed_DiseaseFeebleLimb
+Name:
+  TargetLanguage: English
+  Value: Feeble Limb
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1CB6:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 5C1CB7:LastSeed.esp
+  Data: {}

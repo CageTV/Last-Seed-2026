@@ -1,0 +1,8 @@
+FormKey: 16CC7E:LastSeed.esp
+EditorID: _Seed_CureDiseaseTopic
+Name:
+  TargetLanguage: English
+  Value: Please cure me of my diseases.
+Branch: 16CC7D:LastSeed.esp
+Quest: 158876:LastSeed.esp
+SubtypeName: CUST

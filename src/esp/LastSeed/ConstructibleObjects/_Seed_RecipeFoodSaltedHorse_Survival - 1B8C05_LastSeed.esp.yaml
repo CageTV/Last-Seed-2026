@@ -1,0 +1,19 @@
+FormKey: 1B8C05:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedHorse_Survival
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 065C9C:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+CreatedObject: 18B2AC:LastSeed.esp
+WorkbenchKeyword: CCA002:Update.esm
+CreatedObjectCount: 1

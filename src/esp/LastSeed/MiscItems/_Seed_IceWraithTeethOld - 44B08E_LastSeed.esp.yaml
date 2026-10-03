@@ -1,0 +1,9 @@
+FormKey: 44B08E:LastSeed.esp
+EditorID: _Seed_IceWraithTeethOld
+Name:
+  TargetLanguage: English
+  Value: Inert Ice Wraith Powder
+Model:
+  File: Clutter\Ingredients\VoidSalts.nif
+  Data: 0x020000000000000000000000
+Weight: 0.25

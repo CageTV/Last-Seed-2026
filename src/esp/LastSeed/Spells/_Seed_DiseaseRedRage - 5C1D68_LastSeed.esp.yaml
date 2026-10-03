@@ -1,0 +1,21 @@
+FormKey: 5C1D68:LastSeed.esp
+EditorID: _Seed_DiseaseRedRage
+Name:
+  TargetLanguage: English
+  Value: Red Rage
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1D5E:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 5C1D5F:LastSeed.esp
+  Data: {}

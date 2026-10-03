@@ -1,0 +1,28 @@
+FormKey: 255BE5:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_PortionsToProvisions
+Description:
+  TargetLanguage: English
+  Value: >-
+    ADD PORTIONS TO PROVISIONS
+
+
+    When you recieve portions from food, they will be added to your provisions instead of to your inventory. 
+
+
+    This works best if you have auto-eating enabled or use the Eat & Drink Powers.
+
+
+    Default: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

@@ -1,0 +1,29 @@
+FormKey: 0034B0:LastSeed.esp
+EditorID: _Seed_HungerSpell1
+Name:
+  TargetLanguage: English
+  Value: Full
+MenuDisplayObject: 0A59AE:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 0029DB:LastSeed.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 36731B:LastSeed.esp
+    ComparisonValue: 2
+- BaseEffect: 002F43:LastSeed.esp
+  Data: {}
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 36731B:LastSeed.esp
+    ComparisonValue: 1

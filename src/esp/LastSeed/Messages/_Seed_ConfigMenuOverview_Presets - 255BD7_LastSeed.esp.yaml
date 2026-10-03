@@ -1,0 +1,34 @@
+FormKey: 255BD7:LastSeed.esp
+EditorID: _Seed_ConfigMenuOverview_Presets
+Description:
+  TargetLanguage: English
+  Value: >-
+    GAMEPLAY PRESETS
+
+
+    1. Just for Fun: For those that want new features and effects without much additional challenge. 
+
+
+    2. Immersive Challenge: A mix of features and new challenges. Food can spoil, Vitality is enabled and followers have needs. 
+
+
+    3. Hardcore Survival: For dedicated survival gameplay enthusiasts. Running out of Vitality can kill you, Vitality drains faster, and more food is found spoiled.
+
+
+    Default: Immersive Challenge
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Just for Fun
+- Text:
+    TargetLanguage: English
+    Value: 2. Immersive Challenge
+- Text:
+    TargetLanguage: English
+    Value: 3. Hardcore Survival

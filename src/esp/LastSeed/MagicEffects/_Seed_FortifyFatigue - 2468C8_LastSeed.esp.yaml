@@ -1,0 +1,34 @@
+FormKey: 2468C8:LastSeed.esp
+EditorID: _Seed_FortifyFatigue
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FortifyAttributeScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeSystem
+      Object: 0029D2:LastSeed.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: penalty_amount
+      Data: 25
+    - MutagenObjectType: ScriptFloatProperty
+      Name: restore_amount
+      Data: 20
+Name:
+  TargetLanguage: English
+  Value: Fortify Fatigue
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Reduces fatigue by <20> for <540> seconds. You will gain <25> fatigue when the effect wears off.

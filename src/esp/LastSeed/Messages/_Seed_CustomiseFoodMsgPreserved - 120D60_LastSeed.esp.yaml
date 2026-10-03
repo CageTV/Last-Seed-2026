@@ -1,0 +1,18 @@
+FormKey: 120D60:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgPreserved
+Description:
+  TargetLanguage: English
+  Value: Is this a perishable foodstuff?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: No (Natural)
+- Text:
+    TargetLanguage: English
+    Value: No (Preserved)

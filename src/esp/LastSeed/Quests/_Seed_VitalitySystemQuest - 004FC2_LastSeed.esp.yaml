@@ -1,0 +1,152 @@
+FormKey: 004FC2:LastSeed.esp
+EditorID: _Seed_VitalitySystemQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_VitalitySystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IsHungover
+      Object: 2A1B24:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlternateDeathSystem
+      Object: 5CBFE6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsForceFeedback
+      Object: 003A34:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsMeterDisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsSFX
+      Object: 003A32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsVFX
+      Object: 003A33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications
+      Object: 003A30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NoVitalityMode
+      Object: 209C6C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VampireBehavior
+      Object: 0029D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_setting_VitalityAlcoholMulti
+      Object: 33EB0C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_setting_VitalityDiseaseMulti
+      Object: 33EB09:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_setting_VitalityExposureMulti
+      Object: 33EB07:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_setting_VitalityFatigueMulti
+      Object: 33EB08:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_setting_VitalityHungerMulti
+      Object: 33EB0B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_setting_VitalitySkoomaMulti
+      Object: 33EB0D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_setting_VitalityThirstMulti
+      Object: 33EB0A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingPlayerIsLich
+      Object: 58A11C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_VitalityDeath
+      Object: 01082D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_VitalityTarget
+      Object: 44B08A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeEnabled
+      Object: 007076:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeLevelGlobal
+      Object: 00F7D5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateGlobal
+      Object: 00F7D9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateMultiGlobal
+      Object: 05B5FC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeValueGlobal
+      Object: 004FC4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TimeScale
+      Object: 00003A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 00707A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityISM6
+      Object: 00C70B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityISM7
+      Object: 00C70A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage1
+      Object: 00FD3E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage2
+      Object: 00FD3F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage3
+      Object: 00FD40:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage4
+      Object: 00FD41:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage5
+      Object: 00FD42:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage6
+      Object: 00FD43:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage7
+      Object: 00FD44:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMessage8
+      Object: 00FD45:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell1
+      Object: 00F258:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell2
+      Object: 00F259:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell3
+      Object: 00F25C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell4
+      Object: 00F7D3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell5
+      Object: 00F260:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell6
+      Object: 00F262:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell7
+      Object: 00F264:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalitySpell8
+      Object: 00F266:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: XMarker
+      Object: 00003B:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Vitality System
+NextAliasID: 0

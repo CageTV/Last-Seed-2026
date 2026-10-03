@@ -1,0 +1,25 @@
+FormKey: 18B2B5:LastSeed.esp
+EditorID: _Seed_SaltedGoatMeat
+ObjectBounds:
+  First: -7, -14, -8
+  Second: 7, 14, 8
+Name:
+  TargetLanguage: English
+  Value: Salted Goat Meat
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Ingredients\GoatMeatCooked.nif
+  Data: 0x020000000200000000000000FD9A02CA64647300604DDD5C6C22E12664647300604DDD5C
+Weight: 1
+Value: 4
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 10
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

@@ -1,0 +1,41 @@
+FormKey: 67823E:LastSeed.esp
+EditorID: _Seed_CraftingOvenMarker
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlaceableObject
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_InventoryItem
+      Object: 67823F:LastSeed.esp
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_BypassMenu
+      Data: True
+ObjectBounds:
+  First: -43, -10, -34
+  Second: 75, 185, 112
+Name:
+  TargetLanguage: English
+  Value: Oven
+Model:
+  File: _BYOH\Furniture\OvenMarker.nif
+  Data: 0x020000000000000000000000
+Keywords:
+- 06E9C7:Skyrim.esm
+- 0A56D8:Skyrim.esm
+- 0FD0E1:Skyrim.esm
+- 002840:HearthFires.esm
+- 0117F7:HearthFires.esm
+PNAM: 0x00000000
+Flags:
+- 0x40000000
+InteractionKeyword: 013794:Skyrim.esm
+WorkbenchData:
+  BenchType: CreateObject
+  UsesSkill: 255
+Markers:
+- Enabled: True
+  EntryPoints:
+    Type:
+    - Sit
+    Points:
+    - Behind

@@ -1,0 +1,25 @@
+FormKey: 25FDF1:LastSeed.esp
+EditorID: _Seed_ConfigMenuEffects_Feedback
+Description:
+  TargetLanguage: English
+  Value: >-
+    CONTROLLER FORCE FEEDBACK
+
+
+    Controller Users: You will feel force feedback effects when your condition becomes severe.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

@@ -1,0 +1,25 @@
+FormKey: 2D966A:LastSeed.esp
+EditorID: _Seed_ConfigMenuAlcoholDisease_Tripping
+Description:
+  TargetLanguage: English
+  Value: >-
+    DRUNK & ADDICTION STUMBLING
+
+
+    You will sometimes fall down during severe withdrawal and drunkenness.
+
+
+    Default: On
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

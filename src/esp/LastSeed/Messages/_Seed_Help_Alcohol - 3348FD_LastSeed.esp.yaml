@@ -1,0 +1,18 @@
+FormKey: 3348FD:LastSeed.esp
+EditorID: _Seed_Help_Alcohol
+Description:
+  TargetLanguage: English
+  Value: >+
+    TYPES OF ALCOHOL
+
+
+    You will become more drunk as you consume more alcohol, and some alcohol is stronger than others. 
+
+
+    Ale and mead are weak alcoholic beverages, wine is moderate, while brandy and other spirits are strong.
+
+
+    With Frostfall installed, alcohol will also temporarily boost your warmth, but you will feel even colder when the effect wears off.
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,21 @@
+FormKey: 50664E:LastSeed.esp
+EditorID: _Seed_FoodDesc_Alcohol_Moderate
+Name:
+  TargetLanguage: English
+  Value: Moderate Alcohol
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: A moderate alcoholic beverage.

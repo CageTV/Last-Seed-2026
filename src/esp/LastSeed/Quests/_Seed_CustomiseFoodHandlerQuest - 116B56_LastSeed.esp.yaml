@@ -1,0 +1,179 @@
+FormKey: 116B56:LastSeed.esp
+EditorID: _Seed_CustomiseFoodHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _seed_customisefoodhandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_BloodPotions
+      Object: 501546:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Classifying_Food
+      Object: 00E777:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ClassifyingFinished
+      Object: 135166:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFood_GettingPortions
+      Object: 2282A0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodContainerOpen
+      Object: 23C6B5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodContainerRef
+      Object: 22829F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgAlcohol
+      Object: 120D5F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgClassify
+      Object: 13F36A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgCloseInventory
+      Object: 23C6B6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgHasPortionAmount
+      Object: 22D3A4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgHasPortions
+      Object: 22D3A3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgHasPortionsInfo
+      Object: 2324A6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgPreserved
+      Object: 120D60:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgRestore
+      Object: 120D5E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgStart
+      Object: 116B55:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgStart_ReClassify
+      Object: 1954D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgType1
+      Object: 11BC58:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgType2
+      Object: 11BC59:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgType3
+      Object: 11BC5A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgType4
+      Object: 11BC5B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodMsgType5
+      Object: 11BC5C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodReloadGameMsg
+      Object: 3348F7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AddNames
+      Object: 3348F6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodPriceMulti
+      Object: 2CF454:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodWeightMulti
+      Object: 2CF455:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkAlcoholModerate
+      Object: D9FF04:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkAlcoholStrong
+      Object: D9FF05:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkAlcoholWeak
+      Object: AF101A:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkBloodPotion
+      Object: D9FF0E:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkMilk
+      Object: AF101D:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkNonAlcohol
+      Object: AF101B:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkSkoomaStrong
+      Object: D9FF07:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemDrinkSkoomaWeak
+      Object: D9FF06:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodBread
+      Object: AF100F:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodCheese
+      Object: AF100A:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodCheeseBowl
+      Object: AF100B:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodFish
+      Object: AF1007:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodFruit
+      Object: AF1008:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodMeat
+      Object: AF1004:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodMeatSmall
+      Object: AF1005:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodPastryLarge
+      Object: D9FF02:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodPastrySmall
+      Object: AF1010:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodPreserved
+      Object: AF1003:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodRaw
+      Object: 0A0E56:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodRestoreHungerFilling
+      Object: D9FF0A:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodRestoreHungerHearty
+      Object: D9FF0B:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodRestoreHungerLight
+      Object: D9FF08:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodRestoreHungerMedium
+      Object: D9FF09:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodSalted
+      Object: D9FF0C:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodSeafood
+      Object: AF1006:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodStewComplex
+      Object: D9FF03:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodStewSimple
+      Object: AF1012:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodTreat
+      Object: AF1011:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodVegetable
+      Object: AF1009:Update.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Customise Food Handler Quest
+NextAliasID: 0

@@ -1,0 +1,9 @@
+FormKey: 0BD740:Skyrim.esm
+EditorID: WEDL12GivePotion
+Name:
+  TargetLanguage: English
+  Value: I've got a Cure Disease potion.
+Branch: 0BD755:Skyrim.esm
+Quest: 0BD753:Skyrim.esm
+SubtypeName: CUST
+Unknown: -1

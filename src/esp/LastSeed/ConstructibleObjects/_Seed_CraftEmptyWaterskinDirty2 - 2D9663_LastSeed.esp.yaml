@@ -1,0 +1,16 @@
+FormKey: 2D9663:LastSeed.esp
+EditorID: _Seed_CraftEmptyWaterskinDirty2
+Items:
+- Item:
+    Item: 010890:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 010890:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: 010895:LastSeed.esp
+WorkbenchKeyword: 019831:Campfire.esm
+CreatedObjectCount: 1

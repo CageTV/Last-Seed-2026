@@ -1,0 +1,15 @@
+FormKey: 00B169:LastSeed.esp
+EditorID: _Seed_StartSleepMsg
+Description:
+  TargetLanguage: English
+  Value: Start Last Seed?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: No

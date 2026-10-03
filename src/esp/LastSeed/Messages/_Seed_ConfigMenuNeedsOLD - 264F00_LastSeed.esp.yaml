@@ -1,0 +1,162 @@
+FormKey: 264F00:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeedsOLD
+Description:
+  TargetLanguage: English
+  Value: NEEDS
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Main Menu
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: Enable Vitality
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: Death at 0 Vitality
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: Enable Hunger
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: Diminishing Returns
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: Next
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: Enable Thirst
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Enable Fatigue
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Enable Focus
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Large Food Portioning
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Portions to Provisions
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Next
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 2
+- Text:
+    TargetLanguage: English
+    Value: Auto-Eating
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 3
+- Text:
+    TargetLanguage: English
+    Value: Vampire Behaviour
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 3
+- Text:
+    TargetLanguage: English
+    Value: Needs Affect Movement
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 3
+- Text:
+    TargetLanguage: English
+    Value: Follower Needs
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 3
+- Text:
+    TargetLanguage: English
+    Value: Next
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 255BD9:LastSeed.esp
+    ComparisonValue: 3

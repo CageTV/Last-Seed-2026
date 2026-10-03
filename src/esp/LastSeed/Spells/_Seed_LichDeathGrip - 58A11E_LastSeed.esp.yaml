@@ -1,0 +1,25 @@
+FormKey: 58A11E:LastSeed.esp
+EditorID: _Seed_LichDeathGrip
+Name:
+  TargetLanguage: English
+  Value: Consume Life
+MenuDisplayObject: 0A6459:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 14
+Flags:
+- ManualCostCalc
+CastType: Concentration
+HalfCostPerk: 0F2CA8:Skyrim.esm
+Effects:
+- BaseEffect: 58A126:LastSeed.esp
+  Data:
+    Magnitude: 100
+    Duration: 1
+- BaseEffect: 58A121:LastSeed.esp
+  Data: {}
+- BaseEffect: 58A120:LastSeed.esp
+  Data:
+    Magnitude: 35

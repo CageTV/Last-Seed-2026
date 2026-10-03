@@ -1,0 +1,39 @@
+FormKey: 57AE12:LastSeed.esp
+EditorID: _Seed_CoDoLS_ObjectSetupMsg
+Description:
+  TargetLanguage: English
+  Value: Change object position
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Move Up
+- Text:
+    TargetLanguage: English
+    Value: Move Down
+- Text:
+    TargetLanguage: English
+    Value: Turn Left
+- Text:
+    TargetLanguage: English
+    Value: Turn Right
+- Text:
+    TargetLanguage: English
+    Value: Move Out
+- Text:
+    TargetLanguage: English
+    Value: Move In
+- Text:
+    TargetLanguage: English
+    Value: Move Left
+- Text:
+    TargetLanguage: English
+    Value: Move Right
+- Text:
+    TargetLanguage: English
+    Value: Pick Up
+- Text:
+    TargetLanguage: English
+    Value: Exit

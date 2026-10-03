@@ -1,0 +1,8 @@
+FormKey: 5576C0:LastSeed.esp
+EditorID: _Seed_RescueMsg_A_1
+Description:
+  TargetLanguage: English
+  Value: Before completely succumbing to death, a nearby hunter discovers you while venturing out in search of game. You awaken to find yourself at their campsite, exhausted but otherwise intact.
+INAM: 0x00000000
+Flags:
+- MessageBox

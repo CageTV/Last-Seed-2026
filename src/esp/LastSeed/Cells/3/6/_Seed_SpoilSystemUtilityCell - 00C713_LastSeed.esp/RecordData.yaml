@@ -1,0 +1,152 @@
+FormKey: 00C713:LastSeed.esp
+IsCompressed: True
+MajorRecordFlagsRaw: 262144
+EditorID: _Seed_SpoilSystemUtilityCell
+SkyrimMajorRecordFlags:
+- Compressed
+Name:
+  TargetLanguage: English
+  Value: Thread System Utility Cell
+Flags:
+- IsInteriorCell
+Lighting:
+  AmbientColor: '#00202621'
+  DirectionalColor: '#00000000'
+  FogNearColor: '#00172116'
+  FogFar: 4500
+  DirectionalFade: 1
+  FogPower: 0.6
+  AmbientColors:
+    DirectionalXPlus: '#00232622'
+    DirectionalXMinus: '#001C261F'
+    DirectionalYPlus: '#00202721'
+    DirectionalYMinus: '#00202421'
+    DirectionalZPlus: '#000F120E'
+    DirectionalZMinus: '#00303933'
+    Specular: '#00172116'
+    Scale: 1
+  FogFarColor: '#00172116'
+  FogMax: 1
+  Inherits:
+  - AmbientColor
+  - DirectionalColor
+  - FogColor
+  - FogNear
+  - FogFar
+  - ClipDistance
+WaterHeight: -2.1474836E+09
+ImageSpace: 013B32:Skyrim.esm
+Persistent:
+- MutagenObjectType: PlacedObject
+  FormKey: 00C714:LastSeed.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Seed_TrackerAnchorRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 00003B:Skyrim.esm
+  Placement:
+    Position: 0, 0, 94.585724
+- MutagenObjectType: PlacedObject
+  FormKey: 00C722:LastSeed.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Seed_SpoiledFoodSystemContainerRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 00C721:LastSeed.esp
+  Placement:
+    Position: 89.9449, -174.2767, 87.4628
+- MutagenObjectType: PlacedObject
+  FormKey: 074B07:LastSeed.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Seed_ProvisionsContainerRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  VirtualMachineAdapter:
+    Scripts:
+    - Name: _Seed_ProvisionsContainer
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Classifying_Food
+        Object: 00E777:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Provisions_CurrentWeight
+        Object: 0C0A22:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Provisions_TotalWeight
+        Object: 0C0A24:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Provisions_WeightPerPerson
+        Object: 0C0A23:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_ProvisionsAddPortions
+        Object: 0E923F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_ProvisionsOnlyFoodMsg
+        Object: 2EDAA3:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: VendorItemFood
+        Object: 08CDEA:Skyrim.esm
+      - MutagenObjectType: ScriptObjectProperty
+        Name: VendorItemFoodRaw
+        Object: 0A0E56:Skyrim.esm
+  Base: 074B04:LastSeed.esp
+  Placement:
+    Position: 89.9449, -50.2767, 87.4628
+    Rotation: 0, -0, 2.3831894
+- MutagenObjectType: PlacedObject
+  FormKey: 22829F:LastSeed.esp
+  MajorRecordFlagsRaw: 1024
+  EditorID: _Seed_CustomiseFoodContainerRef
+  SkyrimMajorRecordFlags:
+  - 0x400
+  VirtualMachineAdapter:
+    Scripts:
+    - Name: _Seed_CustomiseFoodContainer
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CustomiseFood_GettingPortions
+        Object: 2282A0:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CustomiseFood_NotClassifiedMsg
+        Object: 2EDA93:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CustomiseFood_NotFoodMsg
+        Object: 2EDA94:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CustomiseFoodContainerOpen
+        Object: 23C6B5:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+  Base: 22829E:LastSeed.esp
+  Placement:
+    Position: 191.65536, -51.811035, 103.3206
+    Rotation: 0, -0, 5.383192
+- MutagenObjectType: PlacedObject
+  FormKey: 5576CC:LastSeed.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Seed_RescueDestinationMarker
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 000034:Skyrim.esm
+  Placement:
+    Position: 185.24815, 108.68919, 93.50971
+    Rotation: 0, -0, 1.0168164
+- MutagenObjectType: PlacedObject
+  FormKey: 599433:LastSeed.esp
+  MajorRecordFlagsRaw: 1073742848
+  EditorID: _Seed_LastSleepMarker
+  SkyrimMajorRecordFlags:
+  - 0x400
+  - 0x40000000
+  Base: 000034:Skyrim.esm
+  Placement:
+    Position: 175.24815, 98.68919, 93.50971
+    Rotation: 0, 0, 1.0168166
+MajorFlags:
+- 0x40000

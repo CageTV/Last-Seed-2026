@@ -1,0 +1,22 @@
+FormKey: 009649:LastSeed.esp
+EditorID: _Seed_Spoiled_SeafoodRaw
+Name:
+  TargetLanguage: English
+  Value: Rank Raw Seafood
+Keywords:
+- 0A0E56:Skyrim.esm
+Model:
+  File: lastseed\spoiled\MudcrabLegs01.nif
+  Data: 0x020000000000000000000000
+Weight: 0.1
+Value: 3
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 1
+- BaseEffect: 007B49:LastSeed.esp
+  Data: {}

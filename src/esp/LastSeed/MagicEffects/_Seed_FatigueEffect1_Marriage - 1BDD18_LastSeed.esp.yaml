@@ -1,0 +1,30 @@
+FormKey: 1BDD18:LastSeed.esp
+EditorID: _Seed_FatigueEffect1_Marriage
+VirtualMachineAdapter:
+  Scripts:
+  - Name: TimedAbilityScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: pAbilityToRemove
+      Object: 1BDD23:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: pHoursToWait
+      Data: 8
+Name:
+  TargetLanguage: English
+  Value: "Fatigue: Lover's Comfort"
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: MagickaRateMult
+DualCastScale: 1
+PerkToApply: 10D96A:Skyrim.esm
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: All skills improve <15>% faster for <240> seconds.

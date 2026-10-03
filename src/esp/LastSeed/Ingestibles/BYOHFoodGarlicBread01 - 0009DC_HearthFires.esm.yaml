@@ -1,0 +1,24 @@
+FormKey: 0009DC:HearthFires.esm
+EditorID: BYOHFoodGarlicBread01
+Name:
+  TargetLanguage: English
+  Value: Garlic Bread
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: _BYOH\Clutter\Food\GarlicBread01.nif
+  Data: 0x020000000000000000000000
+Weight: 0.1
+Value: 2
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 1
+- BaseEffect: 17BF98:LastSeed.esp
+  Data:
+    Magnitude: 25
+    Duration: 28800

@@ -1,0 +1,7 @@
+FormKey: 4DDE3A:LastSeed.esp
+EditorID: _Seed_SkillLockedMessage
+Description:
+  TargetLanguage: English
+  Value: Spell not unlocked yet.
+INAM: 0x00000000
+DisplayTime: 2

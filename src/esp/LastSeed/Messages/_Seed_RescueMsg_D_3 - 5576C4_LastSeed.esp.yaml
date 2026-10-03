@@ -1,0 +1,8 @@
+FormKey: 5576C4:LastSeed.esp
+EditorID: _Seed_RescueMsg_D_3
+Description:
+  TargetLanguage: English
+  Value: As your body tumbles forward, your animal's sounds draw the attention of a nearby hunter. You awaken a short time later to a warm fire and the smell of cooking meat, your faithful companion by your side.
+INAM: 0x00000000
+Flags:
+- MessageBox

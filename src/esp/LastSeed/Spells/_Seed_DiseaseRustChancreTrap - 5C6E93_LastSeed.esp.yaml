@@ -1,0 +1,21 @@
+FormKey: 5C6E93:LastSeed.esp
+EditorID: _Seed_DiseaseRustChancreTrap
+Name:
+  TargetLanguage: English
+  Value: Rust Chancre
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C6E98:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 5C6E99:LastSeed.esp
+  Data: {}

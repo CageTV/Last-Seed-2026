@@ -1,0 +1,47 @@
+FormKey: 27420D:LastSeed.esp
+EditorID: _Seed_AnimationHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_AnimationHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimateFollowers
+      Object: 23C6B4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimatePickup
+      Object: 39EE2A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimatePlayer
+      Object: 23C6B3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimatePlayer_FirstPerson
+      Object: 23C6B2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ChairDrinkingStart
+      Object: 065D07:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ChairEatingStart
+      Object: 065D06:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: idleDrinkingStandingStart
+      Object: 0640FC:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: idleEatingStandingStart
+      Object: 064100:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdlePickup_Ground
+      Object: 075C3E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleStop_Loose
+      Object: 10D9EE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Animation Handler
+NextAliasID: 0

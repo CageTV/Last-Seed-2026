@@ -1,0 +1,18 @@
+FormKey: 1954D1:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgStart_ReClassify
+Description:
+  TargetLanguage: English
+  Value: You already know about this foodstuff. Would you like to examine it again to re-learn its properties?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Examine
+- Text:
+    TargetLanguage: English
+    Value: Later
+- Text:
+    TargetLanguage: English
+    Value: This is Not Food

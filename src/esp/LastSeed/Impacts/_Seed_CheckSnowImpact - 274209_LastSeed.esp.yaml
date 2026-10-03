@@ -1,0 +1,8 @@
+FormKey: 274209:LastSeed.esp
+EditorID: _Seed_CheckSnowImpact
+Duration: 1E-06
+Orientation: ProjectileReflection
+AngleThreshold: 90
+PlacementRadius: 16
+SoundLevel: Silent
+NoDecalData: True

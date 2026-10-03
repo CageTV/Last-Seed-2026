@@ -1,0 +1,34 @@
+FormKey: 255BDD:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_DiminishingReturns
+Description:
+  TargetLanguage: English
+  Value: >-
+    DIMINISHING RETURNS
+
+
+    If you eat the same kind of food more than once in a short span of time, you will only receive half of the food's normal benefit.
+
+
+    DEFAULTS:
+
+
+    Just for Fun: Disabled
+
+
+    Immersive Challenge: Enabled
+
+
+    Hardcore Survival: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

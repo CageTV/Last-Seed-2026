@@ -1,0 +1,336 @@
+FormKey: 575D0F:LastSeed.esp
+EditorID: _Seed_FoodMaintenanceHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FoodMaintenanceHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Bread
+      Object: 009666:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Bread_MaintenancePrice
+      Object: 575CD5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Bread_MaintenanceWeight
+      Object: 575CE9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Cheese
+      Object: 009663:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Cheese_MaintenancePrice
+      Object: 575CE0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Cheese_MaintenanceWeight
+      Object: 575CF4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheeseBowls
+      Object: 00C718:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheeseBowls_MaintenancePrice
+      Object: 575CE4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheeseBowls_MaintenanceWeight
+      Object: 575CF8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholic
+      Object: 00C719:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholic_MaintenancePrice
+      Object: 575CE6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholic_MaintenanceWeight
+      Object: 575CFA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicAle
+      Object: 0108EB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicAle_MaintenanceName
+      Object: 575D04:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicAleBASE
+      Object: 1E653A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicSpirit
+      Object: 0108EC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicSpirit_MaintenanceName
+      Object: 575D06:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicSpiritBASE
+      Object: 1E653B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicWine
+      Object: 0108ED:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicWine_MaintenanceName
+      Object: 575D05:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicWineBASE
+      Object: 1E653C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkMilk
+      Object: 00C71A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkMilk_MaintenanceName
+      Object: 575D02:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkMilk_MaintenancePrice
+      Object: 575CE5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkMilk_MaintenanceWeight
+      Object: 575CF9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkNonAlcoholic
+      Object: 00C71B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkNonAlcoholic_MaintenanceName
+      Object: 575D01:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkNonAlcoholic_MaintenancePrice
+      Object: 575CE7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkNonAlcoholic_MaintenanceWeight
+      Object: 575CFB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaStrong
+      Object: 2A6C36:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaStrong_MaintenanceName
+      Object: 575D0E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaStrongBASE
+      Object: 2FCDAE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaWeak
+      Object: 2A6C35:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaWeak_MaintenanceName
+      Object: 575D0D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaWeakBASE
+      Object: 2FCDAD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkWater
+      Object: 1E6534:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishCooked
+      Object: 00965C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishCooked_MaintenancePrice
+      Object: 575CDB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishCooked_MaintenanceWeight
+      Object: 575CEF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishRaw
+      Object: 00965B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishRaw_MaintenanceName
+      Object: 575D09:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishRaw_MaintenancePrice
+      Object: 575CDA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishRaw_MaintenanceWeight
+      Object: 575CEE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMajor
+      Object: 00707C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMajor_MaintenanceName
+      Object: 575CFE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMajorBASE
+      Object: 1E6541:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMassive
+      Object: 00707E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMassive_MaintenanceName
+      Object: 575D00:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMassiveBASE
+      Object: 1E6542:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMinor
+      Object: 00707B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMinor_MaintenanceName
+      Object: 575CFD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMinorBASE
+      Object: 1E6535:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerSuperior
+      Object: 00707D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerSuperior_MaintenanceName
+      Object: 575CFF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerSuperiorBASE
+      Object: 1E6543:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FoodMiscObjects
+      Object: 32F7F1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FoodMiscObjects_MaintenancePrice
+      Object: 575CE8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FoodMiscObjects_MaintenanceWeight
+      Object: 575CFC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fruit
+      Object: 009660:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fruit_MaintenancePrice
+      Object: 575CDF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fruit_MaintenanceWeight
+      Object: 575CF3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_LoadingChecksum
+      Object: 603AF6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatCooked
+      Object: 009658:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatCooked_MaintenancePrice
+      Object: 575CD7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatCooked_MaintenanceWeight
+      Object: 575CEB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatRaw
+      Object: 009657:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatRaw_MaintenanceName
+      Object: 575D07:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatRaw_MaintenancePrice
+      Object: 575CD6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatRaw_MaintenanceWeight
+      Object: 575CEA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_NotFood
+      Object: 13A268:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Pastries
+      Object: 009665:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Pastries_MaintenancePrice
+      Object: 575CE2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Pastries_MaintenanceWeight
+      Object: 575CF6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Preserved
+      Object: 00C71C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Preserved_MaintenanceName
+      Object: 575D0B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SaltedFood
+      Object: 18B2BB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SaltedFood_MaintenanceName
+      Object: 575D0C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodCooked
+      Object: 00965E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodCooked_MaintenancePrice
+      Object: 575CDD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodCooked_MaintenanceWeight
+      Object: 575CF1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodRaw
+      Object: 00965D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodRaw_MaintenanceName
+      Object: 575D0A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodRaw_MaintenancePrice
+      Object: 575CDC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodRaw_MaintenanceWeight
+      Object: 575CF0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AddNames
+      Object: 3348F6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodPriceMulti
+      Object: 2CF454:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodWeightMulti
+      Object: 2CF455:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameCooked
+      Object: 00965A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameCooked_MaintenancePrice
+      Object: 575CD9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameCooked_MaintenanceWeight
+      Object: 575CED:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameRaw
+      Object: 009659:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameRaw_MaintenanceName
+      Object: 575D08:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameRaw_MaintenancePrice
+      Object: 575CD8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameRaw_MaintenanceWeight
+      Object: 575CEC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Stews
+      Object: 009667:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Stews_MaintenanceName
+      Object: 575D03:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Stews_MaintenancePrice
+      Object: 575CE3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Stews_MaintenanceWeight
+      Object: 575CF7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SystemFoods
+      Object: 5576AC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_TestFood
+      Object: 2CF456:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Treats
+      Object: 009664:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Treats_MaintenancePrice
+      Object: 575CE1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Treats_MaintenanceWeight
+      Object: 575CF5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Vegetables
+      Object: 00965F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Vegetables_MaintenancePrice
+      Object: 575CDE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Vegetables_MaintenanceWeight
+      Object: 575CF2:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Food Datastore Handler
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

@@ -1,0 +1,15 @@
+FormKey: 13F36A:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgClassify
+Description:
+  TargetLanguage: English
+  Value: Would you like to examine a different foodstuff?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: No

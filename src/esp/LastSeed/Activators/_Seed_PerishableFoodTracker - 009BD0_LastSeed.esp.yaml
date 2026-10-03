@@ -1,0 +1,40 @@
+FormKey: 009BD0:LastSeed.esp
+MajorRecordFlagsRaw: 8388608
+EditorID: _Seed_PerishableFoodTracker
+SkyrimMajorRecordFlags:
+- 0x800000
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_PerishableFoodTrackerScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PerishedFood
+      Object: 007B4B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilageEnable
+      Object: 204B66:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilageRemove
+      Object: 2E8991:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilageTemperature
+      Object: 3A3F2D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SpoiledFoodSystemContainerRef
+      Object: 00C722:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SpoilTemperatureMulti
+      Object: 3B8333:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LastSeedRunning
+      Object: 00B162:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Model:
+  File: MarkerX.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []
+MajorFlags:
+- IsMarker

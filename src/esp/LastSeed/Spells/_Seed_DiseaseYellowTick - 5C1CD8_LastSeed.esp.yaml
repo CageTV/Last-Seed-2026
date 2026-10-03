@@ -1,0 +1,21 @@
+FormKey: 5C1CD8:LastSeed.esp
+EditorID: _Seed_DiseaseYellowTick
+Name:
+  TargetLanguage: English
+  Value: Yellow Tick
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1CCE:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 5C1CCF:LastSeed.esp
+  Data: {}

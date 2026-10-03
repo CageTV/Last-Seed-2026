@@ -1,0 +1,40 @@
+FormKey: 255BDB:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_VitalityDeath
+Description:
+  TargetLanguage: English
+  Value: >-
+    AT ZERO VITALITY
+
+
+    Nothing: Nothing happens at zero vitality.
+
+
+    Rescue: Pass out and awaken somewhere else. The most story-driven option.
+
+
+    Death: You and your followers perish.
+
+
+    DEFAULTS: 
+
+
+    Immersive Challenge: Nothing
+
+
+    Hardcore Survival: Rescue
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Nothing
+- Text:
+    TargetLanguage: English
+    Value: 2. Rescue
+- Text:
+    TargetLanguage: English
+    Value: 3. Death

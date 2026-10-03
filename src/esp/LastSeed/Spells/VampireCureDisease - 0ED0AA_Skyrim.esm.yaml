@@ -1,0 +1,15 @@
+FormKey: 0ED0AA:Skyrim.esm
+EditorID: VampireCureDisease
+Name:
+  TargetLanguage: English
+  Value: Cure all diseases before changing
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 158
+CastType: FireAndForget
+Effects:
+- BaseEffect: 3A902F:LastSeed.esp
+  Data:
+    Magnitude: 100

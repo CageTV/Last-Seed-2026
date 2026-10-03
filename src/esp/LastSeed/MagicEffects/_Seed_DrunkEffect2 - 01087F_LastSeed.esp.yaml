@@ -1,0 +1,20 @@
+FormKey: 01087F:LastSeed.esp
+EditorID: _Seed_DrunkEffect2
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Tipsy'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: SpeechcraftModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Your are <mag>% less effective with speech. Fatigue Increases <10>% faster.

@@ -1,0 +1,98 @@
+FormKey: 59E53F:LastSeed.esp
+EditorID: _Seed_DiseaseHitMonitorQuest
+VirtualMachineAdapter:
+  FileName: ''
+  Aliases:
+  - Property:
+      Name: ''
+      Object: 59E53F:LastSeed.esp
+      Alias: 0
+    Scripts:
+    - Name: _Seed_DiseaseHitMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectListProperty
+        Name: _Seed_RaceDiseases
+        Objects:
+        - Name: ''
+          Object: 5C6ED1:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED2:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED3:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED4:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED5:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED6:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED7:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED8:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED9:LastSeed.esp
+        - Name: ''
+          Object: 5C6EDA:LastSeed.esp
+        - Name: ''
+          Object: 5C6EDB:LastSeed.esp
+        - Name: ''
+          Object: 5C6EDC:LastSeed.esp
+        - Name: ''
+          Object: 5C6EDD:LastSeed.esp
+        - Name: ''
+          Object: 5C6EDE:LastSeed.esp
+        - Name: ''
+          Object: 5C6EDF:LastSeed.esp
+        - Name: ''
+          Object: 5C6EE0:LastSeed.esp
+        - Name: ''
+          Object: 5C6EE1:LastSeed.esp
+      - MutagenObjectType: ScriptObjectListProperty
+        Name: _Seed_Races
+        Objects:
+        - Name: ''
+          Object: 5B7A8A:LastSeed.esp
+        - Name: ''
+          Object: 5C6EC4:LastSeed.esp
+        - Name: ''
+          Object: 5C6EC5:LastSeed.esp
+        - Name: ''
+          Object: 59E53C:LastSeed.esp
+        - Name: ''
+          Object: 5C6EC7:LastSeed.esp
+        - Name: ''
+          Object: 5C6EC8:LastSeed.esp
+        - Name: ''
+          Object: 5C6EC9:LastSeed.esp
+        - Name: ''
+          Object: 5C6ECA:LastSeed.esp
+        - Name: ''
+          Object: 5C6ECB:LastSeed.esp
+        - Name: ''
+          Object: 59E53D:LastSeed.esp
+        - Name: ''
+          Object: 5C6ECC:LastSeed.esp
+        - Name: ''
+          Object: 5C6ECD:LastSeed.esp
+        - Name: ''
+          Object: 5C6ECE:LastSeed.esp
+        - Name: ''
+          Object: 5C6ED0:LastSeed.esp
+        - Name: ''
+          Object: 5C1C9A:LastSeed.esp
+        - Name: ''
+          Object: 59E53E:LastSeed.esp
+        - Name: ''
+          Object: 5C6ECF:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: PlayerRef
+        Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Disease Hit Monitor
+NextAliasID: 1
+Aliases:
+- Name: PlayerRef
+  Flags: []
+  ForcedReference: 000014:Skyrim.esm
+  VoiceTypes: Null

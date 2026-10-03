@@ -1,0 +1,15 @@
+FormKey: 01954A:LastSeed.esp
+EditorID: _Seed_DrunkSpell1
+Name:
+  TargetLanguage: English
+  Value: Relaxed
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 01087E:LastSeed.esp
+  Data:
+    Magnitude: 25

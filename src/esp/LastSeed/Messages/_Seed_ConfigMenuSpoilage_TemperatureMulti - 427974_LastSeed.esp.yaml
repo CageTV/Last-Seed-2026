@@ -1,0 +1,25 @@
+FormKey: 427974:LastSeed.esp
+EditorID: _Seed_ConfigMenuSpoilage_TemperatureMulti
+Description:
+  TargetLanguage: English
+  Value: >-
+    SPOILAGE AFFECTED BY TEMPERATURE
+
+
+    Food will spoil slower in colder areas (Requires Frostfall). 
+
+
+    Default: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

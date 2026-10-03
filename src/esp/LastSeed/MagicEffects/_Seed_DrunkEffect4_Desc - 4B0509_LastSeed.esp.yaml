@@ -1,0 +1,20 @@
+FormKey: 4B0509:LastSeed.esp
+EditorID: _Seed_DrunkEffect4_Desc
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Very Drunk'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: 'Your are <mag>% less effective with Speech, Pickpocket, Lockpicking, Combat, and Magic skills. Fatigue Increases <50>% faster. Frequent stumbling. '

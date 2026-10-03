@@ -1,0 +1,9 @@
+FormKey: 2FCDAB:LastSeed.esp
+EditorID: _Seed_RecipeFoodCleanWaterskin3_Snow
+Items:
+- Item:
+    Item: 2FCDA9:LastSeed.esp
+    Count: 1
+CreatedObject: 010893:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

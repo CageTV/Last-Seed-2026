@@ -1,0 +1,22 @@
+FormKey: 2468CA:LastSeed.esp
+EditorID: _Seed_RecipeCanisRootTea
+Items:
+- Item:
+    Item: 06ABCB:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 10394D:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 1B8C0C:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: NotEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 2E388F:LastSeed.esp
+  ComparisonValue: 2
+CreatedObject: 2468C9:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

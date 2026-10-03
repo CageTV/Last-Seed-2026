@@ -1,0 +1,15 @@
+FormKey: 2417BD:LastSeed.esp
+EditorID: _Seed_Help_FocusSKSE
+Description:
+  TargetLanguage: English
+  Value: >-
+    FOCUS
+
+
+    Whenever you are crafting, talking, fighting or in a dangerous environment, you will become Focused.
+
+
+    While Focused, your basic needs will not increase over time. When the danger subsides, all of the hunger, thirst, and fatigue you would have gained will come rushing back. Because of this, you may be very hungry, thirsty, or tired when you leave a dungeon. You may need to recover before moving on.
+INAM: 0x00000000
+Flags:
+- MessageBox

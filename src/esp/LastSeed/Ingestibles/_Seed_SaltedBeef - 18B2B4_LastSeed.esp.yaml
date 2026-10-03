@@ -1,0 +1,25 @@
+FormKey: 18B2B4:LastSeed.esp
+EditorID: _Seed_SaltedBeef
+ObjectBounds:
+  First: -5, -9, -2
+  Second: 5, 9, 2
+Name:
+  TargetLanguage: English
+  Value: Salted Beef
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Ingredients\BeefMeatCooked.nif
+  Data: 0x020000000200000000000000C31EE4A064647300604DDD5CCE14F18D64647300604DDD5C
+Weight: 0.5
+Value: 5
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 10
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

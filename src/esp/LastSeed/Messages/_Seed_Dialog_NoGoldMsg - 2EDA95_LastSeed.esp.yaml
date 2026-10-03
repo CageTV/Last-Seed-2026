@@ -1,0 +1,7 @@
+FormKey: 2EDA95:LastSeed.esp
+EditorID: _Seed_Dialog_NoGoldMsg
+Description:
+  TargetLanguage: English
+  Value: I don't have enough gold.
+INAM: 0x00000000
+DisplayTime: 2

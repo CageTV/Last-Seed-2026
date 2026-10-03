@@ -1,0 +1,27 @@
+FormKey: 250AD2:LastSeed.esp
+EditorID: _Seed_ConfigMenu
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ConfigurationPower
+Name:
+  TargetLanguage: English
+  Value: Last Seed Options
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

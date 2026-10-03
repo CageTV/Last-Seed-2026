@@ -1,0 +1,21 @@
+FormKey: 5C6EBA:LastSeed.esp
+EditorID: _Seed_CureBloodLung
+Name:
+  TargetLanguage: English
+  Value: Potion of Cure Blood Lung
+Keywords:
+- 08CDEC:Skyrim.esm
+Model:
+  File: Clutter\Potions\PotionHealthLesser.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.5
+Value: 79
+Flags:
+- NoAutoCalc
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 5C6EA5:LastSeed.esp
+  Data:
+    Magnitude: 100

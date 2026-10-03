@@ -1,0 +1,37 @@
+FormKey: 010881:LastSeed.esp
+EditorID: _Seed_DrunkEffect4
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_StumblingEffect
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DrunkStumbling
+      Object: 2A1B28:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_StumbleSpell
+      Object: 2A1B26:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptIntProperty
+      Name: trippingChance
+      Data: 50
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Very Drunk'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: SpeechcraftModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Your are <mag>% less effective with Speech, Pickpocket, Lockpicking, Combat, and Magic skills. Fatigue Increases <50>% faster. Frequent stumbling.

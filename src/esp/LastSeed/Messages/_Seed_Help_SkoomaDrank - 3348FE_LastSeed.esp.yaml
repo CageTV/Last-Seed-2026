@@ -1,0 +1,18 @@
+FormKey: 3348FE:LastSeed.esp
+EditorID: _Seed_Help_SkoomaDrank
+Description:
+  TargetLanguage: English
+  Value: >-
+    TYPES OF SKOOMA
+
+
+    You feel your head spin as Skooma rushes through your body. Remember that you will become more high as you consume more Skooma, but consuming too much can be bad for your health! Here is the strength of the different types of Skooma you can find around Skyrim:
+
+
+    Weak: Skooma, Balmora Blue
+
+
+    Strong: Double-Distilled Skooma, Redwater Skooma
+INAM: 0x00000000
+Flags:
+- MessageBox

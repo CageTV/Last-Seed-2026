@@ -1,0 +1,18 @@
+FormKey: 4B04EF:LastSeed.esp
+EditorID: _Seed_RecipeFoodPreservedCabbage_L1
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 4
+- Item:
+    Item: 064B3F:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: 1903C2:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

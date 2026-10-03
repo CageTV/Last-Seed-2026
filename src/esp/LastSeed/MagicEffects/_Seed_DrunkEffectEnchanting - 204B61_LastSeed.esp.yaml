@@ -1,0 +1,22 @@
+FormKey: 204B61:LastSeed.esp
+EditorID: _Seed_DrunkEffectEnchanting
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Enchanting'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: EnchantingModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

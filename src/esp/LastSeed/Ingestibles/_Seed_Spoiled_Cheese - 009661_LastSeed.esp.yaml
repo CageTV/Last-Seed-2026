@@ -1,0 +1,25 @@
+FormKey: 009661:LastSeed.esp
+EditorID: _Seed_Spoiled_Cheese
+Name:
+  TargetLanguage: English
+  Value: Moldy Cheese
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: lastseed\spoiled\CheeseWedge01.nif
+  Data: 0x020000000000000000000000
+  AlternateTextures:
+  - Name: CheeseWedge01:0
+    NewTexture: 00D74B:LastSeed.esp
+Weight: 0.25
+Value: 4
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 1
+- BaseEffect: 007B49:LastSeed.esp
+  Data: {}

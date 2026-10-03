@@ -1,0 +1,22 @@
+FormKey: 204B62:LastSeed.esp
+EditorID: _Seed_DrunkEffectArchery
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Archery'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: MarksmanModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

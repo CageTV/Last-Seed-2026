@@ -1,0 +1,21 @@
+FormKey: 2FCDAA:LastSeed.esp
+EditorID: _Seed_FoodDesc_Snow
+Name:
+  TargetLanguage: English
+  Value: Snow Desc
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Can be boiled to create water.

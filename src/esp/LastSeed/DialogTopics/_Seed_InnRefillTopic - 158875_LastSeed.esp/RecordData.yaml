@@ -1,0 +1,8 @@
+FormKey: 158875:LastSeed.esp
+EditorID: _Seed_InnRefillTopic
+Name:
+  TargetLanguage: English
+  Value: I'd like a refill my empty waterskins and bottles.
+Branch: 158874:LastSeed.esp
+Quest: 158876:LastSeed.esp
+SubtypeName: CUST

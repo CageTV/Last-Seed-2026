@@ -1,0 +1,21 @@
+FormKey: 4A62E5:LastSeed.esp
+EditorID: _Seed_StrongBackEffect
+Name:
+  TargetLanguage: English
+  Value: Strong Back
+Flags:
+- Recover
+- NoDuration
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: CarryWeight
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

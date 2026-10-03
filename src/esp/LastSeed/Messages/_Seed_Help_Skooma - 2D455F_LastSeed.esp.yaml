@@ -1,0 +1,15 @@
+FormKey: 2D455F:LastSeed.esp
+EditorID: _Seed_Help_Skooma
+Description:
+  TargetLanguage: English
+  Value: >-
+    SKOOMA ADDICTION
+
+
+    You have become addicted to Skooma! You will experience Skooma withdrawal over the next three to four days. During which time your withdrawal will become progressively worse, before subsiding slowly. 
+
+
+    You can drink more Skooma to temporarily relieve your withdrawal symptoms, but doing so will undo any progress you made in overcoming your addiction.
+INAM: 0x00000000
+Flags:
+- MessageBox

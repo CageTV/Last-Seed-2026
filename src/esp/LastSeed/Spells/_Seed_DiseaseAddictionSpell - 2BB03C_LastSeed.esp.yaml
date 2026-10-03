@@ -1,0 +1,31 @@
+FormKey: 2BB03C:LastSeed.esp
+EditorID: _Seed_DiseaseAddictionSpell
+Name:
+  TargetLanguage: English
+  Value: Skooma Addiction
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 2CF452:LastSeed.esp
+  Data:
+    Magnitude: 20
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    CompareOperator: NotEqualTo
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 2CF453:LastSeed.esp
+    ComparisonValue: 2
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 00B162:LastSeed.esp
+    ComparisonValue: 2

@@ -1,0 +1,60 @@
+FormKey: 016786:Skyrim.esm
+IsCompressed: True
+MajorRecordFlagsRaw: 262144
+EditorID: WindhelmHalloftheDead
+Version2: 1
+SkyrimMajorRecordFlags:
+- Compressed
+Name:
+  TargetLanguage: English
+  Value: Hall of the Dead
+Flags:
+- IsInteriorCell
+- PublicArea
+Lighting:
+  AmbientColor: '#001E1E28'
+  DirectionalColor: '#00000000'
+  FogNearColor: '#00000000'
+  FogPower: 1
+  AmbientColors:
+    DirectionalXPlus: '#001D1810'
+    DirectionalXMinus: '#0018180F'
+    DirectionalYPlus: '#001B1910'
+    DirectionalYMinus: '#001B1610'
+    DirectionalZPlus: '#000C0B07'
+    DirectionalZMinus: '#00292418'
+    Specular: '#00000000'
+    Scale: 1
+  FogFarColor: '#00000000'
+  FogMax: 1
+  LightFadeEnd: 2048
+  Inherits:
+  - AmbientColor
+  - DirectionalColor
+  - FogColor
+  - FogNear
+  - FogFar
+  - ClipDistance
+LightingTemplate: 07BA87:Skyrim.esm
+WaterHeight: -2.1474836E+09
+Location: 0209EF:Skyrim.esm
+Owner: 045F66:Skyrim.esm
+AcousticSpace: 01AA4D:Skyrim.esm
+Music: 02D4C2:Skyrim.esm
+ImageSpace: 0A2687:Skyrim.esm
+Persistent:
+- MutagenObjectType: PlacedObject
+  FormKey: 07185A:Skyrim.esm
+  MajorRecordFlagsRaw: 1024
+  EditorID: WindhelmShrineofArkayREF
+  Version2: 4
+  SkyrimMajorRecordFlags:
+  - 0x400
+  Base: 071854:Skyrim.esm
+  LocationRefTypes:
+  - 071855:Skyrim.esm
+  LocationReference: 0209EF:Skyrim.esm
+  Placement:
+    Position: 64, -3712, -356.14877
+MajorFlags:
+- 0x40000

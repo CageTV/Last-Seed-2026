@@ -1,0 +1,16 @@
+FormKey: 01089D:LastSeed.esp
+EditorID: _Seed_RecipeFoodCleanWaterskin2
+Items:
+- Item:
+    Item: 010890:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 010890:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: 010891:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

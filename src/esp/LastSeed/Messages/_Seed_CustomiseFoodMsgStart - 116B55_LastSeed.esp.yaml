@@ -1,0 +1,18 @@
+FormKey: 116B55:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgStart
+Description:
+  TargetLanguage: English
+  Value: It appears that you are unfamiliar with this foodstuff. Would you like to examine it to learn its properties?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Examine
+- Text:
+    TargetLanguage: English
+    Value: Later
+- Text:
+    TargetLanguage: English
+    Value: This is Not Food

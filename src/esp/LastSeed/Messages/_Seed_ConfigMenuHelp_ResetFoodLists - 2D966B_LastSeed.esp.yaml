@@ -1,0 +1,25 @@
+FormKey: 2D966B:LastSeed.esp
+EditorID: _Seed_ConfigMenuHelp_ResetFoodLists
+Description:
+  TargetLanguage: English
+  Value: >-
+    RESET FOODSTUFF LISTS
+
+
+    If selected, all player-added food customisations will be reset when you close the Mod Configuration Menu. 
+
+
+    Default: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

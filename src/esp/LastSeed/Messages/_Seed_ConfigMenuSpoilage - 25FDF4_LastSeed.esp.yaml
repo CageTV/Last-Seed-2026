@@ -1,0 +1,21 @@
+FormKey: 25FDF4:LastSeed.esp
+EditorID: _Seed_ConfigMenuSpoilage
+Description:
+  TargetLanguage: English
+  Value: FOOD SPOILAGE
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Main Menu
+- Text:
+    TargetLanguage: English
+    Value: Enable Food Spoilage
+- Text:
+    TargetLanguage: English
+    Value: Remove Perished Food
+- Text:
+    TargetLanguage: English
+    Value: Spoilage Temperature

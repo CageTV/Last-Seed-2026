@@ -1,0 +1,22 @@
+FormKey: 204B64:LastSeed.esp
+EditorID: _Seed_DrunkEffectLightArmour
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Light Armor'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: LightArmorModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,27 @@
+FormKey: 255BD8:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds1
+Description:
+  TargetLanguage: English
+  Value: NEEDS (1/3)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Main Menu
+- Text:
+    TargetLanguage: English
+    Value: Enable Vitality
+- Text:
+    TargetLanguage: English
+    Value: At Zero Vitality
+- Text:
+    TargetLanguage: English
+    Value: Enable Hunger
+- Text:
+    TargetLanguage: English
+    Value: Diminishing Returns
+- Text:
+    TargetLanguage: English
+    Value: More

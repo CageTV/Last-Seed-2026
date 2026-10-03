@@ -1,0 +1,8 @@
+FormKey: 627200:LastSeed.esp
+EditorID: _Seed_InnMealTopic
+Name:
+  TargetLanguage: English
+  Value: I'd like to order a meal.
+Branch: 6271FF:LastSeed.esp
+Quest: 158876:LastSeed.esp
+SubtypeName: CUST

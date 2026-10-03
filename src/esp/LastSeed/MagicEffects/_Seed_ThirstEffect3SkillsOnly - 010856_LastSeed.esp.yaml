@@ -1,0 +1,20 @@
+FormKey: 010856:LastSeed.esp
+EditorID: _Seed_ThirstEffect3SkillsOnly
+Name:
+  TargetLanguage: English
+  Value: 'Thirst: Thirsty'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

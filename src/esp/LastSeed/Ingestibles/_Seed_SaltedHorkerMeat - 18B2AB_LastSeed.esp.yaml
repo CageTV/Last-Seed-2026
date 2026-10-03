@@ -1,0 +1,25 @@
+FormKey: 18B2AB:LastSeed.esp
+EditorID: _Seed_SaltedHorkerMeat
+ObjectBounds:
+  First: -7, -11, 0
+  Second: 7, 12, 8
+Name:
+  TargetLanguage: English
+  Value: Salted Horker
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Ingredients\HorkerMeatCooked.nif
+  Data: 0x020000000200000000000000E00D7B7E64647300604DDD5CEEFCE6B764647300604DDD5C
+Weight: 1
+Value: 4
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 10
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

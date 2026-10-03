@@ -1,0 +1,9 @@
+FormKey: 274208:LastSeed.esp
+EditorID: _Seed_CheckSnowImpactSet
+Impacts:
+- Material: 012F45:Skyrim.esm
+  Impact: 274209:LastSeed.esp
+- Material: 012F47:Skyrim.esm
+  Impact: 274209:LastSeed.esp
+- Material: 052ED0:Skyrim.esm
+  Impact: 274209:LastSeed.esp

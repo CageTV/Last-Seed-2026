@@ -1,0 +1,7 @@
+FormKey: 2EDA94:LastSeed.esp
+EditorID: _Seed_CustomiseFood_NotFoodMsg
+Description:
+  TargetLanguage: English
+  Value: You cannot examine this item. It is not food.
+INAM: 0x00000000
+DisplayTime: 2

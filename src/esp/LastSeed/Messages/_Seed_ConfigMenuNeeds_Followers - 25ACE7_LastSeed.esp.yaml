@@ -1,0 +1,43 @@
+FormKey: 25ACE7:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_Followers
+Description:
+  TargetLanguage: English
+  Value: >-
+    FOLLOWER NEEDS
+
+
+    Settings for Follower Needs 
+
+
+    Disabled: No follower needs.
+
+
+    Individial: Followers have independent Hunger and Thirst needs. 
+
+
+    Party: Followers have combined Hunger and Thirst needs.
+
+
+    DEFAULT:
+
+
+    Just for Fun: Disabled
+
+
+    Immersive Challenge: Party
+
+
+    Hardcore Survival: Party
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

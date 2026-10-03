@@ -1,0 +1,24 @@
+FormKey: 264F02:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds3
+Description:
+  TargetLanguage: English
+  Value: NEEDS (3/3)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Auto-Eating
+- Text:
+    TargetLanguage: English
+    Value: Vampire Behaviour
+- Text:
+    TargetLanguage: English
+    Value: Needs Affect Movement
+- Text:
+    TargetLanguage: English
+    Value: Follower Needs
+- Text:
+    TargetLanguage: English
+    Value: Next

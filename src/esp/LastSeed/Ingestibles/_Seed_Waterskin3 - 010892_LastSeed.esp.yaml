@@ -1,0 +1,21 @@
+FormKey: 010892:LastSeed.esp
+EditorID: _Seed_Waterskin3
+Name:
+  TargetLanguage: English
+  Value: Waterskin of Dirty Water, Full
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: foodandsleep\waterskin.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03E879:Skyrim.esm
+PutDownSound: 03E909:Skyrim.esm
+Weight: 2
+Value: 10
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 301EB0:LastSeed.esp
+  Data: {}

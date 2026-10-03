@@ -1,0 +1,28 @@
+FormKey: 25ACEB:LastSeed.esp
+EditorID: _Seed_ConfigMenuAlcoholDisease_Potions
+Description:
+  TargetLanguage: English
+  Value: >-
+    CURE DISEASE POTIONS
+
+
+    Generic (Just for Fun): Cure Disease Potions cure all diseases.  
+
+
+    Specific (Immersive Challenge): Cure Disease Potions increase your disease resistance, and each disease has its own Cure Disease Potion. 
+
+
+    No Cure (Hardcore Survival): Cure Disease Potions increase your disease resistance, you cannot cure diseases outright using potions.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

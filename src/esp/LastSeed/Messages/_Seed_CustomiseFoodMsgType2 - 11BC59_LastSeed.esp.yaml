@@ -1,0 +1,24 @@
+FormKey: 11BC59:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgType2
+Description:
+  TargetLanguage: English
+  Value: What kind of food or drink is this? (2/5)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Cooked Small Game
+- Text:
+    TargetLanguage: English
+    Value: Raw Fish
+- Text:
+    TargetLanguage: English
+    Value: Cooked Fish
+- Text:
+    TargetLanguage: English
+    Value: Raw Seafood
+- Text:
+    TargetLanguage: English
+    Value: More

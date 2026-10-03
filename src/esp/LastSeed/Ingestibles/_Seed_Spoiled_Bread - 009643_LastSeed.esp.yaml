@@ -1,0 +1,26 @@
+FormKey: 009643:LastSeed.esp
+EditorID: _Seed_Spoiled_Bread
+Name:
+  TargetLanguage: English
+  Value: Moldy Bread
+Keywords:
+- 08CDEA:Skyrim.esm
+- 0A248C:Skyrim.esm
+Model:
+  File: lastseed\spoiled\Bread01B.nif
+  Data: 0x020000000000000000000000
+  AlternateTextures:
+  - Name: Bread01B:0
+    NewTexture: 006017:LastSeed.esp
+Weight: 0.2
+Value: 2
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 2
+- BaseEffect: 007B49:LastSeed.esp
+  Data: {}

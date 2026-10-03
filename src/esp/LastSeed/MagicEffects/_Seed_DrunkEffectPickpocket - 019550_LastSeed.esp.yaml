@@ -1,0 +1,22 @@
+FormKey: 019550:LastSeed.esp
+EditorID: _Seed_DrunkEffectPickpocket
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Pickpocket'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: PickpocketModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

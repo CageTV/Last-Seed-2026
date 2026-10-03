@@ -1,0 +1,73 @@
+FormKey: 0BD743:Skyrim.esm
+VirtualMachineAdapter:
+  Scripts:
+  - Name: TIF__000BD743
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CureVampirism
+      Object: 301EC7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CureDisease
+      Object: 0AE723:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Gold001
+      Object: 00000F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VampireVictim
+      Object: 0BD753:Skyrim.esm
+      Alias: 16
+  ScriptFragments:
+    MutagenObjectType: ScriptFragments
+    FileName: TIF__000BD743
+    OnEnd:
+      ExtraBindDataVersion: 1
+      ScriptName: TIF__000BD743
+      FragmentName: Fragment_0
+Flags:
+  Flags:
+  - Goodbye
+PreviousDialog: Null
+FavorLevel: None
+Responses:
+- Emotion: Happy
+  EmotionValue: 100
+  ResponseNumber: 1
+  Unknown2: 0x000000
+  Flags:
+  - UseEmotionAnimation
+  Unknown3: 0x000000
+  Text:
+    TargetLanguage: English
+    Value: Oh, thank the gods. Here, take this with my thanks.
+  ScriptNotes: ''
+  Edits: ''
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: LessThan
+  Data:
+    MutagenObjectType: GetStageConditionData
+    Quest: 0BD753:Skyrim.esm
+  ComparisonValue: 100
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsAliasRefConditionData
+    ReferenceAliasIndex: 16
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    ItemOrList: 0AE723:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    RunOnType: Reference
+    Reference: 000014:Skyrim.esm
+    ItemOrList: 301EC7:LastSeed.esp
+  ComparisonValue: 1

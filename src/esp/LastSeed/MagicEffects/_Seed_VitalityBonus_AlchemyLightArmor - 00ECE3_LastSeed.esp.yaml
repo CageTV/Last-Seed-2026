@@ -1,0 +1,32 @@
+FormKey: 00ECE3:LastSeed.esp
+EditorID: _Seed_VitalityBonus_AlchemyLightArmor
+Name:
+  TargetLanguage: English
+  Value: Vitality Bonus Effect 7
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+BaseCost: 5
+SpellmakingCastingTime: 0.5
+SecondActorValueWeight: 1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: AlchemyModifier
+  Type: DualValueModifier
+SecondActorValue: LightArmorModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds:
+- Sound: 03E957:Skyrim.esm
+- Type: Charge
+  Sound: 056622:Skyrim.esm
+- Type: Ready
+  Sound: 03F363:Skyrim.esm
+- Type: Release
+  Sound: 03F361:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''

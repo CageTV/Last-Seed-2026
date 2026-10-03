@@ -1,0 +1,20 @@
+FormKey: 0029DE:LastSeed.esp
+EditorID: _Seed_HungerEffect4
+Name:
+  TargetLanguage: English
+  Value: 'Hunger: Very Hungry'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: HealRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Health regenerates <mag>% slower. You are <10>% less effective with melee weapons. Block <10>% less damage with your shield.

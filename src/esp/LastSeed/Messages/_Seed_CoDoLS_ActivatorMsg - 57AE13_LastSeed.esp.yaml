@@ -1,0 +1,21 @@
+FormKey: 57AE13:LastSeed.esp
+EditorID: _Seed_CoDoLS_ActivatorMsg
+Description:
+  TargetLanguage: English
+  Value: Use Water Source
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Nothing
+- Text:
+    TargetLanguage: English
+    Value: Drink
+- Text:
+    TargetLanguage: English
+    Value: Refill
+- Text:
+    TargetLanguage: English
+    Value: Pick up

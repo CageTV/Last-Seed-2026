@@ -1,0 +1,25 @@
+FormKey: 663E28:LastSeed.esp
+MajorRecordFlagsRaw: 512
+EditorID: _Seed_WellBucket_Indicator
+SkyrimMajorRecordFlags:
+- 0x200
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlacementIndicator
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: indicator_distance
+      Data: 200
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_activator_to_place
+      Object: 663E29:LastSeed.esp
+    - MutagenObjectType: ScriptBoolProperty
+      Name: snap_to_terrain
+      Data: True
+Model:
+  File: lastseed\_Seed_WellBucket.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []
+MajorFlags:
+- HiddenFromLocalMap

@@ -1,0 +1,194 @@
+FormKey: 2468CD:LastSeed.esp
+EditorID: _Seed_ConsumeMangerFollowersQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ConsumeManagerFollowers
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_AutoDrankPlayer
+      Object: 0BB920:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_AutoEatenPlayer
+      Object: 0BB91F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_BloodPotions
+      Object: 501546:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Bread
+      Object: 009666:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Cheese
+      Object: 009663:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheeseBowls
+      Object: 00C718:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConsumeNoDrinkMsg
+      Object: 2EDAA2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConsumeNoFoodMsg
+      Object: 2EDAA1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholic
+      Object: 00C719:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicAle
+      Object: 0108EB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicSpirit
+      Object: 0108EC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicWine
+      Object: 0108ED:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkMilk
+      Object: 00C71A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkNonAlcoholic
+      Object: 00C71B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkWater
+      Object: 1E6534:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishCooked
+      Object: 00965C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishRaw
+      Object: 00965B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ForceAddFoodToProvisions_CACO
+      Object: 4FC443:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ForceFoodPortioning
+      Object: 209C69:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fruit
+      Object: 009660:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IceWraithTeeth
+      Object: 44B08B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatCooked
+      Object: 009658:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatRaw
+      Object: 009657:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Pastries
+      Object: 009665:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PerishedFood
+      Object: 007B4B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PortionsToProvisionsList
+      Object: 3348F3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Preserved
+      Object: 00C71C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionContainerLocked
+      Object: 2468CC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsContainerRef
+      Object: 074B07:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsLockedToken
+      Object: 1FFA58:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodCooked
+      Object: 00965E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodRaw
+      Object: 00965D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimateFollowers
+      Object: 23C6B4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimatePlayer
+      Object: 23C6B3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimatePlayer_FirstPerson
+      Object: 23C6B2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AutoConsume
+      Object: 0B681C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiminishingFoodReturns
+      Object: 00C70F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FollowersConsumeFood
+      Object: 431B7F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodPortioning
+      Object: 209C6A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsSFX
+      Object: 003A32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications
+      Object: 003A30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications_Followers
+      Object: 213E87:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VampireBehavior
+      Object: 0029D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingPlayerIsLich
+      Object: 58A11C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameCooked
+      Object: 00965A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameRaw
+      Object: 009659:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Stews
+      Object: 009667:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Treats
+      Object: 009664:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Vegetables
+      Object: 00965F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin3Clean
+      Object: 010893:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ChairDrinkingStart
+      Object: 065D07:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ChairEatingStart
+      Object: 065D06:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC1BloodPotion
+      Object: 018EF3:Dawnguard.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodChicken
+      Object: 0F2011:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: idleDrinkingStandingStart
+      Object: 0640FC:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: idleEatingStandingStart
+      Object: 064100:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdlePickup_Ground
+      Object: 075C3E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdleStop_Loose
+      Object: 10D9EE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodMultiPart
+      Object: D9FF0D:Update.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Follower AutoConsume Manager
+NextAliasID: 0

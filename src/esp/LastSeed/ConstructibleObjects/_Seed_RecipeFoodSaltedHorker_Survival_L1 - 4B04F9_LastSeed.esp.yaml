@@ -1,0 +1,18 @@
+FormKey: 4B04F9:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedHorker_Survival_L1
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 6
+- Item:
+    Item: 065C9B:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: 18B2AB:LastSeed.esp
+WorkbenchKeyword: CCA002:Update.esm
+CreatedObjectCount: 1

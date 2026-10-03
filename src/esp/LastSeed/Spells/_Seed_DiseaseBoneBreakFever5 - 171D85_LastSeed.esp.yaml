@@ -1,0 +1,19 @@
+FormKey: 171D85:LastSeed.esp
+EditorID: _Seed_DiseaseBoneBreakFever5
+Name:
+  TargetLanguage: English
+  Value: Deadly Bone Break Fever
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5AD87A:LastSeed.esp
+  Data:
+    Magnitude: 75

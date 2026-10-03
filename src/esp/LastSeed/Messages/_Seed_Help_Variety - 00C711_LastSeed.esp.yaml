@@ -1,0 +1,15 @@
+FormKey: 00C711:LastSeed.esp
+EditorID: _Seed_Help_Variety
+Description:
+  TargetLanguage: English
+  Value: >-
+    VARIED DIET
+
+
+    To get the best amount of hunger restored by food, try to eat a variety of different foods.
+
+
+    If you eat the same kind of food more than once in a short span of time, you will only receive half of the food's normal benefit. You can get the full benefit of the food again after 30 in-game minutes.
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,12 @@
+FormKey: 00B163:LastSeed.esp
+EditorID: _Seed_FirstStartup_1
+Description:
+  TargetLanguage: English
+  Value: >-
+    I am in a dream. In it, I walk down a trail in a thickly wooded forest. The path twists and turns, but I press ever onward. Loose stones and broken earth threaten my footing. Exhaustion presses down on me like a physical weight. Finally, I arrive in a clearing with a gentle stream. Relief washes over me. In the stream, I see myself, but I've... changed. The journey has taken its toll, but also revealed a purer form of myself.
+
+
+    I awaken inspired, ready to meet the challenges ahead.
+INAM: 0x00000000
+Flags:
+- MessageBox

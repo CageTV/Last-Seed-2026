@@ -1,0 +1,15 @@
+FormKey: 2C014A:LastSeed.esp
+EditorID: _Seed_SkoomaSpell1
+Name:
+  TargetLanguage: English
+  Value: Buzz
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 2E3873:LastSeed.esp
+  Data:
+    Magnitude: 25

@@ -1,0 +1,19 @@
+FormKey: 59E558:LastSeed.esp
+EditorID: _Seed_DiseaseStomachRot1
+Name:
+  TargetLanguage: English
+  Value: Mild Stomach Rot
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 59E551:LastSeed.esp
+  Data:
+    Magnitude: 25

@@ -1,0 +1,7 @@
+FormKey: 158874:LastSeed.esp
+EditorID: _Seed_InnRefill
+Quest: 158876:LastSeed.esp
+Category: Player
+Flags:
+- TopLevel
+StartingTopic: 158875:LastSeed.esp

@@ -1,0 +1,19 @@
+FormKey: 5C1D52:LastSeed.esp
+EditorID: _Seed_DiseaseAshChancre2
+Name:
+  TargetLanguage: English
+  Value: Moderate Ash-Chancre
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1D58:LastSeed.esp
+  Data:
+    Magnitude: 40

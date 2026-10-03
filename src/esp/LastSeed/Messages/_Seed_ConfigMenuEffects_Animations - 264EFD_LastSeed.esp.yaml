@@ -1,0 +1,25 @@
+FormKey: 264EFD:LastSeed.esp
+EditorID: _Seed_ConfigMenuEffects_Animations
+Description:
+  TargetLanguage: English
+  Value: >-
+    PLAYER ANIMATIONS
+
+
+    Player charecter will play animations when eating, drinking and filling waterskins.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

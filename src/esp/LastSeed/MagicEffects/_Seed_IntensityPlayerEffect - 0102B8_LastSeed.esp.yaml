@@ -1,0 +1,45 @@
+FormKey: 0102B8:LastSeed.esp
+EditorID: _Seed_IntensityPlayerEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_IntensityVitalityCheck
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Intensity
+      Object: 00F268:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IntensityErrorNoVitality
+      Object: 0102B9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IntensityKeyword
+      Object: 00F7D2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MAGFail
+      Object: 022472:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_UnboundIntensity
+      Object: 47DAAE:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Unbound Intensity
+MenuDisplayObject: 1097CA:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

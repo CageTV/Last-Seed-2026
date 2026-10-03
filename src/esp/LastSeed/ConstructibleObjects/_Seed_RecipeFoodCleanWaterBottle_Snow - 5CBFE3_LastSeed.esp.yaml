@@ -1,0 +1,9 @@
+FormKey: 5CBFE3:LastSeed.esp
+EditorID: _Seed_RecipeFoodCleanWaterBottle_Snow
+Items:
+- Item:
+    Item: 533F8F:LastSeed.esp
+    Count: 1
+CreatedObject: 506653:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

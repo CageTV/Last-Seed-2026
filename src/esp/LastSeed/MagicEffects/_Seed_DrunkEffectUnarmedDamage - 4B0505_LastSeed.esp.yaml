@@ -1,0 +1,22 @@
+FormKey: 4B0505:LastSeed.esp
+EditorID: _Seed_DrunkEffectUnarmedDamage
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Drunken Brawler'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoDuration
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+MagicSkill: Alteration
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: UnarmedDamage
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Unarmed strikes do <mag> additional damage. Receive <mag> less damage.

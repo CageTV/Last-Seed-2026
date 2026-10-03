@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 47DAAD:LastSeed.esp
+MajorRecordFlagsRaw: 64
+EditorID: Provisioning_PerkRank_OutdoorsmanMax
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 1

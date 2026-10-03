@@ -1,0 +1,25 @@
+FormKey: 255BE0:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_Focus
+Description:
+  TargetLanguage: English
+  Value: >-
+    ENABLE FOCUS
+
+
+    Your basic needs will not increase over time when you are in danger. When the danger subsides, all of the hunger, thirst, and fatigue you would have gained will come rushing back.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

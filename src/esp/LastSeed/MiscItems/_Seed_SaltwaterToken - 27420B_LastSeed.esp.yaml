@@ -1,0 +1,29 @@
+FormKey: 27420B:LastSeed.esp
+EditorID: _Seed_SaltwaterToken
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_MultiCraftingScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CreatedObject1
+      Object: 034CDF:Skyrim.esm
+    - MutagenObjectType: ScriptIntProperty
+      Name: CreatedObject1Count
+      Data: 3
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CreatedObject2
+      Object: 010895:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: CreatedObject2Count
+      Data: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: token
+      Object: 27420B:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Salt Pile
+Model:
+  File: Clutter\Ingredients\SaltPile.nif
+  Data: 0x020000000000000000000000
+Value: 1
+Weight: 1

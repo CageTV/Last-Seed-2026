@@ -1,0 +1,133 @@
+FormKey: 10784A:LastSeed.esp
+EditorID: _Seed_ThirstSystemQuest_Follower2
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ThirstSystem_Follower2
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IsHungover
+      Object: 2A1B24:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AutoConsume
+      Object: 0B681C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_HungerMeterDisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsAffectedByRegeneration
+      Object: 36731B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsForceFeedback
+      Object: 003A34:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsMeterDisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsSFX
+      Object: 003A32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsVFX
+      Object: 003A33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications
+      Object: 003A30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications_Followers
+      Object: 213E87:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VampireBehavior
+      Object: 0029D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel1Msg
+      Object: 005AA8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel2Msg
+      Object: 005AA9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel3Msg
+      Object: 005AAA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel4Msg
+      Object: 005AAB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel5Msg
+      Object: 005AAC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel6Msg
+      Object: 005AAD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstMeterQuest
+      Object: 004A5E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSpell1
+      Object: 005A90:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSpell2
+      Object: 005A92:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSpell3
+      Object: 005A94:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSpell4
+      Object: 005A96:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSpell5
+      Object: 005A98:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSpell6
+      Object: 005A9A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeEnabled
+      Object: 007074:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeLevelGlobal
+      Object: 10C94E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateGlobal
+      Object: 0029D3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateMultiGlobal
+      Object: 0513F9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeValueGlobal
+      Object: 10C951:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AutoDrank
+      Object: 107847:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstISM5
+      Object: 00C709:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstISM6
+      Object: 00C708:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstSound3_F
+      Object: 218F93:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstSound4_F
+      Object: 218F94:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstSound5_F
+      Object: 218F95:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstSound6_F
+      Object: 218F96:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TimeScale
+      Object: 00003A:Skyrim.esm
+    - MutagenObjectType: ScriptBoolProperty
+      Name: undeadImmunity
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 007078:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Thirst System
+NextAliasID: 0

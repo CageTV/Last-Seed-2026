@@ -1,0 +1,21 @@
+FormKey: 0102B7:LastSeed.esp
+EditorID: _Seed_SKSETypesCom
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_SKSETypesDelegate
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SeedConfig
+      Object: 00E774:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Last Seed SKSE Types Communication Delegate
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

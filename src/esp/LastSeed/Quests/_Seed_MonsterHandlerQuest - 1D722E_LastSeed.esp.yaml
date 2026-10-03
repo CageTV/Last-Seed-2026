@@ -1,0 +1,92 @@
+FormKey: 1D722E:LastSeed.esp
+EditorID: _Seed_MonsterHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_MonsterHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_AutoDrink
+      Object: 0A2416:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_AutoEat
+      Object: 083E0E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_LichDeathGrip
+      Object: 58A11E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMajorAmount
+      Object: 008B73:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMassiveAmount
+      Object: 00C710:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMinorAmount
+      Object: 008B72:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerSuperiorAmount
+      Object: 008B74:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceRawFood
+      Object: 209C70:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_isBetterVampiresLoaded
+      Object: 46E798:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SeranaDrinksBlood
+      Object: 68C647:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SystemEnabled_Thirst
+      Object: 007074:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VampireBehavior
+      Object: 0029D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingPlayerIsLich
+      Object: 58A11C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArgonianRaceVampire
+      Object: 08883A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BloodSprayImpactSetRed
+      Object: 01F82A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BretonRaceVampire
+      Object: 08883C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DarkElfRaceVampire
+      Object: 08883D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC1Serana
+      Object: 002B6C:Dawnguard.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HighElfRaceVampire
+      Object: 088840:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ImperialRaceVampire
+      Object: 088844:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: KhajiitRaceVampire
+      Object: 088845:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: NordRaceVampire
+      Object: 088794:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: OrcRaceVampire
+      Object: 0A82B9:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RedguardRaceVampire
+      Object: 088846:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WoodElfRaceVampire
+      Object: 088884:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Disease Handler
+NextAliasID: 0

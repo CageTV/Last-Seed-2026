@@ -1,0 +1,25 @@
+FormKey: 5A3670:LastSeed.esp
+EditorID: _Seed_ConfigMenuAlcoholDisease_AdditionalDiseases
+Description:
+  TargetLanguage: English
+  Value: >-
+    ADDITIONAL DISEASES
+
+
+    Adds more diseases to the game.
+
+
+    DEFAULT: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

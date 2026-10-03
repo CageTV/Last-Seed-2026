@@ -1,0 +1,10 @@
+FormKey: 58A12A:LastSeed.esp
+EditorID: _Seed_DeathGripTelekinesisLightCast
+Time: -1
+Radius: 36
+Color: '#001401C2'
+FalloffExponent: 1
+FOV: 90
+NearClip: 1
+FlickerPeriod: 1
+FadeValue: 3

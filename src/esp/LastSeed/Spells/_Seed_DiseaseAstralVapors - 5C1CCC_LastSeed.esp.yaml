@@ -1,0 +1,21 @@
+FormKey: 5C1CCC:LastSeed.esp
+EditorID: _Seed_DiseaseAstralVapors
+Name:
+  TargetLanguage: English
+  Value: Astral Vapors
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1CC2:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 5C1CC3:LastSeed.esp
+  Data: {}

@@ -1,0 +1,22 @@
+FormKey: 204B5A:LastSeed.esp
+EditorID: _Seed_DrunkEffectOneHanded
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: OneHanded'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: OneHandedModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

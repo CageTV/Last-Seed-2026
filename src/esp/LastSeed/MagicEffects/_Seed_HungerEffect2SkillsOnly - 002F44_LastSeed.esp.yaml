@@ -1,0 +1,19 @@
+FormKey: 002F44:LastSeed.esp
+EditorID: _Seed_HungerEffect2SkillsOnly
+Name:
+  TargetLanguage: English
+  Value: 'Hunger: Content'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You feel content.

@@ -1,0 +1,19 @@
+FormKey: 2E3876:LastSeed.esp
+EditorID: _Seed_SkoomaEffect4
+Name:
+  TargetLanguage: English
+  Value: 'Skooma: Delirious'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Stamina regenerates <40>% faster. Movement speed increased by <30>%. Carry capacity increased by <30>.

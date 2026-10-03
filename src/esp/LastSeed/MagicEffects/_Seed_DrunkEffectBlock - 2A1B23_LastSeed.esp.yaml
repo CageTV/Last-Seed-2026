@@ -1,0 +1,22 @@
+FormKey: 2A1B23:LastSeed.esp
+EditorID: _Seed_DrunkEffectBlock
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Block'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: BlockModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

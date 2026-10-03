@@ -1,0 +1,16 @@
+FormKey: 42CA7D:LastSeed.esp
+EditorID: _Seed_CACOWarning
+Description:
+  TargetLanguage: English
+  Value: >+
+    Last Seed has detected CACO. This mod includes a lot of new food items, so adding them to Last Seed can take some time. Before adding them, you should make sure you are in a safe, indoor location. Would you like to add them now, or wait until the next time you load the game?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Add Later
+- Text:
+    TargetLanguage: English
+    Value: Add Now

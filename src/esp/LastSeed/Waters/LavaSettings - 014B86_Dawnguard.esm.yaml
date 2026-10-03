@@ -1,0 +1,55 @@
+FormKey: 014B86:Dawnguard.esm
+EditorID: LavaSettings
+FormVersion: 43
+Opacity: 100
+Flags:
+- CausesDamage
+OpenSound: 10EE72:Skyrim.esm
+ImageSpace: 0181C4:Dawnguard.esm
+DamagePerSecond: 0
+Unknown: 0xCDCCCC3D0000B4420000003F0000803F
+WaterReflectivity: 1
+WaterFresnel: 0.23
+FogAboveWaterDistanceFarPlane: 10
+ShallowColor: '#00FFFF80'
+DeepColor: '#00FF860D'
+ReflectionColor: '#00FDFDFD'
+Unknown3: 0x00000000CDCCCC3D9A99193FF6287C3F00000040
+DisplacementStartingSize: 0.7
+DisplacementFoce: 0.1
+DisplacementVelocity: 0.85
+DisplacementFalloff: 0.8
+DisplacementDampner: 0.98
+Unknown4: 1028443341
+NoiseLayerOneWindDirection: 107
+NoiseLayerTwoWindDirection: 224
+NoiseLayerThreeWindDirection: 198
+NoiseLayerOneWindSpeed: 0.007
+NoiseLayerTwoWindSpeed: 0.004
+NoiseLayerThreeWindSpeed: 0.014
+Unknown5: 0x00000000D8F0F43D
+FogAboveWaterAmount: 1
+Unknown6: 1146352435
+FogUnderWaterAmount: 1
+FogUnderWaterDistanceNearPlane: 49000
+FogUnderWaterDistanceFarPlane: 50000
+WaterRefractionMagnitude: 48
+Unknown7: 1120403456
+NoiseLayerOneUvScale: 3261
+NoiseLayerTwoUvScale: 10000
+NoiseLayerThreeUvScale: 533
+NoiseLayerTwoAmplitudeScale: 1
+NoiseLayerThreeAmplitudeScale: 0.1159
+WaterReflectionMagnitude: 0.99
+DepthReflections: 1
+DepthRefraction: 0.9
+DepthNormals: 0.65
+DepthSpecularLighting: 0.57
+GNAM: 0x000000000000000000000000
+LinearVelocity: 0.168, 0.3475, 0
+AngularVelocity: 0, 0, 0
+NoiseLayerOneTexture: Data\Textures\Water\DefaultWater.dds
+NoiseLayerTwoTexture: Data\Textures\Water\DefaultWater.dds
+NoiseLayerThreeTexture: Data\Textures\Water\DefaultWater.dds
+DNAMDataTypeState:
+- Break0

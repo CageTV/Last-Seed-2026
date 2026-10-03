@@ -1,0 +1,25 @@
+FormKey: 2FCDA8:LastSeed.esp
+EditorID: _Seed_ConfigMenuSpoilage_Remove
+Description:
+  TargetLanguage: English
+  Value: >-
+    REMOVE PERISHED FOOD
+
+
+    Perished food will be automatically removed from your inventory.
+
+
+    Default: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

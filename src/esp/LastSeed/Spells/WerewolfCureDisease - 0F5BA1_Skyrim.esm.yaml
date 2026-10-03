@@ -1,0 +1,15 @@
+FormKey: 0F5BA1:Skyrim.esm
+EditorID: WerewolfCureDisease
+Name:
+  TargetLanguage: English
+  Value: Cure all diseases before changing
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 34
+CastType: FireAndForget
+Effects:
+- BaseEffect: 3A902F:LastSeed.esp
+  Data:
+    Magnitude: 100

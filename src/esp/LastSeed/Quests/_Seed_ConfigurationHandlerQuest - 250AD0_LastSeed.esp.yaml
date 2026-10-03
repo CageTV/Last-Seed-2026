@@ -1,0 +1,464 @@
+FormKey: 250AD0:LastSeed.esp
+EditorID: _Seed_ConfigurationHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ConfigurationHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease
+      Object: 25ACE8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease_AdditionalDiseases
+      Object: 5A3670:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease_Alcohol
+      Object: 25ACE9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease_Disease
+      Object: 25ACEA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease_Potions
+      Object: 25ACEB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease_RandomPassOut
+      Object: 65ED22:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease_Shrines
+      Object: 25ACEC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease_Tripping
+      Object: 2D966A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuAlcoholDisease2
+      Object: 5A366F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_Animations
+      Object: 264EFD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_AnimationsFollowers
+      Object: 264EFE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_Feedback
+      Object: 25FDF1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_Notifications
+      Object: 25FDF2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_NotificationsFocus
+      Object: 2DE770:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_NotificationsFollowers
+      Object: 25FDF3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_SFX
+      Object: 25FDEF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects_VFX
+      Object: 25FDF0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects1
+      Object: 25FDEE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects2
+      Object: 264EFC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuEffects3
+      Object: 2DE771:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuHelp_IsLich
+      Object: 594330:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuHelp_Reset
+      Object: 25FDF9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuHelp_ResetFoodLists
+      Object: 2D966B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuHelp_Show
+      Object: 25FDF8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuHelp_VampireMonitoring
+      Object: 59432F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuHelp1
+      Object: 25FDF7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuHelp2
+      Object: 59432E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuMain
+      Object: 250AD1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_AutoEat
+      Object: 255BE2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Cannibalism
+      Object: 64580E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_DiminishingReturns
+      Object: 255BDD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Fatigue
+      Object: 255BDF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Focus
+      Object: 255BE0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Followers
+      Object: 25ACE7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Hunger
+      Object: 255BDC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Movement
+      Object: 255BE4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Portioning
+      Object: 255BE1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_PortionsToProvisions
+      Object: 255BE5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Thirst
+      Object: 255BDE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Vampire
+      Object: 255BE3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_Vitality
+      Object: 255BDA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds_VitalityDeath
+      Object: 255BDB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds1
+      Object: 255BD8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds2
+      Object: 264F01:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuNeeds3
+      Object: 264F02:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuOverview
+      Object: 250AD4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuOverview_ModEnabled
+      Object: 255BD6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuOverview_Presets
+      Object: 255BD7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuSpoilage
+      Object: 25FDF4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuSpoilage_Containers
+      Object: 25FDF6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuSpoilage_Food
+      Object: 25FDF5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuSpoilage_Remove
+      Object: 2FCDA8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConfigMenuSpoilage_TemperatureMulti
+      Object: 427974:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Help_Reset
+      Object: 264EFB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Alcohol
+      Object: 3348FC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_DangerousFood
+      Object: 334903:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Disease
+      Object: 2D455D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Focus
+      Object: 00C706:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Food
+      Object: 3348FB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_PoorSleep
+      Object: 2D455B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Skooma
+      Object: 2D4560:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_SkoomaDrank
+      Object: 3348FF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Stew
+      Object: 334902:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Variety
+      Object: 00C712:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Waterskins
+      Object: 2D455A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsAddPortions
+      Object: 0E923F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ResettingFormlists_Finish
+      Object: 2D966D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ResettingFormlists_Start
+      Object: 2D966C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholMulti_Ale
+      Object: 209C6D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholMulti_Spirits
+      Object: 209C6F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholMulti_Wine
+      Object: 209C6E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholSystemEnabled
+      Object: 01082F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimateFollowers
+      Object: 23C6B4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimatePlayer
+      Object: 23C6B3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AnimatePlayer_FirstPerson
+      Object: 23C6B2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AutoConsume
+      Object: 0B681C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AutoSaveLoad
+      Object: 00E776:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_CannibalismEnabled
+      Object: 612DFA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ContainerSpoilageEnable
+      Object: 19A5E6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ContainerSpoilageRate
+      Object: 19A5E7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_CurrentProfile
+      Object: 00E775:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiminishingFoodReturns
+      Object: 00C70F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceDirtyWater
+      Object: 209C71:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceRawFood
+      Object: 209C70:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceStaleFood
+      Object: 209C72:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseasePotionsCure
+      Object: 209C73:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseType
+      Object: 010835:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DisplayTutorials
+      Object: 00C707:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DrunkStumbling
+      Object: 2A1B28:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Focus
+      Object: 1EB653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FocusNotifications
+      Object: 2DE76F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodPortioning
+      Object: 209C6A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodPriceMulti
+      Object: 2CF454:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodWeightMulti
+      Object: 2CF455:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ForceStartMod
+      Object: 36C41D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsAffectedByRegeneration
+      Object: 36731B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsAffectsRegeneration
+      Object: 003A35:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsForceFeedback
+      Object: 003A34:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsSFX
+      Object: 003A32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsVFX
+      Object: 003A33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications
+      Object: 003A30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications_Followers
+      Object: 213E87:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NoVitalityMode
+      Object: 209C6C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Presets_Gameplay
+      Object: 264EFF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_RateMulti_Fatigue
+      Object: 0513F7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_RateMulti_Hunger
+      Object: 0513F8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_RateMulti_Thirst
+      Object: 0513F9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_RateMulti_Vitality
+      Object: 05B5FC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ResetFoodLists
+      Object: 2D9669:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ResetTutorials
+      Object: 218F89:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ShrinesCure
+      Object: 2468C4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SkoomaSystemEnabled
+      Object: 2A6C32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SleepAffectedByLocation
+      Object: 1BDD1F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SleepAffectedByNeeds
+      Object: 1BDD1E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilageEnable
+      Object: 204B66:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilageRemove
+      Object: 2E8991:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilageTemperatureMulti
+      Object: 427973:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate01_Bread
+      Object: 20ED75:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate02_RawMeat
+      Object: 20ED76:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate03_CookedMeat
+      Object: 20ED77:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate04_RawSmallGame
+      Object: 20ED78:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+      Object: 20ED79:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate06_RawFish
+      Object: 20ED7A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate07_CookedFish
+      Object: 20ED7B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate08_RawSeafood
+      Object: 20ED7C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate09_CookedSeafood
+      Object: 20ED7D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate10_Vegitables
+      Object: 20ED7E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate11_Fruit
+      Object: 20ED7F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate12_Cheese
+      Object: 20ED80:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate13_Treats
+      Object: 20ED81:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate14_Pastry
+      Object: 20ED82:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate15_Stew
+      Object: 20ED83:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate16_CheeseBowls
+      Object: 20ED84:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate17_Milk
+      Object: 20ED85:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SystemEnabled_Fatigue
+      Object: 007075:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SystemEnabled_FollowerNeeds
+      Object: 0CAC33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SystemEnabled_Hunger
+      Object: 007073:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SystemEnabled_Thirst
+      Object: 007074:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SystemEnabled_Vitality
+      Object: 007076:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ThirstAffectsMovement
+      Object: 209C6B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VampireBehavior
+      Object: 0029D1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingAdditionalDiseases
+      Object: 59E56D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingPlayerIsLich
+      Object: 58A11C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Settings_DrunkenShenanigans
+      Object: 654B1F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingVampireMonitoring
+      Object: 348D11:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_StartingUpMsg
+      Object: 00B167:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LastSeedRunning
+      Object: 00B162:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LastSeedRunning_KWCheck
+      Object: D9FF01:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LastSeedStartingUp
+      Object: 0657FF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LastSeedStartupFinished
+      Object: 5525A8:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Configuration Handler
+NextAliasID: 0

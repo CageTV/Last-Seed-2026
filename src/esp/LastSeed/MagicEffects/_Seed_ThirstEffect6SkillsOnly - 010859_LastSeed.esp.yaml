@@ -1,0 +1,22 @@
+FormKey: 010859:LastSeed.esp
+EditorID: _Seed_ThirstEffect6SkillsOnly
+Name:
+  TargetLanguage: English
+  Value: 'Thirst: Severely Parched'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds:
+- Type: OnHit
+  Sound: 108E15:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ' Shout cooldown lasts <50>% longer. You are <50>% less effective with light and heavy armour.'

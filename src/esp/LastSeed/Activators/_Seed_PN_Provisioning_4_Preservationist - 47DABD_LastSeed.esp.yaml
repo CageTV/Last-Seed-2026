@@ -1,0 +1,37 @@
+FormKey: 47DABD:LastSeed.esp
+EditorID: _Seed_PN_Provisioning_4_Preservationist
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPerkNode
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_line_1
+      Object: 47DAC0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_node_1
+      Object: 47DAB8:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: required_description_value_count
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_description
+      Object: 47DAB5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global
+      Object: 47DAAA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global_max
+      Object: 47DAAB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_skill_description
+      Object: 47DAB1:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Preservationist
+Model:
+  File: campfire\_camp_intperkstars01.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Select
+Flags: []

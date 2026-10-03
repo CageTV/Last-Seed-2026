@@ -1,0 +1,25 @@
+FormKey: 59432F:LastSeed.esp
+EditorID: _Seed_ConfigMenuHelp_VampireMonitoring
+Description:
+  TargetLanguage: English
+  Value: >-
+    MONITOR FOR VAMPIRE FEEDING
+
+
+    Monitors when you feed as a vampire. Disabling this when you are not a vampire may give you a small boost in performance.
+
+
+    Default: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

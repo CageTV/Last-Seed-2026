@@ -1,0 +1,16 @@
+FormKey: 1B8C11:LastSeed.esp
+EditorID: _Seed_RecipeFoodCookingWater2
+Items:
+- Item:
+    Item: 010891:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 010891:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: 1B8C0F:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

@@ -1,0 +1,62 @@
+FormKey: 59E540:LastSeed.esp
+EditorID: _Seed_DiseaseBrownRot_EnemyEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_DiseaseNeedsMulti
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: multiAmount
+      Data: 0.25
+    - MutagenObjectType: ScriptObjectProperty
+      Name: needsMulti
+      Object: 59E536:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: 'Disease: Brown Rot'
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoDuration
+- NoArea
+- PowerAffectsDuration
+- Painless
+MagicSkill: Restoration
+SpellmakingCastingTime: 0.5
+SecondActorValueWeight: 1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+  Type: DualValueModifier
+TargetType: Touch
+SecondActorValue: Health
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds:
+- Sound: 03E957:Skyrim.esm
+- Type: Charge
+  Sound: 056622:Skyrim.esm
+- Type: Ready
+  Sound: 03F363:Skyrim.esm
+- Type: Release
+  Sound: 03F361:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: My body is covered in black sores, and I feel constantly tired no matter how much you sleep. Fatigue increases <25>% faster.
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: LessThanOrEqualTo
+  Data:
+    MutagenObjectType: GetRandomPercentConditionData
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  CompareOperator: NotEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 5A8772:LastSeed.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsIDConditionData
+    Object: 000007:Skyrim.esm
+  ComparisonValue: 1

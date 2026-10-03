@@ -1,0 +1,63 @@
+FormKey: 005A9A:LastSeed.esp
+EditorID: _Seed_ThirstSpell6
+Name:
+  TargetLanguage: English
+  Value: Severely Parched
+MenuDisplayObject: 0435A5:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 738
+Type: Ability
+ChargeTime: 0.5
+Effects:
+- BaseEffect: 010853:LastSeed.esp
+  Data:
+    Magnitude: 40
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 36731B:LastSeed.esp
+    ComparisonValue: 2
+- BaseEffect: 010859:LastSeed.esp
+  Data: {}
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 36731B:LastSeed.esp
+    ComparisonValue: 1
+- BaseEffect: 01085A:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 01085B:LastSeed.esp
+  Data:
+    Magnitude: 50
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+- BaseEffect: 33EB06:LastSeed.esp
+  Data:
+    Magnitude: 0.5
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp

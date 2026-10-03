@@ -1,0 +1,83 @@
+FormKey: 4A11E1:LastSeed.esp
+EditorID: _Seed_SkillTreeHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_SkillTreeHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IntensityPlayerSpell
+      Object: 0102BA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PerkAdvancement
+      Object: 4A11E2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PerkEarned
+      Object: 47DAB0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PerkNodeController_Provisioning
+      Object: 006B0E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Focus
+      Object: 1EB653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_StrongBackSpell
+      Object: 4A62E4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_IronStomach
+      Object: 47DAA6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_IronStomachMax
+      Object: 47DAA7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_Outdoorsman
+      Object: 47DAAC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_OutdoorsmanMax
+      Object: 47DAAD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_Preservationist
+      Object: 47DAAA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_PreservationistMax
+      Object: 47DAAB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_SkoomaFiend
+      Object: 47DAA8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_SkoomaFiendMax
+      Object: 47DAA9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_StrongBack
+      Object: 47DAA4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_StrongBackMax
+      Object: 47DAA5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_UnboundIntensity
+      Object: 47DAAE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Provisioning_PerkRank_UnboundIntensityMax
+      Object: 47DAAF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ProvisioningPerkPointProgress
+      Object: 006B10:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ProvisioningPerkPoints
+      Object: 006B0F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ProvisioningPerkPointsEarned
+      Object: 47DAA2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ProvisioningPerkPointsTotal
+      Object: 47DAA3:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: SkillTreeHandler
+NextAliasID: 0

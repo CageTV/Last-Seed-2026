@@ -1,0 +1,24 @@
+FormKey: 11BC5C:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgType5
+Description:
+  TargetLanguage: English
+  Value: What kind of food or drink is this? (5/5)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Milk
+- Text:
+    TargetLanguage: English
+    Value: Alcohol or Skooma
+- Text:
+    TargetLanguage: English
+    Value: Non-Alcoholic Beverage
+- Text:
+    TargetLanguage: English
+    Value: Blood Potion
+- Text:
+    TargetLanguage: English
+    Value: More

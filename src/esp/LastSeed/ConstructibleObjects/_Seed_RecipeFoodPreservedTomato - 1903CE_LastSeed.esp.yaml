@@ -1,0 +1,25 @@
+FormKey: 1903CE:LastSeed.esp
+EditorID: _Seed_RecipeFoodPreservedTomato
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 2
+- Item:
+    Item: 064B42:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  CompareOperator: NotEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 2E388F:LastSeed.esp
+  ComparisonValue: 2
+CreatedObject: 1903C7:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

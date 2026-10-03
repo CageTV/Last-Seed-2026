@@ -1,0 +1,21 @@
+FormKey: 0B877E:Skyrim.esm
+EditorID: DiseaseBoneBreakFever
+Name:
+  TargetLanguage: English
+  Value: Bone Break Fever
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 0B8776:Skyrim.esm
+  Data:
+    Magnitude: 25
+- BaseEffect: 010871:LastSeed.esp
+  Data: {}

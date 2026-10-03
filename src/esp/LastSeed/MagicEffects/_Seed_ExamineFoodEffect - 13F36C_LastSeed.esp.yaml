@@ -1,0 +1,37 @@
+FormKey: 13F36C:LastSeed.esp
+EditorID: _Seed_ExamineFoodEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ExamineFoodPower
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFood_GettingPortions
+      Object: 2282A0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CustomiseFoodContainerRef
+      Object: 22829F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Examine Food
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

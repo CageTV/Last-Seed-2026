@@ -1,0 +1,13 @@
+FormKey: 2A1B26:LastSeed.esp
+EditorID: _Seed_StumbleSpell
+Name:
+  TargetLanguage: English
+  Value: Stumble Spell
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+CastType: FireAndForget
+Effects:
+- BaseEffect: 2A1B27:LastSeed.esp
+  Data: {}

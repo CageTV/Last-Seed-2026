@@ -1,0 +1,20 @@
+FormKey: 010857:LastSeed.esp
+EditorID: _Seed_ThirstEffect4SkillsOnly
+Name:
+  TargetLanguage: English
+  Value: 'Thirst: Very Thirsty'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Shout cooldown lasts <10>% longer.  You are <10>% less effective with light and heavy armour.

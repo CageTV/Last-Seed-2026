@@ -1,0 +1,21 @@
+FormKey: 10A24D:Skyrim.esm
+EditorID: TrapDiseaseBrainRot
+Name:
+  TargetLanguage: English
+  Value: Brain Rot
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 10A251:Skyrim.esm
+  Data:
+    Magnitude: 25
+- BaseEffect: 01087A:LastSeed.esp
+  Data: {}

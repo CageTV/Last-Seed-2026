@@ -1,0 +1,8 @@
+FormKey: 135166:LastSeed.esp
+EditorID: _Seed_ClassifyingFinished
+Description:
+  TargetLanguage: English
+  Value: You finish examining this foodstuff. Close your inventory to apply its effects.
+INAM: 0x00000000
+Flags:
+- MessageBox

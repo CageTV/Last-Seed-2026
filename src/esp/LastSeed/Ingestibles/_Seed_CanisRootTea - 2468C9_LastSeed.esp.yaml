@@ -1,0 +1,22 @@
+FormKey: 2468C9:LastSeed.esp
+EditorID: _Seed_CanisRootTea
+Name:
+  TargetLanguage: English
+  Value: Canis Root Tea
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Common\Flagon01.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03EDBD:Skyrim.esm
+PutDownSound: 03EDC0:Skyrim.esm
+Weight: 0.5
+Value: 50
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 2468C8:LastSeed.esp
+  Data:
+    Duration: 540

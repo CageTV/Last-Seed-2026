@@ -1,0 +1,23 @@
+FormKey: 18B2AD:LastSeed.esp
+EditorID: _Seed_SaltedMammothMeat
+Name:
+  TargetLanguage: English
+  Value: Salted Mamoth
+Keywords:
+- 08CDEA:Skyrim.esm
+- 0A0E56:Skyrim.esm
+Model:
+  File: Clutter\Ingredients\MammothMeatCooked.nif
+  Data: 0x0200000002000000000000006399A64164647300604DDD5CE82BD47D64647300604DDD5C
+Weight: 2
+Value: 8
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 10
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

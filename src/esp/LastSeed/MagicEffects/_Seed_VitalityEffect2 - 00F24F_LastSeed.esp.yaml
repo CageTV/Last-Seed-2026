@@ -1,0 +1,20 @@
+FormKey: 00F24F:LastSeed.esp
+EditorID: _Seed_VitalityEffect2
+Name:
+  TargetLanguage: English
+  Value: 'Vitality: Ruined'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: All skills are <50>% less effective. <25>% less resistant to disease. Movement and attacks are <20>% slower.

@@ -1,0 +1,38 @@
+FormKey: 627201:LastSeed.esp
+VirtualMachineAdapter:
+  Scripts:
+  - Name: TIF__06627201
+  ScriptFragments:
+    MutagenObjectType: ScriptFragments
+    FileName: TIF__06627201
+    OnEnd:
+      ExtraBindDataVersion: 1
+      ScriptName: TIF__06627201
+      FragmentName: Fragment_0
+Flags: {}
+PreviousDialog: Null
+FavorLevel: None
+ResponseData: 0DBA22:Skyrim.esm
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 663E2E:LastSeed.esp
+  ComparisonValue: 2
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: LocationHasKeywordConditionData
+    Keyword: 01CB87:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetInFactionConditionData
+    Faction: 05091B:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetInFactionConditionData
+    Faction: 0DEE93:Skyrim.esm
+  ComparisonValue: 1

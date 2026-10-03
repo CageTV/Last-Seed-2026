@@ -1,0 +1,29 @@
+FormKey: 5F47F1:LastSeed.esp
+EditorID: _Seed_ActivatorHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ActivatorHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CarriageRode
+      Object: 5DB2EB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ConvertWineBottleMsg
+      Object: 654B1E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleEmpty
+      Object: 506654:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: cannibalismPerk
+      Object: 0EE5C3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Misc Activator Handler
+NextAliasID: 0

@@ -1,0 +1,12 @@
+FormKey: 2324A6:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgHasPortionsInfo
+Description:
+  TargetLanguage: English
+  Value: Select the portions that you recieve when consuming this foodstuff.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Continue

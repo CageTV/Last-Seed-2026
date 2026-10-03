@@ -1,0 +1,15 @@
+FormKey: 2D455C:LastSeed.esp
+EditorID: _Seed_Help_PoorSleep
+Description:
+  TargetLanguage: English
+  Value: >+
+    POOR SLEEP
+
+
+    You did not sleep well, which means your fatigue level was not fully restored. The quality of your sleep can be affected by your location and how hungry and thirsty you are. 
+
+
+    Try to go to bed fully sated and in a safe location to get the best possible sleep.
+INAM: 0x00000000
+Flags:
+- MessageBox

@@ -1,0 +1,9 @@
+FormKey: 5CBFE5:LastSeed.esp
+EditorID: _Seed_RecipeFoodCookingWaterBottle
+Items:
+- Item:
+    Item: 506653:LastSeed.esp
+    Count: 1
+CreatedObject: 5CBFE4:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

@@ -1,0 +1,25 @@
+FormKey: 255BE4:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_Movement
+Description:
+  TargetLanguage: English
+  Value: >-
+    NEEDS AFFECT MOVEMENT
+
+
+    Having low levels of Thirst or Vitality will reduce your movement speed.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

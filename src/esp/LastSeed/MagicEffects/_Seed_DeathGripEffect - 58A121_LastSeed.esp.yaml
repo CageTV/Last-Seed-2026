@@ -1,0 +1,32 @@
+FormKey: 58A121:LastSeed.esp
+EditorID: _Seed_DeathGripEffect
+Name:
+  TargetLanguage: English
+  Value: Death Grip (Telekinesis)
+MenuDisplayObject: 0A6459:Skyrim.esm
+Keywords:
+- 07F404:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- FXPersist
+- PowerAffectsMagnitude
+- NoDeathDispel
+MagicSkill: Destruction
+CastingLight: 58A12A:LastSeed.esp
+TaperWeight: 1
+SpellmakingArea: 30
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: GrabActorOffset
+  Type: GrabActor
+Projectile: 58A129:LastSeed.esp
+CastType: Concentration
+CastingArt: 0510CF:Skyrim.esm
+SkillUsageMultiplier: 0.75
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

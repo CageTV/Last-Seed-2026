@@ -1,0 +1,20 @@
+FormKey: 010862:LastSeed.esp
+EditorID: _Seed_FatigueEffect3
+Name:
+  TargetLanguage: English
+  Value: 'Fatigue: Tired'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: MagickaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Magicka regenerates <mag>% slower.

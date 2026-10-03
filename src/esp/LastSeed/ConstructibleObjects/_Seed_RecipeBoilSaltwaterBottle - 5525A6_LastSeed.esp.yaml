@@ -1,0 +1,9 @@
+FormKey: 5525A6:LastSeed.esp
+EditorID: _Seed_RecipeBoilSaltwaterBottle
+Items:
+- Item:
+    Item: 506656:LastSeed.esp
+    Count: 1
+CreatedObject: 5525A7:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

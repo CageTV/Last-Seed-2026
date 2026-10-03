@@ -1,0 +1,29 @@
+FormKey: 0CC96F:Skyrim.esm
+Flags:
+  Flags:
+  - SayOnce
+PreviousDialog: 0CC9BF:Skyrim.esm
+FavorLevel: None
+Responses:
+- Emotion: Surprise
+  EmotionValue: 50
+  ResponseNumber: 1
+  Unknown2: 0x000000
+  Flags:
+  - UseEmotionAnimation
+  Unknown3: 0x000000
+  Text:
+    TargetLanguage: English
+    Value: You're bloated with disease. The Vigilant of Stendarr can help you, as long as you promise to never assist the Daedra.
+  ScriptNotes: holy warrior
+  Edits: ''
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsInDialogueWithPlayerConditionData
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetDiseaseConditionData
+    RunOnType: Target
+  ComparisonValue: 1

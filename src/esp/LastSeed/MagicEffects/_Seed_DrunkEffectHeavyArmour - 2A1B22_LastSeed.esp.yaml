@@ -1,0 +1,22 @@
+FormKey: 2A1B22:LastSeed.esp
+EditorID: _Seed_DrunkEffectHeavyArmour
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Heavy Armour'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: HeavyArmorModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

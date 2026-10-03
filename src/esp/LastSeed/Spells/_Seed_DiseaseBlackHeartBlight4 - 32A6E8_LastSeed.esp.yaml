@@ -1,0 +1,19 @@
+FormKey: 32A6E8:LastSeed.esp
+EditorID: _Seed_DiseaseBlackHeartBlight4
+Name:
+  TargetLanguage: English
+  Value: Crippling Black Heart Blight
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5AD875:LastSeed.esp
+  Data:
+    Magnitude: 40

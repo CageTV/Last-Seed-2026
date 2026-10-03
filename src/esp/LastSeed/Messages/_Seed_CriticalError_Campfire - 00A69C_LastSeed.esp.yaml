@@ -1,0 +1,20 @@
+FormKey: 00A69C:LastSeed.esp
+EditorID: _Seed_CriticalError_Campfire
+Description:
+  TargetLanguage: English
+  Value: >-
+    Last Seed Error - Campfire Out of Date
+
+
+    Campfire was detected, but it is out of date. Last Seed requires Campfire to function. Please update to the latest version of Campfire.
+
+
+    Detected version: %.4f
+
+    Expected version: %.4f or greater
+
+
+    This message will repeat. DO NOT SAVE YOUR GAME, exit now and upgrade Campfire.
+INAM: 0x00000000
+Flags:
+- MessageBox

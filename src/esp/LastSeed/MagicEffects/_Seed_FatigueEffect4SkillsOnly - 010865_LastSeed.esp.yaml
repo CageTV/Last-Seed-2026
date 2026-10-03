@@ -1,0 +1,20 @@
+FormKey: 010865:LastSeed.esp
+EditorID: _Seed_FatigueEffect4SkillsOnly
+Name:
+  TargetLanguage: English
+  Value: 'Fatigue: Very Tired'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: MagickaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You are <10>% less effective with spells, archery, lockpicking and pickpocketing.

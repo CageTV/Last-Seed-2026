@@ -1,0 +1,23 @@
+FormKey: 533F8C:LastSeed.esp
+EditorID: _Seed_EmptyBottleWine1
+Name:
+  TargetLanguage: English
+  Value: Empty Wine Bottle
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Wine\WineBottle02A.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 03E879:Skyrim.esm
+PutDownSound: 03E909:Skyrim.esm
+Weight: 0.5
+Value: 1
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0B6435:Skyrim.esm
+Effects:
+- BaseEffect: 01088A:LastSeed.esp
+  Data: {}
+- BaseEffect: 01088B:LastSeed.esp
+  Data: {}

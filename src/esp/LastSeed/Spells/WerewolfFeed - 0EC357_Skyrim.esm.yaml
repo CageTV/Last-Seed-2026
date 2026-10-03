@@ -1,0 +1,19 @@
+FormKey: 0EC357:Skyrim.esm
+EditorID: WerewolfFeed
+Name:
+  TargetLanguage: English
+  Value: Werewolf Feed
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+CastType: FireAndForget
+Effects:
+- BaseEffect: 0EC356:Skyrim.esm
+  Data:
+    Magnitude: 50
+- BaseEffect: 011CFC:Dawnguard.esm
+  Data:
+    Magnitude: 50
+- BaseEffect: 1D722D:LastSeed.esp
+  Data: {}

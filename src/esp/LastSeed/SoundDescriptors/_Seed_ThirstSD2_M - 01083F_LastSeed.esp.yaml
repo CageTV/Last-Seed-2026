@@ -1,0 +1,13 @@
+FormKey: 01083F:LastSeed.esp
+EditorID: _Seed_ThirstSD2_M
+Type: Standard
+Category: 0172A1:Skyrim.esm
+SoundFiles:
+- data\sound\fx\lastseed\_Seed_Thirsty_M_SFX2.wav
+OutputModel: 06CB4F:Skyrim.esm
+LoopAndRumble:
+  Unknown: 1
+PercentFrequencyVariance: 10
+Priority: 128
+Variance: 6
+StaticAttenuation: 9.69

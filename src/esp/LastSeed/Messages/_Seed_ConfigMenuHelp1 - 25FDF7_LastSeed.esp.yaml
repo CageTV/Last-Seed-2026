@@ -1,0 +1,24 @@
+FormKey: 25FDF7:LastSeed.esp
+EditorID: _Seed_ConfigMenuHelp1
+Description:
+  TargetLanguage: English
+  Value: OTHER
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Main Menu
+- Text:
+    TargetLanguage: English
+    Value: Show Tutorials
+- Text:
+    TargetLanguage: English
+    Value: Reset Tutorials
+- Text:
+    TargetLanguage: English
+    Value: Reset Foodstuff Lists
+- Text:
+    TargetLanguage: English
+    Value: More

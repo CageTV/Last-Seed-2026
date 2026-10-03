@@ -1,0 +1,24 @@
+FormKey: 264F01:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds2
+Description:
+  TargetLanguage: English
+  Value: NEEDS (2/3)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Enable Thirst
+- Text:
+    TargetLanguage: English
+    Value: Enable Fatigue
+- Text:
+    TargetLanguage: English
+    Value: Enable Focus
+- Text:
+    TargetLanguage: English
+    Value: Cannibalism
+- Text:
+    TargetLanguage: English
+    Value: Next

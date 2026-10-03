@@ -1,0 +1,26 @@
+FormKey: 19A5E8:LastSeed.esp
+EditorID: _Seed_ContainerSpoilHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ContainerSpoilHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PerishedFood
+      Object: 007B4B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsContainerRef
+      Object: 074B07:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ContainerSpoilageEnable
+      Object: 19A5E6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_ContainerSpoilageRate
+      Object: 19A5E7:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Container Spoilage Handler
+NextAliasID: 0

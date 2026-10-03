@@ -1,0 +1,40 @@
+FormKey: 120D5F:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgAlcohol
+Description:
+  TargetLanguage: English
+  Value: >-
+    How strong is this alcoholic beverage?
+
+
+    Weak Alcohol: ale and mead
+
+
+    Weak Alcohol: wine
+
+
+    Strong Alcohol: brandy and spirits
+
+
+    Weak Skooma: Regular Skooma, Balmora Blue
+
+
+    Strong Skooma: Double-Distilled Skooma, Redwater Skooma
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Weak Alcohol
+- Text:
+    TargetLanguage: English
+    Value: Moderate Alcohol
+- Text:
+    TargetLanguage: English
+    Value: Strong Alcohol
+- Text:
+    TargetLanguage: English
+    Value: Weak Skooma
+- Text:
+    TargetLanguage: English
+    Value: Strong Skooma

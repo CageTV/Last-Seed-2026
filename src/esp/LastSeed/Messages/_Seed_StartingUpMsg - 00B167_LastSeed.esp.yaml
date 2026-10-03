@@ -1,0 +1,7 @@
+FormKey: 00B167:LastSeed.esp
+EditorID: _Seed_StartingUpMsg
+Description:
+  TargetLanguage: English
+  Value: Last Seed is starting up, please wait...
+INAM: 0x00000000
+DisplayTime: 2

@@ -1,0 +1,18 @@
+FormKey: 334900:LastSeed.esp
+EditorID: _Seed_Help_Stew
+Description:
+  TargetLanguage: English
+  Value: >-
+    SOUPS AND STEWS
+
+
+    The hot soup fills your belly and leaves you feeling refreshed. 
+
+
+    As well as restoring hunger, soups and stews will also restore your thirst. 
+
+
+    If you are using Frostfall, they will also give you a temporary boost to warmth.
+INAM: 0x00000000
+Flags:
+- MessageBox

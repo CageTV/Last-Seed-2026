@@ -1,0 +1,15 @@
+FormKey: 2D455E:LastSeed.esp
+EditorID: _Seed_Help_Disease
+Description:
+  TargetLanguage: English
+  Value: >-
+    PROGRESSIVE DISEASES
+
+
+    You have caught a disease! If left untreated, your disease will become more severe as time goes on. You may be able to cure your disease by travelling to a safe place and getting plenty of rest. Increasing your disease resistance will also help to overcome diseases. 
+
+
+    There are a few individuals throughout Skyrim who are skilled at curing diseases, such as the Members of the Silver Hand and the Priests of Kynareth in Whiterun.
+INAM: 0x00000000
+Flags:
+- MessageBox

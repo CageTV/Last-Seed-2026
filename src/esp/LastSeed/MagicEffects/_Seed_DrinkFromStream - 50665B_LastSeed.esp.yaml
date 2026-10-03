@@ -1,0 +1,45 @@
+FormKey: 50665B:LastSeed.esp
+EditorID: _Seed_DrinkFromStream
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_DrinkFromStream
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RiverWater
+      Object: 506659:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Drink from stream
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsIDConditionData
+    Object: 000007:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsInDangerousWaterConditionData
+    RunOnType: Target
+  ComparisonValue: 1

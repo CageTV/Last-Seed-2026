@@ -1,0 +1,10 @@
+FormKey: 58A127:LastSeed.esp
+EditorID: _Seed_DeathGripLightCast
+Time: -1
+Radius: 36
+Color: '#002700C4'
+FalloffExponent: 1
+FOV: 90
+NearClip: 1
+FlickerPeriod: 1
+FadeValue: 3

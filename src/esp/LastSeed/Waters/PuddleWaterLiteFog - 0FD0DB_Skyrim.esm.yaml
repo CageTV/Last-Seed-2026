@@ -1,0 +1,56 @@
+FormKey: 0FD0DB:Skyrim.esm
+EditorID: PuddleWaterLiteFog
+Name:
+  TargetLanguage: English
+  Value: MaterialWaterPuddle
+Opacity: 100
+Flags:
+- CausesDamage
+Material: 0D6C11:Skyrim.esm
+ImageSpace: 000946:Update.esm
+DamagePerSecond: 0
+Unknown: 0xCDCCCC3D0000B4420000003F0000803F
+SpecularSunPower: 1444
+WaterReflectivity: 0.71
+WaterFresnel: 0.2
+FogAboveWaterDistanceFarPlane: 10
+ShallowColor: '#000B0D0C'
+DeepColor: '#000B0F0F'
+ReflectionColor: '#00000000'
+Unknown3: 0x00000000CDCCCC3D9A99193FF6287C3F00000040
+DisplacementDampner: 0.98
+Unknown4: 1028443341
+NoiseFalloff: 4000
+NoiseLayerTwoWindDirection: 170
+NoiseLayerThreeWindDirection: 93
+NoiseLayerOneWindSpeed: 0.051
+NoiseLayerTwoWindSpeed: 0.036
+NoiseLayerThreeWindSpeed: 0.011
+Unknown5: 0x00000000A913D03C
+FogAboveWaterAmount: 0.23
+Unknown6: 1140339507
+FogUnderWaterAmount: 1
+FogUnderWaterDistanceFarPlane: 1000
+WaterRefractionMagnitude: 17
+SpecularPower: 8623
+Unknown7: 1120403456
+SpecularRadius: 10000
+SpecularBrightness: 4
+NoiseLayerOneUvScale: 109
+NoiseLayerTwoUvScale: 145
+NoiseLayerThreeUvScale: 2609
+NoiseLayerOneAmplitudeScale: 0.0833
+NoiseLayerTwoAmplitudeScale: 0.0761
+NoiseLayerThreeAmplitudeScale: 0.163
+WaterReflectionMagnitude: 1
+SpecularSunSparkleMagnitude: 3
+SpecularSunSpecularMagnitude: 3
+SpecularSunSparklePower: 2254
+NoiseFlowmapScale: 1
+GNAM: 0x000000000000000000000000
+LinearVelocity: 0, 0, 0
+AngularVelocity: 0, 0, 0
+NoiseLayerOneTexture: Data\Textures\Water\DefaultWater.dds
+NoiseLayerTwoTexture: Data\Textures\Water\DefaultWater.dds
+NoiseLayerThreeTexture: Data\Textures\Water\DefaultWater.dds
+FlowNormalsNoiseTexture: ''

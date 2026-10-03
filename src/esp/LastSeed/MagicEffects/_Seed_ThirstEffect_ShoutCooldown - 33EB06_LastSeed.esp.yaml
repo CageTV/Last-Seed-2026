@@ -1,0 +1,20 @@
+FormKey: 33EB06:LastSeed.esp
+EditorID: _Seed_ThirstEffect_ShoutCooldown
+Name:
+  TargetLanguage: English
+  Value: Increase Shout Cooldown
+Flags:
+- Recover
+- Detrimental
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: ShoutRecoveryMult
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

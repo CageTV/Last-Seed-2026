@@ -1,0 +1,25 @@
+FormKey: 255BD6:LastSeed.esp
+EditorID: _Seed_ConfigMenuOverview_ModEnabled
+Description:
+  TargetLanguage: English
+  Value: >-
+    ENABLE LAST SEED
+
+
+    When enabled, last Seed will start up the next time you sleep.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

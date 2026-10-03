@@ -1,0 +1,57 @@
+FormKey: 02ADEC:Dragonborn.esm
+EditorID: DLC2ApocryphaWaterTamriel
+FormVersion: 43
+Opacity: 100
+Flags:
+- CausesDamage
+OpenSound: 0202D0:Dragonborn.esm
+ImageSpace: 000946:Update.esm
+DamagePerSecond: 0
+Unknown: 0xCDCCCC3D0000B4420000003F0000803F
+SpecularSunPower: 350
+WaterReflectivity: 0.18
+FogAboveWaterDistanceFarPlane: 10
+ShallowColor: '#000F0F0F'
+DeepColor: '#00000000'
+ReflectionColor: '#00000000'
+Unknown3: 0x32CDCDCDCDCCCC3D9A99193FF6287C3F00000040
+DisplacementStartingSize: 0.7
+DisplacementFoce: 0.1
+DisplacementVelocity: 0.85
+DisplacementFalloff: 0.8
+DisplacementDampner: 0.98
+Unknown4: 1028443341
+NoiseFalloff: 1781
+NoiseLayerOneWindDirection: 321
+NoiseLayerTwoWindDirection: 197
+NoiseLayerThreeWindDirection: 27
+NoiseLayerOneWindSpeed: 0.18
+NoiseLayerTwoWindSpeed: 0.109
+NoiseLayerThreeWindSpeed: 0.21
+Unknown5: 0x00C0C145CDCC4C3E
+FogAboveWaterAmount: 1
+Unknown6: 1147207680
+FogUnderWaterAmount: 0.93
+FogUnderWaterDistanceNearPlane: -500
+FogUnderWaterDistanceFarPlane: 1600
+WaterRefractionMagnitude: 4
+SpecularPower: 500
+SpecularRadius: 10000
+SpecularBrightness: 10
+NoiseLayerOneUvScale: 326
+NoiseLayerTwoUvScale: 254
+NoiseLayerThreeUvScale: 217
+NoiseLayerOneAmplitudeScale: 0.739
+NoiseLayerTwoAmplitudeScale: 1
+WaterReflectionMagnitude: 0.5
+SpecularSunSparkleMagnitude: 0.5
+SpecularSunSpecularMagnitude: 0.5
+SpecularSunSparklePower: 350
+GNAM: 0x000000000000000000000000
+LinearVelocity: 0.22, 0.22, 0
+AngularVelocity: 0, 0, 0
+NoiseLayerOneTexture: data\Textures\Water\DLC2TenticleTile_n.dds
+NoiseLayerTwoTexture: data\Textures\Water\DLC2TenticleTile_n.dds
+NoiseLayerThreeTexture: data\Textures\Water\DLC2TenticleTile_n.dds
+DNAMDataTypeState:
+- Break0

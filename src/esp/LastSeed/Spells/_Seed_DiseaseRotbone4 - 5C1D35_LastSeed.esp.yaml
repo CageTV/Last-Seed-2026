@@ -1,0 +1,19 @@
+FormKey: 5C1D35:LastSeed.esp
+EditorID: _Seed_DiseaseRotbone4
+Name:
+  TargetLanguage: English
+  Value: Crippling Rotbone
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1D2D:LastSeed.esp
+  Data:
+    Magnitude: 2.5

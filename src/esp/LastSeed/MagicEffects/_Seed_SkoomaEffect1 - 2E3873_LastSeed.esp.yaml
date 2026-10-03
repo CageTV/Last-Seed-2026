@@ -1,0 +1,19 @@
+FormKey: 2E3873:LastSeed.esp
+EditorID: _Seed_SkoomaEffect1
+Name:
+  TargetLanguage: English
+  Value: 'Skooma: Buzz'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Stamina regenerates <10>% faster.

@@ -1,0 +1,18 @@
+FormKey: 59432E:LastSeed.esp
+EditorID: _Seed_ConfigMenuHelp2
+Description:
+  TargetLanguage: English
+  Value: OTHER
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Vampire Monitoring
+- Text:
+    TargetLanguage: English
+    Value: Player Is Lich
+- Text:
+    TargetLanguage: English
+    Value: More

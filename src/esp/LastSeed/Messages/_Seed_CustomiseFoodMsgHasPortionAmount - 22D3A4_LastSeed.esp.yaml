@@ -1,0 +1,45 @@
+FormKey: 22D3A4:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgHasPortionAmount
+Description:
+  TargetLanguage: English
+  Value: How many portions does this foodstuff produce?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: 1
+- Text:
+    TargetLanguage: English
+    Value: 2
+- Text:
+    TargetLanguage: English
+    Value: 3
+- Text:
+    TargetLanguage: English
+    Value: 4
+- Text:
+    TargetLanguage: English
+    Value: 5
+- Text:
+    TargetLanguage: English
+    Value: 6
+- Text:
+    TargetLanguage: English
+    Value: 7
+- Text:
+    TargetLanguage: English
+    Value: 8
+- Text:
+    TargetLanguage: English
+    Value: 9
+- Text:
+    TargetLanguage: English
+    Value: 10
+- Text:
+    TargetLanguage: English
+    Value: 11
+- Text:
+    TargetLanguage: English
+    Value: 12

@@ -1,0 +1,21 @@
+FormKey: 32A6E4:LastSeed.esp
+EditorID: DLC2TrapDiseaseBlackHeartBlight
+Name:
+  TargetLanguage: English
+  Value: Black Heart Blight
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 32A6E3:LastSeed.esp
+  Data:
+    Magnitude: 10
+- BaseEffect: 32A6EB:LastSeed.esp
+  Data: {}

@@ -1,0 +1,30 @@
+FormKey: 57AE16:LastSeed.esp
+EditorID: _Seed_CoDoLS_WaterKeg
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_CoDo_WaterKegActivateScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CoDoLS_ActivatorMsg
+      Object: 57AE13:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CoDoLS_ObjectKit
+      Object: 57AE11:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+ObjectBounds:
+  First: -63, -49, 0
+  Second: 49, 58, 214
+Name:
+  TargetLanguage: English
+  Value: Water Keg
+Model:
+  File: Clutter\Meadery\MeadBarrel01.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivationSound: 0452CE:Skyrim.esm
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Use
+Flags: []

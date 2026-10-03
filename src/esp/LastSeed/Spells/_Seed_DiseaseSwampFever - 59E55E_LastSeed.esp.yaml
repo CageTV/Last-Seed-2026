@@ -1,0 +1,20 @@
+FormKey: 59E55E:LastSeed.esp
+EditorID: _Seed_DiseaseSwampFever
+Name:
+  TargetLanguage: English
+  Value: Swamp Fever
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 59E565:LastSeed.esp
+  Data: {}
+- BaseEffect: 59E566:LastSeed.esp
+  Data: {}

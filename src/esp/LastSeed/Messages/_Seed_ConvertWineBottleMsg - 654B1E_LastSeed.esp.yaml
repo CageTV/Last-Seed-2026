@@ -1,0 +1,15 @@
+FormKey: 654B1E:LastSeed.esp
+EditorID: _Seed_ConvertWineBottleMsg
+Description:
+  TargetLanguage: English
+  Value: Do you want to clean this empty bottle and use it to carry water?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: No
+- Text:
+    TargetLanguage: English
+    Value: Yes

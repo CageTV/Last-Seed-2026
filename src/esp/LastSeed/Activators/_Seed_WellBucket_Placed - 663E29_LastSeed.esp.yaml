@@ -1,0 +1,29 @@
+FormKey: 663E29:LastSeed.esp
+EditorID: _Seed_WellBucket_Placed
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlaceableScriptedActivator
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_LinkedActivatorRef
+      Object: 29791D:LastSeed.esp
+    - MutagenObjectType: ScriptBoolProperty
+      Name: Setting_BypassMenu
+      Data: True
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Setting_StartUpRotation
+      Data: 180
+ObjectBounds:
+  First: -18, -21, 0
+  Second: 18, 21, 51
+Name:
+  TargetLanguage: English
+  Value: Well
+Model:
+  File: lastseed\_Seed_WellBucket.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Use
+Flags: []

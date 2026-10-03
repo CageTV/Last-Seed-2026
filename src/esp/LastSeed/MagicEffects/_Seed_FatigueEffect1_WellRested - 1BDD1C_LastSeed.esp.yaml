@@ -1,0 +1,30 @@
+FormKey: 1BDD1C:LastSeed.esp
+EditorID: _Seed_FatigueEffect1_WellRested
+VirtualMachineAdapter:
+  Scripts:
+  - Name: TimedAbilityScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: pAbilityToRemove
+      Object: 1BDD22:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: pHoursToWait
+      Data: 8
+Name:
+  TargetLanguage: English
+  Value: 'Fatigue: Well Rested'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: MagickaRateMult
+DualCastScale: 1
+PerkToApply: 10D969:Skyrim.esm
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: All skills improve <10>% faster for <240> seconds.

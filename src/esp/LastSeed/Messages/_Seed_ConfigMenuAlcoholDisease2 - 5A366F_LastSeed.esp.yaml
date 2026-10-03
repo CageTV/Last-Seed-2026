@@ -1,0 +1,24 @@
+FormKey: 5A366F:LastSeed.esp
+EditorID: _Seed_ConfigMenuAlcoholDisease2
+Description:
+  TargetLanguage: English
+  Value: ALCOHOL & DISEASE
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Progressive Diseases
+- Text:
+    TargetLanguage: English
+    Value: Additional Diseases
+- Text:
+    TargetLanguage: English
+    Value: Cure Disease Potions
+- Text:
+    TargetLanguage: English
+    Value: Diseases & Shrines
+- Text:
+    TargetLanguage: English
+    Value: More

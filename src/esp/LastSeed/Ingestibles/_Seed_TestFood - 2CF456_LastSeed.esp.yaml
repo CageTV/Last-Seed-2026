@@ -1,0 +1,47 @@
+FormKey: 2CF456:LastSeed.esp
+EditorID: _Seed_TestFood
+ObjectBounds:
+  First: -12, -6, 0
+  Second: 12, 6, 5
+Name:
+  TargetLanguage: English
+  Value: Dummy Food
+Keywords:
+- 08CDEA:Skyrim.esm
+- 0A248C:Skyrim.esm
+Model:
+  File: Clutter\Food\Bread01A.nif
+  Data: 0x02000000020000000000000068CCCD4964647300B91482363D2BDFA864647300B9148236
+Weight: 1
+Value: 1
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 506649:LastSeed.esp
+  Data: {}
+- BaseEffect: 50664A:LastSeed.esp
+  Data: {}
+- BaseEffect: 50664B:LastSeed.esp
+  Data: {}
+- BaseEffect: 50664C:LastSeed.esp
+  Data: {}
+- BaseEffect: 50664D:LastSeed.esp
+  Data: {}
+- BaseEffect: 50664E:LastSeed.esp
+  Data: {}
+- BaseEffect: 50664F:LastSeed.esp
+  Data: {}
+- BaseEffect: 1B8C01:LastSeed.esp
+  Data: {}
+- BaseEffect: 002460:LastSeed.esp
+  Data: {}
+- BaseEffect: 007B48:LastSeed.esp
+  Data: {}
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}
+- BaseEffect: 2E388D:LastSeed.esp
+  Data: {}
+- BaseEffect: 2E388E:LastSeed.esp
+  Data: {}

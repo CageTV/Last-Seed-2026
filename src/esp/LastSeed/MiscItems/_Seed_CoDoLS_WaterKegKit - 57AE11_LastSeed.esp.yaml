@@ -1,0 +1,41 @@
+FormKey: 57AE11:LastSeed.esp
+EditorID: _Seed_CoDoLS_WaterKegKit
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CoDo_ObjectSetup
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CoDo_ObjectSetupMsg
+      Object: 57AE12:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: ObjectClass
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ObjectFXShader
+      Object: 05D608:Skyrim.esm
+    - MutagenObjectType: ScriptFloatProperty
+      Name: ObjectHeight
+      Data: 60
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ObjectKit
+      Object: 57AE11:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ObjectPlaceable
+      Object: 57AE16:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ObjectSoundFX
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+ObjectBounds:
+  First: -20, -30, 0
+  Second: 20, 20, 44
+Name:
+  TargetLanguage: English
+  Value: Water Keg
+Model:
+  File: Clutter\Meadery\MeadBarrel01.nif
+  Data: 0x020000000000000000000000
+PickUpSound: 071AE3:Skyrim.esm
+PutDownSound: 06636B:Skyrim.esm
+Value: 16
+Weight: 34

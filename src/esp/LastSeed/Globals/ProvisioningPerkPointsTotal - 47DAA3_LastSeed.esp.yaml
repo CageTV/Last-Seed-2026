@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 47DAA3:LastSeed.esp
+MajorRecordFlagsRaw: 64
+EditorID: ProvisioningPerkPointsTotal
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 15

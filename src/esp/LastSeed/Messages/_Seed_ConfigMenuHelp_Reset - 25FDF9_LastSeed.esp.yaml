@@ -1,0 +1,25 @@
+FormKey: 25FDF9:LastSeed.esp
+EditorID: _Seed_ConfigMenuHelp_Reset
+Description:
+  TargetLanguage: English
+  Value: >-
+    RESET TUTORIALS
+
+
+    All tutorials will be reset when you close the Mod Configuration Menu.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Don't Reset
+- Text:
+    TargetLanguage: English
+    Value: 2. Reset

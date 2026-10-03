@@ -1,0 +1,12 @@
+FormKey: 23C6B6:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgCloseInventory
+Description:
+  TargetLanguage: English
+  Value: Close your inventory, and then select the portions that you recieve when consuming this foodstuff.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Continue

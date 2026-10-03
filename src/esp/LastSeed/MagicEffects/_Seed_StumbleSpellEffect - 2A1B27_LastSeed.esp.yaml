@@ -1,0 +1,20 @@
+FormKey: 2A1B27:LastSeed.esp
+EditorID: _Seed_StumbleSpellEffect
+Name:
+  TargetLanguage: English
+  Value: Stumble
+Flags:
+- NoHitEvent
+- Painless
+TaperWeight: 1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Stagger
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+ScriptEffectAIDelayTime: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

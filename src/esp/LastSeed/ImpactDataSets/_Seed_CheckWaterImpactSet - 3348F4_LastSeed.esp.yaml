@@ -1,0 +1,7 @@
+FormKey: 3348F4:LastSeed.esp
+EditorID: _Seed_CheckWaterImpactSet
+Impacts:
+- Material: 012F40:Skyrim.esm
+  Impact: 274209:LastSeed.esp
+- Material: 0D6C11:Skyrim.esm
+  Impact: 274209:LastSeed.esp

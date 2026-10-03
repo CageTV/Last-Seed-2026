@@ -1,0 +1,22 @@
+FormKey: 019551:LastSeed.esp
+EditorID: _Seed_DrunkEffectLockpick
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Lockpick'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: LockpickingModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

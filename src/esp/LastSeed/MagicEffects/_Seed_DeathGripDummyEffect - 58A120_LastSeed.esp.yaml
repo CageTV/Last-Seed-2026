@@ -1,0 +1,28 @@
+FormKey: 58A120:LastSeed.esp
+EditorID: _Seed_DeathGripDummyEffect
+Name:
+  TargetLanguage: English
+  Value: Death Grip (Dummy)
+MenuDisplayObject: 0A6459:Skyrim.esm
+Flags:
+- SnapToNavmesh
+- NoDuration
+- NoArea
+- FXPersist
+- PowerAffectsMagnitude
+BaseCost: 0.05
+MagicSkill: Destruction
+CastingLight: 58A127:LastSeed.esp
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+Projectile: 58A129:LastSeed.esp
+CastType: Concentration
+CastingArt: 0510CF:Skyrim.esm
+SkillUsageMultiplier: 1
+DualCastScale: 1
+Sounds:
+- Sound: 03F37A:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: Restores hunger and thirst by consuming an enemy's life essence. Dragons, undead and automatons are not effected.

@@ -1,0 +1,14 @@
+FormKey: 1BDD25:LastSeed.esp
+EditorID: _Seed_FatigueSpell_AdoptionFemale
+Name:
+  TargetLanguage: English
+  Value: Mother's Love
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 1BDD27:LastSeed.esp
+  Data: {}

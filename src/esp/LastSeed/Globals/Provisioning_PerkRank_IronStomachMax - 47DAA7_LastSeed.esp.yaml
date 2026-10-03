@@ -1,0 +1,9 @@
+MutagenObjectType: GlobalShort
+FormKey: 47DAA7:LastSeed.esp
+MajorRecordFlagsRaw: 64
+EditorID: Provisioning_PerkRank_IronStomachMax
+SkyrimMajorRecordFlags:
+- 0x40
+MajorFlags:
+- Constant
+Data: 1

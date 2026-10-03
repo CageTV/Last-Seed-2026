@@ -1,0 +1,34 @@
+FormKey: 255BE2:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_AutoEat
+Description:
+  TargetLanguage: English
+  Value: >-
+    AUTO-EAT AND DRINK
+
+
+    You will eat and drink automatically from your provisions when you feel hungry and thirsty.
+
+
+    DEFAULTS:
+
+
+    Just for Fun: Enabled
+
+
+    Immersive Challenge: Disabled
+
+
+    Hardcore Survival: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

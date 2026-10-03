@@ -1,0 +1,30 @@
+FormKey: 2A1B25:LastSeed.esp
+EditorID: _Seed_DrunkEffectIsHungover
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_HungoverThirstEffect
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IsHungover
+      Object: 2A1B24:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Hungover'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

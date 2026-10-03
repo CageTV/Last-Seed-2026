@@ -1,0 +1,13 @@
+FormKey: 00BC31:LastSeed.esp
+EditorID: _Seed_HungerSD1
+Type: Standard
+Category: 0172A1:Skyrim.esm
+SoundFiles:
+- data\sound\fx\lastseed\_Seed_HungrySFX1.wav
+OutputModel: 06CB4F:Skyrim.esm
+LoopAndRumble:
+  Unknown: 1
+PercentFrequencyVariance: 10
+Priority: 128
+Variance: 6
+StaticAttenuation: 0.44

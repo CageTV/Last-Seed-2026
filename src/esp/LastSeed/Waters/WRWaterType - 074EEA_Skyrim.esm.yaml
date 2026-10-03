@@ -1,0 +1,56 @@
+FormKey: 074EEA:Skyrim.esm
+EditorID: WRWaterType
+FormVersion: 40
+Flags:
+- CausesDamage
+ImageSpace: 000946:Update.esm
+DamagePerSecond: 0
+Unknown: 0xCDCCCC3D0000B4420000003F0000803F
+SpecularSunPower: 4331
+WaterReflectivity: 0.9
+WaterFresnel: 0.2
+FogAboveWaterDistanceFarPlane: 160
+ShallowColor: '#00435046'
+DeepColor: '#00242F26'
+ReflectionColor: '#002C322F'
+Unknown3: 0x32CDCDCDCDCCCC3D9A99193FF6287C3F00000040
+DisplacementDampner: 0.98
+Unknown4: 1028443341
+NoiseFalloff: 4
+NoiseLayerOneWindDirection: 325
+NoiseLayerTwoWindDirection: 31
+NoiseLayerOneWindSpeed: 0.069
+NoiseLayerTwoWindSpeed: 0.036
+NoiseLayerThreeWindSpeed: 0.022
+Unknown5: 0x0000000000000000
+Unknown6: 1143734272
+FogUnderWaterAmount: 0.45
+FogUnderWaterDistanceNearPlane: -500
+FogUnderWaterDistanceFarPlane: 900
+WaterRefractionMagnitude: 65
+SpecularPower: 2359
+Unknown7: 1065353216
+SpecularRadius: 2355
+SpecularBrightness: 50.7
+NoiseLayerOneUvScale: 362
+NoiseLayerTwoUvScale: 1196
+NoiseLayerThreeUvScale: 4891
+NoiseLayerOneAmplitudeScale: 0.3297
+NoiseLayerTwoAmplitudeScale: 0.7681
+NoiseLayerThreeAmplitudeScale: 0.7754
+WaterReflectionMagnitude: 0.29
+SpecularSunSparkleMagnitude: 2
+SpecularSunSpecularMagnitude: 3
+DepthReflections: 1
+DepthRefraction: 0.75
+DepthNormals: 0.33
+DepthSpecularLighting: 0.9
+SpecularSunSparklePower: 4401
+GNAM: 0x000000000000000000000000
+LinearVelocity: 0, 0, 0
+AngularVelocity: 0, 0, 0
+NoiseLayerOneTexture: Data\Textures\Water\DefaultWater.dds
+NoiseLayerTwoTexture: Data\Textures\Water\DefaultWater.dds
+NoiseLayerThreeTexture: Data\Textures\Water\DefaultWater.dds
+DNAMDataTypeState:
+- Break0

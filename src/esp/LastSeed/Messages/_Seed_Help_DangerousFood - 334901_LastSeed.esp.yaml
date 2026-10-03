@@ -1,0 +1,12 @@
+FormKey: 334901:LastSeed.esp
+EditorID: _Seed_Help_DangerousFood
+Description:
+  TargetLanguage: English
+  Value: >-
+    DANGEROUS FOOD
+
+
+    The food you just ate left an unpleasant taste in your mouth. If you consume raw meat & seafood, spoiled food or dirty water, there is a chance you may catch a disease.
+INAM: 0x00000000
+Flags:
+- MessageBox

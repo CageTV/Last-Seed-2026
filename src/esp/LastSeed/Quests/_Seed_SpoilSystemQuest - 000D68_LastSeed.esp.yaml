@@ -1,0 +1,1285 @@
+FormKey: 000D68:LastSeed.esp
+EditorID: _Seed_SpoilSystemQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_SpoilSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IceWraithTeethEffect
+      Object: 44B08C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilageTemperatureMulti
+      Object: 427973:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SpoilTemperatureMulti
+      Object: 3B8333:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 42CA76:LastSeed.esp
+  FileName: ''
+  Aliases:
+  - Property:
+      Name: ''
+      Object: 000D68:LastSeed.esp
+      Alias: 0
+    Scripts:
+    - Name: _Seed_AliasFoodMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Bread
+        Object: 009666:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Cheese
+        Object: 009663:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CheeseBowls
+        Object: 00C718:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_DrinkMilk
+        Object: 00C71A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishCooked
+        Object: 00965C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishRaw
+        Object: 00965B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Fruit
+        Object: 009660:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeeth
+        Object: 44B08B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeethOld
+        Object: 44B08E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatCooked
+        Object: 009658:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatRaw
+        Object: 009657:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Pastries
+        Object: 009665:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishableFoodTracker
+        Object: 009BD0:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishedFood
+        Object: 007B4B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Preserved
+        Object: 00C71C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodCooked
+        Object: 00965E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodRaw
+        Object: 00965D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilageEnable
+        Object: 204B66:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate_IceWraithTeeth
+        Object: 450191:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate01_Bread
+        Object: 20ED75:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate02_RawMeat
+        Object: 20ED76:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate03_CookedMeat
+        Object: 20ED77:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate04_RawSmallGame
+        Object: 20ED78:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+        Object: 20ED79:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate06_RawFish
+        Object: 20ED7A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate07_CookedFish
+        Object: 20ED7B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate08_RawSeafood
+        Object: 20ED7C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate09_CookedSeafood
+        Object: 20ED7D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate10_Vegitables
+        Object: 20ED7E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate11_Fruit
+        Object: 20ED7F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate12_Cheese
+        Object: 20ED80:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate13_Treats
+        Object: 20ED81:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate14_Pastry
+        Object: 20ED82:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate15_Stew
+        Object: 20ED83:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate16_CheeseBowls
+        Object: 20ED84:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate17_Milk
+        Object: 20ED85:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameCooked
+        Object: 00965A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameRaw
+        Object: 009659:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Bread
+        Object: 009643:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Cheese
+        Object: 009661:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_CheeseBowl
+        Object: 009655:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishCooked
+        Object: 009647:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishRaw
+        Object: 009645:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Fruit
+        Object: 009641:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatCooked
+        Object: 00963B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatRaw
+        Object: 009639:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Milk
+        Object: 009BD1:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Pastry
+        Object: 009651:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodCooked
+        Object: 00964B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodRaw
+        Object: 009649:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameCooked
+        Object: 00963F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameRaw
+        Object: 00963D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Stew
+        Object: 009653:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Treat
+        Object: 00964F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Vegetable
+        Object: 00964D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoods
+        Object: 009BD3:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoodSystemContainerRef
+        Object: 00C722:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Stews
+        Object: 009667:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_TrackerAnchorRef
+        Object: 00C714:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Treats
+        Object: 009664:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Vegetables
+        Object: 00965F:LastSeed.esp
+      - MutagenObjectType: ScriptIntProperty
+        Name: aliasId
+      - MutagenObjectType: ScriptBoolProperty
+        Name: isActor
+        Data: True
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LastSeed
+        Object: 00B16A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: TrackingList
+        Object: 009BCB:LastSeed.esp
+  - Property:
+      Name: ''
+      Object: 000D68:LastSeed.esp
+      Alias: 1
+    Scripts:
+    - Name: _Seed_AliasFoodMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Bread
+        Object: 009666:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Cheese
+        Object: 009663:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CheeseBowls
+        Object: 00C718:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_DrinkMilk
+        Object: 00C71A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishCooked
+        Object: 00965C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishRaw
+        Object: 00965B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Fruit
+        Object: 009660:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeeth
+        Object: 44B08B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeethOld
+        Object: 44B08E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatCooked
+        Object: 009658:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatRaw
+        Object: 009657:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Pastries
+        Object: 009665:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishableFoodTracker
+        Object: 009BD0:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishedFood
+        Object: 007B4B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Preserved
+        Object: 00C71C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodCooked
+        Object: 00965E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodRaw
+        Object: 00965D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilageEnable
+        Object: 204B66:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate_IceWraithTeeth
+        Object: 450191:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate01_Bread
+        Object: 20ED75:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate02_RawMeat
+        Object: 20ED76:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate03_CookedMeat
+        Object: 20ED77:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate04_RawSmallGame
+        Object: 20ED78:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+        Object: 20ED79:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate06_RawFish
+        Object: 20ED7A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate07_CookedFish
+        Object: 20ED7B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate08_RawSeafood
+        Object: 20ED7C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate09_CookedSeafood
+        Object: 20ED7D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate10_Vegitables
+        Object: 20ED7E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate11_Fruit
+        Object: 20ED7F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate12_Cheese
+        Object: 20ED80:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate13_Treats
+        Object: 20ED81:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate14_Pastry
+        Object: 20ED82:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate15_Stew
+        Object: 20ED83:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate16_CheeseBowls
+        Object: 20ED84:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate17_Milk
+        Object: 20ED85:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameCooked
+        Object: 00965A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameRaw
+        Object: 009659:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Bread
+        Object: 009643:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Cheese
+        Object: 009661:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_CheeseBowl
+        Object: 009655:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishCooked
+        Object: 009647:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishRaw
+        Object: 009645:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Fruit
+        Object: 009641:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatCooked
+        Object: 00963B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatRaw
+        Object: 009639:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Milk
+        Object: 009BD1:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Pastry
+        Object: 009651:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodCooked
+        Object: 00964B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodRaw
+        Object: 009649:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameCooked
+        Object: 00963F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameRaw
+        Object: 00963D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Stew
+        Object: 009653:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Treat
+        Object: 00964F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Vegetable
+        Object: 00964D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoods
+        Object: 009BD3:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoodSystemContainerRef
+        Object: 00C722:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Stews
+        Object: 009667:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_TrackerAnchorRef
+        Object: 00C714:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Treats
+        Object: 009664:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Vegetables
+        Object: 00965F:LastSeed.esp
+      - MutagenObjectType: ScriptIntProperty
+        Name: aliasId
+        Data: 1
+      - MutagenObjectType: ScriptBoolProperty
+        Name: isActor
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LastSeed
+        Object: 00B16A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: TrackingList
+        Object: 009BCF:LastSeed.esp
+  - Property:
+      Name: ''
+      Object: 000D68:LastSeed.esp
+      Alias: 5
+    Scripts:
+    - Name: _Seed_AliasFoodMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Bread
+        Object: 009666:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Cheese
+        Object: 009663:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CheeseBowls
+        Object: 00C718:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_DrinkMilk
+        Object: 00C71A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishCooked
+        Object: 00965C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishRaw
+        Object: 00965B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Fruit
+        Object: 009660:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeeth
+        Object: 44B08B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeethOld
+        Object: 44B08E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatCooked
+        Object: 009658:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatRaw
+        Object: 009657:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Pastries
+        Object: 009665:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishableFoodTracker
+        Object: 009BD0:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishedFood
+        Object: 007B4B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Preserved
+        Object: 00C71C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodCooked
+        Object: 00965E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodRaw
+        Object: 00965D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilageEnable
+        Object: 204B66:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate_IceWraithTeeth
+        Object: 450191:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate01_Bread
+        Object: 20ED75:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate02_RawMeat
+        Object: 20ED76:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate03_CookedMeat
+        Object: 20ED77:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate04_RawSmallGame
+        Object: 20ED78:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+        Object: 20ED79:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate06_RawFish
+        Object: 20ED7A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate07_CookedFish
+        Object: 20ED7B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate08_RawSeafood
+        Object: 20ED7C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate09_CookedSeafood
+        Object: 20ED7D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate10_Vegitables
+        Object: 20ED7E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate11_Fruit
+        Object: 20ED7F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate12_Cheese
+        Object: 20ED80:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate13_Treats
+        Object: 20ED81:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate14_Pastry
+        Object: 20ED82:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate15_Stew
+        Object: 20ED83:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate16_CheeseBowls
+        Object: 20ED84:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate17_Milk
+        Object: 20ED85:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameCooked
+        Object: 00965A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameRaw
+        Object: 009659:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Bread
+        Object: 009643:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Cheese
+        Object: 009661:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_CheeseBowl
+        Object: 009655:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishCooked
+        Object: 009647:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishRaw
+        Object: 009645:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Fruit
+        Object: 009641:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatCooked
+        Object: 00963B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatRaw
+        Object: 009639:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Milk
+        Object: 009BD1:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Pastry
+        Object: 009651:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodCooked
+        Object: 00964B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodRaw
+        Object: 009649:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameCooked
+        Object: 00963F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameRaw
+        Object: 00963D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Stew
+        Object: 009653:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Treat
+        Object: 00964F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Vegetable
+        Object: 00964D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoods
+        Object: 009BD3:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoodSystemContainerRef
+        Object: 00C722:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Stews
+        Object: 009667:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_TrackerAnchorRef
+        Object: 00C714:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Treats
+        Object: 009664:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Vegetables
+        Object: 00965F:LastSeed.esp
+      - MutagenObjectType: ScriptIntProperty
+        Name: aliasId
+        Data: 5
+      - MutagenObjectType: ScriptBoolProperty
+        Name: isActor
+        Data: True
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LastSeed
+        Object: 00B16A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: TrackingList
+        Object: 009BCC:LastSeed.esp
+  - Property:
+      Name: ''
+      Object: 000D68:LastSeed.esp
+      Alias: 6
+    Scripts:
+    - Name: _Seed_AliasFoodMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Bread
+        Object: 009666:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Cheese
+        Object: 009663:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CheeseBowls
+        Object: 00C718:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_DrinkMilk
+        Object: 00C71A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishCooked
+        Object: 00965C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishRaw
+        Object: 00965B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Fruit
+        Object: 009660:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeeth
+        Object: 44B08B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeethOld
+        Object: 44B08E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatCooked
+        Object: 009658:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatRaw
+        Object: 009657:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Pastries
+        Object: 009665:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishableFoodTracker
+        Object: 009BD0:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishedFood
+        Object: 007B4B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Preserved
+        Object: 00C71C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodCooked
+        Object: 00965E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodRaw
+        Object: 00965D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilageEnable
+        Object: 204B66:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate_IceWraithTeeth
+        Object: 450191:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate01_Bread
+        Object: 20ED75:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate02_RawMeat
+        Object: 20ED76:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate03_CookedMeat
+        Object: 20ED77:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate04_RawSmallGame
+        Object: 20ED78:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+        Object: 20ED79:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate06_RawFish
+        Object: 20ED7A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate07_CookedFish
+        Object: 20ED7B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate08_RawSeafood
+        Object: 20ED7C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate09_CookedSeafood
+        Object: 20ED7D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate10_Vegitables
+        Object: 20ED7E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate11_Fruit
+        Object: 20ED7F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate12_Cheese
+        Object: 20ED80:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate13_Treats
+        Object: 20ED81:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate14_Pastry
+        Object: 20ED82:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate15_Stew
+        Object: 20ED83:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate16_CheeseBowls
+        Object: 20ED84:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate17_Milk
+        Object: 20ED85:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameCooked
+        Object: 00965A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameRaw
+        Object: 009659:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Bread
+        Object: 009643:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Cheese
+        Object: 009661:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_CheeseBowl
+        Object: 009655:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishCooked
+        Object: 009647:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishRaw
+        Object: 009645:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Fruit
+        Object: 009641:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatCooked
+        Object: 00963B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatRaw
+        Object: 009639:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Milk
+        Object: 009BD1:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Pastry
+        Object: 009651:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodCooked
+        Object: 00964B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodRaw
+        Object: 009649:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameCooked
+        Object: 00963F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameRaw
+        Object: 00963D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Stew
+        Object: 009653:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Treat
+        Object: 00964F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Vegetable
+        Object: 00964D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoods
+        Object: 009BD3:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoodSystemContainerRef
+        Object: 00C722:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Stews
+        Object: 009667:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_TrackerAnchorRef
+        Object: 00C714:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Treats
+        Object: 009664:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Vegetables
+        Object: 00965F:LastSeed.esp
+      - MutagenObjectType: ScriptIntProperty
+        Name: aliasId
+        Data: 6
+      - MutagenObjectType: ScriptBoolProperty
+        Name: isActor
+        Data: True
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LastSeed
+        Object: 00B16A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: TrackingList
+        Object: 009BCD:LastSeed.esp
+  - Property:
+      Name: ''
+      Object: 000D68:LastSeed.esp
+      Alias: 7
+    Scripts:
+    - Name: _Seed_AliasFoodMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Bread
+        Object: 009666:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Cheese
+        Object: 009663:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CheeseBowls
+        Object: 00C718:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_DrinkMilk
+        Object: 00C71A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishCooked
+        Object: 00965C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishRaw
+        Object: 00965B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Fruit
+        Object: 009660:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeeth
+        Object: 44B08B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeethOld
+        Object: 44B08E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatCooked
+        Object: 009658:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatRaw
+        Object: 009657:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Pastries
+        Object: 009665:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishableFoodTracker
+        Object: 009BD0:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishedFood
+        Object: 007B4B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Preserved
+        Object: 00C71C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodCooked
+        Object: 00965E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodRaw
+        Object: 00965D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilageEnable
+        Object: 204B66:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate_IceWraithTeeth
+        Object: 450191:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate01_Bread
+        Object: 20ED75:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate02_RawMeat
+        Object: 20ED76:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate03_CookedMeat
+        Object: 20ED77:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate04_RawSmallGame
+        Object: 20ED78:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+        Object: 20ED79:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate06_RawFish
+        Object: 20ED7A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate07_CookedFish
+        Object: 20ED7B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate08_RawSeafood
+        Object: 20ED7C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate09_CookedSeafood
+        Object: 20ED7D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate10_Vegitables
+        Object: 20ED7E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate11_Fruit
+        Object: 20ED7F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate12_Cheese
+        Object: 20ED80:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate13_Treats
+        Object: 20ED81:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate14_Pastry
+        Object: 20ED82:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate15_Stew
+        Object: 20ED83:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate16_CheeseBowls
+        Object: 20ED84:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate17_Milk
+        Object: 20ED85:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameCooked
+        Object: 00965A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameRaw
+        Object: 009659:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Bread
+        Object: 009643:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Cheese
+        Object: 009661:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_CheeseBowl
+        Object: 009655:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishCooked
+        Object: 009647:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishRaw
+        Object: 009645:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Fruit
+        Object: 009641:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatCooked
+        Object: 00963B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatRaw
+        Object: 009639:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Milk
+        Object: 009BD1:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Pastry
+        Object: 009651:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodCooked
+        Object: 00964B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodRaw
+        Object: 009649:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameCooked
+        Object: 00963F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameRaw
+        Object: 00963D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Stew
+        Object: 009653:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Treat
+        Object: 00964F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Vegetable
+        Object: 00964D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoods
+        Object: 009BD3:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoodSystemContainerRef
+        Object: 00C722:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Stews
+        Object: 009667:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_TrackerAnchorRef
+        Object: 00C714:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Treats
+        Object: 009664:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Vegetables
+        Object: 00965F:LastSeed.esp
+      - MutagenObjectType: ScriptIntProperty
+        Name: aliasId
+        Data: 7
+      - MutagenObjectType: ScriptBoolProperty
+        Name: isActor
+        Data: True
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LastSeed
+        Object: 00B16A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: TrackingList
+        Object: 009BCE:LastSeed.esp
+  - Property:
+      Name: ''
+      Object: 000D68:LastSeed.esp
+      Alias: 9
+    Scripts:
+    - Name: _Seed_AliasFoodMonitor
+      Properties:
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Bread
+        Object: 009666:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Cheese
+        Object: 009663:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_CheeseBowls
+        Object: 00C718:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_DrinkMilk
+        Object: 00C71A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishCooked
+        Object: 00965C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_FishRaw
+        Object: 00965B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Fruit
+        Object: 009660:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeeth
+        Object: 44B08B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_IceWraithTeethOld
+        Object: 44B08E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatCooked
+        Object: 009658:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_MeatRaw
+        Object: 009657:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Pastries
+        Object: 009665:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishableFoodTracker
+        Object: 009BD0:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_PerishedFood
+        Object: 007B4B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Preserved
+        Object: 00C71C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodCooked
+        Object: 00965E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SeafoodRaw
+        Object: 00965D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilageEnable
+        Object: 204B66:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate_IceWraithTeeth
+        Object: 450191:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate01_Bread
+        Object: 20ED75:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate02_RawMeat
+        Object: 20ED76:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate03_CookedMeat
+        Object: 20ED77:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate04_RawSmallGame
+        Object: 20ED78:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+        Object: 20ED79:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate06_RawFish
+        Object: 20ED7A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate07_CookedFish
+        Object: 20ED7B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate08_RawSeafood
+        Object: 20ED7C:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate09_CookedSeafood
+        Object: 20ED7D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate10_Vegitables
+        Object: 20ED7E:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate11_Fruit
+        Object: 20ED7F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate12_Cheese
+        Object: 20ED80:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate13_Treats
+        Object: 20ED81:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate14_Pastry
+        Object: 20ED82:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate15_Stew
+        Object: 20ED83:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate16_CheeseBowls
+        Object: 20ED84:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Setting_SpoilRate17_Milk
+        Object: 20ED85:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameCooked
+        Object: 00965A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SmallGameRaw
+        Object: 009659:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Bread
+        Object: 009643:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Cheese
+        Object: 009661:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_CheeseBowl
+        Object: 009655:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishCooked
+        Object: 009647:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_FishRaw
+        Object: 009645:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Fruit
+        Object: 009641:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatCooked
+        Object: 00963B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_MeatRaw
+        Object: 009639:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Milk
+        Object: 009BD1:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Pastry
+        Object: 009651:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodCooked
+        Object: 00964B:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SeafoodRaw
+        Object: 009649:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameCooked
+        Object: 00963F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_SmallGameRaw
+        Object: 00963D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Stew
+        Object: 009653:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Treat
+        Object: 00964F:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Spoiled_Vegetable
+        Object: 00964D:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoods
+        Object: 009BD3:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_SpoiledFoodSystemContainerRef
+        Object: 00C722:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Stews
+        Object: 009667:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_TrackerAnchorRef
+        Object: 00C714:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Treats
+        Object: 009664:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: _Seed_Vegetables
+        Object: 00965F:LastSeed.esp
+      - MutagenObjectType: ScriptIntProperty
+        Name: aliasId
+        Data: 9
+      - MutagenObjectType: ScriptBoolProperty
+        Name: isActor
+        Data: True
+      - MutagenObjectType: ScriptObjectProperty
+        Name: LastSeed
+        Object: 00B16A:LastSeed.esp
+      - MutagenObjectType: ScriptObjectProperty
+        Name: TrackingList
+        Object: 3BD435:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Food Spoil System
+NextAliasID: 10
+Aliases:
+- Name: Player
+  Flags:
+  - AllowReserved
+  ForcedReference: 000014:Skyrim.esm
+  VoiceTypes: Null
+- ID: 1
+  Name: Provisions
+  Flags:
+  - AllowReserved
+  ForcedReference: 074B07:LastSeed.esp
+  VoiceTypes: Null
+- ID: 5
+  Name: Follower1
+  Flags:
+  - Optional
+  - AllowReserved
+  External:
+    Quest: 061A04:Campfire.esm
+    AliasID: 0
+  VoiceTypes: Null
+- ID: 6
+  Name: Follower2
+  Flags:
+  - Optional
+  - AllowReserved
+  External:
+    Quest: 061A04:Campfire.esm
+    AliasID: 1
+  VoiceTypes: Null
+- ID: 7
+  Name: Follower3
+  Flags:
+  - Optional
+  - AllowReserved
+  External:
+    Quest: 061A04:Campfire.esm
+    AliasID: 2
+  VoiceTypes: Null
+- ID: 9
+  Name: Animal
+  Flags:
+  - Optional
+  - AllowReserved
+  External:
+    Quest: 061A04:Campfire.esm
+    AliasID: 5
+  VoiceTypes: Null

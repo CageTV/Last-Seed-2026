@@ -1,0 +1,5 @@
+FormKey: 006027:LastSeed.esp
+EditorID: _Seed_FoodClamMeat_Moldy
+Diffuse: lastseed\food\clammeat_moldy.dds
+NormalOrGloss: clutter\ingredients\clam\clammeat_n.dds
+Flags: []

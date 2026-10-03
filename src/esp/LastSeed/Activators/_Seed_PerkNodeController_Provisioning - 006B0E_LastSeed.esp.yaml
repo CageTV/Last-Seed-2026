@@ -1,0 +1,108 @@
+FormKey: 006B0E:LastSeed.esp
+MajorRecordFlagsRaw: 8389120
+EditorID: _Seed_PerkNodeController_Provisioning
+SkyrimMajorRecordFlags:
+- 0x200
+- 0x800000
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPerkNodeControllerBehavior
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkArtPlane
+      Object: 487CC7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkArtPlane_PositionRef
+      Object: 48CDD2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine00
+      Object: 47DABA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine00_PositionRef
+      Object: 49C0DD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine01
+      Object: 47DAC0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine01_PositionRef
+      Object: 48CDD1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine02
+      Object: 47DAC1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine02_PositionRef
+      Object: 49C0DE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine03
+      Object: 47DAC2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine03_PositionRef
+      Object: 49C0DF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine04
+      Object: 47DAC3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine04_PositionRef
+      Object: 49C0DB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine05
+      Object: 47DAC4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkLine05_PositionRef
+      Object: 49C0DC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode00
+      Object: 47DAB8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode00_PositionRef
+      Object: 48CDCF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode01
+      Object: 47DABB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode01_PositionRef
+      Object: 49C0D9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode02
+      Object: 47DABC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode02_PositionRef
+      Object: 49C0DA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode03
+      Object: 47DABD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode03_PositionRef
+      Object: 48CDD0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode04
+      Object: 47DABE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode04_PositionRef
+      Object: 49C0D7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode05
+      Object: 47DABF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNode05_PositionRef
+      Object: 49C0D8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PerkNodeController_PositionRef
+      Object: 48CDCD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_point_progress
+      Object: 006B10:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_points_available
+      Object: 006B0F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_skill_description
+      Object: 47DAB1:LastSeed.esp
+Model:
+  File: MarkerX.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+Flags: []
+MajorFlags:
+- HiddenFromLocalMap
+- IsMarker

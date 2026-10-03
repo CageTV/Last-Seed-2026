@@ -1,0 +1,301 @@
+FormKey: 53909B:LastSeed.esp
+EditorID: _Seed_VendorQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_VendorStock
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CureVampirism
+      Object: 301EC7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Potion_CureList
+      Object: 301EC6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Potion_CureListExtended
+      Object: 5B7A89:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RainBarrel_MiscItem
+      Object: 27E410:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseasePotionsCure
+      Object: 209C73:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingAdditionalDiseases
+      Object: 59E56D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinEmpty
+      Object: 010895:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArnleifChest
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ArnleifChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 9
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AvalAtheronChest
+      Object: 0A3F0A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AvalAtheronChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 16
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BethethorsChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 15
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BethethorsMerchantChestRef
+      Object: 09CAF9:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BirnaChest
+      Object: 09DA64:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BirnaChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 14
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BrandChest
+      Object: 0A31B8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BrandChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 13
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CaravanAChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 19
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CaravanAChestREF
+      Object: 07434C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CaravanBChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 18
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CaravanBChestREF
+      Object: 074353:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CaravanCChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 17
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CaravanCChestREF
+      Object: 074355:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GrayPineGoodsChest
+      Object: 0A6BFD:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GrayPineGoodsChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 8
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LItemApothecaryPotionCureHMS75
+      Object: 09CD43:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LItemPotionCureHMS
+      Object: 065A72:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MerchantSolitudeBitsAndPiecesChestRef
+      Object: 0A6C0A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: NiranyeChest
+      Object: 0A3F08:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: NiranyeChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 20
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PawnedPrawnChest
+      Object: 0A31BF:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PawnedPrawnChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 12
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiverwoodTraderChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 7
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiverwoodTraderMerchantContainer
+      Object: 078C0B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SolitudeBitsAndPiecesChestAlias
+      Object: 53909B:LastSeed.esp
+      Alias: 10
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WhiterunArcadiasCauldronChestRef
+      Object: 09CD46:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Vendor Quest
+NextAliasID: 0
+Aliases:
+- ID: 7
+  Name: RiverwoodTraderChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 078C0B:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 19
+  Name: CaravanAChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 07434C:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  VoiceTypes: Null
+- ID: 18
+  Name: CaravanBChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 074353:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 17
+  Name: CaravanCChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 074355:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 16
+  Name: AvalAtheronChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A3F0A:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 15
+  Name: BethethorsChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 09CAF9:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 14
+  Name: BirnaChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 09DA64:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 13
+  Name: BrandChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A31B8:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 12
+  Name: PawnedPrawnChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A31BF:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 10
+  Name: SolitudeBitsAndPiecesChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A6C0A:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 9
+  Name: ArnleifChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 094377:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 8
+  Name: GrayPineGoodsChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A6BFD:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null
+- ID: 20
+  Name: NiranyeChestAlias
+  Flags:
+  - Optional
+  ForcedReference: 0A3F08:Skyrim.esm
+  Items:
+  - Item:
+      Item: 010895:LastSeed.esp
+      Count: 3
+  - Item:
+      Item: 27E410:LastSeed.esp
+      Count: 1
+  VoiceTypes: Null

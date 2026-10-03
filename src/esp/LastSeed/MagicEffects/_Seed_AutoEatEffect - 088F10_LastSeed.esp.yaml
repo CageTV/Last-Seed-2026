@@ -1,0 +1,31 @@
+FormKey: 088F10:LastSeed.esp
+EditorID: _Seed_AutoEatEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_ConsumeEat
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Consume
+      Object: 083E0D:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Eat From Provisions
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoHitEvent
+- NoDuration
+- NoMagnitude
+- NoArea
+- HideInUI
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

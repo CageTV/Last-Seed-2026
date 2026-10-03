@@ -1,0 +1,56 @@
+FormKey: 036F7C:Campfire.esm
+EditorID: _Camp_FollowerRegistrationEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Camp_FollowerRegistration
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_FollowerQuest
+      Object: 061A04:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_MainQuest
+      Object: 022033:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Animal
+      Object: 061A04:Campfire.esm
+      Alias: 5
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DogCompanionRace
+      Object: 0F1AC4:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DogFaction
+      Object: 043596:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Follower1
+      Object: 061A04:Campfire.esm
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Follower2
+      Object: 061A04:Campfire.esm
+      Alias: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Follower3
+      Object: 061A04:Campfire.esm
+      Alias: 2
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HorseRace
+      Object: 0131FD:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerPotentialAnimalFaction
+      Object: 09A7B2:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Follower Registration Effect
+Flags:
+- NoHitEvent
+- HideInUI
+- NoDeathDispel
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

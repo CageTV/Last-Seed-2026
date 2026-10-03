@@ -1,0 +1,14 @@
+FormKey: 1BDD23:LastSeed.esp
+EditorID: _Seed_FatigueSpell_Marriage
+Name:
+  TargetLanguage: English
+  Value: Lover's Comfort
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 1BDD18:LastSeed.esp
+  Data: {}

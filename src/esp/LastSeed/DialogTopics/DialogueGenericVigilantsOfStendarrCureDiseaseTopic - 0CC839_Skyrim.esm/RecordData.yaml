@@ -1,0 +1,10 @@
+FormKey: 0CC839:Skyrim.esm
+EditorID: DialogueGenericVigilantsOfStendarrCureDiseaseTopic
+Name:
+  TargetLanguage: English
+  Value: Please cure me of my diseases.
+Priority: 60
+Branch: 0CCD73:Skyrim.esm
+Quest: 0B3293:Skyrim.esm
+SubtypeName: CUST
+Unknown: -1

@@ -1,0 +1,123 @@
+FormKey: 003F99:LastSeed.esp
+EditorID: _Seed_HungerMeterQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_HungerMeterInterfaceHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeMax
+      Object: 0102A9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeValue
+      Object: 0029CD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AuxPrimaryColor
+      Object: 0102C0:LastSeed.esp
+    - MutagenObjectType: ScriptFloatListProperty
+      Name: contextual_display_thresholds
+      Data:
+      - 0
+      - 20
+      - 40
+      - 60
+      - 80
+      - 100
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DebugGlobal
+      Object: 00B6CE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayTime
+      Object: 0102AD:LastSeed.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: improvement_display_delta_threshold
+      Data: 2
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MainPrimaryColor
+      Object: 0102C0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: meter
+      Object: 003F99:LastSeed.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: meter_inversion_value
+      Data: -0.01
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Opacity
+      Object: 0102C5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_flash
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - True
+      - True
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_stay_on
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - False
+      - True
+  - Name: _Seed_Meter
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Alpha
+    - MutagenObjectType: ScriptBoolProperty
+      Name: charge_meter
+      Data: True
+    - MutagenObjectType: ScriptStringProperty
+      Name: HAnchor
+      Data: center
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Height
+      Data: -22
+    - MutagenObjectType: ScriptStringListProperty
+      Name: Modes
+      Data:
+      - ALL
+      - Swimming
+      - WarHorseMode
+      - HorseMode
+      - StealthMode
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Percent
+      Data: 1
+    - MutagenObjectType: ScriptIntProperty
+      Name: PrimaryColor
+      Data: 11342935
+    - MutagenObjectType: ScriptStringProperty
+      Name: VAnchor
+      Data: bottom
+    - MutagenObjectType: ScriptStringProperty
+      Name: WidgetName
+      Data: Hunger Meter
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Width
+      Data: 292
+    - MutagenObjectType: ScriptFloatProperty
+      Name: X
+      Data: 1078
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Y
+      Data: 717.5
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Hunger Meter
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

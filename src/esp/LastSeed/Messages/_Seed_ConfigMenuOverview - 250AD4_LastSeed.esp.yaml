@@ -1,0 +1,18 @@
+FormKey: 250AD4:LastSeed.esp
+EditorID: _Seed_ConfigMenuOverview
+Description:
+  TargetLanguage: English
+  Value: OVERVIEW
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Main Menu
+- Text:
+    TargetLanguage: English
+    Value: Enable / Disable Last Seed
+- Text:
+    TargetLanguage: English
+    Value: Gameplay Presets

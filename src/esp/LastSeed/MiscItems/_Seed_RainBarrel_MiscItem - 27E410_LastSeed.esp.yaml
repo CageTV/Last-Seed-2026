@@ -1,0 +1,20 @@
+FormKey: 27E410:LastSeed.esp
+EditorID: _Seed_RainBarrel_MiscItem
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlaceableMiscItem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_placement_indicator
+      Object: 27E411:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_this_item
+      Object: 27E410:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Rain Barrel
+Model:
+  File: lastseed\_Seed_RainBarrel.nif
+  Data: 0x020000000000000000000000
+Value: 60
+Weight: 70

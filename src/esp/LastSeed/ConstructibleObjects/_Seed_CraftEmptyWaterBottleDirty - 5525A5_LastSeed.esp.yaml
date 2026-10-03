@@ -1,0 +1,16 @@
+FormKey: 5525A5:LastSeed.esp
+EditorID: _Seed_CraftEmptyWaterBottleDirty
+Items:
+- Item:
+    Item: 506652:LastSeed.esp
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetItemCountConditionData
+    ItemOrList: 506652:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: 506654:LastSeed.esp
+WorkbenchKeyword: 019831:Campfire.esm
+CreatedObjectCount: 1

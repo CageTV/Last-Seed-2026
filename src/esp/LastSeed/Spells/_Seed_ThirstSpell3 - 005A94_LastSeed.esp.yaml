@@ -1,0 +1,37 @@
+FormKey: 005A94:LastSeed.esp
+EditorID: _Seed_ThirstSpell3
+Name:
+  TargetLanguage: English
+  Value: Thirsty
+MenuDisplayObject: 0435A5:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 010850:LastSeed.esp
+  Data:
+    Magnitude: 10
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 36731B:LastSeed.esp
+    ComparisonValue: 2
+- BaseEffect: 010856:LastSeed.esp
+  Data: {}
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: HasMagicEffectKeywordConditionData
+      Keyword: 00F7D2:LastSeed.esp
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: 36731B:LastSeed.esp
+    ComparisonValue: 1

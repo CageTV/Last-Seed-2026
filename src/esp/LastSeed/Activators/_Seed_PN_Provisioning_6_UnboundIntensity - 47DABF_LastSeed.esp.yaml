@@ -1,0 +1,43 @@
+FormKey: 47DABF:LastSeed.esp
+EditorID: _Seed_PN_Provisioning_6_UnboundIntensity
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPerkNode
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_line_1
+      Object: 47DAC2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_line_2
+      Object: 47DAC4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_node_1
+      Object: 47DABC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: downstream_node_2
+      Object: 47DABE:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: required_description_value_count
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_description
+      Object: 47DAB7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global
+      Object: 47DAAE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_perk_rank_global_max
+      Object: 47DAAF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: required_skill_description
+      Object: 47DAB1:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Unbound Intensity
+Model:
+  File: campfire\_camp_intperkstars01.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Select
+Flags: []

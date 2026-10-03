@@ -1,0 +1,24 @@
+FormKey: 065C97:Skyrim.esm
+EditorID: FoodBread01A
+ObjectBounds:
+  First: -12, -6, 0
+  Second: 12, 6, 5
+Name:
+  TargetLanguage: English
+  Value: Bread Loaf
+Keywords:
+- 08CDEA:Skyrim.esm
+- 0A248C:Skyrim.esm
+Model:
+  File: Clutter\Food\Bread01A.nif
+  Data: 0x02000000020000000000000068CCCD4964647300B91482363D2BDFA864647300B9148236
+Weight: 0.4
+Value: 4
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 2

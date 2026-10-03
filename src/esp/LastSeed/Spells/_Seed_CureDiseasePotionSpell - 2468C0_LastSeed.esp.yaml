@@ -1,0 +1,20 @@
+FormKey: 2468C0:LastSeed.esp
+EditorID: _Seed_CureDiseasePotionSpell
+Name:
+  TargetLanguage: English
+  Value: Cure Disease Potion
+MenuDisplayObject: 018F02:Dawnguard.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+BaseCost: 1012352
+Flags:
+- IgnoreResistance
+- NoAbsorbOrReflect
+CastType: FireAndForget
+Effects:
+- BaseEffect: 17BF98:LastSeed.esp
+  Data:
+    Magnitude: 50
+    Duration: 4320

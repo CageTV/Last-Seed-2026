@@ -1,0 +1,9 @@
+FormKey: 2D9664:LastSeed.esp
+EditorID: _Seed_CraftEmptyWaterskinDirty3
+Items:
+- Item:
+    Item: 010892:LastSeed.esp
+    Count: 1
+CreatedObject: 010895:LastSeed.esp
+WorkbenchKeyword: 019831:Campfire.esm
+CreatedObjectCount: 1

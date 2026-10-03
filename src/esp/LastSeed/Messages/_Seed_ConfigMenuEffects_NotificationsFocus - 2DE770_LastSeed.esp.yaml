@@ -1,0 +1,25 @@
+FormKey: 2DE770:LastSeed.esp
+EditorID: _Seed_ConfigMenuEffects_NotificationsFocus
+Description:
+  TargetLanguage: English
+  Value: >-
+    FOCUS NOTIFICATIONS
+
+
+    If enabled, you will receive notifications when you become focussed.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

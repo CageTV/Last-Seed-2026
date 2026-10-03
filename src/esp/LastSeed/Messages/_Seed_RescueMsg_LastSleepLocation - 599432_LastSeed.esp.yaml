@@ -1,0 +1,8 @@
+FormKey: 599432:LastSeed.esp
+EditorID: _Seed_RescueMsg_LastSleepLocation
+Description:
+  TargetLanguage: English
+  Value: You wake to find yourself in a warm bed. You are unsure of how you arrived, but thankful to be alive just the same.
+INAM: 0x00000000
+Flags:
+- MessageBox

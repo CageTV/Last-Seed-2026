@@ -1,0 +1,58 @@
+FormKey: 00A69D:LastSeed.esp
+EditorID: _Seed_TrackingQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: QF__Seed_TrackingQuest_0400A69D
+  FileName: QF__Seed_TrackingQuest_0400A69D
+  Fragments:
+  - Stage: 10
+    Unknown2: 1
+    ScriptName: QF__Seed_TrackingQuest_0400A69D
+    FragmentName: Fragment_2
+  - Stage: 15
+    Unknown2: 1
+    ScriptName: QF__Seed_TrackingQuest_0400A69D
+    FragmentName: Fragment_4
+  - Stage: 20
+    Unknown2: 1
+    ScriptName: QF__Seed_TrackingQuest_0400A69D
+    FragmentName: Fragment_0
+Name:
+  TargetLanguage: English
+  Value: Last Seed
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+Stages:
+- LogEntries:
+  - Flags: []
+    Entry:
+      TargetLanguage: English
+      Value: Initial state
+- Index: 10
+  LogEntries:
+  - Flags: []
+    Entry:
+      TargetLanguage: English
+      Value: I should rest and plan for the journey ahead.                                                           (Activate Last Seed by sleeping for at least 1 hour, or via the Last Seed Mod Configuration Menu.)
+- Index: 15
+  LogEntries:
+  - Flags: []
+    Entry:
+      TargetLanguage: English
+      Value: 'I should rest and plan for the journey ahead.                                                           (Activate Last Seed by sleeping for at least 1 hour, or by selecting Options: Last Seed from the Magic menu and pressing Shout.)'
+- Index: 20
+  LogEntries:
+  - Flags:
+    - CompleteQuest
+    Entry:
+      TargetLanguage: English
+      Value: After a decent rest, I feel prepared to face the trials that lie ahead.
+Objectives:
+- Index: 10
+  Flags: []
+  DisplayText:
+    TargetLanguage: English
+    Value: Rest and plan for the journey ahead. (See Quest Journal for details)
+NextAliasID: 0

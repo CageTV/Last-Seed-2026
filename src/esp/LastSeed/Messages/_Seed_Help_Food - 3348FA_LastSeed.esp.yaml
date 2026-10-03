@@ -1,0 +1,21 @@
+FormKey: 3348FA:LastSeed.esp
+EditorID: _Seed_Help_Food
+Description:
+  TargetLanguage: English
+  Value: >-
+    TYPES OF FOOD
+
+
+    Light Meal: Raw vegetables, raw small game, raw fish, raw seafood and milk
+
+
+    Medium Meal: Bread, raw meat, cooked small game, cooked fish, cooked seafood, raw fruit, cooked vegetables, treats and cheese
+
+
+    Filling Meal: Cooked large meat, simple soups & stews, small pastries and cheesebowls
+
+
+    Hearty Meal: Complex stews and large pastries.
+INAM: 0x00000000
+Flags:
+- MessageBox

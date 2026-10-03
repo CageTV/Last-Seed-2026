@@ -1,0 +1,25 @@
+FormKey: 009645:LastSeed.esp
+EditorID: _Seed_Spoiled_FishRaw
+Name:
+  TargetLanguage: English
+  Value: Rank Raw Fish
+Keywords:
+- 0A0E56:Skyrim.esm
+Model:
+  File: lastseed\spoiled\SalmonMeat01.nif
+  Data: 0x020000000000000000000000
+  AlternateTextures:
+  - Name: SalmonMeat01:0
+    NewTexture: 00D1E8:LastSeed.esp
+Weight: 0.1
+Value: 3
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 2
+- BaseEffect: 007B49:LastSeed.esp
+  Data: {}

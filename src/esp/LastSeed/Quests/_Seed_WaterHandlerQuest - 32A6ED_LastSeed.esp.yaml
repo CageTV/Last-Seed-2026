@@ -1,0 +1,127 @@
+FormKey: 32A6ED:LastSeed.esp
+EditorID: _Seed_WaterHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _seed_waterhandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheckSnowImpactSet
+      Object: 274208:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheckWaterImpactSet
+      Object: 3348F4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Dialog_NoWaterskinsMsg
+      Object: 2EDA96:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkOrFillMsg
+      Object: 57AE17:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Help_Waterskins
+      Object: 2D4559:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Waterskins
+      Object: 2D455A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ITMPotionUse
+      Object: 58501A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_OvercastWeatherList
+      Object: 66E031:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsContainerRef
+      Object: 074B07:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RiverWater
+      Object: 506659:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceDirtyWater
+      Object: 209C71:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DisplayTutorials
+      Object: 00C707:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_PO3WaterDetection
+      Object: 42CA77:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SnowStatList
+      Object: 26F106:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WashWater
+      Object: 32F7EF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterActList
+      Object: 26F105:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottle
+      Object: 506652:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleClean
+      Object: 506653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleEmpty
+      Object: 506654:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleSea
+      Object: 506656:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleSnow
+      Object: 533F8F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterfallList
+      Object: 0108EE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin1
+      Object: 01088E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin1Clean
+      Object: 01088F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterSkin2
+      Object: 010890:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterSkin2Clean
+      Object: 010891:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin3
+      Object: 010892:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin3Clean
+      Object: 010893:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinEmpty
+      Object: 010895:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinSea
+      Object: 010894:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinSnow
+      Object: 2FCDA9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinsNoWaterMsg
+      Object: 2EDAA0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ClearpinePondLocation
+      Object: 019156:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2AshStorm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2SolstheimWorld
+      Object: 000800:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IdlePickup_Ground
+      Object: 075C3E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Tamriel
+      Object: 00003C:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Water Handler
+NextAliasID: 0

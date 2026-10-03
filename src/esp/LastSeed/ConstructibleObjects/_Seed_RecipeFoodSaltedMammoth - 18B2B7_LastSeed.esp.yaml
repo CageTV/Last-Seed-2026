@@ -1,0 +1,19 @@
+FormKey: 18B2B7:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedMammoth
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 0669A4:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+CreatedObject: 18B2AD:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

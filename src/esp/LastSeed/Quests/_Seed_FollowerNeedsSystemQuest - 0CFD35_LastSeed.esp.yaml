@@ -1,0 +1,104 @@
+FormKey: 0CFD35:LastSeed.esp
+EditorID: _Seed_FollowerNeedsSystemQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _seed_followerneedssystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicAle
+      Object: 0108EB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicSpirit
+      Object: 0108EC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicWine
+      Object: 0108ED:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMajor
+      Object: 00707C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMassive
+      Object: 00707E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMinor
+      Object: 00707B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerSuperior
+      Object: 00707D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Variety
+      Object: 00C712:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HungerSystemQuest_Follower1
+      Object: 0CAC27:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HungerSystemQuest_Follower2
+      Object: 0CAC31:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HungerSystemQuest_Follower3
+      Object: 0CAC32:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RecentlyEatenFood
+      Object: 00C70E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMajorAmount
+      Object: 008B73:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMassiveAmount
+      Object: 00C710:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMinorAmount
+      Object: 008B72:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerSuperiorAmount
+      Object: 008B74:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreThirstMajorAmount
+      Object: 01082E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Salted
+      Object: 18B2BB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SaltIncreaseThirstAmount
+      Object: 18B2BC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiminishingFoodReturns
+      Object: 00C70F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DisplayTutorials
+      Object: 00C707:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_PartyCount
+      Object: 3E5C4B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SystemEnabled_FollowerNeeds
+      Object: 0CAC33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSystemQuest_Follower1
+      Object: 107849:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSystemQuest_Follower2
+      Object: 10784A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstSystemQuest_Follower3
+      Object: 10784B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeEnabled
+      Object: 0CAC33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UpdateFrequencyGlobal
+      Object: 0D4E37:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFood
+      Object: 08CDEA:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodRaw
+      Object: 0A0E56:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Follower Needs System
+NextAliasID: 0

@@ -1,0 +1,19 @@
+FormKey: 010855:LastSeed.esp
+EditorID: _Seed_ThirstEffect2SkillsOnly
+Name:
+  TargetLanguage: English
+  Value: 'Thirst: Refreshed'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You feel refreshed.

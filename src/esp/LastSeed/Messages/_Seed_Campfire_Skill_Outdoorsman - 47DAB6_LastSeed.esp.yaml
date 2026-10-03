@@ -1,0 +1,36 @@
+FormKey: 47DAB6:LastSeed.esp
+EditorID: _Seed_Campfire_Skill_Outdoorsman
+Description:
+  TargetLanguage: English
+  Value: >-
+    OUTDOORSMAN
+
+
+    Gain the ability to rest well while sleeping outdoors.
+
+
+    Rank: %.0f/%.0f
+
+
+    Perks to increase: %.0f
+
+    Next perk progress: %.0f%%
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Choose Perk
+  Conditions:
+  - MutagenObjectType: ConditionFloat
+    Data:
+      MutagenObjectType: GetGlobalValueConditionData
+      Global: CC0D02:Update.esm
+    ComparisonValue: 1
+- Text:
+    TargetLanguage: English
+    Value: About Provisioning
+- Text:
+    TargetLanguage: English
+    Value: Back

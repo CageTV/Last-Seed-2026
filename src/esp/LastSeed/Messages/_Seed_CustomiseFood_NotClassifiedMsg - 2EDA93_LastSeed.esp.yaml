@@ -1,0 +1,7 @@
+FormKey: 2EDA93:LastSeed.esp
+EditorID: _Seed_CustomiseFood_NotClassifiedMsg
+Description:
+  TargetLanguage: English
+  Value: You cannot add this item as a portion, it has not been examined yet.
+INAM: 0x00000000
+DisplayTime: 2

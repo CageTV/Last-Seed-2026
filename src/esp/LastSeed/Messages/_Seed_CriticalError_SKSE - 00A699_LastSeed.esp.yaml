@@ -1,0 +1,17 @@
+FormKey: 00A699:LastSeed.esp
+EditorID: _Seed_CriticalError_SKSE
+Description:
+  TargetLanguage: English
+  Value: >-
+    Last Seed and SKSE
+
+
+    SKSE is not installed, or is out of date. Last Seed needs SKSE in order to enable all features. If you are OK with running Last Seed in Non-SKSE mode (with a reduced set of features), you can ignore this message. You CANNOT switch to using SKSE later at this time, so consider this a permanent choice. 
+
+
+    Detected version: %.4f
+
+    Expected version: %.4f or greater
+INAM: 0x00000000
+Flags:
+- MessageBox

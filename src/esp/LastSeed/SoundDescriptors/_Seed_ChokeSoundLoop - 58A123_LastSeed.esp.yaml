@@ -1,0 +1,13 @@
+FormKey: 58A123:LastSeed.esp
+EditorID: _Seed_ChokeSoundLoop
+Type: Standard
+Category: 0172A1:Skyrim.esm
+SoundFiles:
+- data\sound\fx\lastseed\_Seed_Choke.wav
+OutputModel: 07EDCA:Skyrim.esm
+LoopAndRumble:
+  Loop: Loop
+PercentFrequencyShift: -10
+PercentFrequencyVariance: 10
+Priority: 128
+StaticAttenuation: 10.13

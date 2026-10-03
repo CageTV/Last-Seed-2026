@@ -1,0 +1,19 @@
+FormKey: 2E3875:LastSeed.esp
+EditorID: _Seed_SkoomaEffect3
+Name:
+  TargetLanguage: English
+  Value: 'Skooma: Very High'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Stamina regenerates <30>% faster. Movement speed increased by <20>%. Carry capacity increased by <20>.

@@ -1,0 +1,352 @@
+FormKey: 0108E7:LastSeed.esp
+EditorID: _Seed_AlcoholSystemQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _seed_alcoholsystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_BlackISM
+      Object: 019555:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholAltVisuals
+      Object: 23C6BA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholMulti_Ale
+      Object: 209C6D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholMulti_Spirits
+      Object: 209C6F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AlcoholMulti_Wine
+      Object: 209C6E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AutoConsume
+      Object: 0B681C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_NeedsVFX
+      Object: 003A33:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Notifications
+      Object: 003A30:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_VitalitySystemEnabled
+      Object: 010833:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingPlayerIsLich
+      Object: 58A11C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Settings_DrunkenShenanigans
+      Object: 654B1F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AngasMillMapMarker
+      Object: 0162D6:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Attribute
+      Object: 010830:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: attributeRateMultiGlobal
+      Object: 3EFE4E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BlackBriarMeaderyLocationCenter
+      Object: 022483:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BraidwoodInnkeeperStandingSpotREF
+      Object: 02E749:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CenterMakerStonehills
+      Object: 01C1BC:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CenterMarkerBattlebornFarm
+      Object: 0216AF:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CenterMarkerHeartwoodMill
+      Object: 05CAC8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CenterMarkerMerryfairFarm
+      Object: 05CAB8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionEastmarch
+      Object: 0267E3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionFalkreath
+      Object: 028170:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionHaafingar
+      Object: 029DB0:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionHjaalmarch
+      Object: 02816D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionPale
+      Object: 02816E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionReach
+      Object: 02816C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionRift
+      Object: 02816B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionWhiterun
+      Object: 0267EA:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CrimeFactionWinterhold
+      Object: 02816F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CWMission03InnMarkerDragonsBridgeFourShieldsTavern
+      Object: 0D2994:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CWMission03InnMarkerNightGateInn
+      Object: 0E19FE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CWMission03InnMarkerRoriksteadFrostfruitInn
+      Object: 0D2997:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DarkwaterCrossingLocationCenterMarkerREF
+      Object: 02A974:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DawnstarMapMarkerREF
+      Object: 01773A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DBRecurringTargetMarkerRiften
+      Object: 097258:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2CrimeRavenRockFaction
+      Object: 018279:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2PillarRRGuardAMarker
+      Object: 03CA58:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2RR02VelethCenterMarker
+      Object: 0295EA:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2RRDrovasCookMarker
+      Object: 035E4E:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2SkaalVillageEdgeMarker
+      Object: 03D3C1:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2TelMithrynExteriorCenterMarker
+      Object: 01D75D:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DragonBridgeMapMarker
+      Object: 017753:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EdgeMarkerAngasMill
+      Object: 05CAA1:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FalkreathInnSandboxMarker
+      Object: 07266A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FalkreathMapMarker
+      Object: 017760:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FalkreathShrineofArkayREF
+      Object: 07185B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GameHour
+      Object: 000038:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HalfMoonMillMapMarker
+      Object: 016370:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HighHrothgarMapMarker
+      Object: 016352:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HillgrundsTombMapMarker
+      Object: 0162CB:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HlaaluFarmMapMarkerRef
+      Object: 016355:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ISM2
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ISM3
+      Object: 019556:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ISM4
+      Object: 019557:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ISM5
+      Object: 019558:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: IvarsteadMapMarker
+      Object: 017791:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: KarthspireMapMarker
+      Object: 01626C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: KynesgroveMapMarker
+      Object: 0177A1:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: KynesgroveSteamscorchGullyCenterMarker
+      Object: 020A0D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Level
+      Object: 1E1432:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Level1Msg
+      Object: 0108E1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Level2Msg
+      Object: 0108E0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Level3Msg
+      Object: 0108DF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Level4Msg
+      Object: 0108DE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Level5Msg
+      Object: 0108DD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Level6Msg
+      Object: 0108DC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LurbukBardMarker
+      Object: 10DE51:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MarkarthHalloftheDeadCenterMarkerREF
+      Object: 06A9AB:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MarkarthMapMarkerREF
+      Object: 01C38A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MarkarthShrineofTalosCenterMarkerREF
+      Object: 0871D6:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MarkarthSilverFishInnLocationCenterMarkerREF
+      Object: 01F320:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MarkarthStablesMapMarker
+      Object: 0E962F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MarkarthTempleofDibellaLocationCenterMarkerREF
+      Object: 01F321:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MarkarthWarrensLocationCenterMarkerREF
+      Object: 01F324:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MorthalMapMarkerRef
+      Object: 0177B0:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MS04AvanchnzelMarker
+      Object: 01620D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MS10PirateSceneEMWaitressMARKER
+      Object: 052273:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MS11BloodTrailEnableMARKER
+      Object: 0C4B23:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: OldHroldanHangedManLocationCenterMarkerREF
+      Object: 01F7D2:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiftenBeeTalenWorkMarker
+      Object: 046BA8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiftenBeggersCampMarker
+      Object: 044A87:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiftenBunkhouseHaelgaBed
+      Object: 0445E1:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiftenMapMarkerREF
+      Object: 01C390:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiftenStablesMapMarker
+      Object: 096A46:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiftenTempleWorshipMarker
+      Object: 0449B3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RiverwoodMapMarker
+      Object: 0162A4:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: RoriksteadMapMarker
+      Object: 0177CC:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SaarthalMapMarker
+      Object: 0162A5:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SarethiFarmMapMarker
+      Object: 016379:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ShorsStoneMapMarker
+      Object: 0177D7:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SolitudeMapmarkerRef
+      Object: 04D0F4:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SolitudeStablesMapMarker
+      Object: 01635E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Spell1
+      Object: 01954A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Spell2
+      Object: 01954B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Spell3
+      Object: 01954C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Spell4
+      Object: 01954D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Spell5
+      Object: 01954E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SystemEnabled
+      Object: 01082F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TG06EnthirArrivalMarker
+      Object: 089BAC:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: UstengravMapMarker
+      Object: 01621F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VilemyrEatMarker01
+      Object: 10E0C5:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VolskyggeMapMarker
+      Object: 0162CA:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WhiterunDrunkenHuntsmanCenterMarker
+      Object: 01F88D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WhiterunMapMarkerREF
+      Object: 0162CE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WhiterunStablesMapMarker
+      Object: 072879:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WhiterunWatchtowerCenterMarker
+      Object: 0D907D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WindhelmLocationCenterMarkerREF
+      Object: 02A975:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WindhelmMapMarkerRef
+      Object: 038436:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WindhelmNewGnisisCornerclubCenterMarker
+      Object: 0209DA:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WindhelmPlayersHorseStart
+      Object: 098492:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WindhelmShrineofArkayREF
+      Object: 07185A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WinterholdMapMarker
+      Object: 0177EF:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Alcohol System
+NextAliasID: 0

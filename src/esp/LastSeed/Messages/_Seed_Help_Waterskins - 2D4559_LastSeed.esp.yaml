@@ -1,0 +1,8 @@
+FormKey: 2D4559:LastSeed.esp
+EditorID: _Seed_Help_Waterskins
+Description:
+  TargetLanguage: English
+  Value: "EMPTY WATERSKINS\r\n\r\nYou check your waterskin, but it appears to be empty. You can fill your waterskin at several locations, including large bodies of water, waterfalls and snow. You can also refill your waterskins in the rain if you are using Frostfall, and innkeepers will refill them for a small fee. \r\n\r\nYou can craft more waterskins at a tanning rack, and can craft placeable rain barrels at a blacksmiths forge. You can empty waterskins using the Create Item power. "
+INAM: 0x00000000
+Flags:
+- MessageBox

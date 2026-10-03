@@ -1,0 +1,24 @@
+FormKey: 47DAB1:LastSeed.esp
+EditorID: _Seed_Campfire_Skill_Provisioning
+Description:
+  TargetLanguage: English
+  Value: >-
+    PROVISIONING
+
+
+    Skyrim is an unforgiving land, but these skills will help you to stay healthy and rested during your travels. 
+
+
+    Fully restore your needs to earn perks, and keep your Vitality high to earn them faster. 
+
+
+    Perks to increase: %.0f
+
+    Next perk progress: %.0f%%
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back

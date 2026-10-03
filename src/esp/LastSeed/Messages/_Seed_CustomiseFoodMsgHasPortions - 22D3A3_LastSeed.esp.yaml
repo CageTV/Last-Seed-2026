@@ -1,0 +1,15 @@
+FormKey: 22D3A3:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgHasPortions
+Description:
+  TargetLanguage: English
+  Value: Can this foodstuff be broken down into smaller portions (e.g. cheese wheels)?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Yes
+- Text:
+    TargetLanguage: English
+    Value: No

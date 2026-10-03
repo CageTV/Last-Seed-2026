@@ -1,0 +1,5 @@
+FormKey: 006010:LastSeed.esp
+EditorID: _Seed_FoodApple_Stale
+Diffuse: lastseed\food\apple01_stale.dds
+NormalOrGloss: clutter\food\apple01_n.dds
+Flags: []

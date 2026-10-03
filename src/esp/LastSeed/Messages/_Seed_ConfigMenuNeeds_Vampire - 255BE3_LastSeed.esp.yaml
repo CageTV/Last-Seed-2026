@@ -1,0 +1,34 @@
+FormKey: 255BE3:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_Vampire
+Description:
+  TargetLanguage: English
+  Value: >-
+    VAMPIRE BEHAVIOUR
+
+
+    Mortal: Needs affect you normally, even as a vampire.
+
+
+    Supernatural: You are immune to thirst, fatigue normally, and must feed to restore hunger. Penalties still apply.
+
+
+    Immortal: You cannot succumb to lack of wellness. Penalties still apply.
+
+
+    Default: Supernatural
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Mortal
+- Text:
+    TargetLanguage: English
+    Value: 2. Supernatural
+- Text:
+    TargetLanguage: English
+    Value: 3. Immortal

@@ -1,0 +1,18 @@
+FormKey: 00C721:LastSeed.esp
+MajorRecordFlagsRaw: 134217728
+EditorID: _Seed_SpoiledFoodSystemContainer
+SkyrimMajorRecordFlags:
+- 0x8000000
+ObjectBounds:
+  First: -27, -27, 0
+  Second: 27, 27, 80
+Name:
+  TargetLanguage: English
+  Value: Barrel
+Model:
+  File: Clutter\Barrel01.NIF
+  Data: 0x020000000000000000000000
+OpenSound: 03C86D:Skyrim.esm
+CloseSound: 03C870:Skyrim.esm
+MajorFlags:
+- NavMeshGenerationBoundingBox

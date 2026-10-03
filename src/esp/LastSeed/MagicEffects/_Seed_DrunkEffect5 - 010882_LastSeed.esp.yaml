@@ -1,0 +1,33 @@
+FormKey: 010882:LastSeed.esp
+EditorID: _Seed_DrunkEffect5
+VirtualMachineAdapter:
+  Scripts:
+  - Name: TimedAbilityScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: pAbilityToRemove
+      Object: 01954E:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: pHoursToWait
+      Data: 6
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Hungover'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Hostile
+- Recover
+- Detrimental
+- NoArea
+- Painless
+BaseCost: 0.3
+SpellmakingCastingTime: 0.5
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: SpeechcraftModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: 'For <6> hours, you are <mag>% less effective with all skill and thirst increases <25>% faster. '

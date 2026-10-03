@@ -1,0 +1,19 @@
+FormKey: 010860:LastSeed.esp
+EditorID: _Seed_FatigueEffect2
+Name:
+  TargetLanguage: English
+  Value: 'Fatigue: Sharp'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: MagickaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You feel sharp.

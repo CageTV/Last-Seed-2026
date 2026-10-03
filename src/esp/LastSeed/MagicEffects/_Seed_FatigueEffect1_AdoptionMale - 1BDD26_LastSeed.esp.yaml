@@ -1,0 +1,33 @@
+FormKey: 1BDD26:LastSeed.esp
+EditorID: _Seed_FatigueEffect1_AdoptionMale
+VirtualMachineAdapter:
+  Scripts:
+  - Name: BYOHRestedAdoptionEffectScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: pAbilityToRemove1
+      Object: 004292:HearthFires.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: pAbilityToRemove2
+      Object: 002F54:HearthFires.esm
+    - MutagenObjectType: ScriptIntProperty
+      Name: pHoursToWait
+      Data: 8
+Name:
+  TargetLanguage: English
+  Value: "Fatigue: Father's Love"
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Health
+DualCastScale: 1
+PerkToApply: 004295:HearthFires.esm
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Healing spells and potions restore <25>% more health for <240> seconds.

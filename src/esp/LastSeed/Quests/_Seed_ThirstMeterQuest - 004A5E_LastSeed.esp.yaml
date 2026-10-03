@@ -1,0 +1,123 @@
+FormKey: 004A5E:LastSeed.esp
+EditorID: _Seed_ThirstMeterQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_Meter
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Alpha
+    - MutagenObjectType: ScriptBoolProperty
+      Name: charge_meter
+      Data: True
+    - MutagenObjectType: ScriptStringProperty
+      Name: HAnchor
+      Data: Left
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Height
+      Data: -22
+    - MutagenObjectType: ScriptStringListProperty
+      Name: Modes
+      Data:
+      - ALL
+      - Swimming
+      - WarHorseMode
+      - HorseMode
+      - StealthMode
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Percent
+      Data: 1
+    - MutagenObjectType: ScriptIntProperty
+      Name: PrimaryColor
+      Data: 11342935
+    - MutagenObjectType: ScriptStringProperty
+      Name: VAnchor
+      Data: bottom
+    - MutagenObjectType: ScriptStringProperty
+      Name: WidgetName
+      Data: Thirst Meter
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Width
+      Data: 292
+    - MutagenObjectType: ScriptFloatProperty
+      Name: X
+      Data: 1194.25
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Y
+      Data: 717.5
+  - Name: _Seed_ThirstMeterInterfaceHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeMax
+      Object: 0102AA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeValue
+      Object: 0029CE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AuxPrimaryColor
+      Object: 14E670:LastSeed.esp
+    - MutagenObjectType: ScriptFloatListProperty
+      Name: contextual_display_thresholds
+      Data:
+      - 0
+      - 20
+      - 40
+      - 60
+      - 80
+      - 100
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DebugGlobal
+      Object: 00B6CE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayMode
+      Object: 004FC8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayTime
+      Object: 0102AD:LastSeed.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: improvement_display_delta_threshold
+      Data: 2
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MainPrimaryColor
+      Object: 14E670:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: meter
+      Object: 004A5E:LastSeed.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: meter_inversion_value
+      Data: -0.01
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Opacity
+      Object: 0102C5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_flash
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - True
+      - True
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_stay_on
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - False
+      - True
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Thirst Meter
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

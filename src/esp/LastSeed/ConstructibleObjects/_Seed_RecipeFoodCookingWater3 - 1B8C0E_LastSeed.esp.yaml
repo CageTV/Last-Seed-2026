@@ -1,0 +1,9 @@
+FormKey: 1B8C0E:LastSeed.esp
+EditorID: _Seed_RecipeFoodCookingWater3
+Items:
+- Item:
+    Item: 010893:LastSeed.esp
+    Count: 1
+CreatedObject: 1B8C0D:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

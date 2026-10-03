@@ -1,0 +1,25 @@
+FormKey: 255BDF:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_Fatigue
+Description:
+  TargetLanguage: English
+  Value: >-
+    ENABLE FATIGUE
+
+
+    Enable Fatigue System
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

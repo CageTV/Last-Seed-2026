@@ -1,0 +1,15 @@
+FormKey: 01954B:LastSeed.esp
+EditorID: _Seed_DrunkSpell2
+Name:
+  TargetLanguage: English
+  Value: Tipsy
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 01087F:LastSeed.esp
+  Data:
+    Magnitude: 10

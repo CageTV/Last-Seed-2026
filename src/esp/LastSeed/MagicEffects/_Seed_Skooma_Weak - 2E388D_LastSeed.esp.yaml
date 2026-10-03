@@ -1,0 +1,21 @@
+FormKey: 2E388D:LastSeed.esp
+EditorID: _Seed_Skooma_Weak
+Name:
+  TargetLanguage: English
+  Value: Skooma
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Addictive narcotic.

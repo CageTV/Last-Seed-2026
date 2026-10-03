@@ -1,0 +1,24 @@
+FormKey: 264EFC:LastSeed.esp
+EditorID: _Seed_ConfigMenuEffects2
+Description:
+  TargetLanguage: English
+  Value: EFFECTS  (2/3)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Player Notifications
+- Text:
+    TargetLanguage: English
+    Value: Follower Notifications
+- Text:
+    TargetLanguage: English
+    Value: Player Animations
+- Text:
+    TargetLanguage: English
+    Value: Follower Animations
+- Text:
+    TargetLanguage: English
+    Value: More

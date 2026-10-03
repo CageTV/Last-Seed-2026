@@ -1,0 +1,34 @@
+FormKey: 25FDF6:LastSeed.esp
+EditorID: _Seed_ConfigMenuSpoilage_Containers
+Description:
+  TargetLanguage: English
+  Value: >-
+    CONTAINER SPOILAGE
+
+
+    Some of the food in containers will already be spoiled.
+
+
+    DEFAULTS:
+
+
+    Just for Fun: never
+
+
+    Immersive Challenge: 50%
+
+
+    Hardcore Survival: 75%
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

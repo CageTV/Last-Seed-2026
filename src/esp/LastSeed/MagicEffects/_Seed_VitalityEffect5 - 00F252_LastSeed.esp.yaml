@@ -1,0 +1,19 @@
+FormKey: 00F252:LastSeed.esp
+EditorID: _Seed_VitalityEffect5
+Name:
+  TargetLanguage: English
+  Value: 'Vitality: Healthy'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You are healthy.

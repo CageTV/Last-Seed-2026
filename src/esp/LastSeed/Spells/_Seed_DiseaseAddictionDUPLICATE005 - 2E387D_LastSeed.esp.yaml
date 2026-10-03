@@ -1,0 +1,61 @@
+FormKey: 2E387D:LastSeed.esp
+EditorID: _Seed_DiseaseAddictionDUPLICATE005
+Name:
+  TargetLanguage: English
+  Value: Crippling Skooma Withdrawal
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 2E3889:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 204B5D:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B62:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B5F:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B5E:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B61:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B5C:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B63:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B5A:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B60:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B64:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 204B5B:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 2A1B21:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 2A1B22:LastSeed.esp
+  Data:
+    Magnitude: 25
+- BaseEffect: 2A1B23:LastSeed.esp
+  Data:
+    Magnitude: 25

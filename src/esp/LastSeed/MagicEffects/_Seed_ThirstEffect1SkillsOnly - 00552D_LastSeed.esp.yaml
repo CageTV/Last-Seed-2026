@@ -1,0 +1,18 @@
+FormKey: 00552D:LastSeed.esp
+EditorID: _Seed_ThirstEffect1SkillsOnly
+Name:
+  TargetLanguage: English
+  Value: 'Thirst: Quenched'
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: StaminaRateMult
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: You feel refreshed.

@@ -1,0 +1,36 @@
+FormKey: 00F7CC:LastSeed.esp
+EditorID: _Seed_IntensityDamagePerk
+Name:
+  TargetLanguage: English
+  Value: Unbound Intensity
+Description:
+  TargetLanguage: English
+  Value: ''
+NumRanks: 1
+Playable: True
+Effects:
+- MutagenObjectType: PerkEntryPointModifyValue
+  EntryPoint: ModIncomingDamage
+  PerkConditionTabCount: 3
+  Modification: Multiply
+  Value: 0.33
+- MutagenObjectType: PerkEntryPointModifyValue
+  EntryPoint: ModSpellCost
+  PerkConditionTabCount: 2
+  Modification: Multiply
+  Value: 0.25
+- MutagenObjectType: PerkEntryPointModifyValue
+  EntryPoint: ModSpellMagnitude
+  PerkConditionTabCount: 3
+  Modification: Multiply
+  Value: 5
+- MutagenObjectType: PerkEntryPointModifyValue
+  EntryPoint: ModAttackDamage
+  PerkConditionTabCount: 3
+  Modification: Multiply
+  Value: 3
+- MutagenObjectType: PerkEntryPointModifyValue
+  EntryPoint: ModPowerAttackStamina
+  PerkConditionTabCount: 2
+  Modification: Multiply
+  Value: 0.25

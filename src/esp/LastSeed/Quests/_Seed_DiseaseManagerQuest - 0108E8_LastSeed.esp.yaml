@@ -1,0 +1,149 @@
+FormKey: 0108E8:LastSeed.esp
+EditorID: _Seed_DiseaseManagerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _seed_diseasemanager
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CureDiseaseSetting
+      Object: 158877:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DirtyWater
+      Object: 0108E9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseSpellsAll
+      Object: 5B2987:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseSpellsBase
+      Object: 0108EA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseSpellsCurrentCrippling
+      Object: 176E94:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseSpellsCurrentDeadly
+      Object: 176E95:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseSpellsCurrentMild
+      Object: 176E91:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseSpellsCurrentModerate
+      Object: 176E92:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DiseaseSpellsCurrentSevere
+      Object: 176E93:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProgressiveDiseasesEnabled
+      Object: 5A8772:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SafeLocations
+      Object: 36731A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceDirtyWater
+      Object: 209C71:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceRawFood
+      Object: 209C70:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseChanceStaleFood
+      Object: 209C72:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DiseaseType
+      Object: 010835:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SettingAdditionalDiseases
+      Object: 59E56D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SpoiledFoods
+      Object: 009BD3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ActorTypeCreature
+      Object: 013795:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DA11Cannibalism
+      Object: 0EE5C3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DA11RingofNamira
+      Object: 02C37B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeAnimalDen
+      Object: 0130DE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeCemetery
+      Object: 01CD58:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeDragonLair
+      Object: 0130E0:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeDragonPriestLair
+      Object: 0130E1:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeDraugrCrypt
+      Object: 0130E2:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeDungeon
+      Object: 0130DB:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeDwarvenAutomatons
+      Object: 0130E3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeFalmerHive
+      Object: 0130E4:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeFarm
+      Object: 018EF0:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeGiantCamp
+      Object: 0130E5:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeGuild
+      Object: 01CD5A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeHabitation
+      Object: 039793:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeHagravenNest
+      Object: 0130E6:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeHouse
+      Object: 01CB85:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeInn
+      Object: 01CB87:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeJail
+      Object: 01CD59:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeMine
+      Object: 018EF1:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypePlayerHouse
+      Object: 0FC1A3:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeShipwreck
+      Object: 01929F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeSprigganGrove
+      Object: 0130EA:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeTemple
+      Object: 01CD56:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeVampireLair
+      Object: 0130EB:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LocTypeWerewolfLair
+      Object: 0130ED:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TrapDiseaseSanguinareVampiris
+      Object: 0037E9:Dawnguard.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Disease Handler
+NextAliasID: 0

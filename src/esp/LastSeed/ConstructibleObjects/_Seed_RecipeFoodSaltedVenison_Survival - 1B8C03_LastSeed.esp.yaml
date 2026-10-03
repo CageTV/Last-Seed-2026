@@ -1,0 +1,19 @@
+FormKey: 1B8C03:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedVenison_Survival
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 0669A2:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+CreatedObject: 18B2AE:LastSeed.esp
+WorkbenchKeyword: CCA002:Update.esm
+CreatedObjectCount: 1

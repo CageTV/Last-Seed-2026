@@ -1,0 +1,18 @@
+FormKey: 59E54C:LastSeed.esp
+EditorID: _Seed_DiseaseBrownRot5
+Name:
+  TargetLanguage: English
+  Value: Deadly Brown Rot
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 59E545:LastSeed.esp
+  Data: {}

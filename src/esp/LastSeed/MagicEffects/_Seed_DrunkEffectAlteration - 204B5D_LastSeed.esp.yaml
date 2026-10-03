@@ -1,0 +1,22 @@
+FormKey: 204B5D:LastSeed.esp
+EditorID: _Seed_DrunkEffectAlteration
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Alteration'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: AlterationModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

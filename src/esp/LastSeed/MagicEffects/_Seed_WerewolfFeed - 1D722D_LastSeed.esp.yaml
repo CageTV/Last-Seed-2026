@@ -1,0 +1,34 @@
+FormKey: 1D722D:LastSeed.esp
+EditorID: _Seed_WerewolfFeed
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_WerewolfFeed
+Name:
+  TargetLanguage: English
+  Value: Werewolf Feed
+Flags:
+- Recover
+- NoDuration
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Werewolf Feed.
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsIDConditionData
+    Object: 000007:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 007073:LastSeed.esp
+  ComparisonValue: 2

@@ -1,0 +1,34 @@
+FormKey: 120D5E:LastSeed.esp
+EditorID: _Seed_CustomiseFoodMsgRestore
+Description:
+  TargetLanguage: English
+  Value: >-
+    How much hunger does this food restore?
+
+
+    Light Meals: Raw vegetables, raw small game, raw Fish, raw seafood and milk
+
+
+    Medium Meals: Bread, raw large meat, cooked small game, cooked fish, cooked seafood, raw fruit, cooked vegetables, treats and Cheese
+
+
+    Filling Meals: Cooked large meat, simple soups & stews, small pastries and cheesebowls
+
+
+    Hearty Meals: Complex stews and large pastries.
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Light
+- Text:
+    TargetLanguage: English
+    Value: Medium
+- Text:
+    TargetLanguage: English
+    Value: Filling
+- Text:
+    TargetLanguage: English
+    Value: Hearty

@@ -1,0 +1,30 @@
+FormKey: 58A126:LastSeed.esp
+EditorID: _Seed_DeathGripChokeEffect
+Name:
+  TargetLanguage: English
+  Value: Death Grip (Cloak)
+MenuDisplayObject: 0A6459:Skyrim.esm
+Keywords:
+- 0A9B1F:Skyrim.esm
+Flags:
+- SnapToNavmesh
+- NoArea
+- FXPersist
+- PowerAffectsMagnitude
+- NoDeathDispel
+BaseCost: 0.05
+MagicSkill: Destruction
+CastingLight: 58A127:LastSeed.esp
+Archetype:
+  MutagenObjectType: MagicEffectCloakArchetype
+  Association: 58A11D:LastSeed.esp
+Projectile: 58A129:LastSeed.esp
+CastType: Concentration
+CastingArt: 0510CF:Skyrim.esm
+SkillUsageMultiplier: 1
+DualCastScale: 1
+Sounds:
+- Sound: 03F37A:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''

@@ -1,0 +1,57 @@
+FormKey: 288618:LastSeed.esp
+EditorID: _Seed_RainBarrel_Real
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_RainBarrelActivateScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Dialog_NoWaterskinsMsg
+      Object: 2EDA96:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottle
+      Object: 506652:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleClean
+      Object: 506653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleEmpty
+      Object: 506654:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin1
+      Object: 01088E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin1Clean
+      Object: 01088F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterSkin2
+      Object: 010890:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterSkin2Clean
+      Object: 010891:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin3
+      Object: 010892:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin3Clean
+      Object: 010893:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinEmpty
+      Object: 010895:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+ObjectBounds:
+  First: -63, -49, 0
+  Second: 49, 58, 214
+Name:
+  TargetLanguage: English
+  Value: Rain Barrel
+Model:
+  File: lastseed\_Seed_RainBarrel.nif
+  Data: 0x020000000000000000000000
+MarkerColor: '#00CC4C33'
+ActivationSound: 0452CE:Skyrim.esm
+ActivateTextOverride:
+  TargetLanguage: English
+  Value: Use
+Flags: []

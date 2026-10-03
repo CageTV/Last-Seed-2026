@@ -1,0 +1,19 @@
+FormKey: 42CA7C:LastSeed.esp
+EditorID: _Seed_HunterbornSoupsWarning
+Description:
+  TargetLanguage: English
+  Value: >+
+    HUNTERBORN SOUPS AND STEWS
+
+
+    Last Seed has detected Hunterborn Soups and Stews. This mod includes a lot of new food items, so adding them to Last Seed can take some time. Before adding them, you should make sure you are in a safe, indoor location. Would you like to add them now, or wait until the next time you load the game?
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Add Later
+- Text:
+    TargetLanguage: English
+    Value: Add Now

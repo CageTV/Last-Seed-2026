@@ -1,0 +1,22 @@
+FormKey: 18B2AE:LastSeed.esp
+EditorID: _Seed_SaltedVenison
+Name:
+  TargetLanguage: English
+  Value: Salted Venison
+Keywords:
+- 08CDEA:Skyrim.esm
+Model:
+  File: Clutter\Ingredients\VenisonCooked.nif
+  Data: 0x02000000020000000000000071211F8464647300604DDD5C32D164ED64647300604DDD5C
+Weight: 0.4
+Value: 5
+Flags:
+- NoAutoCalc
+- FoodItem
+ConsumeSound: 0CAF94:Skyrim.esm
+Effects:
+- BaseEffect: 0F33CB:Skyrim.esm
+  Data:
+    Magnitude: 5
+- BaseEffect: 2468BF:LastSeed.esp
+  Data: {}

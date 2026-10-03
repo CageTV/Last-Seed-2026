@@ -1,0 +1,203 @@
+FormKey: 00F7D1:LastSeed.esp
+EditorID: _Seed_IntensityOutroImod
+Animatable: True
+Duration: 3
+RadialBlurCenter: 0.5, 0.5
+BlurRadius:
+- Value: 0.5
+- Time: 0.07
+  Value: 2
+- Time: 1
+DoubleVisionStrength:
+- {}
+- Time: 1
+TintColor:
+- Color: '#8CFDD835'
+- Time: 0.07
+  Color: '#96FDD835'
+- Time: 1
+  Color: '#00FDD835'
+FadeColor:
+- Color: '#00FFFFFF'
+- Time: 1
+  Color: '#00FFFFFF'
+RadialBlurStrength:
+- Value: 0.2
+- Time: 0.07
+  Value: 0.5
+- Time: 1
+RadialBlurRampUp:
+- Value: 0.5
+- Time: 1
+RadialBlurStart:
+- Value: 0.3
+- Time: 1
+RadialBlurRampDown:
+- {}
+- Time: 1
+RadialBlurDownStart:
+- {}
+- Time: 1
+DepthOfFieldStrength:
+- {}
+- Time: 1
+DepthOfFieldDistance:
+- {}
+- Time: 1
+DepthOfFieldRange:
+- {}
+- Time: 1
+MotionBlurStrength:
+- {}
+- Time: 1
+HdrEyeAdaptSpeedMult:
+- Value: 1
+- Time: 1
+  Value: 1
+HdrEyeAdaptSpeedAdd:
+- {}
+- Time: 1
+HdrBloomBlurRadiusMult:
+- Value: 1
+- Time: 1
+  Value: 1
+HdrBloomBlurRadiusAdd:
+- Value: 7
+- Time: 1
+HdrBloomThresholdMult:
+- {}
+- Time: 1
+  Value: 1
+HdrBloomThresholdAdd:
+- Value: 0.7
+- Time: 1
+HdrBloomScaleMult:
+- {}
+- Time: 1
+  Value: 1
+HdrBloomScaleAdd:
+- Value: 15
+- Time: 1
+HdrTargetLumMinMult:
+- Value: 1
+- Time: 1
+  Value: 1
+HdrTargetLumMinAdd:
+- {}
+- Time: 1
+HdrTargetLumMaxMult:
+- Value: 1
+- Time: 1
+  Value: 1
+HdrTargetLumMaxAdd:
+- {}
+- Time: 1
+HdrSunlightScaleMult:
+- Value: 1
+- Time: 1
+  Value: 1
+HdrSunlightScaleAdd:
+- Value: 0.25
+- Time: 1
+HdrSkyScaleMult:
+- {}
+- Time: 1
+  Value: 1
+HdrSkyScaleAdd:
+- {}
+- Time: 1
+Unknown08:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown48:
+- {}
+- Time: 1
+Unknown09:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown49:
+- {}
+- Time: 1
+Unknown0A:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown4A:
+- {}
+- Time: 1
+Unknown0B:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown4B:
+- {}
+- Time: 1
+Unknown0C:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown4C:
+- {}
+- Time: 1
+Unknown0D:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown4D:
+- {}
+- Time: 1
+Unknown0E:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown4E:
+- {}
+- Time: 1
+Unknown0F:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown4F:
+- {}
+- Time: 1
+Unknown10:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown50:
+- {}
+- Time: 1
+CinematicSaturationMult:
+- Value: 0.65
+- Time: 1
+  Value: 1
+CinematicSaturationAdd:
+- {}
+- Time: 1
+CinematicBrightnessMult:
+- Value: 1
+- Time: 1
+  Value: 1
+CinematicBrightnessAdd:
+- Value: 0.2
+- Time: 0.07
+  Value: 0.5
+- Time: 1
+CinematicContrastMult:
+- Value: 1
+- Time: 1
+  Value: 1
+CinematicContrastAdd:
+- Value: 0.35
+- Time: 0.07
+  Value: 0.5
+- Time: 1
+Unknown14:
+- Value: 1
+- Time: 1
+  Value: 1
+Unknown54:
+- {}
+- Time: 1

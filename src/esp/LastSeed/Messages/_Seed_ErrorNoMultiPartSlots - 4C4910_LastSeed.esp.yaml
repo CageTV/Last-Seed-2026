@@ -1,0 +1,7 @@
+FormKey: 4C4910:LastSeed.esp
+EditorID: _Seed_ErrorNoMultiPartSlots
+Description:
+  TargetLanguage: English
+  Value: Cannont add multi-part food, there are no slots remaining.
+INAM: 0x00000000
+DisplayTime: 2

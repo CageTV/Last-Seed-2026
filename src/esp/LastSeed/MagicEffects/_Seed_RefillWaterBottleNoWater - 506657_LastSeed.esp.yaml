@@ -1,0 +1,47 @@
+FormKey: 506657:LastSeed.esp
+EditorID: _Seed_RefillWaterBottleNoWater
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FillWaterskinNoWater
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleClean
+      Object: 506653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleEmpty
+      Object: 506654:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleFull
+      Object: 506652:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleSea
+      Object: 506656:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BottleSnow
+      Object: 533F8F:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Refill Empty Bottle Waterfall
+Flags:
+- NoDuration
+- NoMagnitude
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsIDConditionData
+    Object: 000007:Skyrim.esm
+  ComparisonValue: 1
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsInDangerousWaterConditionData
+    RunOnType: Target

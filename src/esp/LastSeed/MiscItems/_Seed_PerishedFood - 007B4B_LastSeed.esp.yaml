@@ -1,0 +1,9 @@
+FormKey: 007B4B:LastSeed.esp
+EditorID: _Seed_PerishedFood
+Name:
+  TargetLanguage: English
+  Value: Perished Food
+Model:
+  File: lastseed\_Seed_PerishedFood01.nif
+  Data: 0x020000000000000000000000
+Weight: 0.5

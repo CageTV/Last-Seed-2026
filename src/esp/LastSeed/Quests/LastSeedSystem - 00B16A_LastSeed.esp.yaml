@@ -1,0 +1,173 @@
+FormKey: 00B16A:LastSeed.esp
+EditorID: LastSeedSystem
+VirtualMachineAdapter:
+  Scripts:
+  - Name: LastSeedAPI
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_IsSpecialEdition
+      Object: 0742B9:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_AlcoholLevel
+      Object: 1E1432:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_APIVersion
+      Object: 010834:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FatigueLevel
+      Object: 00F7D8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HungerLevel
+      Object: 00F7D6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HungerLevel_Party
+      Object: 3C763C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IsPlayerFocused
+      Object: 00C195:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_LastSeedVersion
+      Object: 00A69A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_OblivionAreas
+      Object: 4789A0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_OblivionCells
+      Object: 47899F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_OblivionLocations
+      Object: 47899E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SkoomaLevel
+      Object: 2A6C34:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel
+      Object: 00F7D7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ThirstLevel_Party
+      Object: 3D1841:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_VitalityLevel
+      Object: 00F7D5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Activators
+      Object: 5F47F1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Alcohol
+      Object: 0108E7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Animation
+      Object: 27420D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AutoConsumeFollowers
+      Object: 2468CD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AutoConsumeParty
+      Object: 3DBA47:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AutoConsumePlayer
+      Object: 083E0D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Compatibility
+      Object: 000D72:LastSeed.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: config
+      Object: 250AD0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: CustomiseFood
+      Object: 116B56:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Dialog
+      Object: 158876:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Disease
+      Object: 0108E8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_LastSeedLoaded
+      Object: 00A698:LastSeed.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: EventEmitter_OnRescuePlayer
+      Object: 5576AD:LastSeed.esp
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Fatigue
+      Object: 0029D2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FatigueMeterHandler
+      Object: 004FC1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Followers
+      Object: 0CFD35:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodDatastore
+      Object: 00B6CD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodMaintenance
+      Object: 575D0F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HitMonitor
+      Object: 59E53F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: hunger
+      Object: 0029CC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerMeterHandler
+      Object: 003F99:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: HungerParty
+      Object: 3C763B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: LastSeedRunning
+      Object: 00B162:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Main
+      Object: 000D72:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Monster
+      Object: 1D722E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Rescue
+      Object: 55C7CE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SkillTree
+      Object: 4A11E1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Skooma
+      Object: 2A6C31:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Spoil
+      Object: 000D68:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Thirst
+      Object: 0029D5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstMeterHandler
+      Object: 004A5E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: ThirstParty
+      Object: 3D1843:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Translation
+      Object: 2F2BA5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Vendor
+      Object: 53909B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: vitality
+      Object: 004FC2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VitalityMeterHandler
+      Object: 004FC3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WATER
+      Object: 32A6ED:LastSeed.esp
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+NextAliasID: 0

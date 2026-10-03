@@ -1,0 +1,816 @@
+FormKey: 00B6CD:LastSeed.esp
+EditorID: _Seed_FoodDatastoreHandlerQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FoodDatastoreHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_ModWaterSkins
+      Object: 05711E:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_BloodPotions
+      Object: 501546:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_BloodPotionsBASE
+      Object: 501547:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Bread
+      Object: 009666:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_BreadBASE
+      Object: 1E6536:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Cheese
+      Object: 009663:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheeseBASE
+      Object: 1E6537:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheeseBowls
+      Object: 00C718:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CheeseBowlsBASE
+      Object: 1E6538:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_CookingWater
+      Object: 1B8C0C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholic
+      Object: 00C719:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicAle
+      Object: 0108EB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicAleBASE
+      Object: 1E653A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicBASE
+      Object: 1E6539:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicSpirit
+      Object: 0108EC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicSpiritBASE
+      Object: 1E653B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicWine
+      Object: 0108ED:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkAlcoholicWineBASE
+      Object: 1E653C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkMilk
+      Object: 00C71A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkMilkBASE
+      Object: 1E653D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkNonAlcoholic
+      Object: 00C71B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkNonAlcoholicBASE
+      Object: 1E653E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaStrong
+      Object: 2A6C36:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaStrongBASE
+      Object: 2FCDAE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaWeak
+      Object: 2A6C35:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkSkoomaWeakBASE
+      Object: 2FCDAD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_DrinkWater
+      Object: 1E6534:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ErrorNoMultiPartSlots
+      Object: 4C4910:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishCooked
+      Object: 00965C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishCookedBASE
+      Object: 1E653F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishRaw
+      Object: 00965B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FishRawBASE
+      Object: 1E6540:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMajor
+      Object: 00707C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMajorBASE
+      Object: 1E6541:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMassive
+      Object: 00707E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMassiveBASE
+      Object: 1E6542:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMinor
+      Object: 00707B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerMinorBASE
+      Object: 1E6535:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerSuperior
+      Object: 00707D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Food_RestoreHungerSuperiorBASE
+      Object: 1E6543:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FoodListsSet
+      Object: 47899D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FoodMiscObjects
+      Object: 32F7F1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ForceAddFoodToProvisions_CACO
+      Object: 4FC443:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Fruit
+      Object: 009660:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FruitBASE
+      Object: 1E6544:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportApothecary
+      Object: 40E466:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportApothecary_Done
+      Object: 40E467:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportBruma
+      Object: 41356D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportBruma_Done
+      Object: 41356E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportCACO
+      Object: 3C7639:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportCACO_Done
+      Object: 3C763A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportCCFish
+      Object: 42CA78:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportCCFish_Done
+      Object: 42CA79:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportHunterborn
+      Object: 40E468:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportHunterborn_Done
+      Object: 40E469:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportHunterbornSoups
+      Object: 42CA7A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportHunterbornSoups_Done
+      Object: 42CA7B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportMealtime
+      Object: 64A918:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportMealtime_Done
+      Object: 64A919:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportNordicCooking
+      Object: 64A916:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportNordicCooking_Done
+      Object: 64A917:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportProjectAho
+      Object: 64A912:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportProjectAho_Done
+      Object: 64A913:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportRequiem
+      Object: 40E46A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportRequiem_Done
+      Object: 40E46B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportSAFO
+      Object: 64A914:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportSAFO_Done
+      Object: 64A915:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportWarmDrinks
+      Object: 64A910:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ImportWarmDrinks_Done
+      Object: 64A911:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatCooked
+      Object: 009658:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatCookedBASE
+      Object: 1E6545:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatRaw
+      Object: 009657:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MeatRawBASE
+      Object: 1E6546:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_NotFood
+      Object: 13A268:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_NotFoodBASE
+      Object: 1E6547:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Pastries
+      Object: 009665:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PastriesBASE
+      Object: 1E6548:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PerishedFood
+      Object: 007B4B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection
+      Object: 515962:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_AlcoholModerate
+      Object: 515969:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_AlcoholStrong
+      Object: 51596A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_AlcoholWeak
+      Object: 515968:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Bread
+      Object: 51AA71:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Cheese
+      Object: 51AA7C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_CheeseBowls
+      Object: 51AA80:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_DrinkAlcoholic
+      Object: 51AA82:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_DrinkMilk
+      Object: 51AA81:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_DrinkNonAlcoholic
+      Object: 51AA83:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_FishCooked
+      Object: 51AA77:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_FishRaw
+      Object: 51AA76:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Fruit
+      Object: 51AA7B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_HungerFilling
+      Object: 515965:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_HungerHearty
+      Object: 515966:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_HungerLight
+      Object: 515963:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_HungerMedium
+      Object: 515964:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_MeatCooked
+      Object: 51AA73:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_MeatRaw
+      Object: 51AA72:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_NotFood
+      Object: 51596F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Pastries
+      Object: 51AA7E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Preserved
+      Object: 51596D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Salted
+      Object: 51596E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_SeafoodCooked
+      Object: 51AA79:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_SeafoodRaw
+      Object: 51AA78:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_SkoomaStrong
+      Object: 51596C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_SkoomaWeak
+      Object: 51596B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_SmallGameCooked
+      Object: 51AA75:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_SmallGameRaw
+      Object: 51AA74:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Stews
+      Object: 51AA7F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Thirst
+      Object: 515967:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Treats
+      Object: 51AA7D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PO3_Detection_Vegetables
+      Object: 51AA7A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Preserved
+      Object: 00C71C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_PreservedBASE
+      Object: 1E6549:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsAddPortions
+      Object: 0E923F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsContainerRef
+      Object: 074B07:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity01
+      Object: 1AE9ED:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity02
+      Object: 00C71D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity03
+      Object: 1AE9EE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity04
+      Object: 1AE9EF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity05
+      Object: 1AE9F0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity06
+      Object: 1AE9F1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity07
+      Object: 1AE9F2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity08
+      Object: 00C71F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity09
+      Object: 1B3AF4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity10
+      Object: 1B3AF5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity11
+      Object: 1B3AF6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity12
+      Object: 1B3AF7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity13
+      Object: 1B3AF8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity14
+      Object: 1B3AF9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity15
+      Object: 1B3AFA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity16
+      Object: 1B3AFB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity17
+      Object: 1B3AFC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity18
+      Object: 1B3AFD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity19
+      Object: 1B3AFE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Quantity20
+      Object: 1B3AFF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMajorAmount
+      Object: 008B73:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMassiveAmount
+      Object: 00C710:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerMinorAmount
+      Object: 008B72:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RestoreHungerSuperiorAmount
+      Object: 008B74:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RiverWater
+      Object: 506659:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SaltedFood
+      Object: 18B2BB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SaltedFoodBASE
+      Object: 1E654A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodCooked
+      Object: 00965E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodCookedBASE
+      Object: 1E654B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodRaw
+      Object: 00965D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SeafoodRawBASE
+      Object: 1E654C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_AddNames
+      Object: 3348F6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodPriceMulti
+      Object: 2CF454:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FoodWeightMulti
+      Object: 2CF455:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate01_Bread
+      Object: 20ED75:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate02_RawMeat
+      Object: 20ED76:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate03_CookedMeat
+      Object: 20ED77:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate04_RawSmallGame
+      Object: 20ED78:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate05_CookedSmallGame
+      Object: 20ED79:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate06_RawFish
+      Object: 20ED7A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate07_CookedFish
+      Object: 20ED7B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate08_RawSeafood
+      Object: 20ED7C:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate09_CookedSeafood
+      Object: 20ED7D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate10_Vegitables
+      Object: 20ED7E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate11_Fruit
+      Object: 20ED7F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate12_Cheese
+      Object: 20ED80:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate13_Treats
+      Object: 20ED81:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate14_Pastry
+      Object: 20ED82:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate15_Stew
+      Object: 20ED83:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate16_CheeseBowls
+      Object: 20ED84:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_SpoilRate17_Milk
+      Object: 20ED85:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Settings_EnableWaterBottles
+      Object: 636507:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameCooked
+      Object: 00965A:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameCookedBASE
+      Object: 1E654D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameRaw
+      Object: 009659:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SmallGameRawBASE
+      Object: 1E654E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Bread
+      Object: 009643:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Cheese
+      Object: 009661:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_CheeseBowl
+      Object: 009655:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_FishCooked
+      Object: 009647:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_FishRaw
+      Object: 009645:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Fruit
+      Object: 009641:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_MeatCooked
+      Object: 00963B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_MeatRaw
+      Object: 009639:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Milk
+      Object: 009BD1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Pastry
+      Object: 009651:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_SeafoodCooked
+      Object: 00964B:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_SeafoodRaw
+      Object: 009649:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_SmallGameCooked
+      Object: 00963F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_SmallGameRaw
+      Object: 00963D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Stew
+      Object: 009653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Treat
+      Object: 00964F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Spoiled_Vegetable
+      Object: 00964D:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SpoiledFoods
+      Object: 009BD3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Stews
+      Object: 009667:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_StewsBASE
+      Object: 1E654F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_SystemFoods
+      Object: 5576AC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_TestFood
+      Object: 2CF456:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Treats
+      Object: 009664:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_TreatsBASE
+      Object: 1E6550:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Vegetables
+      Object: 00965F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_VegetablesBASE
+      Object: 1E6551:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottle
+      Object: 506652:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleClean
+      Object: 506653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleEmpty
+      Object: 506654:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleSea
+      Object: 506656:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterBottleSnow
+      Object: 533F8F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin1
+      Object: 01088E:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin1Clean
+      Object: 01088F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterSkin2
+      Object: 010890:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterSkin2Clean
+      Object: 010891:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin3
+      Object: 010892:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Waterskin3Clean
+      Object: 010893:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinEmpty
+      Object: 010895:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinSea
+      Object: 010894:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_WaterskinSnow
+      Object: 2FCDA9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Ale
+      Object: 034C5E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AleWhiterunQuest
+      Object: 09380D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BYOHFoodButter
+      Object: 00353C:HearthFires.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BYOHFoodFlour
+      Object: 003538:HearthFires.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BYOHFoodWineBottle03
+      Object: 003536:HearthFires.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: BYOHFoodWineBottle04
+      Object: 003535:HearthFires.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC1BloodPotion
+      Object: 018EF3:Dawnguard.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2Flin
+      Object: 0207E5:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2FoodAshfireMead
+      Object: 03572F:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2FoodAshHopperMeat
+      Object: 03BD15:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2FoodBoarMeat
+      Object: 03BD14:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2FoodBoarMeatCooked
+      Object: 03CF72:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2Matze
+      Object: 0248CE:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2RRF04Sujamma
+      Object: 024E0B:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2RRFavor01EmberbrandWine
+      Object: 0320DF:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2Shein
+      Object: 0248CC:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2Sujamma
+      Object: 0207E6:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FavorSorexRum
+      Object: 0D055E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FirebrandWine
+      Object: 01895F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodBeef
+      Object: 065C99:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodBeefCooked
+      Object: 0721E8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodBlackBriarMead
+      Object: 02C35A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodBlackBriarMeadPrivateReserve
+      Object: 0F693F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodBread01A
+      Object: 065C97:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodBread01B
+      Object: 065C98:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodCheeseWedge01
+      Object: 064B31:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodCheeseWedge02
+      Object: 064B32:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodCheeseWheel01A
+      Object: 064B33:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodCheeseWheel01B
+      Object: 064B35:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodCheeseWheel02A
+      Object: 064B34:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodCheeseWheel02B
+      Object: 064B36:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodGoatMeatCooked
+      Object: 07224C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodHoney
+      Object: 10394D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodHonningbrewMead
+      Object: 0508CA:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodHorkerMeat
+      Object: 065C9B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodHorseMeat
+      Object: 065C9C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodHorseMeatCooked
+      Object: 0722B0:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodMammothMeat
+      Object: 0669A4:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodMead
+      Object: 034C5D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodPie
+      Object: 064B43:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodSolitudeSpicedWine
+      Object: 085368:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodVenison
+      Object: 0669A2:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodWineAlto
+      Object: 03133B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodWineAltoA
+      Object: 0C5349:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodWineBottle02
+      Object: 03133C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodWineBottle02A
+      Object: 0C5348:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FreeformDragonBridgeMead
+      Object: 0555E8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MQ101JuniperMead
+      Object: 107A8A:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MQ201Drink
+      Object: 036D53:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MS14WineAltoA
+      Object: 0F257E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TGTQ02BalmoraBlue
+      Object: 0DC172:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFood
+      Object: 08CDEA:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: VendorItemFoodRaw
+      Object: 0A0E56:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: WEDL03CyrodilicBrandy
+      Object: 0B91D7:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Food Datastore Handler
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0

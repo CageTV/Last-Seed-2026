@@ -1,0 +1,42 @@
+FormKey: 010885:LastSeed.esp
+EditorID: _Seed_FoodPortionsWaterskin3
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FoodPortions
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsAddPortions
+      Object: 0E923F:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_ProvisionsContainerRef
+      Object: 074B07:LastSeed.esp
+    - MutagenObjectType: ScriptIntProperty
+      Name: count
+      Data: 1
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FoodItem
+      Object: 010890:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Drink Waterskin, Full
+Flags:
+- Recover
+- NoDuration
+- NoMagnitude
+- NoArea
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  Type: Script
+CastType: FireAndForget
+DualCastScale: 1
+CastingSoundLevel: Normal
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: 3 Servings.
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetIsIDConditionData
+    Object: 000007:Skyrim.esm
+  ComparisonValue: 1

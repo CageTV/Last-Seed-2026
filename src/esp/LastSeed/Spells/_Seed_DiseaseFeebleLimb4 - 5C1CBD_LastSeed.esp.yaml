@@ -1,0 +1,19 @@
+FormKey: 5C1CBD:LastSeed.esp
+EditorID: _Seed_DiseaseFeebleLimb4
+Name:
+  TargetLanguage: English
+  Value: Crippling Feeble Limb
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1CB5:LastSeed.esp
+  Data:
+    Magnitude: 40

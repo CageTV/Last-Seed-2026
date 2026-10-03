@@ -1,0 +1,20 @@
+FormKey: 1B8C01:LastSeed.esp
+EditorID: _Seed_ReduceThirst
+Name:
+  TargetLanguage: English
+  Value: Reduce Thirst
+MenuDisplayObject: 0435A5:Skyrim.esm
+Flags:
+- NoDuration
+- NoArea
+- PowerAffectsMagnitude
+BaseCost: 1
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+CastType: FireAndForget
+DualCastScale: 1
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: Restores Thirst.

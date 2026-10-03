@@ -1,0 +1,30 @@
+FormKey: 250AD1:LastSeed.esp
+EditorID: _Seed_ConfigMenuMain
+Description:
+  TargetLanguage: English
+  Value: LAST SEED OPTIONS
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Exit
+- Text:
+    TargetLanguage: English
+    Value: Overview
+- Text:
+    TargetLanguage: English
+    Value: Needs
+- Text:
+    TargetLanguage: English
+    Value: Alchohol & Disease
+- Text:
+    TargetLanguage: English
+    Value: Food Spoilage
+- Text:
+    TargetLanguage: English
+    Value: Effects
+- Text:
+    TargetLanguage: English
+    Value: Other

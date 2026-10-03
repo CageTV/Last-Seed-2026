@@ -1,0 +1,226 @@
+FormKey: 55C7CE:LastSeed.esp
+EditorID: _Seed_RescueSystemQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FallbackReceiverRescueSystem
+  - Name: _Seed_RescueSystem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Campfire
+      Object: 031DAF:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Campfire_Light_3
+      Object: 025BBB:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_ForceBlackVFX
+      Object: 053168:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Fuel_Flickering_BranchesLit
+      Object: 0328A6:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Fuel_Flickering_BranchesUnlit
+      Object: 0328A7:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_LastUsedCampfireSize
+      Object: CC0E0C:Update.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Camp_Trees
+      Object: 01D441:Campfire.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_LastSleepMarker
+      Object: 599433:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerDawnstar
+      Object: 05226F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerDragonbridge
+      Object: 10C072:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerFalkreath
+      Object: 10C075:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerIvarstead
+      Object: 10C074:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerKynesgrove
+      Object: 020A08:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerMarkarth
+      Object: 0F9952:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerMorthal
+      Object: 10DE51:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerNightgateInn
+      Object: 020059:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerRiften
+      Object: 05CE28:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerRiverwood
+      Object: 013164:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerRorikstead
+      Object: 10C078:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerSolitude
+      Object: 10C073:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerTamriel
+      Object: 0DC1C8:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerWhiterun
+      Object: 0769DD:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerWindhelm
+      Object: 047CAE:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_MarkerWinterhold
+      Object: 01EB7F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueDestinationMarker
+      Object: 5576CC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueLetterSettlement
+      Object: 5576AE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueLetterSpouse
+      Object: 5576AF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_A_1
+      Object: 5576C0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_A_2
+      Object: 5576C1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_D_1
+      Object: 5576C2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_D_2
+      Object: 5576C3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_D_3
+      Object: 5576C4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_D_4
+      Object: 5576C5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_F_1
+      Object: 5576C7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_F_2
+      Object: 5576C8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_F_3
+      Object: 5576C9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_F_4
+      Object: 5576CA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_F_5
+      Object: 5576CB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_Failsafe
+      Object: 5576C6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RescueMsg_LastSleepLocation
+      Object: 599432:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterOther
+      Object: 5576B0:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Dawnstar
+      Object: 5576B1:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_DragonBridge
+      Object: 5576B2:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Falkreath
+      Object: 5576B3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Ivarstead
+      Object: 5576B4:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Kynesgrove
+      Object: 5576B5:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Markarth
+      Object: 5576B6:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Morthal
+      Object: 5576B7:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_NightgateInn
+      Object: 5576B8:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Riften
+      Object: 5576B9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Riverwood
+      Object: 5576BA:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Rorikstead
+      Object: 5576BB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Solitude
+      Object: 5576BC:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Whiterun
+      Object: 5576BD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Windhelm
+      Object: 5576BE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_RobLetterSettlement_Winterhold
+      Object: 5576BF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Alias_LoveInterest
+      Object: 021382:Skyrim.esm
+      Alias: 0
+    - MutagenObjectType: ScriptObjectProperty
+      Name: COCMarkerHeading
+      Object: 000032:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC01FalmerValley
+      Object: 000BB5:Dawnguard.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DLC2SolstheimWorld
+      Object: 000800:Dragonborn.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FadeToBlackHoldImod
+      Object: 0F756E:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: FadeToBlackImod
+      Object: 0F756D:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: GameHour
+      Object: 000038:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Gold001
+      Object: 00000F:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Idle_1stPersonWoozyGetUpFromBed
+      Object: 0CF2C6:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PHYGenericDirtHeavyH
+      Object: 044678:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: SleepyTimeFadeIn
+      Object: 0F342B:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Tamriel
+      Object: 00003C:Skyrim.esm
+    - MutagenObjectType: ScriptObjectProperty
+      Name: TG05_KnockOut
+      Object: 0D17FB:Skyrim.esm
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Rescue System
+NextAliasID: 0

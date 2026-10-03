@@ -1,0 +1,21 @@
+FormKey: 5C1D80:LastSeed.esp
+EditorID: _Seed_DiseaseScalonSunburn
+Name:
+  TargetLanguage: English
+  Value: Scalon Sunburn
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1D76:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 5C1D77:LastSeed.esp
+  Data: {}

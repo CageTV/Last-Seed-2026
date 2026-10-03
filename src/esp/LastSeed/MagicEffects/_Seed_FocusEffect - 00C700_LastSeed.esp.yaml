@@ -1,0 +1,49 @@
+FormKey: 00C700:LastSeed.esp
+EditorID: _Seed_FocusEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_FocusEffectScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FocusOffMsg
+      Object: 00C703:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_FocusOnMsg
+      Object: 00C702:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Help_Focus
+      Object: 00C705:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Help_FocusSKSE
+      Object: 2417BD:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_HelpDone_Focus
+      Object: 00C706:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_IsPlayerFocused
+      Object: 00C195:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_DisplayTutorials
+      Object: 00C707:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_Focus
+      Object: 1EB653:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: _Seed_Setting_FocusNotifications
+      Object: 2DE76F:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Focused
+Flags:
+- Recover
+- NoArea
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: Mood
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: While in this area, you remain Focused. Hunger, thirst, and fatigue will continue to increase, but new effects will not be applied until you exit the area.

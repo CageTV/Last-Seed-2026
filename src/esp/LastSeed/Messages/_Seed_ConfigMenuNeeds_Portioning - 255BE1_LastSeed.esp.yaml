@@ -1,0 +1,25 @@
+FormKey: 255BE1:LastSeed.esp
+EditorID: _Seed_ConfigMenuNeeds_Portioning
+Description:
+  TargetLanguage: English
+  Value: >-
+    LARGE FOOD PORTIONING
+
+
+    Some large food (like cheese wheels) will be broken down into smaller portions when consumed.
+
+
+    Default: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

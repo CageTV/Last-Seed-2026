@@ -1,0 +1,21 @@
+FormKey: 2C014C:LastSeed.esp
+EditorID: _Seed_SkoomaSpell3
+Name:
+  TargetLanguage: English
+  Value: Very High
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 2E3875:LastSeed.esp
+  Data:
+    Magnitude: 75
+- BaseEffect: 2E3879:LastSeed.esp
+  Data:
+    Magnitude: 50
+- BaseEffect: 2E3878:LastSeed.esp
+  Data:
+    Magnitude: 15

@@ -1,0 +1,19 @@
+FormKey: 5C1D06:LastSeed.esp
+EditorID: _Seed_DiseaseChanthraxBlight5
+Name:
+  TargetLanguage: English
+  Value: Deadly Chanthrax Blight
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1CFD:LastSeed.esp
+  Data:
+    Magnitude: 75

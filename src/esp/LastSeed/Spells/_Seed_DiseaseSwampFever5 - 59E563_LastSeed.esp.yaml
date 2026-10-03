@@ -1,0 +1,18 @@
+FormKey: 59E563:LastSeed.esp
+EditorID: _Seed_DiseaseSwampFever5
+Name:
+  TargetLanguage: English
+  Value: Deadly Swamp Fever
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 59E56B:LastSeed.esp
+  Data: {}

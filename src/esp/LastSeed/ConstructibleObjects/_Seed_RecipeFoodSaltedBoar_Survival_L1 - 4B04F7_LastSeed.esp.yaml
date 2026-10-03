@@ -1,0 +1,18 @@
+FormKey: 4B04F7:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedBoar_Survival_L1
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 6
+- Item:
+    Item: 03BD14:Dragonborn.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 1
+CreatedObject: 1903BF:LastSeed.esp
+WorkbenchKeyword: CCA002:Update.esm
+CreatedObjectCount: 1

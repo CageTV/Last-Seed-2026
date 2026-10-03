@@ -1,0 +1,82 @@
+FormKey: 58A11F:LastSeed.esp
+EditorID: _Seed_DeathGripDamageEffect
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_LichDeathGripScript
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+Name:
+  TargetLanguage: English
+  Value: Death Grip (Damage)
+MenuDisplayObject: 0A6459:Skyrim.esm
+Flags:
+- Hostile
+- Detrimental
+- NoArea
+- FXPersist
+- PowerAffectsMagnitude
+BaseCost: 0.5
+MagicSkill: Destruction
+CastingLight: 58A127:LastSeed.esp
+HitShader: 58A128:LastSeed.esp
+Archetype:
+  MutagenObjectType: MagicEffectArchetype
+  ActorValue: Mood
+Projectile: 58A129:LastSeed.esp
+CastType: Concentration
+TargetType: Aimed
+CastingArt: 0ABF02:Skyrim.esm
+HitEffectArt: 0506D6:Skyrim.esm
+SkillUsageMultiplier: 1
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds:
+- Type: OnHit
+  Sound: 58A123:LastSeed.esp
+Description:
+  TargetLanguage: English
+  Value: ''
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Flags:
+  - SwapSubjectAndTarget
+  Data:
+    MutagenObjectType: GetHeadingAngleConditionData
+  ComparisonValue: -15
+- MutagenObjectType: ConditionFloat
+  CompareOperator: LessThanOrEqualTo
+  Flags:
+  - SwapSubjectAndTarget
+  Data:
+    MutagenObjectType: GetHeadingAngleConditionData
+  ComparisonValue: 15
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: HasKeywordConditionData
+    Keyword: 035D59:Skyrim.esm
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: IsUndeadConditionData
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: HasKeywordConditionData
+    Keyword: 013796:Skyrim.esm
+- MutagenObjectType: ConditionFloat
+  Data:
+    MutagenObjectType: HasKeywordConditionData
+    Keyword: 01397A:Skyrim.esm
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThan
+  Flags:
+  - OR
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 0029CD:LastSeed.esp
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThan
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 0029CE:LastSeed.esp

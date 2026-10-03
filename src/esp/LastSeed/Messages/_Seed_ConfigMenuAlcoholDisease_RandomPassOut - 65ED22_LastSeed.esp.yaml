@@ -1,0 +1,25 @@
+FormKey: 65ED22:LastSeed.esp
+EditorID: _Seed_ConfigMenuAlcoholDisease_RandomPassOut
+Description:
+  TargetLanguage: English
+  Value: >-
+    CHANGE LOCATION ON PASS OUT
+
+
+    If enabled, you will wake up in a random location (or possibly in jail), after passing out.
+
+
+    Default: On
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

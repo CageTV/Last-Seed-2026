@@ -1,0 +1,20 @@
+FormKey: 67823F:LastSeed.esp
+EditorID: _Seed_Oven_MiscItem
+VirtualMachineAdapter:
+  Scripts:
+  - Name: CampPlaceableMiscItem
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_placement_indicator
+      Object: 678240:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Required_this_item
+      Object: 67823F:LastSeed.esp
+Name:
+  TargetLanguage: English
+  Value: Oven
+Model:
+  File: _BYOH\Furniture\OvenMarker.nif
+  Data: 0x020000000000000000000000
+Value: 60
+Weight: 100

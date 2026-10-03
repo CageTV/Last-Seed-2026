@@ -1,0 +1,19 @@
+FormKey: 5C1D3F:LastSeed.esp
+EditorID: _Seed_DiseaseAshWoeBlight2
+Name:
+  TargetLanguage: English
+  Value: Moderate Ash Woe Blight
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Flags:
+- ManualCostCalc
+- NoAbsorbOrReflect
+Type: Disease
+ChargeTime: 0.5
+TargetType: Touch
+Effects:
+- BaseEffect: 5C1D39:LastSeed.esp
+  Data:
+    Magnitude: 40

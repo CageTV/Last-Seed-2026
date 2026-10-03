@@ -1,0 +1,25 @@
+FormKey: 594330:LastSeed.esp
+EditorID: _Seed_ConfigMenuHelp_IsLich
+Description:
+  TargetLanguage: English
+  Value: >-
+    PLAYER IS A LICH
+
+
+    Enable this setting if you have a Lich mod installed, and have transformed into a lich. When enabled, you will not restore hunger and thirst through normal means, and will instead have to consume Life Essence (which can be crafted from filled soul gems). You will also not die from lack of Vitality. 
+
+
+    Default: Disabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

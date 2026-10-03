@@ -1,0 +1,14 @@
+FormKey: 1BDD22:LastSeed.esp
+EditorID: _Seed_FatigueSpell_WellRested
+Name:
+  TargetLanguage: English
+  Value: Well Rested
+MenuDisplayObject: 10FEF4:Skyrim.esm
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 1BDD1C:LastSeed.esp
+  Data: {}

@@ -1,0 +1,22 @@
+FormKey: 204B5C:LastSeed.esp
+EditorID: _Seed_DrunkEffectIllusion
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: Illusion'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: IllusionModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

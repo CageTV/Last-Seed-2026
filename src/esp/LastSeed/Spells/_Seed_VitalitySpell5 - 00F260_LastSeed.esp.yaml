@@ -1,0 +1,13 @@
+FormKey: 00F260:LastSeed.esp
+EditorID: _Seed_VitalitySpell5
+Name:
+  TargetLanguage: English
+  Value: Healthy
+EquipmentType: 013F44:Skyrim.esm
+Description:
+  TargetLanguage: English
+  Value: ''
+Type: Ability
+Effects:
+- BaseEffect: 00F252:LastSeed.esp
+  Data: {}

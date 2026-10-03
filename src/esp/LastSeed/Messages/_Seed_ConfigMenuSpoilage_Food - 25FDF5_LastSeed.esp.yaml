@@ -1,0 +1,34 @@
+FormKey: 25FDF5:LastSeed.esp
+EditorID: _Seed_ConfigMenuSpoilage_Food
+Description:
+  TargetLanguage: English
+  Value: >-
+    FOOD SPOILAGE
+
+
+    Food you pick up will spoil over time.
+
+
+    DEFAULTS:
+
+
+    Just for Fun: Disabled
+
+
+    Immersive Challenge: Enabled
+
+
+    Hardcore Survival: Enabled
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Back
+- Text:
+    TargetLanguage: English
+    Value: 1. Disable
+- Text:
+    TargetLanguage: English
+    Value: 2. Enable

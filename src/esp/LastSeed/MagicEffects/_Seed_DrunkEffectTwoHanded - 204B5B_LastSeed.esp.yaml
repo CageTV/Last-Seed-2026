@@ -1,0 +1,22 @@
+FormKey: 204B5B:LastSeed.esp
+EditorID: _Seed_DrunkEffectTwoHanded
+Name:
+  TargetLanguage: English
+  Value: 'Alcohol: TwoHanded'
+MenuDisplayObject: 0A59AE:Skyrim.esm
+Flags:
+- Recover
+- Detrimental
+- NoArea
+- HideInUI
+- PowerAffectsMagnitude
+- Painless
+Archetype:
+  MutagenObjectType: MagicEffectPeakValueModArchetype
+  ActorValue: TwoHandedModifier
+DualCastScale: 1
+CastingSoundLevel: Silent
+Sounds: []
+Description:
+  TargetLanguage: English
+  Value: ''

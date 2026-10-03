@@ -1,0 +1,19 @@
+FormKey: 18B2B6:LastSeed.esp
+EditorID: _Seed_RecipeFoodSaltedHorker
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 3
+- Item:
+    Item: 065C9B:Skyrim.esm
+    Count: 1
+Conditions:
+- MutagenObjectType: ConditionFloat
+  CompareOperator: GreaterThanOrEqualTo
+  Data:
+    MutagenObjectType: GetGlobalValueConditionData
+    Global: 47DAAA:LastSeed.esp
+  ComparisonValue: 2
+CreatedObject: 18B2AB:LastSeed.esp
+WorkbenchKeyword: 0A5CB3:Skyrim.esm
+CreatedObjectCount: 1

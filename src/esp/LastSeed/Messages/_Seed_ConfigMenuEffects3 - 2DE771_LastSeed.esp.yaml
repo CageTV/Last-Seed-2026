@@ -1,0 +1,15 @@
+FormKey: 2DE771:LastSeed.esp
+EditorID: _Seed_ConfigMenuEffects3
+Description:
+  TargetLanguage: English
+  Value: EFFECTS  (3/3)
+INAM: 0x00000000
+Flags:
+- MessageBox
+MenuButtons:
+- Text:
+    TargetLanguage: English
+    Value: Focus Notifications
+- Text:
+    TargetLanguage: English
+    Value: More

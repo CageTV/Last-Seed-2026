@@ -1,0 +1,21 @@
+FormKey: 011800:HearthFires.esm
+EditorID: BYOHRecipeFoodChickenDumplings
+Items:
+- Item:
+    Item: 034CDF:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 034D22:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0669A5:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 0F2011:Skyrim.esm
+    Count: 1
+- Item:
+    Item: 003538:HearthFires.esm
+    Count: 1
+CreatedObject: 0117FF:HearthFires.esm
+WorkbenchKeyword: 0117F7:HearthFires.esm
+CreatedObjectCount: 1

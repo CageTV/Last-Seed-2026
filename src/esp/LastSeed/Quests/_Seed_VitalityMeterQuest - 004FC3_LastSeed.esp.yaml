@@ -1,0 +1,87 @@
+FormKey: 004FC3:LastSeed.esp
+EditorID: _Seed_VitalityMeterQuest
+VirtualMachineAdapter:
+  Scripts:
+  - Name: _Seed_Meter
+    Properties:
+    - MutagenObjectType: ScriptFloatProperty
+      Name: Alpha
+    - MutagenObjectType: ScriptBoolProperty
+      Name: charge_meter
+  - Name: _Seed_VitalityMeterInterfaceHandler
+    Properties:
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeMax
+      Object: 0102AB:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: AttributeValue
+      Object: 004FC4:LastSeed.esp
+    - MutagenObjectType: ScriptFloatListProperty
+      Name: contextual_display_thresholds
+      Data:
+      - 0
+      - 20
+      - 40
+      - 60
+      - 80
+      - 100
+      - 120
+      - 140
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DebugGlobal
+      Object: 00B6CE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayMode
+      Object: 004FC9:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: DisplayTime
+      Object: 0102AC:LastSeed.esp
+    - MutagenObjectType: ScriptFloatProperty
+      Name: improvement_display_delta_threshold
+      Data: 2
+    - MutagenObjectType: ScriptObjectProperty
+      Name: MainPrimaryColor
+      Object: 0102AE:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: meter
+      Object: 004FC3:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: Opacity
+      Object: 0102AF:LastSeed.esp
+    - MutagenObjectType: ScriptObjectProperty
+      Name: PlayerRef
+      Object: 000014:Skyrim.esm
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_flash
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - False
+      - False
+      - True
+      - True
+    - MutagenObjectType: ScriptBoolListProperty
+      Name: threshold_should_stay_on
+      Data:
+      - False
+      - False
+      - False
+      - False
+      - False
+      - False
+      - False
+      - True
+  Versioning:
+  - Break0
+  ExtraBindDataVersion: 0
+  FileName: ''
+Name:
+  TargetLanguage: English
+  Value: Vitality Meter
+Flags:
+- StartGameEnabled
+- 0x10
+- RunOnce
+NextAliasID: 0
