@@ -24,7 +24,7 @@ namespace Spoilage
 		constexpr double kInvalidTime = -1.0;
 		constexpr RE::FormID kKeywordFood = 0x0008CDEA;     // VendorItemFood (Skyrim.esm)
 		constexpr RE::FormID kKeywordFoodRaw = 0x000A0E56;  // VendorItemFoodRaw (Skyrim.esm)
-		constexpr RE::FormID kEatSound = 0x000CAF94;        // ITMFoodEat (Skyrim.esm)
+		constexpr RE::FormID kDrinkSound = 0x000B6435;      // ITMPotionUse (Skyrim.esm): what ale, mead and wine play when drunk
 		constexpr int    kWorldScanTicks = 4;     // polls between looks at the containers around the player
 		constexpr float  kWorldScanRadius = 4096.0f;
 		constexpr int    kWorldBudget = 24;       // containers handled per look
@@ -147,11 +147,13 @@ namespace Spoilage
 					return a_out.spoiled && a_out.maxHours > 0.0f;
 				}
 			}
-			// Food Last Seed does not list (added by other mods): anything that is eaten (food flag, the eating sound -- drinks use the
-			// potion sound) and carries Skyrim's own VendorItemFood / VendorItemFoodRaw keyword. It rots into "perished" food.
+			// Food Last Seed does not list (added by other mods): anything with the food flag and Skyrim's own VendorItemFood /
+			// VendorItemFoodRaw keyword that is not a drink. Drinks are told apart by the drinking sound only (ITMPotionUse): eating-
+			// animation mods give foods their own eating sounds, so requiring the vanilla eating sound would wrongly leave those out.
+			// It rots into "perished" food.
 			if (const auto& s = Settings::Get(); s.keywordFoods) {
 				const auto* alch = a_form->As<RE::AlchemyItem>();
-				if (alch && alch->IsFood() && alch->data.consumptionSound && alch->data.consumptionSound->GetFormID() == kEatSound &&
+				if (alch && alch->IsFood() && !(alch->data.consumptionSound && alch->data.consumptionSound->GetFormID() == kDrinkSound) &&
 					(!d.spoiledFoods || !d.spoiledFoods->HasForm(a_form))) {
 					const bool raw = alch->HasKeywordID(kKeywordFoodRaw);
 					if (raw || alch->HasKeywordID(kKeywordFood)) {
