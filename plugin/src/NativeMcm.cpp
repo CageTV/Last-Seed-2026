@@ -1,6 +1,7 @@
 #include "PCH.h"
 #include "NativeMcm.h"
 #include "Game.h"
+#include "Hotkeys.h"
 #include "McmTable.h"
 
 #include "SKSEMenuFramework.h"
@@ -143,9 +144,30 @@ namespace NativeMcm
 				break;
 			case mcm::Kind::Key:
 				if (auto* g = Global(a_e.formId)) {
-					Text("%s", a_e.label);
+					const int slot = static_cast<int>(a_e.formId);
+					int       picked = 0;
+					if (Hotkeys::CapturingSlot() == slot) {
+						if (Hotkeys::TakeCaptured(slot, picked)) {
+							Changed(a_e, g, static_cast<float>(picked), picked);
+							if (auto* dh = RE::TESDataHandler::GetSingleton()) {
+								if (auto* spell = dh->LookupForm<RE::SpellItem>(a_e.aux, "LastSeed.esp"); spell && RE::PlayerCharacter::GetSingleton()) {
+									RE::PlayerCharacter::GetSingleton()->RemoveSpell(spell);  // as the MCM does when a hotkey changes
+								}
+							}
+						}
+					}
+					if (Hotkeys::CapturingSlot() == slot) {
+						if (Button("Press a key...  (Esc cancels, Delete clears)")) {
+							Hotkeys::CancelCapture();
+						}
+					} else {
+						const std::string text = std::string(Hotkeys::KeyName(static_cast<int>(g->value))) + "##key";
+						if (Button(text.c_str(), ImVec2(180.0f, 0.0f))) {
+							Hotkeys::BeginCapture(slot);
+						}
+					}
 					SameLine();
-					TextDisabled("(key %d)", static_cast<int>(g->value));
+					Text("%s", a_e.label);
 				}
 				break;
 			case mcm::Kind::Menu:
@@ -234,7 +256,7 @@ namespace NativeMcm
 		if (std::string_view(page.title) == "Other") {
 			DrawProvisioning();
 			Spacing();
-			TextWrapped("Hotkeys are shown for reference; changing them still happens in Last Seed's SkyUI menu until that menu is retired.");
+			TextWrapped("Click a hotkey button, then press the key. Escape cancels, Delete clears it.");
 		}
 	}
 

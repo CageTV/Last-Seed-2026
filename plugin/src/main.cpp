@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "GridInv.h"
 #include "Hud.h"
+#include "Hotkeys.h"
 #include "Menu.h"
 #include "Settings.h"
 #include "Spoilage.h"
@@ -64,7 +65,12 @@ namespace
 			Game::Init();
 			Spoilage::Init();
 			Spoilage::Begin();
+			Hotkeys::Init();
 			AutoStart::Begin();
+			break;
+		case SKSE::MessagingInterface::kPostLoadGame:
+		case SKSE::MessagingInterface::kNewGame:
+			Hotkeys::OnGameLoaded();
 			break;
 		default:
 			break;
