@@ -1,4 +1,5 @@
 #include "PCH.h"
+#include "Ids.h"
 #include <unordered_set>
 #include <random>
 #include "Spoilage.h"
@@ -105,7 +106,7 @@ namespace Spoilage
 		T* Look(RE::FormID a_id)
 		{
 			auto* dh = RE::TESDataHandler::GetSingleton();
-			return dh ? dh->LookupForm<T>(a_id, "LastSeed.esp") : nullptr;
+			return dh ? dh->LookupForm<T>(ids::Ls(a_id), "LastSeed.esp") : nullptr;
 		}
 
 		// TESBoundObject has no form type of its own, so LookupForm<TESBoundObject> always fails; cast by hand.
@@ -117,7 +118,7 @@ namespace Spoilage
 		RE::TESBoundObject* LookBound(RE::FormID a_id)
 		{
 			auto* dh = RE::TESDataHandler::GetSingleton();
-			return dh ? skyrim_cast<RE::TESBoundObject*>(dh->LookupForm(a_id, "LastSeed.esp")) : nullptr;
+			return dh ? skyrim_cast<RE::TESBoundObject*>(dh->LookupForm(ids::Ls(a_id), "LastSeed.esp")) : nullptr;
 		}
 
 		double NowHours()

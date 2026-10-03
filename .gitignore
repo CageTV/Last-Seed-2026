@@ -14,3 +14,5 @@ release-contents/Scripts/_Seed_ContainerSpoilScript.pex
 src/scripts/_Seed_SkyUIConfigPanelScript.psc
 release-contents/Scripts/Source/_Seed_SkyUIConfigPanelScript.psc
 release-contents/Scripts/_Seed_SkyUIConfigPanelScript.pex
+esl-work/
+release-esl/

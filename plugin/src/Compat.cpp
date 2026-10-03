@@ -1,4 +1,5 @@
 #include "PCH.h"
+#include "Ids.h"
 #include "Compat.h"
 #include "GameIds.h"
 #include "Settings.h"
@@ -12,7 +13,7 @@ namespace Compat
 		RE::TESForm* LastSeedForm(RE::FormID a_local)
 		{
 			auto* dh = RE::TESDataHandler::GetSingleton();
-			return dh ? dh->LookupForm(a_local, "LastSeed.esp") : nullptr;
+			return dh ? dh->LookupForm(ids::Ls(a_local), "LastSeed.esp") : nullptr;
 		}
 
 		bool Loaded(const char* a_plugin)

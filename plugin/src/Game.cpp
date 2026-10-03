@@ -1,4 +1,5 @@
 #include "PCH.h"
+#include "Ids.h"
 #include "Game.h"
 #include "GameIds.h"
 
@@ -12,7 +13,7 @@ namespace Game
 		RE::TESGlobal* Lookup(RE::FormID a_localID, const char* a_name)
 		{
 			auto* dh = RE::TESDataHandler::GetSingleton();
-			auto* form = dh ? dh->LookupForm<RE::TESGlobal>(a_localID, "LastSeed.esp") : nullptr;
+			auto* form = dh ? dh->LookupForm<RE::TESGlobal>(ids::Ls(a_localID), "LastSeed.esp") : nullptr;
 			if (!form) {
 				SKSE::log::error("LastSeed.esp global {} ({:06X}) not found", a_name, a_localID);
 			}
@@ -61,11 +62,11 @@ namespace Game
 		g.vitality = Lookup(ids::Seed_AttributeVitality, "_Seed_AttributeVitality");
 		g.vitalityMax = Lookup(ids::Seed_AttributeVitalityMax, "_Seed_AttributeVitalityMax");
 		auto* dh = RE::TESDataHandler::GetSingleton();
-		g.startupFinished = dh ? dh->LookupForm<RE::TESGlobal>(ids::LastSeedStartupFinished, "LastSeed.esp") : nullptr;
-		g.frostfallRunning = dh ? dh->LookupForm<RE::TESGlobal>(ids::FrostfallRunning, "Frostfall.esp") : nullptr;
+		g.startupFinished = dh ? dh->LookupForm<RE::TESGlobal>(ids::Ls(ids::LastSeedStartupFinished), "LastSeed.esp") : nullptr;
+		g.frostfallRunning = dh ? dh->LookupForm<RE::TESGlobal>(ids::Frostfall(ids::FrostfallRunning), "Frostfall.esp") : nullptr;
 		g.kwCheck = dh ? dh->LookupForm<RE::TESGlobal>(ids::LastSeedRunningKWCheck, "Update.esm") : nullptr;
-		g.mainQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::MainQuest, "LastSeed.esp") : nullptr;
-		g.trackingQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::TrackingQuest, "LastSeed.esp") : nullptr;
+		g.mainQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::Ls(ids::MainQuest), "LastSeed.esp") : nullptr;
+		g.trackingQuest = dh ? dh->LookupForm<RE::TESQuest>(ids::Ls(ids::TrackingQuest), "LastSeed.esp") : nullptr;
 		SKSE::log::info("KWCheck global {}, main quest {}, tracking quest {}", g.kwCheck ? "found" : "MISSING", g.mainQuest ? "found" : "MISSING", g.trackingQuest ? "found" : "MISSING");
 		ready = g.running && g.hunger && g.thirst && g.fatigue && g.vitality;
 		SKSE::log::info("Last Seed globals {}", ready ? "found" : "MISSING - is LastSeed.esp enabled?");

@@ -1,4 +1,5 @@
 #include "PCH.h"
+#include "Ids.h"
 #include <fstream>
 #include <map>
 #include <regex>
@@ -36,7 +37,7 @@ namespace NativeMcm
 		RE::TESGlobal* Global(unsigned int a_localId)
 		{
 			auto* dh = RE::TESDataHandler::GetSingleton();
-			return dh ? dh->LookupForm<RE::TESGlobal>(a_localId, "LastSeed.esp") : nullptr;
+			return dh ? dh->LookupForm<RE::TESGlobal>(ids::Ls(a_localId), "LastSeed.esp") : nullptr;
 		}
 
 		// Calls a method of _Seed_ConfigurationHandler on the game thread.
@@ -45,7 +46,7 @@ namespace NativeMcm
 			SKSE::GetTaskInterface()->AddTask([a_method]() {
 				auto* dh = RE::TESDataHandler::GetSingleton();
 				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
-				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(kConfigHandlerQuest, "LastSeed.esp") : nullptr;
+				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(ids::Ls(kConfigHandlerQuest), "LastSeed.esp") : nullptr;
 				if (!vm || !quest) {
 					SKSE::log::warn("Last Seed settings: cannot call _Seed_ConfigurationHandler.{} (quest or VM missing)", a_method);
 					return;
@@ -88,7 +89,7 @@ namespace NativeMcm
 			SKSE::GetTaskInterface()->AddTask([=]() mutable {
 				auto* dh = RE::TESDataHandler::GetSingleton();
 				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
-				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(a_quest, "LastSeed.esp") : nullptr;
+				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(ids::Ls(a_quest), "LastSeed.esp") : nullptr;
 				if (!vm || !quest) {
 					SKSE::log::warn("Last Seed settings: cannot call {}.{} (quest or VM missing)", a_script, a_method);
 					return;
@@ -184,7 +185,7 @@ namespace NativeMcm
 			SKSE::GetTaskInterface()->AddTask([]() {
 				auto* dh = RE::TESDataHandler::GetSingleton();
 				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
-				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(kDiseaseQuest, "LastSeed.esp") : nullptr;
+				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(ids::Ls(kDiseaseQuest), "LastSeed.esp") : nullptr;
 				if (!vm || !quest) {
 					return;
 				}
@@ -200,7 +201,7 @@ namespace NativeMcm
 			SKSE::GetTaskInterface()->AddTask([a_location, a_safe]() {
 				auto* dh = RE::TESDataHandler::GetSingleton();
 				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
-				auto* list = dh ? dh->LookupForm<RE::BGSListForm>(kSafeLocations, "LastSeed.esp") : nullptr;
+				auto* list = dh ? dh->LookupForm<RE::BGSListForm>(ids::Ls(kSafeLocations), "LastSeed.esp") : nullptr;
 				if (!vm || !list || !a_location) {
 					return;
 				}
@@ -266,7 +267,7 @@ namespace NativeMcm
 						if (Hotkeys::TakeCaptured(slot, picked)) {
 							Changed(a_e, g, static_cast<float>(picked), picked);
 							if (auto* dh = RE::TESDataHandler::GetSingleton()) {
-								if (auto* spell = dh->LookupForm<RE::SpellItem>(a_e.aux, "LastSeed.esp"); spell && RE::PlayerCharacter::GetSingleton()) {
+								if (auto* spell = dh->LookupForm<RE::SpellItem>(ids::Ls(a_e.aux), "LastSeed.esp"); spell && RE::PlayerCharacter::GetSingleton()) {
 									RE::PlayerCharacter::GetSingleton()->RemoveSpell(spell);  // as the MCM does when a hotkey changes
 								}
 							}
@@ -461,7 +462,7 @@ namespace NativeMcm
 		}
 		BeginSession();
 		auto* dh = RE::TESDataHandler::GetSingleton();
-		auto* preset = dh ? dh->LookupForm<RE::TESGlobal>(mcm::kOverview_PresetGlobal, "LastSeed.esp") : nullptr;
+		auto* preset = dh ? dh->LookupForm<RE::TESGlobal>(ids::Ls(mcm::kOverview_PresetGlobal), "LastSeed.esp") : nullptr;
 
 		Spacing();
 		Separator();
@@ -491,7 +492,7 @@ namespace NativeMcm
 		}
 		auto* player = RE::PlayerCharacter::GetSingleton();
 		auto* location = player ? player->GetCurrentLocation() : nullptr;
-		auto* safe = dh ? dh->LookupForm<RE::BGSListForm>(kSafeLocations, "LastSeed.esp") : nullptr;
+		auto* safe = dh ? dh->LookupForm<RE::BGSListForm>(ids::Ls(kSafeLocations), "LastSeed.esp") : nullptr;
 		if (location && safe && hazard - 1 > 1) {
 			bool marked = safe->HasForm(location);
 			if (Checkbox("Mark this location as safe", &marked)) {

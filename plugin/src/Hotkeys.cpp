@@ -1,4 +1,5 @@
 #include "PCH.h"
+#include "Ids.h"
 #include "Hotkeys.h"
 #include "Game.h"
 #include "McmTable.h"
@@ -64,7 +65,7 @@ namespace Hotkeys
 		RE::TESForm* Look(RE::FormID a_id)
 		{
 			auto* dh = RE::TESDataHandler::GetSingleton();
-			return dh ? dh->LookupForm(a_id, "LastSeed.esp") : nullptr;
+			return dh ? dh->LookupForm(ids::Ls(a_id), "LastSeed.esp") : nullptr;
 		}
 
 		// The menus in which the MCM script's OnKeyDown ignored the keys, plus our own settings window.

@@ -1,4 +1,5 @@
 #include "PCH.h"
+#include "Ids.h"
 #include "NativeFoodLists.h"
 #include "Game.h"
 #include "McmTable.h"
@@ -23,7 +24,7 @@ namespace NativeFoodLists
 		RE::BGSListForm* List(int a_index)
 		{
 			auto* dh = RE::TESDataHandler::GetSingleton();
-			return (dh && a_index >= 0 && a_index < static_cast<int>(std::size(mcm::kFoodLists))) ? dh->LookupForm<RE::BGSListForm>(mcm::kFoodLists[a_index].formId, "LastSeed.esp") : nullptr;
+			return (dh && a_index >= 0 && a_index < static_cast<int>(std::size(mcm::kFoodLists))) ? dh->LookupForm<RE::BGSListForm>(ids::Ls(mcm::kFoodLists[a_index].formId), "LastSeed.esp") : nullptr;
 		}
 
 		bool OnList(int a_index, const RE::TESForm* a_form)
@@ -65,7 +66,7 @@ namespace NativeFoodLists
 			SKSE::GetTaskInterface()->AddTask([a_food, a_type]() {
 				auto* dh = RE::TESDataHandler::GetSingleton();
 				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
-				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(kDataStoreQuest, "LastSeed.esp") : nullptr;
+				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(ids::Ls(kDataStoreQuest), "LastSeed.esp") : nullptr;
 				if (!vm || !quest) {
 					return;
 				}
