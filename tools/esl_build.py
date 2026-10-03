@@ -237,26 +237,27 @@ write(os.path.join(HERE, "plugin", "src", "EslMap.h"), "\n".join(lines))
 print(f"4. plugin/src/EslMap.h: {len(rows)} Last Seed ids, {len(frost)} Frostfall id")
 
 # ---- 5. other mods' files that name Last Seed forms by id
-OAR = os.path.join(r"E:\Tabula Rasa\mods", "Drunk or drugged animations OAR", "meshes", "actors", "character", "animations", "OpenAnimationReplacer", "Drunk animations", "Drunken", "config.json")
+# The Open Animation Replacer drunk-walk config names Last Seed's drunk effects ("formID" is a hex string: 10880 = 0x010880 = _Seed_DrunkEffect3).
+OAR_REL = os.path.join("meshes", "actors", "character", "animations", "OpenAnimationReplacer", "Drunk animations", "Drunken", "config.json")
+OAR = os.path.join(r"E:\Tabula Rasa\mods", "Drunk or drugged animations OAR", OAR_REL)
 if os.path.exists(OAR):
     t = read(OAR)
     n = 0
+    missing = []
 
     def f(m):
         global n
-        old = f"{int(m.group(2)):06X}"
+        old = f"{int(m.group(2), 16):06X}"
         if old not in lsmap:
-            bad.append((OAR, "LastSeed.esp", old))
+            missing.append(old)
             return m.group(0)
         n += 1
-        return m.group(1) + str(int(lsmap[old], 16)) + m.group(3)
+        return m.group(1) + f"{int(lsmap[old], 16):X}" + m.group(3)
 
-    t2 = re.sub(r'("pluginName":\s*"LastSeed\.esp",\s*"formID":\s*")(\d+)(")', f, t)
-    if bad:
-        # the config names Last Seed forms that LastSeed.esp 5.3 does not have (an older version's ids): it never matched, so it is left alone
-        print("5. OAR config left alone: it names forms LastSeed.esp does not contain:", sorted({b[2] for b in bad}))
-        bad.clear()
-    else:
-        write(os.path.join(W, "other-mods", "Drunk or drugged animations OAR", "Drunken", "config.json"), t2)
-        print(f"5. OAR config: {n} Last Seed ids remapped")
+    t2 = re.sub(r'("pluginName":\s*"LastSeed\.esp",\s*"formID":\s*")([0-9A-Fa-f]+)(")', f, t)
+    if missing:
+        print("UNMAPPED OAR ids:", missing)
+        sys.exit(1)
+    write(os.path.join(W, "other-mods", OAR_REL), t2)
+    print(f"5. OAR drunk-walk config: {n} Last Seed ids remapped")
 print("done. Next: spriggit deserialize esl-work/yaml -> LastSeed.esp, then tools/esl_package.py")

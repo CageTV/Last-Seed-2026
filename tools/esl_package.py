@@ -47,12 +47,15 @@ for root, _, files in os.walk(os.path.join(REL, "Interface")):
 
 put(os.path.join(HERE, "plugin", "build", "release", "LastSeed.dll"), os.path.join("SKSE", "Plugins", "LastSeed.dll"))
 
-# other mods' files remapped for the ESL ids (only those the build could remap)
+# other mods' files that name Last Seed forms by id, remapped for the ESL ids: same relative path, so they replace the originals when this
+# folder sits below the mod that owns them in MO2's list (higher priority number = further down... see the README)
 other = os.path.join(W, "other-mods")
 if os.path.isdir(other):
     for root, _, files in os.walk(other):
         for fn in files:
-            print("note: remapped file of another mod not packaged automatically:", os.path.join(root, fn))
+            src = os.path.join(root, fn)
+            put(src, os.path.relpath(src, other))
+            print("remapped file of another mod:", os.path.relpath(src, other))
 
 with open(os.path.join(DEST, "README - ESL build.txt"), "w", encoding="utf-8") as f:
     f.write(
