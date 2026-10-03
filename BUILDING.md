@@ -47,7 +47,7 @@ Frostfall 2026 project's `esl` folder), rewrites and recompiles the scripts that
 `patches/src` is the Spriggit YAML of the patches that are still needed (listed with their requirements in `patches/patches.json`).
 `python tools/patches_esl.py` (after `tools/esl_build.py`) rewrites each for the ESL build: Last Seed and ESL Campfire references renumbered,
 Small flag set; `python tools/patches_verify.py` re-reads every result and checks it. `python tools/make_patches_release.py <version>` builds the
-FOMOD zip: `Regular/` holds Chesko's original plugins (from the Last Seed Development Kit download), `ESL/` the rewritten ones.
+two FOMOD zips, one per build (regular: Chesko's original plugins from the Last Seed Development Kit download; ESL: the rewritten ones).
 
 ## Release zips
 

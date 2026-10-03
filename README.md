@@ -60,8 +60,9 @@ Install the original Last Seed, then this over it, and let this one overwrite. D
 
 ## Patches
 
-Last Seed's compatibility patches that are still needed are in a separate FOMOD, **Last Seed 2026 - Patches**, with a regular and an ESL
-version of each (the installer asks which build you use and only lets you tick patches for mods you have).
+Last Seed's compatibility patches that are still needed are separate FOMOD downloads, one per build, so you cannot install the wrong one:
+**Last Seed 2026 - Patches** for the regular build and **Last Seed 2026 - Patches (ESL)** for the ESL build (a patch whose mod is not in your load
+order cannot be ticked).
 
 ## Building
 

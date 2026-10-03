@@ -22,7 +22,7 @@ OAR_PREFIX = os.path.join("meshes", "actors")
 
 REGULAR_README = """Last Seed 2026 {v}
 
-An update of Last Seed - Survival Needs and Diseases (Nexus 56393, by Chesko and Aytrus) for Skyrim SE/AE 1.6.1170 and up.
+An update of Last Seed - Survival Needs and Diseases (Nexus 56393, by Chesko and Aytrus) for Skyrim AE 1.6.1170 and up.
 Install the original Last Seed 5.3 first (meshes, textures, sounds, the other scripts) and Campfire, then this over it.
 
 Needs: SKSE64, Address Library, SKSE Menu Framework 3 (Nexus 120352), PapyrusUtil. Optional: Frostfall 2026, Grid Inventory.
