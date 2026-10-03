@@ -273,6 +273,7 @@ namespace Menu
 		void __stdcall RenderAlcoholDiseaseSettings() { NativeMcm::DrawPage(3); }
 		void __stdcall RenderFoodSpoilageSettings() { NativeMcm::DrawPage(4); }
 		void __stdcall RenderOtherSettings() { NativeMcm::DrawPage(5); }
+		void __stdcall RenderProfiles() { NativeMcm::DrawProfiles(); }
 
 		std::atomic<bool> registered{ false };
 	}
@@ -295,6 +296,7 @@ namespace Menu
 		SKSEMenuFramework::AddSectionItem("Alcohol, Skooma & Disease", RenderAlcoholDiseaseSettings);
 		SKSEMenuFramework::AddSectionItem("Food Spoilage Settings", RenderFoodSpoilageSettings);
 		SKSEMenuFramework::AddSectionItem("Other Settings", RenderOtherSettings);
+		SKSEMenuFramework::AddSectionItem("Profiles", RenderProfiles);
 		SKSEMenuFramework::AddHudElement(Hud::Render);
 		registered = true;
 		SKSE::log::info("Registered with SKSE Menu Framework {}", SKSEMenuFramework::GetMenuFrameworkVersion());

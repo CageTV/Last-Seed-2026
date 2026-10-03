@@ -12,6 +12,9 @@ namespace NativeMcm
 	// toggle. Drawn below the status block of the Overview page.
 	void DrawOverviewExtras();
 
+	// Last Seed's settings profiles: pick, rename, reset, and switch automatic saving on or off.
+	void DrawProfiles();
+
 	// Once per frame from Hud::Render: notices when the pages stop being drawn (the player closed the menu or changed page),
 	// flushes pending profile writes and tells Last Seed to apply the changes.
 	void Tick(float a_dt);

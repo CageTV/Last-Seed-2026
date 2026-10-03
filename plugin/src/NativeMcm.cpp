@@ -1,4 +1,7 @@
 #include "PCH.h"
+#include <fstream>
+#include <map>
+#include <regex>
 #include "NativeMcm.h"
 #include "Game.h"
 #include "Hotkeys.h"
@@ -17,6 +20,7 @@ namespace NativeMcm
 		constexpr RE::FormID kCurrentProfile = 0x00E775;      // _Seed_Setting_CurrentProfile
 		constexpr RE::FormID kSkillTreeQuest = 0x4A11E1;      // _Seed_SkillTreeHandlerQuest, carries _Seed_SkillTreeHandler
 		constexpr RE::FormID kPerkPointsTotal = 0x47DAA3;     // ProvisioningPerkPointsTotal
+		constexpr RE::FormID kMcmQuest = 0x00E774;            // _Seed_MCMQuest, carries _Seed_SkyUIConfigPanelScript (profile functions live there)
 		constexpr RE::FormID kDiseaseQuest = 0x0108E8;        // _Seed_DiseaseManagerQuest, carries _Seed_DiseaseManager
 		constexpr RE::FormID kSafeLocations = 0x36731A;       // _Seed_SafeLocations: locations the player marked as safe
 		constexpr const char* kConfigPath = "../LastSeedData/";  // where the MCM keeps its profiles (JsonUtil path)
@@ -94,6 +98,55 @@ namespace NativeMcm
 				const bool ok = vm->DispatchMethodCall2(handle, a_script, a_method, RE::MakeFunctionArguments(std::move(a_args)...), callback);
 				SKSE::log::info("Last Seed settings: {}.{}() -> {}", a_script, a_method, ok ? "dispatched" : "FAILED");
 			});
+		}
+
+		// PapyrusUtil JsonUtil calls on the game thread, as the MCM makes them.
+		void JsonSetInt(std::string a_path, std::string a_key, int a_value)
+		{
+			SKSE::GetTaskInterface()->AddTask([a_path, a_key, a_value]() {
+				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
+				if (vm) {
+					vm->DispatchStaticCall("JsonUtil", "SetIntValue", RE::MakeFunctionArguments(std::string(a_path), std::string(a_key), static_cast<std::int32_t>(a_value)), callback);
+				}
+			});
+		}
+
+		void JsonSetString(std::string a_path, std::string a_key, std::string a_value)
+		{
+			SKSE::GetTaskInterface()->AddTask([a_path, a_key, a_value]() {
+				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
+				if (vm) {
+					vm->DispatchStaticCall("JsonUtil", "SetStringValue", RE::MakeFunctionArguments(std::string(a_path), std::string(a_key), std::string(a_value)), callback);
+				}
+			});
+		}
+
+		void JsonSave(std::string a_path)
+		{
+			SKSE::GetTaskInterface()->AddTask([a_path]() {
+				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
+				if (vm) {
+					vm->DispatchStaticCall("JsonUtil", "Save", RE::MakeFunctionArguments(std::string(a_path), false), callback);
+				}
+			});
+		}
+
+		// The name stored in a profile's file (Data/SKSE/Plugins/LastSeedData/profileN.json), or "Profile N".
+		std::string ProfileName(int a_index)
+		{
+			std::ifstream in("Data/SKSE/Plugins/LastSeedData/profile" + std::to_string(a_index) + ".json");
+			if (in) {
+				const std::string text((std::istreambuf_iterator<char>(in)), std::istreambuf_iterator<char>());
+				static const std::regex re("\"profile_name\"\\s*:\\s*\"([^\"]*)\"");
+				std::smatch m;
+				if (std::regex_search(text, m, re) && !m[1].str().empty()) {
+					return m[1].str();
+				}
+			}
+			return "Profile " + std::to_string(a_index);
 		}
 
 		void BeginSession()
@@ -292,6 +345,110 @@ namespace NativeMcm
 				}
 			} else if (Button("Restore skill progress")) {
 				confirm = 2;
+				confirmTimer = 10.0f;
+			}
+		}
+	}
+
+	void DrawProfiles()
+	{
+		if (!Game::Ready() || !Game::IsRunning()) {
+			TextDisabled("Last Seed is not running. Start it from the Overview page first.");
+			return;
+		}
+		BeginSession();
+		auto* current = Global(kCurrentProfile);
+		auto* autoSave = Global(kAutoSaveLoad);
+		if (!current || !autoSave) {
+			return;
+		}
+		static int         pendingSwitch = 0;   // profile asked for, waiting for the confirmation
+		static bool        askDefault = false;  // "reset the current profile" waiting for the confirmation
+		static float       confirmTimer = 0.0f;
+		static float       namesTimer = 0.0f;
+		static std::string names[10];
+		static char        renameBuffer[64] = "";
+		confirmTimer -= GetIO()->DeltaTime;
+		if (confirmTimer <= 0.0f) {
+			pendingSwitch = 0;
+			askDefault = false;
+		}
+		namesTimer -= GetIO()->DeltaTime;
+		if (namesTimer <= 0.0f) {
+			namesTimer = 1.0f;
+			for (int i = 0; i < 10; ++i) {
+				names[i] = ProfileName(i + 1);
+			}
+		}
+		const char* items[10];
+		for (int i = 0; i < 10; ++i) {
+			items[i] = names[i].c_str();
+		}
+
+		SeparatorText("Settings Profiles");
+		const int activeIndex = std::clamp(static_cast<int>(current->value), 1, 10) - 1;
+		int       choice = activeIndex;
+		if (Combo("Current profile", &choice, items, 10) && choice != activeIndex) {
+			pendingSwitch = choice + 1;
+			confirmTimer = 10.0f;
+		}
+		if (pendingSwitch > 0) {
+			TextWrapped("Load the selected profile? Your current settings are replaced by that profile's.");
+			if (Button("Yes, load it")) {
+				CallQuest(kMcmQuest, "_Seed_SkyUIConfigPanelScript", "SwitchToProfile", static_cast<std::int32_t>(pendingSwitch));
+				changed = true;
+				pendingSwitch = 0;
+			}
+			SameLine();
+			if (Button("Cancel##switch")) {
+				pendingSwitch = 0;
+			}
+		}
+
+		Spacing();
+		bool automatic = static_cast<int>(autoSave->value) == 2;
+		if (Checkbox("Automatic profile save / load", &automatic)) {
+			autoSave->value = automatic ? 2.0f : 1.0f;
+			JsonSetInt(std::string(kConfigPath) + "common", "auto_load", automatic ? 2 : 1);
+			JsonSave(std::string(kConfigPath) + "common");
+			if (automatic) {
+				CallQuest(kMcmQuest, "_Seed_SkyUIConfigPanelScript", "SaveAllSettings", static_cast<std::int32_t>(current->value));  // write every setting to the profile now
+			}
+		}
+		TextWrapped(
+			"A profile stores all of Last Seed's settings in a file. With automatic save / load on, each change is saved to the current profile, and "
+			"loading a game, switching characters or starting a new game picks the profile up again. There are 10 profile slots. The files are in "
+			"Data/SKSE/Plugins/LastSeedData/ (common.json and profile*.json); with Mod Organizer 2 they end up in your Overwrite folder.");
+
+		if (automatic) {
+			Spacing();
+			SeparatorText("This profile");
+			InputText("##rename", renameBuffer, sizeof(renameBuffer));
+			SameLine();
+			if (Button("Rename profile")) {
+				if (renameBuffer[0] != '\0') {
+					const std::string path = std::string(kConfigPath) + "profile" + std::to_string(static_cast<int>(current->value));
+					JsonSetString(path, "profile_name", renameBuffer);
+					JsonSave(path);
+					renameBuffer[0] = '\0';
+					namesTimer = 0.5f;  // re-read the names once the file has been written
+				}
+			}
+			if (askDefault) {
+				TextWrapped("Are you sure you want to restore all settings on your current profile to their default values?");
+				if (Button("Yes, restore the defaults")) {
+					const auto profile = static_cast<std::int32_t>(current->value);
+					CallQuest(kMcmQuest, "_Seed_SkyUIConfigPanelScript", "GenerateDefaultProfile", profile);
+					CallQuest(kMcmQuest, "_Seed_SkyUIConfigPanelScript", "SwitchToProfile", profile);
+					changed = true;
+					askDefault = false;
+				}
+				SameLine();
+				if (Button("Cancel##default")) {
+					askDefault = false;
+				}
+			} else if (Button("Default current profile")) {
+				askDefault = true;
 				confirmTimer = 10.0f;
 			}
 		}
