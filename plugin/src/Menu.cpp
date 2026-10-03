@@ -78,10 +78,19 @@ namespace Menu
 			Text("Thirst    %.0f / %.0f", Game::Value(g.thirst), Game::Value(g.thirstMax, 120.0f));
 			Text("Fatigue   %.0f / %.0f", Game::Value(g.fatigue), Game::Value(g.fatigueMax, 120.0f));
 			Text("Vitality  %.0f / %.0f", Game::Value(g.vitality), Game::Value(g.vitalityMax, 160.0f));
+			if (auto* dh = RE::TESDataHandler::GetSingleton()) {
+				if (auto* drunk = dh->LookupForm<RE::TESGlobal>(0x010830, "LastSeed.esp")) {  // _Seed_AttributeDrunk
+					Text("Alcohol   %.0f%%", drunk->value);
+				}
+				if (auto* skooma = dh->LookupForm<RE::TESGlobal>(0x2A6C33, "LastSeed.esp")) {  // _Seed_AttributeSkooma
+					Text("Skooma    %.0f%%", skooma->value);
+				}
+			}
+			NativeMcm::DrawOverviewExtras();
 
 			Spacing();
 			Separator();
-			TextWrapped("Last Seed's other settings (gameplay, food, diseases, profiles) are still in the SkyUI Mod Configuration Menu.");
+			TextWrapped("Last Seed's settings are on the pages in this section: Gameplay, Primary Needs, Vitality, Alcohol / Skooma / Disease, Food Spoilage and Other. Profiles and the food lists are still in the SkyUI Mod Configuration Menu.");
 		}
 
 		void __stdcall RenderHud()

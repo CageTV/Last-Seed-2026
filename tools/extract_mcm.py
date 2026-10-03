@@ -351,6 +351,19 @@ def main():
         A("	};")
         A("")
         page_ids.append((title, f"kPage{pi}"))
+    # Overview page extras (drawn by hand in Menu.cpp): the gameplay preset menu and the location safety texts
+    for name, arr in (("PresetsGameplay", "PresetsGameplay"), ("LocationText", "_LocationText")):
+        vals = arrays.get(arr)
+        if vals is None:
+            problems.append(f"list {arr} not found in loadArrays")
+            continue
+        A(f"	inline constexpr const char* kOverview_{name}[] = {{")
+        for v in vals:
+            A(f"		{cstr(label(v) if v else '')},")
+        A("	};")
+    g = resolve("_Seed_Setting_Presets_Gameplay")
+    A(f"	inline constexpr unsigned int kOverview_PresetGlobal = 0x{g[0]:06X};  // 1 = easy ... 3 = hard; profile key gameplayPreset; applied with _Seed_ConfigurationHandler.setPresets(value)")
+    A("")
     A("	struct Page")
     A("	{")
     A("		const char*  title;")

@@ -196,6 +196,21 @@ namespace mcm
 		{ Kind::Key, "Drink From Stream", 0x50B75F, "hotkey_DrinkFromStream", 0.0f, 0.0f, 0.0f, 0.0f, "", nullptr, 0, 0, 0x50665A },
 	};
 
+	inline constexpr const char* kOverview_PresetsGameplay[] = {
+		"Just for Fun",
+		"Immersive Challenge",
+		"Hardcore Survival",
+	};
+	inline constexpr const char* kOverview_LocationText[] = {
+		"This is a very safe location.",
+		"This is a safe location.",
+		"This is a somewhat safe location.",
+		"This is a somewhat unsafe location.",
+		"This is an unsafe location.",
+		"This is a very unsafe location.",
+	};
+	inline constexpr unsigned int kOverview_PresetGlobal = 0x264EFF;  // 1 = easy ... 3 = hard; profile key gameplayPreset; applied with _Seed_ConfigurationHandler.setPresets(value)
+
 	struct Page
 	{
 		const char*  title;

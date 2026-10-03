@@ -17,6 +17,8 @@ namespace NativeMcm
 		constexpr RE::FormID kCurrentProfile = 0x00E775;      // _Seed_Setting_CurrentProfile
 		constexpr RE::FormID kSkillTreeQuest = 0x4A11E1;      // _Seed_SkillTreeHandlerQuest, carries _Seed_SkillTreeHandler
 		constexpr RE::FormID kPerkPointsTotal = 0x47DAA3;     // ProvisioningPerkPointsTotal
+		constexpr RE::FormID kDiseaseQuest = 0x0108E8;        // _Seed_DiseaseManagerQuest, carries _Seed_DiseaseManager
+		constexpr RE::FormID kSafeLocations = 0x36731A;       // _Seed_SafeLocations: locations the player marked as safe
 		constexpr const char* kConfigPath = "../LastSeedData/";  // where the MCM keeps its profiles (JsonUtil path)
 		constexpr float       kSessionGraceSeconds = 0.4f;     // the pages count as closed when not drawn for this long
 		constexpr float       kProfileWriteDelay = 0.6f;       // profile writes wait for the last change, like dragging a slider
@@ -91,6 +93,67 @@ namespace NativeMcm
 				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
 				const bool ok = vm->DispatchMethodCall2(handle, a_script, a_method, RE::MakeFunctionArguments(std::move(a_args)...), callback);
 				SKSE::log::info("Last Seed settings: {}.{}() -> {}", a_script, a_method, ok ? "dispatched" : "FAILED");
+			});
+		}
+
+		void BeginSession()
+		{
+			sinceDraw = 0.0f;
+			if (!session) {
+				session = true;
+				changed = false;
+				CallHandler("onStart");  // Last Seed notes what the settings were, so it can start or stop systems when they change
+			}
+		}
+
+		// Result of a Papyrus function that returns an int, kept for the page to read.
+		class IntResult : public RE::BSScript::IStackCallbackFunctor
+		{
+		public:
+			explicit IntResult(std::atomic<int>& a_out) :
+				out(a_out) {}
+			void operator()(RE::BSScript::Variable a_result) override
+			{
+				if (a_result.IsInt()) {
+					out = a_result.GetSInt();
+				}
+			}
+			void SetObject(const RE::BSTSmartPointer<RE::BSScript::Object>&) override {}
+
+		private:
+			std::atomic<int>& out;
+		};
+		std::atomic<int> locationHazard{ 0 };  // _Seed_DiseaseManager.getLocationHazardLevel(false): 1 (very safe) to 6 (very unsafe)
+		float            hazardTimer = 0.0f;
+
+		void AskLocationHazard()
+		{
+			SKSE::GetTaskInterface()->AddTask([]() {
+				auto* dh = RE::TESDataHandler::GetSingleton();
+				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+				auto* quest = dh ? dh->LookupForm<RE::TESQuest>(kDiseaseQuest, "LastSeed.esp") : nullptr;
+				if (!vm || !quest) {
+					return;
+				}
+				const auto                                               handle = vm->GetObjectHandlePolicy()->GetHandleForObject(RE::TESQuest::FORMTYPE, quest);
+				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback(new IntResult(locationHazard));
+				vm->DispatchMethodCall2(handle, "_Seed_DiseaseManager", "getLocationHazardLevel", RE::MakeFunctionArguments(false), callback);
+			});
+		}
+
+		// FormList.AddForm / RemoveAddedForm through Papyrus, so the list is saved the way Last Seed's own menu saved it.
+		void SetSafeLocation(RE::BGSLocation* a_location, bool a_safe)
+		{
+			SKSE::GetTaskInterface()->AddTask([a_location, a_safe]() {
+				auto* dh = RE::TESDataHandler::GetSingleton();
+				auto* vm = RE::BSScript::Internal::VirtualMachine::GetSingleton();
+				auto* list = dh ? dh->LookupForm<RE::BGSListForm>(kSafeLocations, "LastSeed.esp") : nullptr;
+				if (!vm || !list || !a_location) {
+					return;
+				}
+				const auto                                               handle = vm->GetObjectHandlePolicy()->GetHandleForObject(RE::BGSListForm::FORMTYPE, list);
+				RE::BSTSmartPointer<RE::BSScript::IStackCallbackFunctor> callback;
+				vm->DispatchMethodCall2(handle, "FormList", a_safe ? "AddForm" : "RemoveAddedForm", RE::MakeFunctionArguments(static_cast<RE::TESForm*>(a_location)), callback);
 			});
 		}
 
@@ -234,6 +297,54 @@ namespace NativeMcm
 		}
 	}
 
+	void DrawOverviewExtras()
+	{
+		if (!Game::Ready() || !Game::IsRunning() || !Game::StartupFinished()) {
+			return;
+		}
+		BeginSession();
+		auto* dh = RE::TESDataHandler::GetSingleton();
+		auto* preset = dh ? dh->LookupForm<RE::TESGlobal>(mcm::kOverview_PresetGlobal, "LastSeed.esp") : nullptr;
+
+		Spacing();
+		Separator();
+		Text("Presets");
+		if (preset) {
+			int index = std::clamp(static_cast<int>(preset->value) - 1, 0, static_cast<int>(std::size(mcm::kOverview_PresetsGameplay)) - 1);
+			if (Combo("Gameplay preset", &index, mcm::kOverview_PresetsGameplay, static_cast<int>(std::size(mcm::kOverview_PresetsGameplay)))) {
+				preset->value = static_cast<float>(index + 1);
+				changed = true;
+				pendingProfile["gameplayPreset"] = index + 1;
+				profileTimer = kProfileWriteDelay;
+				CallQuest(kConfigHandlerQuest, "_Seed_ConfigurationHandler", "setPresets", static_cast<std::int32_t>(index + 1));  // applies the preset's settings
+			}
+		}
+
+		Spacing();
+		Separator();
+		Text("Location");
+		hazardTimer -= GetIO()->DeltaTime;
+		if (hazardTimer <= 0.0f) {
+			hazardTimer = 2.0f;
+			AskLocationHazard();
+		}
+		const int hazard = locationHazard.load();
+		if (hazard >= 1 && hazard <= static_cast<int>(std::size(mcm::kOverview_LocationText))) {
+			TextWrapped("%s", mcm::kOverview_LocationText[hazard - 1]);
+		}
+		auto* player = RE::PlayerCharacter::GetSingleton();
+		auto* location = player ? player->GetCurrentLocation() : nullptr;
+		auto* safe = dh ? dh->LookupForm<RE::BGSListForm>(kSafeLocations, "LastSeed.esp") : nullptr;
+		if (location && safe && hazard - 1 > 1) {
+			bool marked = safe->HasForm(location);
+			if (Checkbox("Mark this location as safe", &marked)) {
+				SetSafeLocation(location, marked);
+			}
+		} else {
+			TextDisabled("This location cannot be marked as safe.");
+		}
+	}
+
 	void DrawPage(int a_page)
 	{
 		if (a_page < 0 || a_page >= static_cast<int>(std::size(mcm::kPages))) {
@@ -243,12 +354,7 @@ namespace NativeMcm
 			TextDisabled("Last Seed is not running. Start it from the Overview page first.");
 			return;
 		}
-		sinceDraw = 0.0f;
-		if (!session) {
-			session = true;
-			changed = false;
-			CallHandler("onStart");  // Last Seed notes what the settings were, so it can start or stop systems when they change
-		}
+		BeginSession();
 		const auto& page = mcm::kPages[a_page];
 		for (int i = 0; i < page.count; ++i) {
 			DrawEntry(page.entries[i], i);

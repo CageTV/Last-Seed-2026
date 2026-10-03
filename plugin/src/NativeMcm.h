@@ -8,6 +8,10 @@ namespace NativeMcm
 	// One page of McmTable.h (an index into mcm::kPages), drawn inside a SKSE Menu Framework section.
 	void DrawPage(int a_page);
 
+	// The parts of Last Seed's Overview page that are settings: the gameplay preset, the location safety readout and the safe-location
+	// toggle. Drawn below the status block of the Overview page.
+	void DrawOverviewExtras();
+
 	// Once per frame from Hud::Render: notices when the pages stop being drawn (the player closed the menu or changed page),
 	// flushes pending profile writes and tells Last Seed to apply the changes.
 	void Tick(float a_dt);
