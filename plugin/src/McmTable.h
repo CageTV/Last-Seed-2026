@@ -2,6 +2,8 @@
 // Last Seed - Survival Needs and Diseases is by Chesko and Aytrus; its scripts and plugin are MIT licensed (the meshes and textures are not part of this).
 #pragma once
 
+#include <iterator>
+
 namespace mcm
 {
 	enum class Kind { Header, Column, Toggle, Slider, Menu };

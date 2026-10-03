@@ -1,6 +1,7 @@
 #include "PCH.h"
 #include "Hud.h"
 #include "Freshness.h"
+#include "NativeMcm.h"
 #include "Game.h"
 #include "Settings.h"
 
@@ -305,6 +306,7 @@ namespace Hud
 	void __stdcall Render()
 	{
 		const float dt = std::clamp(GetIO()->DeltaTime, 0.0f, 0.1f);
+		NativeMcm::Tick(dt);
 
 		if (saveTimer >= 0.0f) {
 			saveTimer -= dt;
