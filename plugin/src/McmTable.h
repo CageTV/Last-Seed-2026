@@ -211,6 +211,56 @@ namespace mcm
 	};
 	inline constexpr unsigned int kOverview_PresetGlobal = 0x264EFF;  // 1 = easy ... 3 = hard; profile key gameplayPreset; applied with _Seed_ConfigurationHandler.setPresets(value)
 
+	struct FoodList { const char* label; unsigned int formId; };
+	inline constexpr FoodList kFoodLists[] = {
+		{ "Bread", 0x009666 },
+		{ "Raw Meat", 0x009657 },
+		{ "Cooked Meat", 0x009658 },
+		{ "Raw Small Game", 0x009659 },
+		{ "Cooked Small Game", 0x00965A },
+		{ "Raw Fish", 0x00965B },
+		{ "Cooked Fish", 0x00965C },
+		{ "Raw Seafood", 0x00965D },
+		{ "Cooked Seafood", 0x00965E },
+		{ "Vegetable", 0x00965F },
+		{ "Fruit", 0x009660 },
+		{ "Cheese", 0x009663 },
+		{ "Treat", 0x009664 },
+		{ "pastry", 0x009665 },
+		{ "Stew", 0x009667 },
+		{ "Cheese Bowl", 0x00C718 },
+		{ "Milk", 0x00C71A },
+		{ "Alcohol and Skooma", 0x00C719 },
+		{ "Non Alcoholic Drinks", 0x00C71B },
+		{ "Blood Potion", 0x501546 },
+		{ "Not Food", 0x13A268 },
+		{ "Preserved", 0x00C71C },
+		{ "Salted", 0x18B2BB },
+		{ "Light Snack", 0x00707B },
+		{ "Medium Meal", 0x00707C },
+		{ "Fillng Meal", 0x00707D },
+		{ "Hearty Meal", 0x00707E },
+		{ "Weak Alcohol", 0x0108EB },
+		{ "Moderate Alcohol", 0x0108ED },
+		{ "Strong Alcohol", 0x0108EC },
+		{ "Weak Skooma", 0x2A6C35 },
+		{ "Strong Skooma", 0x2A6C36 },
+		{ "SYSTEM USE ONLY", 0x5576AC },
+	};
+	inline constexpr const char* kFood_HungerMenu[] = {
+		"Light Snack",
+		"Medium Meal",
+		"Fillng Meal",
+		"Hearty Meal",
+	};
+	inline constexpr const char* kFood_AlcoholMenu[] = {
+		"Weak Alcohol",
+		"Moderate Alcohol",
+		"Strong Alcohol",
+		"Weak Skooma",
+		"Strong Skooma",
+	};
+
 	struct Page
 	{
 		const char*  title;

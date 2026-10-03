@@ -106,6 +106,28 @@ def spells_from_yaml(folder):
     return out
 
 
+def formlists_from_yaml(folder):
+    out = {}
+    d = os.path.join(folder, "FormLists")
+    for fn in os.listdir(d):
+        t = read(os.path.join(d, fn))
+        eid = re.search(r"^EditorID:\s*(\S+)", t, re.M)
+        fk = re.search(r"^FormKey:\s*([0-9A-Fa-f]{6}):(\S+)", t, re.M)
+        if eid and fk and fk.group(2).lower() == "lastseed.esp":
+            out[eid.group(1).lower()] = int(fk.group(1), 16)
+    return out
+
+
+def list_assignments(body, name):
+    """name[i] = PROPERTY -> {i: PROPERTY}"""
+    out = {}
+    for l in body:
+        m = re.match(r"^\s*" + re.escape(name) + r"\[(\d+)\] = (\w+)\s*$", l)
+        if m:
+            out[int(m.group(1))] = m.group(2)
+    return out
+
+
 def translations(path):
     out = {}
     for l in read(path, "utf-16").splitlines():
@@ -363,6 +385,28 @@ def main():
         A("	};")
     g = resolve("_Seed_Setting_Presets_Gameplay")
     A(f"	inline constexpr unsigned int kOverview_PresetGlobal = 0x{g[0]:06X};  // 1 = easy ... 3 = hard; profile key gameplayPreset; applied with _Seed_ConfigurationHandler.setPresets(value)")
+    A("")
+    # Food & Drink Lists editor (drawn by hand in NativeFoodLists.cpp): the 33 lists the editor looks at, and its menus
+    flists = formlists_from_yaml(yaml_dir)
+    full = list_assignments(funcs["loadArrays"], "_fullListRef")
+    full_names = arrays.get("_fullListMenu") or []
+    A("	struct FoodList { const char* label; unsigned int formId; };")
+    A("	inline constexpr FoodList kFoodLists[] = {")
+    for i in range(33):
+        prop = full.get(i)
+        fid = flists.get((prop or "").lower())
+        if not prop or fid is None:
+            problems.append(f"food list {i} ({prop}) not found")
+            fid = 0
+        nm = full_names[i] if i < len(full_names) and full_names[i] else prop
+        A(f"		{{ {cstr(label(nm))}, 0x{fid:06X} }},")
+    A("	};")
+    for nm, arr in (("HungerMenu", "_HungerMenu"), ("AlcoholMenu", "_AlcoholMenu")):
+        vals = arrays.get(arr) or []
+        A(f"	inline constexpr const char* kFood_{nm}[] = {{")
+        for v in vals:
+            A(f"		{cstr(label(v) if v else '')},")
+        A("	};")
     A("")
     A("	struct Page")
     A("	{")

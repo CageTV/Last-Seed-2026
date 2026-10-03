@@ -17,6 +17,7 @@ add_commonlibsse_plugin(${PROJECT_NAME} NAME "LastSeed" AUTHOR "CageTV" SOURCES
     src/GridInv.cpp
     src/NativeMcm.cpp
     src/Hotkeys.cpp
+    src/NativeFoodLists.cpp
 )
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)

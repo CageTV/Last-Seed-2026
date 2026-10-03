@@ -3,6 +3,7 @@
 #include "Game.h"
 #include "Hud.h"
 #include "NativeMcm.h"
+#include "NativeFoodLists.h"
 #include "Settings.h"
 #include "Spoilage.h"
 
@@ -274,6 +275,7 @@ namespace Menu
 		void __stdcall RenderFoodSpoilageSettings() { NativeMcm::DrawPage(4); }
 		void __stdcall RenderOtherSettings() { NativeMcm::DrawPage(5); }
 		void __stdcall RenderProfiles() { NativeMcm::DrawProfiles(); }
+		void __stdcall RenderFoodLists() { NativeFoodLists::Draw(); }
 
 		std::atomic<bool> registered{ false };
 	}
@@ -297,6 +299,7 @@ namespace Menu
 		SKSEMenuFramework::AddSectionItem("Food Spoilage Settings", RenderFoodSpoilageSettings);
 		SKSEMenuFramework::AddSectionItem("Other Settings", RenderOtherSettings);
 		SKSEMenuFramework::AddSectionItem("Profiles", RenderProfiles);
+		SKSEMenuFramework::AddSectionItem("Food & Drink Lists", RenderFoodLists);
 		SKSEMenuFramework::AddHudElement(Hud::Render);
 		registered = true;
 		SKSE::log::info("Registered with SKSE Menu Framework {}", SKSEMenuFramework::GetMenuFrameworkVersion());
