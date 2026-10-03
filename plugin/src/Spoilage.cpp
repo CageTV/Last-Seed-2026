@@ -449,16 +449,33 @@ namespace Spoilage
 			auto*       tes = RE::TES::GetSingleton();
 			const auto  period = static_cast<double>(Settings::Get().containerResetDays) * 24.0;
 			const float chance = d.worldRate ? std::clamp(d.worldRate->value, 0.0f, 100.0f) : 0.0f;
-			if (!player || !tes) {
+			auto*       cell = player ? player->GetParentCell() : nullptr;
+			// Not while a save is loading or the world is not fully attached: TES::ForEachReferenceInRange crashes then, so walk
+			// the attached cells ourselves.
+			if (!player || !tes || !cell || !cell->IsAttached() || !player->Is3DLoaded()) {
 				return;
 			}
+			const auto origin = player->GetPosition();
 			std::vector<RE::ObjectRefHandle> found;
-			tes->ForEachReferenceInRange(player, kWorldScanRadius, [&](RE::TESObjectREFR& a_ref) {
-				if (IsWorldContainer(&a_ref)) {
-					found.push_back(a_ref.GetHandle());
+			const auto collect = [&](RE::TESObjectCELL* a_cell) {
+				if (a_cell && a_cell->IsAttached()) {
+					a_cell->ForEachReferenceInRange(origin, kWorldScanRadius, [&](RE::TESObjectREFR& a_ref) {
+						if (IsWorldContainer(&a_ref)) {
+							found.push_back(a_ref.GetHandle());
+						}
+						return RE::BSContainer::ForEachResult::kContinue;
+					});
 				}
-				return RE::BSContainer::ForEachResult::kContinue;
-			});
+			};
+			if (cell->IsInteriorCell()) {
+				collect(cell);
+			} else if (auto* grid = tes->gridCells; grid && player->GetWorldspace()) {
+				for (std::uint32_t x = 0; x < grid->length; ++x) {
+					for (std::uint32_t y = 0; y < grid->length; ++y) {
+						collect(grid->GetCell(x, y));
+					}
+				}
+			}
 			int budget = kWorldBudget;
 			for (auto& handle : found) {
 				auto ref = handle.get();
@@ -637,6 +654,7 @@ namespace Spoilage
 			batches.clear();
 			worlds.clear();
 			stash.clear();
+			worldTicks = -10;  // give a freshly loaded world ~30 s to settle before looking at its containers
 			lastAdvance = kInvalidTime;
 			lastReconcile = kInvalidTime;
 			std::uint32_t type, version, length;
