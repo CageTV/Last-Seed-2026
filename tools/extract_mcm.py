@@ -18,6 +18,7 @@ PAGES = [
     ("Alcohol, Skooma & Disease", "PageReset_AlcoholDisease"),
     ("Food Spoilage", "PageReset_FoodSpoilage"),
     ("Other", "PageReset_Help"),
+    ("Interface", "PageReset_Interface"),
 ]
 
 # Lines of the "Other" page that are not plain settings: handled by hand in NativeMcm.cpp (or only shown while Last Seed is stopped).

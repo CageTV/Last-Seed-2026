@@ -196,6 +196,23 @@ namespace mcm
 		{ Kind::Key, "Drink From Stream", 0x50B75F, "hotkey_DrinkFromStream", 0.0f, 0.0f, 0.0f, 0.0f, "", nullptr, 0, 0, 0x50665A },
 	};
 
+	inline constexpr Entry kPage6[] = {
+		{ Kind::Header, "Effects", 0, "", 0.0f, 0.0f, 0.0f, 0.0f, "", nullptr, 0, 0, 0 },
+		{ Kind::Toggle, "Sound Effects", 0x003A32, "interface_sfx", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Toggle, "Full Screen Effects", 0x003A33, "interface_vfx", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Toggle, "Force Feedback", 0x003A34, "interface_feedback", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Header, "Notifications", 0, "", 0.0f, 0.0f, 0.0f, 0.0f, "", nullptr, 0, 0, 0 },
+		{ Kind::Toggle, "Player Notifications", 0x003A30, "interface_messages", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Toggle, "Follower Notifications", 0x213E87, "interface_messages_followers", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Toggle, "Focus Notifications", 0x2DE76F, "interface_focusMessages", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Toggle, "Frostfall Messages in Wellbeing", 0x3C2537, "interface_frostfallMessages", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Column, "", 0, "", 0, 0, 0, 0, "", nullptr, 0, 0, 0 },
+		{ Kind::Header, "Animations", 0, "", 0.0f, 0.0f, 0.0f, 0.0f, "", nullptr, 0, 0, 0 },
+		{ Kind::Toggle, "Player Animations", 0x23C6B3, "interface_animations_player", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Toggle, "Follower Animations", 0x23C6B4, "interface_animations_followers", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+		{ Kind::Toggle, "Animate Collecting Water", 0x39EE2A, "interface_animations_pickup", 1, 1, 2, 1, "", nullptr, 0, 1, 0 },
+	};
+
 	inline constexpr const char* kOverview_PresetsGameplay[] = {
 		"Just for Fun",
 		"Immersive Challenge",
@@ -274,5 +291,6 @@ namespace mcm
 		{ "Alcohol, Skooma & Disease", kPage3, static_cast<int>(std::size(kPage3)) },
 		{ "Food Spoilage", kPage4, static_cast<int>(std::size(kPage4)) },
 		{ "Other", kPage5, static_cast<int>(std::size(kPage5)) },
+		{ "Interface", kPage6, static_cast<int>(std::size(kPage6)) },
 	};
 }

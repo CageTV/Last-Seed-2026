@@ -290,6 +290,7 @@ namespace Menu
 		void __stdcall RenderAlcoholDiseaseSettings() { NativeMcm::DrawPage(3); }
 		void __stdcall RenderFoodSpoilageSettings() { NativeMcm::DrawPage(4); }
 		void __stdcall RenderOtherSettings() { NativeMcm::DrawPage(5); }
+		void __stdcall RenderInterfaceSettings() { NativeMcm::DrawPage(6); }
 		void __stdcall RenderProfiles() { NativeMcm::DrawProfiles(); }
 		void __stdcall RenderFoodLists() { NativeFoodLists::Draw(); }
 
@@ -313,6 +314,7 @@ namespace Menu
 		SKSEMenuFramework::AddSectionItem("Vitality", RenderVitalitySettings);
 		SKSEMenuFramework::AddSectionItem("Alcohol, Skooma & Disease", RenderAlcoholDiseaseSettings);
 		SKSEMenuFramework::AddSectionItem("Food Spoilage Settings", RenderFoodSpoilageSettings);
+		SKSEMenuFramework::AddSectionItem("Interface Settings", RenderInterfaceSettings);
 		SKSEMenuFramework::AddSectionItem("Other Settings", RenderOtherSettings);
 		SKSEMenuFramework::AddSectionItem("Profiles", RenderProfiles);
 		SKSEMenuFramework::AddSectionItem("Food & Drink Lists", RenderFoodLists);
