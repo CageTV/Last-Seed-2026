@@ -548,9 +548,10 @@ namespace Spoilage
 			std::vector<RE::ObjectRefHandle> found;
 			const auto collect = [&](RE::TESObjectCELL* a_cell) {
 				if (a_cell && a_cell->IsAttached()) {
-					a_cell->ForEachReferenceInRange(origin, kWorldScanRadius, [&](RE::TESObjectREFR& a_ref) {
-						if (IsWorldContainer(&a_ref)) {
-							found.push_back(a_ref.GetHandle());
+					a_cell->ForEachReferenceInRange(origin, kWorldScanRadius, [&](auto&& a_refArg) {
+						auto* a_ref = compat::Ptr(a_refArg);
+						if (IsWorldContainer(a_ref)) {
+							found.push_back(a_ref->GetHandle());
 						}
 						return RE::BSContainer::ForEachResult::kContinue;
 					});

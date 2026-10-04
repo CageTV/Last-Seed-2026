@@ -40,8 +40,8 @@ namespace NativeFoodLists
 			if (!a_list) {
 				return out;
 			}
-			a_list->ForEachForm([&](RE::TESForm& a_form) {
-				out.push_back(&a_form);
+			a_list->ForEachForm([&](auto&& a_form) {
+				out.push_back(compat::Ptr(a_form));
 				return RE::BSContainer::ForEachResult::kContinue;
 			});
 			return out;

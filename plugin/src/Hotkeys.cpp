@@ -94,7 +94,11 @@ namespace Hotkeys
 			if (a_slot.needsIntensityPerk) {
 				auto* perk = Look(kUnboundIntensity) ? Look(kUnboundIntensity)->As<RE::TESGlobal>() : nullptr;
 				if (!perk || perk->value <= 0.0f) {
+#if __has_include(<RE/S/SendHUDMessage.h>)
+					RE::SendHUDMessage::ShowHUDMessage("You have not unlocked Unbound Intensity.");
+#else
 					RE::DebugNotification("You have not unlocked Unbound Intensity.");
+#endif
 					return;
 				}
 			}
