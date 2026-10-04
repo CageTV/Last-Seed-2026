@@ -1,3 +1,11 @@
+/*
+ * Last Seed 2026
+ * Copyright (C) 2026 CageTV
+ *
+ * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or (at your option) any later version. It is distributed WITHOUT ANY
+ * WARRANTY; see LICENSE.txt for the full text.
+ */
 #pragma once
 
 // Last Seed's hotkeys (check needs, eat, drink, provisions, intensity, examine food, drink from stream), handled here instead of by the

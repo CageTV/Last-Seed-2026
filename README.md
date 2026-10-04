@@ -72,7 +72,7 @@ See [BUILDING.md](BUILDING.md).
 ## Credits and licences
 
 - **Chesko and Aytrus** - Last Seed; Chesko - Campfire and Frostfall. `LastSeed.esp` and the Papyrus scripts here are modified versions of
-  theirs, used under their MIT licence (see [LICENSE.txt](LICENSE.txt)).
+  theirs, used under their MIT licence; the combined work is released under the GPL-3.0-or-later (see [LICENSE.txt](LICENSE.txt)).
 - The SKSE Menu Framework 3 author - `plugin/include/SKSEMenuFramework.h` is that project's SDK header, unmodified, under its own terms.
 - Grid Inventory (Nexus) - `plugin/include/GridInventoryAPI.h` is its extension header, vendored unmodified as the header asks, under Grid
   Inventory's GPL-3.0 with its modding exception.
