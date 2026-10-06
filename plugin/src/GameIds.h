@@ -1,10 +1,8 @@
 /*
  * Last Seed 2026
- * Copyright (C) 2026 CageTV
+ * Copyright (c) 2026 CageTV
  *
- * This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or (at your option) any later version. It is distributed WITHOUT ANY
- * WARRANTY; see LICENSE.txt for the full text.
+ * Released under the MIT License; see LICENSE.txt.
  */
 #pragma once
 // Local FormIDs (in LastSeed.esp) of the globals LastSeed.dll reads. Read from LastSeed.esp 5.3 (Nexus 56393) with houseCARL on 2026-10-02.
