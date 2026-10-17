@@ -19,6 +19,7 @@ add_commonlibsse_plugin(${PROJECT_NAME} NAME "LastSeed" AUTHOR "CageTV" SOURCES
     src/Hotkeys.cpp
     src/NativeFoodLists.cpp
     src/Compat.cpp
+    src/DiseaseWidget.cpp
     src/Ids.cpp
 )
 

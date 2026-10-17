@@ -23,6 +23,7 @@
 #include <mutex>
 #include <string>
 #include <string_view>
+#include <thread>
 #include <unordered_map>
 
 using namespace std::literals;

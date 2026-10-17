@@ -112,7 +112,7 @@ xml.dom.minidom.parseString(info)
 rr = reg.read("README.txt").decode("utf-8")
 er = esl.read("README.txt").decode("utf-8")
 esl_note = er.split("\n", 1)[1].strip()
-readme = (f"Last Seed 2026 {version}\n\nOne installer for both builds: it asks Regular or ESL, then which LastSeed.dll (new: Skyrim 1.6.1170 and newer; older: Skyrim VR or 1.6.1130 and older; both work on 1.6.1170). New in 1.1.1: an Interface Settings page (Focus and other notifications, eating and drinking animations, effects). The text below is the regular build's README, "
+readme = (f"Last Seed 2026 {version}\n\nOne installer for both builds: it asks Regular or ESL, then which LastSeed.dll (new: Skyrim 1.6.1170 and newer; older: Skyrim VR or 1.6.1130 and older; both work on 1.6.1170). New in 1.1.2: support for Disease Widget - SKSE (when its DLL is installed, Last Seed adds its diseases and their stages to the widget's list, so they get the right icons). New in 1.1.1: an Interface Settings page (Focus and other notifications, eating and drinking animations, effects). The text below is the regular build's README, "
           "then the ESL build's README (differences only matter if you pick ESL).\n\n" + rr.split("\n", 1)[1].strip() +
           "\n\n\n=== ESL BUILD ===\n\n" + esl_note + "\n")
 

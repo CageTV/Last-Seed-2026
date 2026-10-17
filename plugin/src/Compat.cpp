@@ -7,6 +7,7 @@
 #include "PCH.h"
 #include "Ids.h"
 #include "Compat.h"
+#include "DiseaseWidget.h"
 #include "GameIds.h"
 #include "Settings.h"
 
@@ -178,5 +179,12 @@ namespace Compat
 		}
 	}
 
-	std::vector<Entry> Status() { return status; }
+	std::vector<Entry> Status()
+	{
+		auto result = status;
+		if (const auto widget = DiseaseWidget::Status(); widget.present) {
+			result.push_back(widget);
+		}
+		return result;
+	}
 }

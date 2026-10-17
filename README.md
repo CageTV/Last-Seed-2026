@@ -26,7 +26,7 @@ download installed underneath it.
   SkyUI menu keeps one page: the food portion editor.
 - **Patches built in** (no patch plugins, no new masters): General Compatibility, Attack Speed Fix (Unbound Intensity no longer slows time),
   Your Own Thoughts (first-person messages). **Done at run time when the other mod is present:** spoiled food as bait for any fishing mod,
-  Growl - Werebeasts of Skyrim, Travellers of Skyrim.
+  Growl - Werebeasts of Skyrim, Travellers of Skyrim, Disease Widget - SKSE (Last Seed's diseases and their stages get the right icons).
 - The **"COMPLETED: LAST SEED" banner** at start-up is gone.
 
 Patches that need another mod as a master, or that move things in the world, are not included and keep working as separate plugins: the

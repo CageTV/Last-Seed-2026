@@ -10,6 +10,7 @@
 #include "GridInv.h"
 #include "Hud.h"
 #include "Compat.h"
+#include "DiseaseWidget.h"
 #include "Hotkeys.h"
 #include "Menu.h"
 #include "Settings.h"
@@ -67,6 +68,7 @@ namespace
 		switch (a_msg->type) {
 		case SKSE::MessagingInterface::kPostLoad:
 			Menu::Register();  // SKSE Menu Framework loads after us alphabetically, so register once everything is loaded
+			DiseaseWidget::MergeDefinitions();  // before Disease Widget reads its definitions at kDataLoaded
 			break;
 		case SKSE::MessagingInterface::kDataLoaded:
 			Game::Init();
@@ -79,6 +81,10 @@ namespace
 		case SKSE::MessagingInterface::kPostLoadGame:
 		case SKSE::MessagingInterface::kNewGame:
 			Hotkeys::OnGameLoaded();
+			std::thread([]() {
+				std::this_thread::sleep_for(std::chrono::seconds(20));
+				DiseaseWidget::LogActiveDiseases();
+			}).detach();
 			break;
 		default:
 			break;
