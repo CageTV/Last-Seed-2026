@@ -10,6 +10,7 @@
 //   * fishing bait: Perished Food and the spoiled meats and fish go into the bait list of any fishing mod (found by what is on the list)
 //   * Growl - Werebeasts of Skyrim: the werewolf feeding spell gets Growl's effects
 //   * Travellers of Skyrim: the Apothecary's cure disease ability cures with Last Seed's disease cure
+//   * any food mod: foods Last Seed does not know are classified automatically (FoodAuto)
 // Nothing here adds a master to LastSeed.esp.
 namespace Compat
 {

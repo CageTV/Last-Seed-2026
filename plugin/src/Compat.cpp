@@ -8,6 +8,7 @@
 #include "Ids.h"
 #include "Compat.h"
 #include "DiseaseWidget.h"
+#include "FoodAuto.h"
 #include "GameIds.h"
 #include "Settings.h"
 
@@ -174,6 +175,7 @@ namespace Compat
 		FishingBait();
 		Growl();
 		Travellers();
+		status.push_back(FoodAuto::Apply());
 		for (const auto& e : status) {
 			SKSE::log::info("Compat: {} - {}{}", e.name, e.present ? (e.applied ? "applied" : "present") : "not installed", e.detail.empty() ? "" : " (" + e.detail + ")");
 		}

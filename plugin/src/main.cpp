@@ -11,6 +11,7 @@
 #include "Hud.h"
 #include "Compat.h"
 #include "DiseaseWidget.h"
+#include "FoodAuto.h"
 #include "Hotkeys.h"
 #include "Menu.h"
 #include "Settings.h"
@@ -81,6 +82,7 @@ namespace
 		case SKSE::MessagingInterface::kPostLoadGame:
 		case SKSE::MessagingInterface::kNewGame:
 			Hotkeys::OnGameLoaded();
+			FoodAuto::OnGameLoaded();
 			std::thread([]() {
 				std::this_thread::sleep_for(std::chrono::seconds(20));
 				DiseaseWidget::LogActiveDiseases();

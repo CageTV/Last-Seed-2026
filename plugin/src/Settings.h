@@ -18,6 +18,7 @@ struct Settings
 	float rawFoodHours = 48.0f;       // ... raw ones (VendorItemFoodRaw)
 	float otherFoodHours = 120.0f;    // ... everything else (VendorItemFood)
 	bool  baitCompat = true;          // spoiled food goes on the bait list of any fishing mod
+	bool  autoClassifyFoods = true;   // foods Last Seed does not know get its food keywords at game start instead of a question (FoodAuto)
 	bool  freshnessBar = true;        // thin freshness bar over the item card while hovering a food that spoils
 	bool  worldSpoilage = true;       // food in world containers spoils (LastSeed.dll), and is restocked fresh after the reset period
 	float worldSpoilChance = 40.0f;   // % chance each food in a world container has spoiled when first seen (replaces Last Seed's Container Spoilage Rate)

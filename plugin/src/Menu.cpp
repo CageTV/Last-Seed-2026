@@ -103,6 +103,9 @@ namespace Menu
 			if (Checkbox("Spoiled food works as fishing bait (any fishing mod)", &settings.baitCompat)) {
 				settings.Save();
 			}
+			if (Checkbox("Classify foods of other mods automatically (no \"unfamiliar foodstuff\" questions)", &settings.autoClassifyFoods)) {
+				settings.Save();
+			}
 			TextDisabled("Takes effect the next time the game starts.");
 			for (const auto& e : Compat::Status()) {
 				if (e.present || e.applied) {
