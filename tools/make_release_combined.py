@@ -3,7 +3,8 @@
 
 Step 1 picks Regular or ESL (LastSeed.esp differs, and the ESL build adds six rebuilt scripts). Step 2 picks the DLL: "new" (alandtse's
 CommonLibSSE-NG, Skyrim 1.6.1170 and newer) or "older" (CharmedBaryon's, Skyrim VR and 1.6.1130 and older). The logo, icons and the nine scripts
-that are identical are installed always. Everything except the DLL is taken from the published 1.0.0 regular and ESL zips, so it is byte-identical.
+that are identical are installed always. Everything except the DLL and the scripts in CHANGED is taken from the published 1.0.0 regular and ESL zips,
+so it is byte-identical.
 Usage: python tools/make_release_combined.py [version]
 """
 import hashlib
@@ -30,6 +31,24 @@ assert not (A - B), A - B
 SPECIAL = {"LastSeed.esp", "README.txt", DLL_NAME}
 shared = sorted((A & B) - SPECIAL)
 assert all(md5(reg, n) == md5(esl, n) for n in shared)
+
+# Scripts changed since 1.0.0: published path -> {where: source file}. "common" goes to both builds; "regular" / "esl" to that build only
+# (the ESL build's copy has Last Seed's FormIDs renumbered by tools/esl_build.py). Run tools/build_scripts.py and tools/esl_build.py first.
+RC = os.path.join(HERE, "release-contents", "Scripts")
+EW = os.path.join(HERE, "esl-work")
+CHANGED = {
+    # 1.1.3: a Campfire tent or a bedroll by the fire is a safe place to sleep (no FormIDs: the same in both builds)
+    "Scripts/_Seed_FatigueSystem.pex": {"common": os.path.join(RC, "_Seed_FatigueSystem.pex")},
+    "Scripts/Source/_Seed_FatigueSystem.psc": {"common": os.path.join(RC, "Source", "_Seed_FatigueSystem.psc")},
+    # 1.2.0: CACO's food is imported without the Add Now / Add Later question
+    "Scripts/_Seed_Compatibility.pex": {"regular": os.path.join(RC, "_Seed_Compatibility.pex"), "esl": os.path.join(EW, "pex", "_Seed_Compatibility.pex")},
+    "Scripts/Source/_Seed_Compatibility.psc": {"regular": os.path.join(RC, "Source", "_Seed_Compatibility.psc"),
+                                               "esl": os.path.join(EW, "scripts-src", "_Seed_Compatibility.psc")},
+}
+for n, srcs in CHANGED.items():
+    for where, p in srcs.items():
+        assert os.path.isfile(p), f"missing {where} {n}: {p}"
+shared = [n for n in shared if n not in CHANGED]
 esl_only = sorted(B - A)
 
 config = f"""<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://qconsulting.ca/fo3/ModConfig5.0.xsd">
@@ -112,7 +131,7 @@ xml.dom.minidom.parseString(info)
 rr = reg.read("README.txt").decode("utf-8")
 er = esl.read("README.txt").decode("utf-8")
 esl_note = er.split("\n", 1)[1].strip()
-readme = (f"Last Seed 2026 {version}\n\nOne installer for both builds: it asks Regular or ESL, then which LastSeed.dll (new: Skyrim 1.6.1170 and newer; older: Skyrim VR or 1.6.1130 and older; both work on 1.6.1170). New in 1.1.2: support for Disease Widget - SKSE (when its DLL is installed, Last Seed adds its diseases and their stages to the widget's list, so they get the right icons). New in 1.1.1: an Interface Settings page (Focus and other notifications, eating and drinking animations, effects). The text below is the regular build's README, "
+readme = (f"Last Seed 2026 {version}\n\nOne installer for both builds: it asks Regular or ESL, then which LastSeed.dll (new: Skyrim 1.6.1170 and newer; older: Skyrim VR or 1.6.1130 and older; both work on 1.6.1170). New in 1.2.0: foods of other mods that Last Seed does not know are classified automatically when the game starts, instead of asking you about each one (switch: Compatibility on the settings page); items that only look like food (CACO's hunger-status tokens) are marked as not food; CACO's food is imported without the Add Now / Add Later question; a Campfire tent or a bedroll by the fire counts as a safe place to sleep. New in 1.1.2: support for Disease Widget - SKSE (when its DLL is installed, Last Seed adds its diseases and their stages to the widget's list, so they get the right icons). New in 1.1.1: an Interface Settings page (Focus and other notifications, eating and drinking animations, effects). The text below is the regular build's README, "
           "then the ESL build's README (differences only matter if you pick ESL).\n\n" + rr.split("\n", 1)[1].strip() +
           "\n\n\n=== ESL BUILD ===\n\n" + esl_note + "\n")
 
@@ -129,12 +148,21 @@ with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     z.writestr("regular/LastSeed.esp", reg.read("LastSeed.esp"))
     z.writestr("esl/LastSeed.esp", esl.read("LastSeed.esp"))
     for n in esl_only:
-        z.writestr("esl/" + n, esl.read(n))
-# verify: what each choice installs equals the published zips
+        if n not in CHANGED:
+            z.writestr("esl/" + n, esl.read(n))
+    for n, srcs in CHANGED.items():
+        for where, p in srcs.items():
+            z.write(p, f"{where}/{n}")
+# verify: what each choice installs equals the published zips, apart from the DLL and the changed scripts (which must be the files listed)
 chk = zipfile.ZipFile(out)
 for name, src, pre in (("regular", reg, "regular/"), ("esl", esl, "esl/")):
     got = {n[len("common/"):]: chk.read(n) for n in chk.namelist() if n.startswith("common/")}
     got.update({n[len(pre):]: chk.read(n) for n in chk.namelist() if n.startswith(pre)})
-    want = {n: src.read(n) for n in files(src) - {"README.txt", DLL_NAME}}
-    assert got == want, name
-print(f"wrote {out}: {len(shared)} shared, {len(esl_only) + 1} ESL, 1 regular plugin; both builds verified byte-identical to 1.0.0 apart from the DLL; {os.path.getsize(out) // 1024} KB")
+    want = {n: src.read(n) for n in files(src) - {"README.txt", DLL_NAME} - set(CHANGED)}
+    for n, srcs in CHANGED.items():
+        p = srcs.get("common") or srcs.get(name)
+        if p:
+            want[n] = open(p, "rb").read()
+    assert got == want, (name, sorted(set(got) ^ set(want)), sorted(k for k in got.keys() & want.keys() if got[k] != want[k]))
+print(f"wrote {out}: {len(shared)} shared, {len(esl_only) + 1} ESL, 1 regular plugin, {len(CHANGED)} changed scripts; both builds verified against 1.0.0 "
+      f"apart from the DLL and those scripts; {os.path.getsize(out) // 1024} KB")
