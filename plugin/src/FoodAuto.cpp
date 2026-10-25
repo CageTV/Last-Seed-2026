@@ -30,7 +30,7 @@ namespace FoodAuto
 		struct Keywords
 		{
 			RE::BGSKeyword *meat{}, *fish{}, *seafood{}, *stewSimple{}, *stewComplex{}, *pastrySmall{}, *pastryLarge{}, *vegetable{}, *fruit{}, *bread{},
-				*cheese{}, *cheeseBowl{}, *treat{}, *milk{};
+				*cheese{}, *cheeseBowl{}, *treat{}, *milk{}, *nonAlcohol{}, *skoomaWeak{}, *skoomaStrong{};
 			RE::BGSKeyword* alcohol[3]{};  // weak, moderate, strong
 			RE::BGSKeyword* hunger[4]{};   // light, medium, filling, hearty
 			RE::BGSKeyword* raw{};         // Skyrim's VendorItemFoodRaw
@@ -52,6 +52,9 @@ namespace FoodAuto
 				cheeseBowl = Kw(0xAF100B);
 				treat = Kw(0xAF1011);
 				milk = Kw(0xAF101D);
+				nonAlcohol = Kw(0xAF101B);
+				skoomaWeak = Kw(0xD9FF06);
+				skoomaStrong = Kw(0xD9FF07);
 				alcohol[0] = Kw(0xAF101A);
 				alcohol[1] = Kw(0xD9FF04);
 				alcohol[2] = Kw(0xD9FF05);
@@ -89,6 +92,42 @@ namespace FoodAuto
 				a_item->AddKeyword(a_kw);
 			}
 		}
+
+		// Drinks the food classifier leaves out on purpose (it only knows Gourmet's foods, ales and wines): skooma, cider, water, coffee, tea...
+		bool Drink(const Keywords& k, RE::AlchemyItem* a_item, std::string& a_what)
+		{
+			const auto words = gclass::Words(a_item->GetName());
+			auto       has = [&](std::initializer_list<const char*> a_list) {
+                return std::any_of(words.begin(), words.end(), [&](const std::string& w) {
+                    return std::any_of(a_list.begin(), a_list.end(), [&](const char* x) { return w == x; });
+                });
+			};
+			RE::BGSKeyword* kw = nullptr;
+			if (has({ "skooma", "balmora" })) {
+				const bool strong = has({ "double", "distilled", "strong" });
+				kw = strong ? k.skoomaStrong : k.skoomaWeak;
+				a_what = strong ? "strong skooma" : "weak skooma";
+			} else if (has({ "cider", "liquor", "spirits", "jagga" })) {
+				kw = k.alcohol[0];
+				a_what = "weak alcohol";
+			} else if (has({ "water", "coffee", "tea", "juice", "cocoa", "lemonade", "infusion" })) {
+				kw = k.nonAlcohol;
+				a_what = "non-alcoholic drink";
+			}
+			if (!kw) {
+				return false;
+			}
+			Add(a_item, kw);
+			return true;
+		}
+
+		bool Known(RE::AlchemyItem* a_item, RE::BGSListForm* a_notFood, const std::vector<RE::BGSListForm*>& a_lists, const Keywords& k)
+		{
+			return a_notFood->HasForm(a_item) || std::any_of(a_lists.begin(), a_lists.end(), [&](auto* l) { return l->HasForm(a_item); }) ||
+			       std::any_of(k.kinds.begin(), k.kinds.end(), [&](auto* kw) { return a_item->HasKeyword(kw); });
+		}
+
+		std::vector<RE::AlchemyItem*> unread;  // foods the classifier could not read, for the count after a save has loaded
 
 		// The kind and hunger keywords for one classified food; false when the classifier's answer has no Last Seed kind
 		bool Describe(const Keywords& k, RE::AlchemyItem* a_item, const gclass::Result& c, std::string& a_what)
@@ -188,8 +227,7 @@ namespace FoodAuto
 			if (!item || item->IsDeleted() || !item->IsFood() || item->IsPoison()) {
 				continue;
 			}
-			if (notFood->HasForm(item) || std::any_of(lists.begin(), lists.end(), [&](auto* l) { return l->HasForm(item); }) ||
-				std::any_of(k.kinds.begin(), k.kinds.end(), [&](auto* kw) { return item->HasKeyword(kw); })) {
+			if (Known(item, notFood, lists, k)) {
 				continue;  // Last Seed knows it, or will file it by its keywords
 			}
 			const char*       n = item->GetName();
@@ -206,7 +244,7 @@ namespace FoodAuto
 			in.value = item->GetGoldValue();
 			const auto  c = gclass::Classify(in);
 			std::string what;
-			if (c.ok && Describe(k, item, c, what)) {
+			if ((c.ok && Describe(k, item, c, what)) || Drink(k, item, what)) {
 				++classified;
 				SKSE::log::info("Foods: {} ({}, {:08X}) -> {}", name, where, item->GetFormID(), what);
 			} else if (item->GetWeight() <= 0.0f && item->GetGoldValue() <= 0) {
@@ -217,19 +255,18 @@ namespace FoodAuto
 				SKSE::log::info("Foods: {} ({}, {:08X}) -> not food ({})", name.empty() ? "(unnamed)" : name, where, item->GetFormID(), c.why);
 			} else {
 				++left;
-				SKSE::log::info("Foods: {} ({}, {:08X}) -> not recognised ({}): Last Seed will ask", name.empty() ? "(unnamed)" : name, where, item->GetFormID(), c.why);
+				unread.push_back(item);
+				SKSE::log::info("Foods: {} ({}, {:08X}) -> not recognised ({})", name.empty() ? "(unnamed)" : name, where, item->GetFormID(), c.why);
 			}
 		}
 		entry.applied = classified + notFoodCount > 0;
-		entry.detail = std::format("{} classified, {} marked as not food, {} left for Last Seed to ask about", classified, notFoodCount, left);
+		entry.detail = std::format("{} classified, {} marked as not food, {} not recognised (most are filed by Last Seed's own imports once a save loads)", classified,
+			notFoodCount, left);
 		return entry;
 	}
 
 	void OnGameLoaded()
 	{
-		if (tokens.empty()) {
-			return;
-		}
 		auto* notFood = LsList(kIdxNotFood);
 		if (!notFood) {
 			return;
@@ -244,5 +281,24 @@ namespace FoodAuto
 		if (added) {
 			SKSE::log::info("Foods: {} not-food item(s) put back on Last Seed's Not Food list after loading", added);
 		}
+		// Last Seed's own imports (CACO, Bruma, Frostfall...) fill its lists from the save, so only now is it known what it would still ask about
+		Keywords k;
+		std::vector<RE::BGSListForm*> lists;
+		for (int i = 0; i < kCategoryCount; ++i) {
+			if (auto* l = LsList(i)) {
+				lists.push_back(l);
+			}
+		}
+		if (!k.Load()) {
+			return;
+		}
+		int ask = 0;
+		for (auto* item : unread) {
+			if (!Known(item, notFood, lists, k)) {
+				++ask;
+				SKSE::log::info("Foods: Last Seed will ask about {} ({:08X}) the first time it is eaten or stored", item->GetName(), item->GetFormID());
+			}
+		}
+		SKSE::log::info("Foods: after loading, {} of {} unrecognised food(s) are still unknown to Last Seed", ask, unread.size());
 	}
 }
