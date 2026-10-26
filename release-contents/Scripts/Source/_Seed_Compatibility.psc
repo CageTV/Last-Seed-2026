@@ -90,6 +90,9 @@ Bool Property isProjectAhoLoaded Auto hidden
 Bool Property isRequiemLoaded Auto hidden
 Bool Property isSAFOLoaded Auto hidden
 Bool Property isSKSELoaded Auto hidden
+; Last Seed 2026: true on Special Edition once SKSE64 is confirmed. IsPluginLoaded then asks Game.IsPluginInstalled (one native call, sees light plugins too)
+; instead of probing every optional plugin with Game.GetFormFromFile, which logged a Papyrus error per missing plugin on every load.
+Bool pluginProbeViaSKSE = False
 Bool Property isSKYUILoaded Auto hidden
 Bool Property isShadowOfSkyrimLoaded Auto hidden
 Bool Property isSkyrimVR Auto hidden
@@ -313,6 +316,8 @@ Function RunCompatibility()
       isSKSELoaded = False ; #DEBUG_LINE_NO:422
       Self.ErrorSKSE(0) ; #DEBUG_LINE_NO:423
     EndIf
+  Else
+    pluginProbeViaSKSE = skse.GetVersion() as Bool
   EndIf
   Self.VanillaGameLoadUp() ; #DEBUG_LINE_NO:427
   Self.CheckDatastore() ; #DEBUG_LINE_NO:430
@@ -612,7 +617,13 @@ Function CheckDatastore()
 EndFunction
 
 Bool Function IsPluginLoaded(Int iFormID, String sPluginName)
-  If isSKSELoaded ; #DEBUG_LINE_NO:824
+  If pluginProbeViaSKSE
+    If Game.IsPluginInstalled(sPluginName)
+      Debug.trace("[LastSeed] Loaded: " + sPluginName, 0)
+      Return True
+    EndIf
+    Return False
+  ElseIf isSKSELoaded ; #DEBUG_LINE_NO:824
     Int i = Game.GetModByName(sPluginName) ; #DEBUG_LINE_NO:825
     If i != 255 ; #DEBUG_LINE_NO:826
       Debug.trace("[LastSeed] Loaded: " + sPluginName, 0) ; #DEBUG_LINE_NO:827
