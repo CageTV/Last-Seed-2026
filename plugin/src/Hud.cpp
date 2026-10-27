@@ -12,16 +12,20 @@
 #include "Settings.h"
 
 #include "SKSEMenuFramework.h"
+#include "BarKit.h"
 
 namespace Hud
 {
 	namespace
 	{
 		using namespace ImGuiMCP;
+		using namespace BarKit;
 
 		int   previewFrames = 0;
 		float saveTimer = -1.0f;
 		float groupAlpha = 1.0f;
+		bool  editMode = false;  // free layout: drag the bars with the mouse while the settings window is open
+		int   dragBar = -1;
 
 		FrostfallLayout frostfall;
 		constexpr const char* kLogoPath = "Data\\Interface\\lastseed\\lastseed_logo.png";
@@ -63,30 +67,6 @@ namespace Hud
 			a_t.shown += (a_frac - a_t.shown) * std::min(1.0f, a_dt * 6.0f);  // smooth fill movement
 		}
 
-		ImU32 Col(float r, float g, float b, float a)
-		{
-			return IM_COL32(static_cast<int>(std::clamp(r, 0.0f, 255.0f)), static_cast<int>(std::clamp(g, 0.0f, 255.0f)),
-				static_cast<int>(std::clamp(b, 0.0f, 255.0f)), static_cast<int>(std::clamp(a, 0.0f, 1.0f) * 255.0f));
-		}
-
-		struct Rgb { float r, g, b; };
-
-		// One flat vertical bar: dark track, fill from the bottom, slightly lighter at the top of the fill. No border.
-		// (Same drawing as Frostfall's bars so the two groups look like one HUD.)
-		void DrawBar(ImDrawList* a_dl, float a_x, float a_y, float a_w, float a_h, float a_fill, Rgb a_color, float a_alpha)
-		{
-			const float rounding = std::min(a_w * 0.35f, 4.0f);
-			ImDrawListManager::AddRectFilled(a_dl, ImVec2(a_x, a_y), ImVec2(a_x + a_w, a_y + a_h), Col(10, 12, 16, 0.55f * a_alpha), rounding, 0);
-			const float fh = a_h * std::clamp(a_fill, 0.0f, 1.0f);
-			if (fh < 0.5f) {
-				return;
-			}
-			const float top = a_y + a_h - fh;
-			const ImU32 cTop = Col(a_color.r + 35, a_color.g + 35, a_color.b + 35, 0.95f * a_alpha);
-			const ImU32 cBot = Col(a_color.r * 0.8f, a_color.g * 0.8f, a_color.b * 0.8f, 0.95f * a_alpha);
-			ImDrawListManager::AddRectFilledMultiColor(a_dl, ImVec2(a_x, top), ImVec2(a_x + a_w, a_y + a_h), cTop, cTop, cBot, cBot);
-		}
-
 		// White glyphs on transparent PNGs (Interface/lastseed/icons, drawn by tools/make_icons.py), tinted here.
 		enum Icon { kHunger, kThirst, kFatigue, kVitality, kIconCount };
 
@@ -112,18 +92,7 @@ namespace Hud
 			return textures[a_icon];
 		}
 
-		void DrawIcon(ImDrawList* a_dl, Icon a_icon, float a_cx, float a_top, float a_size, float a_alpha)
-		{
-			auto* tex = IconTexture(a_icon);
-			if (!tex) {
-				return;
-			}
-			const float x = a_cx - a_size * 0.5f;
-			ImDrawListManager::AddImage(a_dl, tex, ImVec2(x + 1.0f, a_top + 1.0f), ImVec2(x + a_size + 1.0f, a_top + a_size + 1.0f),
-				ImVec2(0, 0), ImVec2(1, 1), Col(0, 0, 0, 0.55f * a_alpha));
-			ImDrawListManager::AddImage(a_dl, tex, ImVec2(x, a_top), ImVec2(x + a_size, a_top + a_size),
-				ImVec2(0, 0), ImVec2(1, 1), Col(225, 232, 240, 0.9f * a_alpha));
-		}
+		void IconFor(ImDrawList* a_dl, Icon a_icon, const Bar& a_b, float a_k, float a_alpha) { DrawIconFor(a_dl, IconTexture(a_icon), a_b, a_k, a_alpha); }
 
 		bool HudHiddenByGame()
 		{
@@ -137,25 +106,20 @@ namespace Hud
 			return !ui->IsShowingMenus();  // the HUD was toggled off (tm)
 		}
 
-		// Where the bottom edge of Frostfall's bar group (including the icons under its last row) sits, using Frostfall's own
-		// layout maths (Frostfall.dll Hud.cpp DrawBars), so this group can start just below it.
-		float FrostfallBottom(const FrostfallLayout& a_ff, float a_w, float a_h)
+		// Frostfall's group, as its own INI describes it (the same shape as this one's).
+		Group FrostfallGroup(const FrostfallLayout& a_ff)
 		{
-			(void)a_w;
-			const float k = (a_h / 1080.0f) * a_ff.scale;
-			const float L = a_ff.barLength * k;
-			const float gap = a_ff.spacing * k;
-			const float icon = a_ff.showIcons ? 16.0f * k : 0.0f;
-			const float rowGap = gap + icon + (a_ff.showIcons ? 6.0f * k : 0.0f);
-			const float centerY = a_ff.posY * a_h;
-			float       barsBottom;
-			if (a_ff.layout == 0) {
-				const float groupH = 2 * L + rowGap;
-				barsBottom = centerY - groupH * 0.5f + groupH;
-			} else {
-				barsBottom = centerY - (L + icon) * 0.5f + L;
-			}
-			return barsBottom + (a_ff.showIcons ? 19.0f * k : 0.0f);
+			Group g;
+			g.layout = std::min(a_ff.layout, 1);
+			g.orientation = a_ff.orientation;
+			g.flip = a_ff.flipFill;
+			g.icons = a_ff.showIcons;
+			g.thickness = a_ff.barThickness;
+			g.length = a_ff.barLength;
+			g.spacing = a_ff.spacing;
+			g.posX = a_ff.posX;
+			g.posY = a_ff.posY;
+			return g;
 		}
 
 		void DrawBars(ImDrawList* a_dl, float a_dt, bool a_preview)
@@ -191,72 +155,88 @@ namespace Hud
 				return;
 			}
 
-			// Size and layout: this group's own settings, or Frostfall's while stacked and matching it
-			const bool stacked = s.stackUnderFrostfall && frostfall.loaded && frostfall.hudEnabled;
-			const bool matching = stacked && s.matchFrostfall;
+			// Size and layout: this group's own settings, or Frostfall's while stacked and matching it. Stacking needs Frostfall's grouped layout
+			// (a Frostfall with its bars placed one by one has no group to sit under).
+			const bool  stacked = s.stackUnderFrostfall && frostfall.loaded && frostfall.hudEnabled && frostfall.layout != 2;
+			const bool  matching = stacked && s.matchFrostfall;
 			const float k = ((matching ? frostfall.scale : s.scale) * H) / 1080.0f;
-			const float t = (matching ? frostfall.barThickness : s.barThickness) * k;
-			const float L = (matching ? frostfall.barLength : s.barLength) * k;
-			const float gap = (matching ? frostfall.spacing : s.spacing) * k;
 			const bool  icons = matching ? frostfall.showIcons : s.showIcons;
-			const int   layout = matching ? frostfall.layout : s.layout;
-			const float icon = icons ? 16.0f * k : 0.0f;
-			const float rowGap = gap + icon + (icons ? 6.0f * k : 0.0f);
-			const float stepX = t + gap * 1.6f;
 
-			const float groupH = layout == 0 ? 2 * L + rowGap : L + icon;
-			float       right = s.posX * W;
-			float       y0;
-			if (stacked) {
-				right = frostfall.posX * W;
-				y0 = FrostfallBottom(frostfall, W, H) + s.stackGap * (H / 1080.0f);
-			} else {
-				y0 = s.posY * H - groupH * 0.5f;
-			}
-
-			// Slot positions: grid = 2 columns x 2 rows; row = 4 across
-			struct Slot { float x, y; };
-			Slot slots[4];
-			if (layout == 0) {
-				const float groupW = 2 * t + gap * 1.6f;
-				const float x0 = right - groupW;
-				slots[0] = { x0, y0 };
-				slots[1] = { x0 + stepX, y0 };
-				slots[2] = { x0, y0 + L + rowGap };
-				slots[3] = { x0 + stepX, y0 + L + rowGap };
-			} else {
-				const float x0 = right - (4 * t + 3 * gap * 1.6f);
+			Bar slots[4];
+			if (s.layout == 2 && !stacked) {
+				Placed placed[4];
 				for (int i = 0; i < 4; ++i) {
-					slots[i] = { x0 + i * stepX, y0 };
+					placed[i] = { s.freeBar[i].x, s.freeBar[i].y, s.freeBar[i].orient, s.freeBar[i].flip };
+				}
+				FreeSlots(placed, s.barThickness, s.barLength, W, H, k, slots);
+			} else {
+				Group grp;
+				grp.icons = icons;
+				grp.thickness = matching ? frostfall.barThickness : s.barThickness;
+				grp.length = matching ? frostfall.barLength : s.barLength;
+				grp.spacing = matching ? frostfall.spacing : s.spacing;
+				grp.layout = matching ? std::min(frostfall.layout, 1) : std::min(s.layout, 1);
+				grp.orientation = matching ? frostfall.orientation : s.orientation;
+				grp.flip = matching ? frostfall.flipFill : s.flipFill;
+				if (stacked) {
+					// hang from Frostfall's right edge, with the top a little below where its group ends
+					float ffTop = 0.0f, ffBottom = 0.0f;
+					Bar   scratch[4];
+					GroupedSlots(FrostfallGroup(frostfall), W, H, (H / 1080.0f) * frostfall.scale, scratch, &ffTop, &ffBottom);
+					grp.posX = frostfall.posX;
+					grp.posY = 0.5f;
+					float myTop = 0.0f;
+					GroupedSlots(grp, W, H, k, slots, &myTop, nullptr);
+					const float shift = ffBottom + s.stackGap * (H / 1080.0f) - myTop;
+					for (auto& b : slots) {
+						b.y += shift;
+					}
+				} else {
+					grp.posX = s.posX;
+					grp.posY = s.posY;
+					GroupedSlots(grp, W, H, k, slots);
 				}
 			}
 
 			// Last Seed's own meter colours, a little brighter so they read on the dark track
-			const Rgb hungerCol{ 221, 70, 130 }, thirstCol{ 156, 204, 101 }, fatigueCol{ 80, 160, 220 }, vitalityCol{ 253, 216, 53 };
+			const Rgb   hungerCol{ 221, 70, 130 }, thirstCol{ 156, 204, 101 }, fatigueCol{ 80, 160, 220 }, vitalityCol{ 253, 216, 53 };
 			const float pulseT = static_cast<float>(ImGuiMCP::GetTime()) * 5.0f;
 			auto        pulse = [&](float a_need) { return a_need >= 0.83f ? 0.75f + 0.25f * std::sin(pulseT) : 1.0f; };  // value >= 100: starving etc.
 
 			auto iconAt = [&](int a_slot, Icon a_icon) {
 				if (icons) {
-					DrawIcon(a_dl, a_icon, slots[a_slot].x + t * 0.5f, slots[a_slot].y + L + 5.0f * k, 14.0f * k, alpha);
+					IconFor(a_dl, a_icon, slots[a_slot], k, alpha);
 				}
 			};
 
 			if (s.showHunger) {
-				DrawBar(a_dl, slots[0].x, slots[0].y, t, L, hungerT.shown, hungerCol, alpha * pulse(nHunger));
+				DrawBar(a_dl, slots[0], hungerT.shown, hungerCol, alpha * pulse(nHunger));
 				iconAt(0, kHunger);
 			}
 			if (s.showThirst) {
-				DrawBar(a_dl, slots[1].x, slots[1].y, t, L, thirstT.shown, thirstCol, alpha * pulse(nThirst));
+				DrawBar(a_dl, slots[1], thirstT.shown, thirstCol, alpha * pulse(nThirst));
 				iconAt(1, kThirst);
 			}
 			if (s.showFatigue) {
-				DrawBar(a_dl, slots[2].x, slots[2].y, t, L, fatigueT.shown, fatigueCol, alpha * pulse(nFatigue));
+				DrawBar(a_dl, slots[2], fatigueT.shown, fatigueCol, alpha * pulse(nFatigue));
 				iconAt(2, kFatigue);
 			}
 			if (s.showVitality) {
-				DrawBar(a_dl, slots[3].x, slots[3].y, t, L, vitalityT.shown, vitalityCol, alpha);
+				DrawBar(a_dl, slots[3], vitalityT.shown, vitalityCol, alpha);
 				iconAt(3, kVitality);
+			}
+
+			if (a_preview && editMode && s.layout == 2 && !stacked) {
+				float     dx = 0, dy = 0;
+				const int moved = HandleDrag(a_dl, slots, 4, dragBar, W, H, dx, dy);
+				if (moved >= 0) {
+					auto& fb = s.freeBar[moved];
+					fb.x = std::clamp(fb.x + dx, 0.0f, 1.0f);
+					fb.y = std::clamp(fb.y + dy, 0.0f, 1.0f);
+					MarkSettingsDirty();
+				}
+			} else {
+				dragBar = -1;
 			}
 		}
 
@@ -306,6 +286,8 @@ namespace Hud
 	}
 
 	void MarkPreviewFrame() { previewFrames = 2; }
+
+	bool& EditMode() { return editMode; }
 
 	void MarkSettingsDirty() { saveTimer = 0.6f; }
 

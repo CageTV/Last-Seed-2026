@@ -152,14 +152,46 @@ namespace Menu
 			Changed(SliderFloat("Vertical (centre)", &s.posY, 0.0f, 1.0f, "%.3f"));
 			EndDisabled();
 			BeginDisabled(matching);
-			static const char* layouts[] = { "2 x 2 grid", "Single row" };
-			Changed(Combo("Layout", &s.layout, layouts, 2));
+			static const char* layouts[] = { "2 x 2 grid", "Single row", "Free (place every bar yourself)" };
+			Changed(Combo("Layout", &s.layout, layouts, 3));
+			static const char* orientations[] = { "Standing bars", "Bars lying flat" };
+			if (s.layout != 2) {
+				Changed(Combo("Direction", &s.orientation, orientations, 2));
+				Changed(Checkbox("Flip: fill from the other end", &s.flipFill));
+				if (IsItemHovered()) {
+					SetTooltip("Standing bars fill from the top instead of the bottom, flat bars from the right instead of the left. The icons move to that end.");
+				}
+			}
 			Changed(SliderFloat("Scale", &s.scale, 0.5f, 3.0f, "%.2f"));
 			Changed(SliderFloat("Bar length", &s.barLength, 30.0f, 400.0f, "%.0f"));
 			Changed(SliderFloat("Bar thickness", &s.barThickness, 3.0f, 30.0f, "%.0f"));
 			Changed(SliderFloat("Spacing", &s.spacing, 2.0f, 40.0f, "%.0f"));
 			EndDisabled();
 			Changed(SliderFloat("Opacity", &s.opacity, 0.1f, 1.0f, "%.2f"));
+
+			if (s.layout == 2) {
+				Spacing();
+				Separator();
+				Text("Each bar");
+				TextWrapped("Stacking under Frostfall and the free layout exclude each other: untick stacking above to place the bars yourself.");
+				BeginDisabled(stacked);
+				Checkbox("Move the bars with the mouse", &Hud::EditMode());
+				if (IsItemHovered()) {
+					SetTooltip("While this is ticked, click a bar on the screen and drag it where you want it. The sliders below do the same, to the pixel.");
+				}
+				static const char* names[Settings::kBars] = { "Hunger", "Thirst", "Fatigue", "Vitality" };
+				for (int n = 0; n < Settings::kBars; ++n) {
+					auto& fb = s.freeBar[n];
+					PushID(n);
+					Text("%s", names[n]);
+					Changed(SliderFloat("Horizontal", &fb.x, 0.0f, 1.0f, "%.3f"));
+					Changed(SliderFloat("Vertical", &fb.y, 0.0f, 1.0f, "%.3f"));
+					Changed(Combo("Direction", &fb.orient, orientations, 2));
+					Changed(Checkbox("Flip: fill from the other end", &fb.flip));
+					PopID();
+				}
+				EndDisabled();
+			}
 
 			Spacing();
 			Separator();

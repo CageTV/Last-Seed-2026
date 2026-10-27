@@ -107,6 +107,15 @@ void Settings::Load()
 	GetInt(kv, "idisplaymode", displayMode);
 	GetInt(kv, "ifillmode", fillMode);
 	GetInt(kv, "ilayout", layout);
+	GetInt(kv, "iorientation", orientation);
+	GetBool(kv, "bflipfill", flipFill);
+	for (int n = 0; n < kBars; ++n) {
+		const std::string p = "free" + std::to_string(n);
+		GetFloat(kv, (p + "x").c_str(), freeBar[n].x);
+		GetFloat(kv, (p + "y").c_str(), freeBar[n].y);
+		GetInt(kv, (p + "orient").c_str(), freeBar[n].orient);
+		GetBool(kv, (p + "flip").c_str(), freeBar[n].flip);
+	}
 	GetBool(kv, "bstackunderfrostfall", stackUnderFrostfall);
 	GetBool(kv, "bmatchfrostfall", matchFrostfall);
 	GetFloat(kv, "fstackgap", stackGap);
@@ -134,7 +143,13 @@ void Settings::Load()
 	worldFreshShare = std::clamp(worldFreshShare, 0.0f, 100.0f);
 	displayMode = std::clamp(displayMode, 0, 1);
 	fillMode = std::clamp(fillMode, 0, 1);
-	layout = std::clamp(layout, 0, 1);
+	layout = std::clamp(layout, 0, 2);
+	orientation = std::clamp(orientation, 0, 1);
+	for (auto& fb : freeBar) {
+		fb.x = std::clamp(fb.x, 0.0f, 1.0f);
+		fb.y = std::clamp(fb.y, 0.0f, 1.0f);
+		fb.orient = std::clamp(fb.orient, 0, 1);
+	}
 	stackGap = std::clamp(stackGap, 0.0f, 200.0f);
 	posX = std::clamp(posX, 0.0f, 1.0f);
 	posY = std::clamp(posY, 0.0f, 1.0f);
@@ -174,6 +189,12 @@ void Settings::Save() const
 	out << "iDisplayMode=" << displayMode << "\n";
 	out << "iFillMode=" << fillMode << "\n";
 	out << "iLayout=" << layout << "\n";
+	out << "iOrientation=" << orientation << "\n";
+	out << "bFlipFill=" << (flipFill ? 1 : 0) << "\n";
+	for (int n = 0; n < kBars; ++n) {
+		out << std::format("fFree{0}X={1:.4f}\nfFree{0}Y={2:.4f}\niFree{0}Orient={3}\nbFree{0}Flip={4}\n", n, freeBar[n].x, freeBar[n].y, freeBar[n].orient,
+			freeBar[n].flip ? 1 : 0);
+	}
 	out << "bStackUnderFrostfall=" << (stackUnderFrostfall ? 1 : 0) << "\n";
 	out << "bMatchFrostfall=" << (matchFrostfall ? 1 : 0) << "\n";
 	out << std::format("fStackGap={:.1f}\n", stackGap);
@@ -192,6 +213,11 @@ void Settings::ResetHudLayout()
 	displayMode = d.displayMode;
 	fillMode = d.fillMode;
 	layout = d.layout;
+	orientation = d.orientation;
+	flipFill = d.flipFill;
+	for (int n = 0; n < kBars; ++n) {
+		freeBar[n] = d.freeBar[n];
+	}
 	stackUnderFrostfall = d.stackUnderFrostfall;
 	matchFrostfall = d.matchFrostfall;
 	stackGap = d.stackGap;
@@ -220,6 +246,8 @@ FrostfallLayout FrostfallLayout::Read()
 	}
 	GetBool(kv, "bhudenabled", f.hudEnabled);
 	GetInt(kv, "ilayout", f.layout);
+	GetInt(kv, "iorientation", f.orientation);
+	GetBool(kv, "bflipfill", f.flipFill);
 	GetFloat(kv, "fposx", f.posX);
 	GetFloat(kv, "fposy", f.posY);
 	GetFloat(kv, "fscale", f.scale);
@@ -227,7 +255,8 @@ FrostfallLayout FrostfallLayout::Read()
 	GetFloat(kv, "fbarthickness", f.barThickness);
 	GetFloat(kv, "fspacing", f.spacing);
 	GetBool(kv, "bshowicons", f.showIcons);
-	f.layout = std::clamp(f.layout, 0, 1);
+	f.layout = std::clamp(f.layout, 0, 2);
+	f.orientation = std::clamp(f.orientation, 0, 1);
 	f.posX = std::clamp(f.posX, 0.0f, 1.0f);
 	f.posY = std::clamp(f.posY, 0.0f, 1.0f);
 	f.scale = std::clamp(f.scale, 0.5f, 3.0f);

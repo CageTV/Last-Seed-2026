@@ -31,7 +31,9 @@ struct Settings
 	bool  hudEnabled = true;
 	int   displayMode = 1;           // 0 = always, 1 = contextual (fade out while comfortable and unchanged)
 	int   fillMode = 0;              // 0 = bars show how well off you are (drain as a need grows), 1 = bars show the need itself
-	int   layout = 0;                // 0 = 2 x 2 grid, 1 = single row (ignored while matching Frostfall's layout)
+	int   layout = 0;                // 0 = 2 x 2 grid, 1 = single row, 2 = free: every bar placed on its own (ignored while matching Frostfall's layout)
+	int   orientation = 0;           // grouped layouts: 0 = standing bars, 1 = bars lying flat (ignored while matching Frostfall's layout)
+	bool  flipFill = false;          // grouped layouts: fill from the other end (top / right) (ignored while matching Frostfall's layout)
 	bool  stackUnderFrostfall = true;  // put the group directly below Frostfall's bars (needs Frostfall.dll's HUD on)
 	bool  matchFrostfall = true;     // while stacked: use Frostfall's bar size, spacing, layout and icon setting
 	float stackGap = 18.0f;          // pixels at 1080p between Frostfall's group and this one
@@ -49,6 +51,18 @@ struct Settings
 	bool  showVitality = true;
 	bool  showIcons = true;
 
+	// Free layout (layout 2): where each bar sits (its centre, fractions of the screen), whether it lies flat, and which end it fills from.
+	// Order: hunger, thirst, fatigue, vitality.
+	static constexpr int kBars = 4;
+	struct FreeBar
+	{
+		float x = 0.975f;
+		float y = 0.8f;
+		int   orient = 0;  // 0 = standing, 1 = lying flat
+		bool  flip = false;
+	};
+	FreeBar freeBar[kBars] = { { 0.975f, 0.72f, 0, false }, { 0.945f, 0.72f, 0, false }, { 0.975f, 0.88f, 0, false }, { 0.945f, 0.88f, 0, false } };
+
 	static constexpr int kVersion = 1;
 
 	static Settings& Get();
@@ -63,6 +77,8 @@ struct FrostfallLayout
 	bool  loaded = false;        // Frostfall.dll is loaded in this game
 	bool  hudEnabled = true;
 	int   layout = 0;
+	int   orientation = 0;
+	bool  flipFill = false;
 	float posX = 0.975f;
 	float posY = 0.50f;
 	float scale = 1.0f;
