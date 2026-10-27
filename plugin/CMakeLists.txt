@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.21)
 
 # LastSeed.dll - the SKSE plugin behind Last Seed 2026's HUD bars and SKSE Menu Framework page.
-project(LastSeed VERSION 1.2.0 LANGUAGES CXX)
+project(LastSeed VERSION 1.3.0 LANGUAGES CXX)
 
 find_package(CommonLibSSE CONFIG REQUIRED)
 
