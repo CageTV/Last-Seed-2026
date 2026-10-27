@@ -24,7 +24,7 @@ namespace Hud
 		int   previewFrames = 0;
 		float saveTimer = -1.0f;
 		float groupAlpha = 1.0f;
-		bool  editMode = false;  // free layout: drag the bars with the mouse while the settings window is open
+		int   editTarget = -1;  // see Hud::EditTarget
 		int   dragBar = -1;
 
 		FrostfallLayout frostfall;
@@ -122,7 +122,7 @@ namespace Hud
 			return g;
 		}
 
-		void DrawBars(ImDrawList* a_dl, float a_dt, bool a_preview)
+		void DrawBars(ImDrawList* a_dl, float a_dt, bool a_preview, bool a_demo)
 		{
 			auto&       s = Settings::Get();
 			const auto& g = Game::G();
@@ -131,10 +131,11 @@ namespace Hud
 			const float H = io->DisplaySize.y;
 
 			// Need values: higher = needier. Vitality: higher = healthier.
-			const float nHunger = Frac(g.hunger, g.hungerMax, 120.0f);
-			const float nThirst = Frac(g.thirst, g.thirstMax, 120.0f);
-			const float nFatigue = Frac(g.fatigue, g.fatigueMax, 120.0f);
-			const float fVitality = Frac(g.vitality, g.vitalityMax, 160.0f);
+			// While the settings page is open before Last Seed is running, sample values stand in so the bars can still be placed.
+			const float nHunger = a_demo ? 0.25f : Frac(g.hunger, g.hungerMax, 120.0f);
+			const float nThirst = a_demo ? 0.40f : Frac(g.thirst, g.thirstMax, 120.0f);
+			const float nFatigue = a_demo ? 0.30f : Frac(g.fatigue, g.fatigueMax, 120.0f);
+			const float fVitality = a_demo ? 0.80f : Frac(g.vitality, g.vitalityMax, 160.0f);
 			const bool  satisfaction = s.fillMode == 0;
 			Track(hungerT, satisfaction ? 1.0f - nHunger : nHunger, a_dt);
 			Track(thirstT, satisfaction ? 1.0f - nThirst : nThirst, a_dt);
@@ -166,7 +167,7 @@ namespace Hud
 			if (s.layout == 2 && !stacked) {
 				Placed placed[4];
 				for (int i = 0; i < 4; ++i) {
-					placed[i] = { s.freeBar[i].x, s.freeBar[i].y, s.freeBar[i].orient, s.freeBar[i].flip };
+					placed[i] = { s.freeBar[i].x, s.freeBar[i].y, s.freeBar[i].orient, s.freeBar[i].flip, s.freeBar[i].length, s.freeBar[i].thickness };
 				}
 				FreeSlots(placed, s.barThickness, s.barLength, W, H, k, slots);
 			} else {
@@ -226,14 +227,26 @@ namespace Hud
 				iconAt(3, kVitality);
 			}
 
-			if (a_preview && editMode && s.layout == 2 && !stacked) {
-				float     dx = 0, dy = 0;
-				const int moved = HandleDrag(a_dl, slots, 4, dragBar, W, H, dx, dy);
-				if (moved >= 0) {
-					auto& fb = s.freeBar[moved];
-					fb.x = std::clamp(fb.x + dx, 0.0f, 1.0f);
-					fb.y = std::clamp(fb.y + dy, 0.0f, 1.0f);
-					MarkSettingsDirty();
+			if (a_preview && editTarget >= 0) {
+				float dx = 0, dy = 0;
+				if (s.layout == 2 && !stacked && editTarget < 4) {  // one unlocked bar
+					const int moved = HandleDrag(a_dl, slots, 4, dragBar, W, H, dx, dy, editTarget);
+					if (moved >= 0) {
+						auto& fb = s.freeBar[moved];
+						fb.x = std::clamp(fb.x + dx, 0.0f, 1.0f);
+						fb.y = std::clamp(fb.y + dy, 0.0f, 1.0f);
+						MarkSettingsDirty();
+					}
+				} else if (s.layout != 2 && !stacked && editTarget == 4) {  // the whole group
+					const Bar bounds = Bounds(slots, 4, 14.0f * k);
+					const int moved = HandleDrag(a_dl, &bounds, 1, dragBar, W, H, dx, dy);
+					if (moved >= 0) {
+						s.posX = std::clamp(s.posX + dx, 0.0f, 1.0f);
+						s.posY = std::clamp(s.posY + dy, 0.0f, 1.0f);
+						MarkSettingsDirty();
+					}
+				} else {
+					dragBar = -1;
 				}
 			} else {
 				dragBar = -1;
@@ -287,7 +300,7 @@ namespace Hud
 
 	void MarkPreviewFrame() { previewFrames = 2; }
 
-	bool& EditMode() { return editMode; }
+	int& EditTarget() { return editTarget; }
 
 	void MarkSettingsDirty() { saveTimer = 0.6f; }
 
@@ -344,12 +357,14 @@ namespace Hud
 		lastHudEnabled = hudEnabled;
 		DrawLogo(dl, dt);
 
-		// Bars appear with the logo, once Last Seed's start-up has finished (not while it is still checking mods).
-		if (!Game::IsRunning() || !Game::StartupFinished()) {
+		// Bars appear with the logo, once Last Seed's start-up has finished (not while it is still checking mods). The settings page shows
+		// them with sample values before that, so they can be placed.
+		const bool running = Game::IsRunning() && Game::StartupFinished();
+		if (!running && !preview) {
 			return;
 		}
 		if (Settings::Get().hudEnabled) {
-			DrawBars(dl, dt, preview);
+			DrawBars(dl, dt, preview, !running);
 		}
 	}
 }

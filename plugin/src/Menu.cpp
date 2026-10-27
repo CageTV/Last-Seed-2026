@@ -138,59 +138,103 @@ namespace Menu
 
 			Spacing();
 			Separator();
-			Text("Position and size");
-			Changed(Checkbox("Stack directly below Frostfall's bars", &s.stackUnderFrostfall));
-			if (s.stackUnderFrostfall) {
-				Changed(Checkbox("Match Frostfall's bar size and layout", &s.matchFrostfall));
-				Changed(SliderFloat("Gap below Frostfall", &s.stackGap, 0.0f, 100.0f, "%.0f"));
-				TextWrapped("Stacking needs Frostfall's HUD bars to be on; otherwise the position below is used.");
+			Text("Where the bars go");
+			if (s.layout > 1 && s.stackUnderFrostfall) {
+				s.layout = 0;  // the free layout and stacking exclude each other
 			}
-			const bool stacked = s.stackUnderFrostfall;
-			const bool matching = stacked && s.matchFrostfall;
-			BeginDisabled(stacked);
-			Changed(SliderFloat("Horizontal (right edge)", &s.posX, 0.0f, 1.0f, "%.3f"));
-			Changed(SliderFloat("Vertical (centre)", &s.posY, 0.0f, 1.0f, "%.3f"));
-			EndDisabled();
-			BeginDisabled(matching);
-			static const char* layouts[] = { "2 x 2 grid", "Single row", "Free (place every bar yourself)" };
-			Changed(Combo("Layout", &s.layout, layouts, 3));
+			int mode = s.stackUnderFrostfall ? (s.matchFrostfall ? 0 : 1) : (s.layout == 2 ? 3 : 2);
+			static const char* modes[] = { "Below Frostfall's bars, same size and layout", "Below Frostfall's bars, own size and layout", "Its own group, placed anywhere",
+				"Every bar placed on its own" };
+			if (Combo("Placement", &mode, modes, 4)) {
+				s.stackUnderFrostfall = mode <= 1;
+				s.matchFrostfall = mode == 0;
+				if (mode == 3) {
+					s.layout = 2;
+				} else if (s.layout == 2) {
+					s.layout = 0;
+				}
+				Hud::EditTarget() = -1;
+				Hud::MarkSettingsDirty();
+			}
+			if ((mode != 3 && Hud::EditTarget() >= 0 && Hud::EditTarget() < 4) || (mode != 2 && Hud::EditTarget() == 4)) {
+				Hud::EditTarget() = -1;  // the placement changed under an unlocked bar
+			}
+			static const char* layouts[] = { "2 x 2 grid", "Single row" };
 			static const char* orientations[] = { "Standing bars", "Bars lying flat" };
-			if (s.layout != 2) {
+			if (mode <= 1) {
+				Changed(SliderFloat("Gap below Frostfall", &s.stackGap, 0.0f, 100.0f, "%.0f"));
+				TextWrapped("Needs Frostfall's HUD bars to be on and in a grid or row layout; otherwise this group uses the position below.");
+			}
+			if (mode == 0) {
+				TextWrapped("Bar size, direction and layout follow Frostfall's settings. Pick \"own size and layout\" above to set them here.");
+			}
+			if (mode == 2) {
+				Changed(SliderFloat("Horizontal (right edge)", &s.posX, 0.0f, 1.0f, "%.3f"));
+				Changed(SliderFloat("Vertical (centre)", &s.posY, 0.0f, 1.0f, "%.3f"));
+				if (Hud::EditTarget() == 4) {
+					if (Button("Lock the group")) {
+						Hud::EditTarget() = -1;
+					}
+					SameLine();
+					TextDisabled("Unlocked: click the bars on the screen and drag the whole group.");
+				} else if (Button("Unlock to move the group with the mouse")) {
+					Hud::EditTarget() = 4;
+				}
+			}
+			if (mode == 1 || mode == 2) {
+				Changed(Combo("Layout", &s.layout, layouts, 2));
 				Changed(Combo("Direction", &s.orientation, orientations, 2));
 				Changed(Checkbox("Flip: fill from the other end", &s.flipFill));
 				if (IsItemHovered()) {
 					SetTooltip("Standing bars fill from the top instead of the bottom, flat bars from the right instead of the left. The icons move to that end.");
 				}
 			}
-			Changed(SliderFloat("Scale", &s.scale, 0.5f, 3.0f, "%.2f"));
-			Changed(SliderFloat("Bar length", &s.barLength, 30.0f, 400.0f, "%.0f"));
-			Changed(SliderFloat("Bar thickness", &s.barThickness, 3.0f, 30.0f, "%.0f"));
-			Changed(SliderFloat("Spacing", &s.spacing, 2.0f, 40.0f, "%.0f"));
-			EndDisabled();
+			if (mode != 0) {
+				Changed(SliderFloat("Scale", &s.scale, 0.5f, 3.0f, "%.2f"));
+				Changed(SliderFloat("Bar length", &s.barLength, 30.0f, 400.0f, "%.0f"));
+				Changed(SliderFloat("Bar thickness", &s.barThickness, 3.0f, 30.0f, "%.0f"));
+				if (mode != 3) {
+					Changed(SliderFloat("Spacing", &s.spacing, 2.0f, 40.0f, "%.0f"));
+				}
+			}
 			Changed(SliderFloat("Opacity", &s.opacity, 0.1f, 1.0f, "%.2f"));
 
-			if (s.layout == 2) {
+			if (mode == 3) {
 				Spacing();
 				Separator();
 				Text("Each bar");
-				TextWrapped("Stacking under Frostfall and the free layout exclude each other: untick stacking above to place the bars yourself.");
-				BeginDisabled(stacked);
-				Checkbox("Move the bars with the mouse", &Hud::EditMode());
-				if (IsItemHovered()) {
-					SetTooltip("While this is ticked, click a bar on the screen and drag it where you want it. The sliders below do the same, to the pixel.");
-				}
+				TextWrapped("Unlock one bar at a time, then click it on the screen and drag it where you want it. The sliders do the same, to the pixel. Length and thickness "
+							"left at the shared values above follow them.");
 				static const char* names[Settings::kBars] = { "Hunger", "Thirst", "Fatigue", "Vitality" };
+				static const char* orients[] = { "Standing", "Lying flat" };
 				for (int n = 0; n < Settings::kBars; ++n) {
 					auto& fb = s.freeBar[n];
 					PushID(n);
+					Separator();
 					Text("%s", names[n]);
+					if (Hud::EditTarget() == n) {
+						if (Button("Lock")) {
+							Hud::EditTarget() = -1;
+						}
+						SameLine();
+						TextDisabled("Unlocked: drag it on the screen.");
+					} else if (Button("Unlock to move with the mouse")) {
+						Hud::EditTarget() = n;
+					}
 					Changed(SliderFloat("Horizontal", &fb.x, 0.0f, 1.0f, "%.3f"));
 					Changed(SliderFloat("Vertical", &fb.y, 0.0f, 1.0f, "%.3f"));
-					Changed(Combo("Direction", &fb.orient, orientations, 2));
+					Changed(Combo("Direction", &fb.orient, orients, 2));
 					Changed(Checkbox("Flip: fill from the other end", &fb.flip));
+					float length = fb.length > 0.0f ? fb.length : s.barLength;
+					if (Changed(SliderFloat("Length", &length, 30.0f, 400.0f, "%.0f"))) {
+						fb.length = length;
+					}
+					float thickness = fb.thickness > 0.0f ? fb.thickness : s.barThickness;
+					if (Changed(SliderFloat("Thickness", &thickness, 3.0f, 30.0f, "%.0f"))) {
+						fb.thickness = thickness;
+					}
 					PopID();
 				}
-				EndDisabled();
 			}
 
 			Spacing();
@@ -200,9 +244,9 @@ namespace Menu
 			Changed(Checkbox("Thirst", &s.showThirst));
 			Changed(Checkbox("Fatigue", &s.showFatigue));
 			Changed(Checkbox("Vitality", &s.showVitality));
-			BeginDisabled(matching);
-			Changed(Checkbox("Icons under the bars", &s.showIcons));
-			EndDisabled();
+			if (mode != 0) {
+				Changed(Checkbox("Icons next to the bars", &s.showIcons));
+			}
 			EndDisabled();
 
 			Spacing();

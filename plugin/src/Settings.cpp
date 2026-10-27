@@ -115,6 +115,8 @@ void Settings::Load()
 		GetFloat(kv, (p + "y").c_str(), freeBar[n].y);
 		GetInt(kv, (p + "orient").c_str(), freeBar[n].orient);
 		GetBool(kv, (p + "flip").c_str(), freeBar[n].flip);
+		GetFloat(kv, (p + "length").c_str(), freeBar[n].length);
+		GetFloat(kv, (p + "thickness").c_str(), freeBar[n].thickness);
 	}
 	GetBool(kv, "bstackunderfrostfall", stackUnderFrostfall);
 	GetBool(kv, "bmatchfrostfall", matchFrostfall);
@@ -149,6 +151,8 @@ void Settings::Load()
 		fb.x = std::clamp(fb.x, 0.0f, 1.0f);
 		fb.y = std::clamp(fb.y, 0.0f, 1.0f);
 		fb.orient = std::clamp(fb.orient, 0, 1);
+		fb.length = fb.length <= 0.0f ? 0.0f : std::clamp(fb.length, 30.0f, 400.0f);
+		fb.thickness = fb.thickness <= 0.0f ? 0.0f : std::clamp(fb.thickness, 3.0f, 30.0f);
 	}
 	stackGap = std::clamp(stackGap, 0.0f, 200.0f);
 	posX = std::clamp(posX, 0.0f, 1.0f);
@@ -192,8 +196,8 @@ void Settings::Save() const
 	out << "iOrientation=" << orientation << "\n";
 	out << "bFlipFill=" << (flipFill ? 1 : 0) << "\n";
 	for (int n = 0; n < kBars; ++n) {
-		out << std::format("fFree{0}X={1:.4f}\nfFree{0}Y={2:.4f}\niFree{0}Orient={3}\nbFree{0}Flip={4}\n", n, freeBar[n].x, freeBar[n].y, freeBar[n].orient,
-			freeBar[n].flip ? 1 : 0);
+		out << std::format("fFree{0}X={1:.4f}\nfFree{0}Y={2:.4f}\niFree{0}Orient={3}\nbFree{0}Flip={4}\nfFree{0}Length={5:.1f}\nfFree{0}Thickness={6:.1f}\n", n, freeBar[n].x,
+			freeBar[n].y, freeBar[n].orient, freeBar[n].flip ? 1 : 0, freeBar[n].length, freeBar[n].thickness);
 	}
 	out << "bStackUnderFrostfall=" << (stackUnderFrostfall ? 1 : 0) << "\n";
 	out << "bMatchFrostfall=" << (matchFrostfall ? 1 : 0) << "\n";
