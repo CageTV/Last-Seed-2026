@@ -129,6 +129,33 @@ namespace FoodAuto
 
 		std::vector<RE::AlchemyItem*> unread;  // foods the classifier could not read, for the count after a save has loaded
 
+		// Items other mods flag as food that are not food, found by a keyword their mod puts on them. Hunting in Skyrim's 73 trap baits ("Deer Musk", "Wolf
+		// Chow", "Fox Lure", "Bear Bait" ...) are ingestibles with the FoodItem flag and the vendor-food keyword, and their names carry animal words, so the
+		// classifier would take them for raw meat and they would spoil in the player's inventory.
+		struct NotFoodKeyword
+		{
+			const char* plugin;
+			unsigned    id;
+		};
+		constexpr NotFoodKeyword kNotFoodKeywords[] = {
+			{ "Hunting in Skyrim.esp", 0x13B64A },  // HISTrapBaitKeyword
+		};
+
+		bool HasNotFoodKeyword(RE::TESDataHandler* a_dh, RE::AlchemyItem* a_item)
+		{
+			static std::vector<RE::BGSKeyword*> resolved;
+			static bool                          done = false;
+			if (!done) {
+				done = true;
+				for (const auto& nf : kNotFoodKeywords) {
+					if (auto* kw = a_dh->LookupForm<RE::BGSKeyword>(nf.id, nf.plugin)) {
+						resolved.push_back(kw);
+					}
+				}
+			}
+			return std::any_of(resolved.begin(), resolved.end(), [&](auto* kw) { return a_item->HasKeyword(kw); });
+		}
+
 		// The kind and hunger keywords for one classified food; false when the classifier's answer has no Last Seed kind
 		bool Describe(const Keywords& k, RE::AlchemyItem* a_item, const gclass::Result& c, std::string& a_what)
 		{
@@ -229,6 +256,11 @@ namespace FoodAuto
 			}
 			if (Known(item, notFood, lists, k)) {
 				continue;  // Last Seed knows it, or will file it by its keywords
+			}
+			if (HasNotFoodKeyword(dh, item)) {
+				notFood->AddForm(item);  // bait, not a meal: never classified, never spoils
+				++notFoodCount;
+				continue;
 			}
 			const char*       n = item->GetName();
 			const std::string name = (n && n[0]) ? n : "";
