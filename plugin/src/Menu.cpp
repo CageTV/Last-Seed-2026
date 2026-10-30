@@ -8,6 +8,7 @@
 #include "Ids.h"
 #include "Menu.h"
 #include "Game.h"
+#include "Freshness.h"
 #include "Hud.h"
 #include "NativeMcm.h"
 #include "Compat.h"
@@ -78,6 +79,13 @@ namespace Menu
 				}
 			}
 			TextWrapped("Auto-start waits for Frostfall to start (when it is installed), otherwise until you are outside, in control and out of any menu or fight.");
+			if (Checkbox("Ask whether to clean an empty wine bottle when I pick it up", &settings.askWineBottle)) {
+				settings.Save();
+			}
+			if (Checkbox("Prison penalty: leave jail with every need at level 4 (Last Seed's original)", &settings.jailPenalty)) {
+				settings.Save();
+			}
+			TextDisabled("Off: the days served in jail do not raise hunger, thirst, fatigue or vitality loss.");
 
 			Spacing();
 			Separator();
@@ -249,6 +257,45 @@ namespace Menu
 			}
 			EndDisabled();
 
+			// Last Seed's original SkyUI meters: they come back when the bars above are switched off. Their old settings page is gone, so the
+			// display mode and opacity (the same globals the old Mod Configuration Menu wrote) are set here. "Never" hides them for good.
+			Spacing();
+			Separator();
+			Text("Original Last Seed meters");
+			TextWrapped(s.hudEnabled ? "These SkyUI meters stay hidden while the bars above are on. Their settings apply when you switch the bars off."
+									 : "The bars above are off, so Last Seed's original SkyUI meters are shown. Set them to Never to hide them.");
+			{
+				auto* dh = RE::TESDataHandler::GetSingleton();
+				auto  global = [dh](RE::FormID a_local) { return dh ? dh->LookupForm<RE::TESGlobal>(ids::Ls(a_local), "LastSeed.esp") : nullptr; };
+				auto* needsMode = global(0x004FC8);
+				auto* vitalityMode = global(0x004FC9);
+				auto* needsOpacity = global(0x0102C5);
+				auto* vitalityOpacity = global(0x0102AF);
+				if (!needsMode || !vitalityMode || !needsOpacity || !vitalityOpacity) {
+					TextDisabled("Available once Last Seed's plugin is loaded.");
+				} else {
+					static const char* meterModes[] = { "Never", "Always", "Contextual (shown when it changes)" };
+					auto               modeCombo = [](const char* a_label, RE::TESGlobal* a_global) {
+                        int mode = std::clamp(static_cast<int>(a_global->value), 0, 2);
+                        if (Combo(a_label, &mode, meterModes, 3)) {
+                            a_global->value = static_cast<float>(mode);
+                            Hud::MarkOldMetersDirty();
+                        }
+					};
+					auto opacitySlider = [](const char* a_label, RE::TESGlobal* a_global) {
+						float opacity = std::clamp(a_global->value, 0.0f, 100.0f);
+						if (SliderFloat(a_label, &opacity, 0.0f, 100.0f, "%.0f")) {
+							a_global->value = std::round(opacity);
+							Hud::MarkOldMetersDirty();
+						}
+					};
+					modeCombo("Hunger, thirst and fatigue meters", needsMode);
+					opacitySlider("Hunger, thirst and fatigue opacity", needsOpacity);
+					modeCombo("Vitality meter", vitalityMode);
+					opacitySlider("Vitality opacity", vitalityOpacity);
+				}
+			}
+
 			Spacing();
 			if (Button("Reset position and size")) {
 				s.ResetHudLayout();
@@ -269,15 +316,20 @@ namespace Menu
 			if (Checkbox("Freshness bar over the item card when hovering food", &s.freshnessBar)) {
 				s.Save();
 			}
+			Hud::MarkFreshnessPreview();  // a sample bar shows while this page is open
 			BeginDisabled(!s.freshnessBar);
-			TextWrapped("The defaults fit the vanilla / SkyUI inventory. Other inventory skins put the item card elsewhere: open the inventory, hover a food, and use these to place the bar.");
+			TextWrapped("The defaults fit the vanilla / SkyUI inventory. Other inventory skins put the item card elsewhere: unlock the bar, then click it on the screen and drag it, "
+						"or use the sliders. (The sample sits where the real bar was the last time you hovered a food.)");
+			if (Button(Freshness::Unlocked() ? "Lock the bar" : "Unlock to move with the mouse")) {
+				Freshness::Unlocked() = !Freshness::Unlocked();
+			}
 			if (SliderFloat("Bar left edge", &s.freshLeft, 0.0f, 1.0f, "%.3f")) {
 				s.Save();
 			}
 			if (SliderFloat("Bar width", &s.freshWidth, 0.02f, 1.0f, "%.3f")) {
 				s.Save();
 			}
-			if (SliderFloat("Bar height offset", &s.freshOffsetY, -200.0f, 200.0f, "%.0f")) {
+			if (SliderFloat("Bar height offset", &s.freshOffsetY, -720.0f, 720.0f, "%.0f")) {
 				s.Save();
 			}
 			if (Button("Reset bar position")) {

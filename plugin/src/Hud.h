@@ -25,4 +25,10 @@ namespace Hud
 
 	// Mark settings as changed; they are written to the INI shortly after the last change.
 	void MarkSettingsDirty();
+
+	// The original SkyUI meters' settings (display mode, opacity) were changed: apply them to the meters shortly after the last change.
+	void MarkOldMetersDirty();
+
+	// The settings page of the freshness bar calls this every frame it is visible: a sample bar is drawn so it can be placed.
+	void MarkFreshnessPreview();
 }

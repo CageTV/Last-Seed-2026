@@ -6,16 +6,22 @@
  */
 #include "PCH.h"
 #include "Freshness.h"
+#include "Hud.h"
 #include "Settings.h"
 #include "Spoilage.h"
 
 #include "SKSEMenuFramework.h"
+#include "BarKit.h"
 
 namespace Freshness
 {
 	namespace
 	{
 		using namespace ImGuiMCP;
+
+		bool              unlocked = false;       // the settings page lets the mouse move the bar
+		int               dragState = -1;         // BarKit::HandleDrag's pick-up state
+		std::atomic<float> lastClipTop{ -1.0f };  // where the card clip was the last time a food was hovered (fraction of the stage height)
 
 		// The bar sits just under the divider below the item's name, which is the one part of the card that never moves relative to
 		// the card (descriptions grow and shrink below it). The card's own height is read from the menu movie; the divider is a fixed
@@ -86,6 +92,9 @@ namespace Freshness
 						next.valid = true;
 						next.rotted = f.rotted;
 						next.haveCard = ClipTop(view, next.clipTop);
+						if (next.haveCard) {
+							lastClipTop = next.clipTop;
+						}
 						if (food != lastLogged) {  // once per food hovered
 							lastLogged = food;
 							SKSE::log::info("Freshness: {:08X} in {:08X} is {:.0f}% rotted; card clip {}", food, owner, f.rotted * 100.0f, next.haveCard ? "found" : "NOT found");
@@ -153,5 +162,38 @@ namespace Freshness
 			g = 70.0f + 110.0f * k;
 		}
 		ImDrawListManager::AddRectFilled(a_dl, ImVec2(x0, y), ImVec2(x0 + (x1 - x0) * fresh, y + t), Col(r, g, 70.0f, 0.95f), 0.0f, 0);
+	}
+
+	bool& Unlocked() { return unlocked; }
+
+	void DrawPreview(ImDrawList* a_dl, float a_displayW, float a_displayH, bool a_preview)
+	{
+		auto& s = Settings::Get();
+		if (!a_preview || !s.freshnessBar) {
+			unlocked = false;  // the page is closed: the bar locks itself again
+			dragState = -1;
+			return;
+		}
+		// A sample bar where the real one would be: the card's clip position measured the last time a food was hovered (or the vanilla fallback).
+		const float clip = lastClipTop.load();
+		const float top = clip >= 0.0f ? clip + (kDividerBelowTop + kGapBelowDivider) / 720.0f : kFallbackTop;
+		BarKit::Bar bar;
+		bar.x = a_displayW * s.freshLeft;
+		bar.w = a_displayW * std::min(1.0f, s.freshLeft + s.freshWidth) - bar.x;
+		bar.y = a_displayH * (top + s.freshOffsetY / 720.0f);
+		bar.h = std::max(2.0f, kThickness * a_displayH / 1080.0f);
+		bar.horizontal = true;
+		BarKit::DrawBar(a_dl, bar, 0.62f, BarKit::Rgb{ 190.0f, 195.0f, 70.0f }, 0.95f);
+		if (!unlocked) {
+			dragState = -1;
+			return;
+		}
+		float     dx = 0.0f, dy = 0.0f;
+		const int moved = BarKit::HandleDrag(a_dl, &bar, 1, dragState, a_displayW, a_displayH, dx, dy);
+		if (moved >= 0) {
+			s.freshLeft = std::clamp(s.freshLeft + dx, 0.0f, std::max(0.0f, 1.0f - s.freshWidth));
+			s.freshOffsetY = std::clamp(s.freshOffsetY + dy * 720.0f, -720.0f, 720.0f);
+			Hud::MarkSettingsDirty();
+		}
 	}
 }

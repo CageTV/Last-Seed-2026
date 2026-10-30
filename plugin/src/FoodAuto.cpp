@@ -157,6 +157,101 @@ namespace FoodAuto
 		}
 
 		// The kind and hunger keywords for one classified food; false when the classifier's answer has no Last Seed kind
+		// Foods the classifier cannot read from their names, by display name (and plugin, where the name alone could mean something else): Hunterborn's
+		// own prepared meals and foraged food ("Morthal Mudders", "Velvet Slaughter", "Edible Root"), Heartland's dishes, a few creature foods. Only
+		// foods the classifier left unrecognised are looked up here, and the kind follows what the dish is made of. Without it they would get no
+		// hunger value, never spoil, and Last Seed would ask about each the first time it is eaten or stored.
+		struct DishRule
+		{
+			const char*  file;  // lower-case plugin name; the plugin the food comes from
+			const char*  name;  // lower-case display name
+			gclass::Stat stat;
+			gclass::Type type;
+			bool         raw;
+			bool         drink = false;
+		};
+
+		std::string Lower(std::string a_text)
+		{
+			std::transform(a_text.begin(), a_text.end(), a_text.begin(), [](unsigned char ch) { return static_cast<char>(std::tolower(ch)); });
+			return a_text;
+		}
+
+		bool KnownDish(const std::string& a_file, const std::string& a_name, gclass::Result& a_out)
+		{
+			using S = gclass::Stat;
+			using T = gclass::Type;
+			static const DishRule kDishes[] = {
+				// Hunterborn.esp
+				{ "hunterborn.esp", "edible flower", S::Stamina, T::Vegetable, true },
+				{ "hunterborn.esp", "edible root", S::Stamina, T::Vegetable, true },
+				{ "hunterborn.esp", "edible mushroom", S::Stamina, T::Vegetable, true },
+				{ "hunterborn.esp", "fox herb cutlet", S::Health, T::Meat, false },
+				{ "hunterborn.esp", "velvet slaughter", S::Health, T::Fish, false },
+				{ "hunterborn.esp", "sweetwolf", S::Health, T::Meat, false },
+				{ "hunterborn.esp", "wyrm and chips", S::Health, T::Fish, false },
+				{ "hunterborn.esp", "morthal mudders", S::Health, T::Crab, false },
+				{ "hunterborn.esp", "ocean's kiss", S::Health, T::Fish, false },
+				{ "hunterborn.esp", "farmer's breakfast", S::Stamina, T::Bread, false },
+				{ "hunterborn.esp", "wool coat", S::Health, T::Meat, false },
+				{ "hunterborn.esp", "fatty fin fry", S::Health, T::Fish, false },
+				{ "hunterborn.esp", "predators' price", S::Health, T::Meat, false },
+				// Heartland (BSHeartland.esm, BSAssets.esm)
+				{ "bsheartland.esm", "agvald's seafood surprise", S::Health, T::Fish, false },
+				{ "bsheartland.esm", "mooncake", S::Magicka, T::Dessert, false },
+				{ "bsheartland.esm", "sweetcake", S::Magicka, T::Dessert, false },
+				{ "bsheartland.esm", "colovian battlecry", S::Stamina, T::Ale, false, true },
+				{ "bsassets.esm", "flapjack", S::Stamina, T::Bread, false },
+				{ "bsassets.esm", "eyebread", S::Stamina, T::Bread, false },
+				// Immersive Creatures
+				{ "skyrim immersive creatures special edition.esp", "kwama egg", S::Health, T::Meat, true },
+			};
+			const std::string file = Lower(a_file);
+			const std::string name = Lower(a_name);
+			for (const auto& r : kDishes) {
+				if (file == r.file && name == r.name) {
+					a_out = {};
+					a_out.ok = true;
+					a_out.why = "known dish";
+					a_out.stat = r.stat;
+					a_out.type = r.type;
+					a_out.raw = r.raw;
+					a_out.drink = r.drink;
+					a_out.tier = r.raw ? 10 : 25;
+					return true;
+				}
+			}
+			return false;
+		}
+
+		// Ingestible records that are not food: cooking ingredients and seasonings, creature parts, ritual and token items, and the "buff" items other
+		// mods hand out. Filed as not food, so they are never asked about and never spoil.
+		bool KnownNotFood(const std::string& a_file, const std::string& a_name)
+		{
+			static const char* kFiles[] = { "skillsofthewild.esp", "stress and fear.esp", "frostfall.esp", "campfire.esm" };
+			static const char* kNames[] = { "salt", "sugar", "seasoning", "oil", "cliffracer tail", "scamp skin", "blood of the hunt", "kollopi essence", "resin distillated",
+				"homecooked meal", "sleeping tree sap", "soul husk", "placeholder", "dummy food" };
+			static const char* kPrefixes[] = { "itm", "npchuman" };  // complete alchemy & cooking overhaul's engine tokens (ITMFoodEat, NPCHumanDrink...)
+			const std::string file = Lower(a_file);
+			const std::string name = Lower(a_name);
+			for (const char* f : kFiles) {
+				if (file == f) {
+					return true;
+				}
+			}
+			for (const char* n : kNames) {
+				if (name == n) {
+					return true;
+				}
+			}
+			for (const char* pre : kPrefixes) {
+				if (name.rfind(pre, 0) == 0 && name.size() > std::string_view(pre).size() && std::isupper(static_cast<unsigned char>(a_name[std::string_view(pre).size()]))) {
+					return true;
+				}
+			}
+			return false;
+		}
+
 		bool Describe(const Keywords& k, RE::AlchemyItem* a_item, const gclass::Result& c, std::string& a_what)
 		{
 			using T = gclass::Type;
@@ -267,6 +362,13 @@ namespace FoodAuto
 			const auto*       file = item->GetFile(0);
 			const std::string where = file ? std::string(file->GetFilename()) : "?";
 
+			if (KnownNotFood(where, name)) {
+				notFood->AddForm(item);
+				++notFoodCount;
+				SKSE::log::info("Foods: {} ({}, {:08X}) -> not food (known)", name.empty() ? "(unnamed)" : name, where, item->GetFormID());
+				continue;
+			}
+
 			gclass::Input in;
 			in.name = name;
 			const char* ed = item->GetFormEditorID();
@@ -274,7 +376,24 @@ namespace FoodAuto
 			in.rawKeyword = k.raw && item->HasKeyword(k.raw);
 			in.warmth = Warm(item);
 			in.value = item->GetGoldValue();
-			const auto  c = gclass::Classify(in);
+			auto c = gclass::Classify(in);
+			if (!c.ok) {
+				KnownDish(where, name, c);
+				if (!c.ok && in.rawKeyword) {
+					// a raw food from a fishing mod's plugin (Fancy Fishing, the Creation Club fish, ...) is a fish, whatever its species is called
+					std::string lowerFile = where;
+					std::transform(lowerFile.begin(), lowerFile.end(), lowerFile.begin(), [](unsigned char ch) { return static_cast<char>(std::tolower(ch)); });
+					if (lowerFile.find("fish") != std::string::npos) {
+						c = {};
+						c.ok = true;
+						c.why = "raw food from a fishing mod";
+						c.stat = gclass::Stat::Health;
+						c.type = gclass::Type::Fish;
+						c.raw = true;
+						c.tier = 10;
+					}
+				}
+			}
 			std::string what;
 			if ((c.ok && Describe(k, item, c, what)) || Drink(k, item, what)) {
 				++classified;

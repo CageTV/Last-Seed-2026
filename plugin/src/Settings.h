@@ -26,6 +26,8 @@ struct Settings
 	float containerResetDays = 30.0f; // game days before a world container's spoiled food is made fresh again and re-rolled
 	bool  nativeSpoilage = true;     // food spoilage runs in LastSeed.dll instead of Last Seed's Papyrus trackers
 	bool  autoStart = true;          // start Last Seed on its own the first time the player is outside and in control
+	bool  jailPenalty = true;        // Chesko's original: after serving jail time every need jumps to level 4 (off: the time served costs nothing)
+	bool  askWineBottle = true;     // picking up an empty wine bottle asks whether to clean it for water (Last Seed's original question)
 
 	// [HUD]
 	bool  hudEnabled = true;

@@ -59,7 +59,9 @@ namespace gclass
 			                    "frog", "toad", "worm", "grub", "larva", "insect", "bug", "beetle", "spider", "cricket", "grasshopper", "ant", "locust", "moth" };
 		const WordSet kFish = { "fish", "salmon", "trout", "bass", "carp", "char", "pike", "perch", "cod", "eel", "slaughterfish", "catfish", "lamprey", "tuna",
 			                    "sturgeon", "herring", "sardine", "anchovy", "mackerel", "pufferfish", "fillet", "filet", "whitefish", "snapper", "halibut", "sole",
-			                    "minnow", "angler", "pearlfish", "lungfish", "koi", "roe", "caviar", "darter", "goldfish", "bream", "tilapia" };
+			                    "minnow", "angler", "pearlfish", "lungfish", "koi", "roe", "caviar", "darter", "goldfish", "bream", "tilapia",
+			                    "grayling", "anthias", "grouper", "flounder", "mullet", "goby", "tench", "dace", "roach", "chub", "walleye", "zander", "bluegill", "sculpin",
+			                    "wrasse", "shad", "smelt", "whiting", "pollock", "haddock", "marlin", "barracuda", "piranha", "gar", "bowfin", "skate", "stingray" };
 		const WordSet kCrab = { "crab", "mudcrab", "clam", "lobster", "shrimp", "prawn", "oyster", "mussel", "scallop", "crawdad", "crayfish", "shellfish", "squid",
 			                    "octopus", "snail", "crabmeat", "barnacle", "cockle", "whelk", "langoustine", "krill" };
 		const WordSet kPart = { "meat", "leg", "snout", "breast", "thigh", "wing", "tenderloin", "ribs", "rib", "flesh", "fillet", "filet", "tongue", "liver", "heart",
@@ -232,6 +234,15 @@ namespace gclass
 		const auto* mushroomWord = Find(words, kMushroom);
 		const auto* crabWord = Find(words, kCrab);
 		const auto* fishWord = Find(words, kFish);
+		// fish named for what they are, in one word: Direfish, Pogfish, Tripod Spiderfish, Spadefish (the word lists cannot know every one)
+		if (!fishWord) {
+			for (const auto& w : words) {
+				if (w.size() > 4 && w.ends_with("fish") && w != "shellfish") {
+					fishWord = &w;
+					break;
+				}
+			}
+		}
 		const auto* meatWord = Find(words, kMeat);
 		// fish added by other mods often have names no list knows ("Arctic Grayling"), but their editor ids say so ("...FishFoodArcticGrayling")
 		const auto  idWords = Words(a_in.editorId);

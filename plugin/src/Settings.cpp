@@ -88,6 +88,8 @@ void Settings::Load()
 	}
 
 	GetBool(kv, "bautostart", autoStart);
+	GetBool(kv, "baskwinebottle", askWineBottle);
+	GetBool(kv, "bjailpenalty", jailPenalty);
 	GetBool(kv, "bnativespoilage", nativeSpoilage);
 	GetBool(kv, "bworldspoilage", worldSpoilage);
 	GetBool(kv, "bfreshnessbar", freshnessBar);
@@ -140,7 +142,7 @@ void Settings::Load()
 	otherFoodHours = std::clamp(otherFoodHours, 1.0f, 2000.0f);
 	freshLeft = std::clamp(freshLeft, 0.0f, 1.0f);
 	freshWidth = std::clamp(freshWidth, 0.02f, 1.0f);
-	freshOffsetY = std::clamp(freshOffsetY, -200.0f, 200.0f);
+	freshOffsetY = std::clamp(freshOffsetY, -720.0f, 720.0f);
 	worldSpoilChance = std::clamp(worldSpoilChance, 0.0f, 100.0f);
 	worldFreshShare = std::clamp(worldFreshShare, 0.0f, 100.0f);
 	displayMode = std::clamp(displayMode, 0, 1);
@@ -177,6 +179,8 @@ void Settings::Save() const
 	out << "[General]\n";
 	out << "iVersion=" << kVersion << "\n";
 	out << "bAutoStart=" << (autoStart ? 1 : 0) << "\n";
+	out << "bAskWineBottle=" << (askWineBottle ? 1 : 0) << "\n";
+	out << "bJailPenalty=" << (jailPenalty ? 1 : 0) << "\n";
 	out << "bWaitForFrostfall=" << (waitForFrostfall ? 1 : 0) << "\n";
 	out << "bNativeSpoilage=" << (nativeSpoilage ? 1 : 0) << "\n";
 	out << "bWorldSpoilage=" << (worldSpoilage ? 1 : 0) << "\n";

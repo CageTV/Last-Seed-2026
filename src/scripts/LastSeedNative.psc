@@ -9,6 +9,8 @@ endFunction
 ; Implemented by LastSeed.dll
 bool function HudBarsActive() global native
 bool function AutoStartEnabled() global native
+bool function AskWineBottle() global native
+bool function JailPenalty() global native
 bool function NativeSpoilage() global native
 bool function NativeWorldSpoilage() global native
 

@@ -15,4 +15,10 @@ namespace Freshness
 {
 	// Render thread, once per frame, inside SKSE Menu Framework's HUD callback. a_dl is the foreground draw list.
 	void Draw(ImGuiMCP::ImDrawList* a_dl, float a_displayW, float a_displayH);
+
+	// While the settings page is open: a sample bar where the real one would be, and (once unlocked) mouse dragging to place it.
+	void DrawPreview(ImGuiMCP::ImDrawList* a_dl, float a_displayW, float a_displayH, bool a_preview);
+
+	// True while the settings page lets the mouse move the bar (it locks itself again when the page closes).
+	bool& Unlocked();
 }

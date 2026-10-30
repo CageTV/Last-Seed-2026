@@ -45,6 +45,16 @@ namespace
 		return Settings::Get().autoStart;
 	}
 
+	bool JailPenalty(RE::StaticFunctionTag*)
+	{
+		return Settings::Get().jailPenalty;
+	}
+
+	bool AskWineBottle(RE::StaticFunctionTag*)
+	{
+		return Settings::Get().askWineBottle;
+	}
+
 	bool NativeSpoilage(RE::StaticFunctionTag*)
 	{
 		return Spoilage::Active();
@@ -59,6 +69,8 @@ namespace
 	{
 		a_vm->RegisterFunction("HudBarsActive", "LastSeedNative", HudBarsActive);
 		a_vm->RegisterFunction("AutoStartEnabled", "LastSeedNative", AutoStartEnabled);
+		a_vm->RegisterFunction("AskWineBottle", "LastSeedNative", AskWineBottle);
+		a_vm->RegisterFunction("JailPenalty", "LastSeedNative", JailPenalty);
 		a_vm->RegisterFunction("NativeSpoilage", "LastSeedNative", NativeSpoilage);
 		a_vm->RegisterFunction("NativeWorldSpoilage", "LastSeedNative", NativeWorldSpoilage);
 		return true;
@@ -98,7 +110,7 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
 	SetupLog();
-	SKSE::log::info("LastSeed.dll 1.3.1, game {}", REL::Module::get().version().string());
+	SKSE::log::info("LastSeed.dll 1.4.0, game {}", REL::Module::get().version().string());
 	Settings::Get().Load();
 	Spoilage::Register();
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);

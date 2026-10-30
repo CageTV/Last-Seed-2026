@@ -23,6 +23,8 @@ namespace Hud
 
 		int   previewFrames = 0;
 		float saveTimer = -1.0f;
+		float oldMetersTimer = -1.0f;
+		int   freshPreviewFrames = 0;
 		float groupAlpha = 1.0f;
 		int   editTarget = -1;  // see Hud::EditTarget
 		int   dragBar = -1;
@@ -304,6 +306,10 @@ namespace Hud
 
 	void MarkSettingsDirty() { saveTimer = 0.6f; }
 
+	void MarkOldMetersDirty() { oldMetersTimer = 0.6f; }
+
+	void MarkFreshnessPreview() { freshPreviewFrames = 2; }
+
 	void __stdcall Render()
 	{
 		const float dt = std::clamp(GetIO()->DeltaTime, 0.0f, 0.1f);
@@ -313,6 +319,12 @@ namespace Hud
 			saveTimer -= dt;
 			if (saveTimer < 0.0f) {
 				Settings::Get().Save();
+			}
+		}
+		if (oldMetersTimer >= 0.0f) {
+			oldMetersTimer -= dt;
+			if (oldMetersTimer < 0.0f) {
+				Game::RefreshOldMeters();  // re-reads the meters' globals; while the bars are on the meters stay hidden
 			}
 		}
 
@@ -330,6 +342,11 @@ namespace Hud
 
 		auto* dl = GetForegroundDrawList();
 		Freshness::Draw(dl, GetIO()->DisplaySize.x, GetIO()->DisplaySize.y);  // over the inventory item card, whatever the HUD is doing
+		const bool freshPreview = freshPreviewFrames > 0;
+		if (freshPreviewFrames > 0) {
+			--freshPreviewFrames;
+		}
+		Freshness::DrawPreview(dl, GetIO()->DisplaySize.x, GetIO()->DisplaySize.y, freshPreview);
 		if (!preview && (SKSEMenuFramework::IsAnyBlockingWindowOpened() || HudHiddenByGame())) {
 			return;
 		}
