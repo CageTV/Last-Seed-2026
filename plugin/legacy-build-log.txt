@@ -1,0 +1,58 @@
+﻿cmd : 'vswhere.exe' is not recognized as an internal or external command,
+At line:3 char:1
++ cmd /c "E:\WorkSpace\Last-Seed-2026\plugin\build.cmd" > "E:\WorkSpace ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ('vswhere.exe' i...ternal command,:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+operable program or batch file.
+-- Running vcpkg install
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe
+Detecting compiler hash for triplet x64-windows-static-md...
+Compiler found: C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe
+The following packages are already installed:
+    commonlibsse-ng:x64-windows-static-md@3.7.0
+  * fmt:x64-windows-static-md@12.1.0
+  * rapidcsv:x64-windows-static-md@8.97
+    spdlog[core,tz-offset,fmt]:x64-windows-static-md@1.17.0
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2024-05-23
+  * xbyak:x64-windows-static-md@7.28
+The package spdlog provides CMake targets:
+
+    find_package(spdlog CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE spdlog::spdlog)
+
+    # Or use the header-only version
+    find_package(spdlog CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE spdlog::spdlog_header_only)
+
+commonlibsse-ng provides CMake targets:
+
+  # this is heuristically generated, and may not be correct
+  find_package(CommonLibSSE CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE CommonLibSSE::CommonLibSSE)
+
+All requested installations completed successfully in: 186 us
+-- Running vcpkg install - done
+
+
+-- Configuring done (3.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: E:/WorkSpace/Last-Seed-2026/plugin/build/release
+[1/13] Building CXX object CMakeFiles\LastSeed.dir\__LastSeedPlugin.cpp.obj
+[2/13] Building CXX object CMakeFiles\LastSeed.dir\src\GridInv.cpp.obj
+[3/13] Building CXX object CMakeFiles\LastSeed.dir\src\AutoStart.cpp.obj
+[4/13] Building CXX object CMakeFiles\LastSeed.dir\src\Hud.cpp.obj
+[5/13] Building CXX object CMakeFiles\LastSeed.dir\src\FoodAuto.cpp.obj
+[6/13] Building CXX object CMakeFiles\LastSeed.dir\src\Menu.cpp.obj
+[7/13] Building CXX object CMakeFiles\LastSeed.dir\src\Settings.cpp.obj
+[8/13] Building CXX object CMakeFiles\LastSeed.dir\src\main.cpp.obj
+[9/13] Building CXX object CMakeFiles\LastSeed.dir\src\Freshness.cpp.obj
+[10/13] Building CXX object CMakeFiles\LastSeed.dir\src\Compat.cpp.obj
+E:\WorkSpace\Last-Seed-2026\plugin\src\Compat.cpp(40): warning C4291: 'void *RE::Effect::operator new(size_t,void *) noexcept': no matching operator delete found; memory will not be freed if initialization throws an exception
+E:\WorkSpace\Last-Seed-2026\plugin\build\release\vcpkg_installed\x64-windows-static-md\include\RE/E/Effect.h(29): note: see declaration of 'RE::Effect::operator new'
+[11/13] Building CXX object CMakeFiles\LastSeed.dir\src\Spoilage.cpp.obj
+[12/13] Building CXX object CMakeFiles\LastSeed.dir\src\Classifier.cpp.obj
+[13/13] Linking CXX shared library LastSeed.dll

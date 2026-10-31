@@ -119,7 +119,7 @@ SKSEPluginLoad(const SKSE::LoadInterface* a_skse)
 {
 	SKSE::Init(a_skse);
 	SetupLog();
-	SKSE::log::info("LastSeed.dll 1.4.0, game {}", REL::Module::get().version().string());
+	SKSE::log::info("LastSeed.dll 1.4.1, game {}", REL::Module::get().version().string());
 	Settings::Get().Load();
 	Spoilage::Register();
 	SKSE::GetPapyrusInterface()->Register(RegisterPapyrus);
