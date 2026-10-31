@@ -13,6 +13,8 @@ bool function AskWineBottle() global native
 bool function JailPenalty() global native
 bool function NativeSpoilage() global native
 bool function NativeWorldSpoilage() global native
+; The record number to pass to Game.GetFormFromFile for a record of another mod (Hunterborn's ESL edition renumbers its records; every other id passes through).
+int function ModFormId(int aiFormID, string asPlugin) global native
 
 ; True when LastSeed.dll starts Last Seed on its own: the start-up objective (journal prompt) and its "COMPLETED" banner are skipped.
 bool function QuietStart() global

@@ -13,6 +13,7 @@
 #include "DiseaseWidget.h"
 #include "FoodAuto.h"
 #include "Hotkeys.h"
+#include "HunterbornIds.h"
 #include "Menu.h"
 #include "Settings.h"
 #include "Spoilage.h"
@@ -65,8 +66,16 @@ namespace
 		return Spoilage::WorldActive();
 	}
 
+	// The record number a script should pass to Game.GetFormFromFile for a record of another mod (a_id as in that mod's regular plugin): Hunterborn's ESL edition
+	// renumbers its records, so its food ids are translated; every other plugin's ids come back unchanged.
+	std::int32_t ModFormId(RE::StaticFunctionTag*, std::int32_t a_id, RE::BSFixedString a_plugin)
+	{
+		return static_cast<std::int32_t>(HunterbornIds::Fix(a_plugin.c_str(), static_cast<unsigned>(a_id)));
+	}
+
 	bool RegisterPapyrus(RE::BSScript::IVirtualMachine* a_vm)
 	{
+		a_vm->RegisterFunction("ModFormId", "LastSeedNative", ModFormId);
 		a_vm->RegisterFunction("HudBarsActive", "LastSeedNative", HudBarsActive);
 		a_vm->RegisterFunction("AutoStartEnabled", "LastSeedNative", AutoStartEnabled);
 		a_vm->RegisterFunction("AskWineBottle", "LastSeedNative", AskWineBottle);

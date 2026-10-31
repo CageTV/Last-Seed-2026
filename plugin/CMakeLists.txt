@@ -23,6 +23,7 @@ add_commonlibsse_plugin(${PROJECT_NAME} NAME "LastSeed" AUTHOR "CageTV" SOURCES
     src/Ids.cpp
     src/Classifier.cpp
     src/FoodAuto.cpp
+    src/HunterbornIds.cpp
 )
 
 target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_23)
