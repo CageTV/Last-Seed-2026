@@ -354,6 +354,7 @@ namespace FoodAuto
 			}
 			if (HasNotFoodKeyword(dh, item)) {
 				notFood->AddForm(item);  // bait, not a meal: never classified, never spoils
+				tokens.push_back(item);  // put back after a save loads (the save restores the list)
 				++notFoodCount;
 				continue;
 			}
@@ -364,6 +365,7 @@ namespace FoodAuto
 
 			if (KnownNotFood(where, name)) {
 				notFood->AddForm(item);
+				tokens.push_back(item);  // put back after a save loads (the save restores the list): without this Stress and Fear's hidden potions asked "unfamiliar foodstuff"
 				++notFoodCount;
 				SKSE::log::info("Foods: {} ({}, {:08X}) -> not food (known)", name.empty() ? "(unnamed)" : name, where, item->GetFormID());
 				continue;
