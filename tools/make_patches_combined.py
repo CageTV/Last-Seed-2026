@@ -109,6 +109,9 @@ with zipfile.ZipFile(zpath, "w", zipfile.ZIP_DEFLATED) as z:
     z.writestr("fomod/ModuleConfig.xml", config)
     z.writestr("README.txt", readme)
     for p in patches:
-        z.writestr("regular/" + p["file"], regular.read(p["file"]))
+        if p.get("src"):  # a patch newer than the 1.0.0 zip: the author's original plugin, taken from the file named in patches.json
+            z.write(p["src"], "regular/" + p["file"])
+        else:
+            z.writestr("regular/" + p["file"], regular.read(p["file"]))
         z.write(os.path.join(W, "patches", "ESL", p["file"]), "esl/" + p["file"])
 print(f"wrote {zpath}: {len(patches)} patches x 2 builds, {os.path.getsize(zpath) // 1024} KB")

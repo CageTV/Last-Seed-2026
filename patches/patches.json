@@ -42,6 +42,14 @@
     "description": "Adds boiled water as an ingredient for the stew recipes."
   },
   {
+    "file": "Lively Farms - Last Seed patch.esp",
+    "title": "Lively Farms",
+    "group": "Food and recipe mods",
+    "requires": ["Lively Farms.esp"],
+    "description": "Makes the preserved pear from Lively Farms a Last Seed food: it restores hunger like the other preserved fruit and gets its preserving recipe.",
+    "src": "H:/Modlists/Tabula/mods/Lively Farms/Lively Farms - Last Seed patch.esp"
+  },
+  {
     "file": "Last Seed - Mealtime Patch.esp",
     "title": "Mealtime",
     "group": "Food and recipe mods",
